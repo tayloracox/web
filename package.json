@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.10",
+    "@fortawesome/fontawesome-pro-light": "^5.0.10",
+    "@fortawesome/fontawesome-pro-solid": "^5.0.10",
+    "@fortawesome/react-fontawesome": "^0.0.18",
+    "gatsby": "^1.9.241",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sass": "^1.0.25",
+    "normalize.css": "^8.0.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-helmet": "^5.2.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "predeploy": "yarn build",
+    "deploy": "surge ./public -d sdg-web.surge.sh",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  }
+}
