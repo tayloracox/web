@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: suncoast-devs/web
-publish_mode: editorial_workflow
 display_url: https://suncoast.io
 media_folder: static/media
 public_folder: /media

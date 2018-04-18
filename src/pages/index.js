@@ -72,8 +72,8 @@ const IndexPage = () => (
         <img src={logoJunior} alt="SDG Jr Logo" width="120" />
         <aside>
           <p>Do you want to know about our free kids classes?</p>
-          <p class="cta">
-            <Link>Yes, I do!</Link>
+          <p className="cta">
+            <Link to="/jr">Yes, I do!</Link>
           </p>
         </aside>
       </div>
