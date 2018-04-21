@@ -18,6 +18,12 @@ $yellow: #e4d31c;
 
 $desktop-width: 60rem;
 
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14pt;
@@ -499,6 +505,7 @@ h2 {
     max-width: $desktop-width;
     margin: auto;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .ident {
@@ -510,9 +517,11 @@ h2 {
 
   .locate {
     flex: 2;
-    margin: 0 2rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
 
     h3 {
+      margin-top: 0;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 1rem;
@@ -526,6 +535,8 @@ h2 {
   .social {
     font-size: 1.5rem;
     display: flex;
+    margin-top: 0;
+
     li:not(:first-child) {
       margin-left: 1rem;
     }
@@ -564,5 +575,78 @@ h2 {
       font-size: 0.7rem;
       color: $red;
     }
+  }
+}
+
+.AcademyPage {
+  nav {
+    background-color: $darkGrey;
+    color: $cream;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: thick solid lighten($darkGrey, 10%);
+
+    a {
+      color: $cream;
+    }
+
+    ul {
+      display: flex;
+      border-left: thin solid lighten($darkGrey, 10%);
+      margin: 0;
+    }
+
+    li {
+      text-align: center;
+      border-right: thin solid lighten($darkGrey, 10%);
+      flex-basis: 12rem;
+      display: flex;
+
+      a {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-basis: 12rem;
+
+        &:hover {
+          background-color: lighten($darkGrey, 20%);
+        }
+      }
+    }
+
+    figure {
+      margin: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      height: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  .wrap {
+    max-width: $desktop-width;
+    padding: 1rem;
+    margin: auto;
+  }
+}
+
+.form-embed {
+  height: 100%;
+
+  > div {
+    height: 100%;
+    > .wrap {
+      height: 100%;
+      padding: 0;
+      max-width: none;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
+    height: 100%;
   }
 }

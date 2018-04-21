@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 
 import Head from '../components/Head'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 import '../stylesheets/screen.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div className="form-embed">
     <Head />
     <Header />
     {children()}
-    <Footer />
   </div>
 )
 

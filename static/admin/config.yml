@@ -5,6 +5,19 @@ display_url: https://suncoast.io
 media_folder: static/media
 public_folder: /media
 collections:
+  - name: faqs
+  - label: FAQs
+  folder: data/faqs
+  create: true
+  fields:
+    - name: title
+      label: Question
+    - name: body
+      label: Answer
+      widget: markdown
+    - label: position
+      name: Position (for ordering)
+      widget: number
   - name: organizations
     label: Organizations
     folder: data/organizations
@@ -14,12 +27,12 @@ collections:
       - name: title
         label: Organization Name
         required: true
-      - name: "url"
-        label: "URL"
+      - name: url
+        label: URL
         required: true
-      - name: "thumbnail"
-        label: "Thumbnail Image / Logo"
-        widget: "image"
-      - name: "founded_on"
-        label: "Foundation Date"
+      - name: thumbnail
+        label: Thumbnail Image / Logo
+        widget: image
+      - name: founded_on
+        label: Foundation Date
         widget: date

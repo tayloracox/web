@@ -124,7 +124,7 @@ const IndexPage = () => (
             your company.
           </p>
           <p className="cta">
-            <Link to="/hire">Meet Alumni</Link>
+            <Link to="/academy/network">Meet Alumni</Link>
           </p>
         </aside>
 
@@ -132,7 +132,7 @@ const IndexPage = () => (
           <h3>Donate</h3>
           <p className="desc">Every dollar helps us fulfill our mission.</p>
           <p className="cta">
-            <Link to="/apply">Give Today</Link>
+            <Link to="/donate">Give Today</Link>
           </p>
         </aside>
 
@@ -142,7 +142,7 @@ const IndexPage = () => (
             Join our next cohort of students and learn to be a web developer.
           </p>
           <p className="cta">
-            <Link to="/apply">Apply Now</Link>
+            <Link to="/academy">Apply Now</Link>
           </p>
         </aside>
       </div>
