@@ -35,7 +35,7 @@ const AcademyPage = () => (
         JavaScript.
       </p>
 
-      <table>
+      <table className="curriculum-info">
         <tbody>
           <tr>
             <th>Background and Basics</th>
@@ -73,7 +73,7 @@ const AcademyPage = () => (
         popular JavaScript library for building user interfaces.
       </p>
 
-      <table>
+      <table className="curriculum-info">
         <tbody>
           <tr>
             <th>Modern JavaScript tooling</th>
@@ -100,7 +100,7 @@ const AcademyPage = () => (
         the C# programming language).
       </p>
 
-      <table>
+      <table className="curriculum-info">
         <tbody>
           <tr>
             <th>Working with servers </th>
@@ -128,42 +128,42 @@ const AcademyPage = () => (
         </thead>
         <tbody>
           <tr>
-            <th>09:00 AM</th>
+            <th>09:00&nbsp;AM</th>
             <td>Instructor’s Hour / Warmup Lab</td>
             <td>Career Support Lab</td>
           </tr>
           <tr>
-            <th>10:00 AM</th>
+            <th>10:00&nbsp;AM</th>
             <td rowSpan="2">Classroom</td>
             <td>Career Support Lecture</td>
           </tr>
           <tr>
-            <th>11:00 AM</th>
+            <th>11:00&nbsp;AM</th>
             <td>Weekly Review (or extended Career Support)</td>
           </tr>
           <tr>
-            <th>12:00 PM</th>
+            <th>12:00&nbsp;PM</th>
             <td colSpan="2">Lunch</td>
           </tr>
           <tr>
-            <th>01:00 PM</th>
+            <th>01:00&nbsp;PM</th>
             <td colSpan="2">Lab</td>
           </tr>
           <tr>
-            <th>02:00 PM</th>
+            <th>02:00&nbsp;PM</th>
             <td>Classroom: “Review at Two”</td>
             <td>Huddles</td>
           </tr>
           <tr>
-            <th>03:00 PM</th>
+            <th>03:00&nbsp;PM</th>
             <td rowSpan="2">Lab</td>
             <td rowSpan="3">End of Day / Optional Social Time</td>
           </tr>
           <tr>
-            <th>04:00 PM</th>
+            <th>04:00&nbsp;PM</th>
           </tr>
           <tr>
-            <th>05:00 PM</th>
+            <th>05:00&nbsp;PM</th>
             <td>End of Day</td>
           </tr>
         </tbody>

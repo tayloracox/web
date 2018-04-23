@@ -6,7 +6,7 @@ const ContactPage = () => (
       <h2>Contact Us</h2>
       <p>Question? Comments? Just want to chat and say "Hello"?</p>
       <form action="">
-        <fieldset>
+        <fieldset className="contact">
           <p>
             <label htmlFor="">Name</label>
             <input type="text" />
@@ -24,7 +24,7 @@ const ContactPage = () => (
             <textarea name="" id="" cols="30" rows="10" />
           </p>
         </fieldset>
-        <fieldset>
+        <fieldset className="interests">
           <p>I'm interested in:</p>
           <ul>
             <li>
@@ -47,7 +47,9 @@ const ContactPage = () => (
               <input type="checkbox" /> <label>Hiring a developer</label>
             </li>
           </ul>
-          <button type="submit">Submit</button>
+          <p className="action">
+            <button type="submit">Submit</button>
+          </p>
         </fieldset>
       </form>
       <div />

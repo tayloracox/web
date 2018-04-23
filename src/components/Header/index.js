@@ -14,16 +14,24 @@ const Header = () => (
       <nav>
         <ul>
           <li>
-            <Link to="/community">Community</Link>
+            <Link to="/community" activeClassName="active">
+              Community
+            </Link>
           </li>
           <li>
-            <Link to="/academy">Academy</Link>
+            <Link to="/academy" activeClassName="active">
+              Academy
+            </Link>
           </li>
           <li>
-            <Link to="/team">Our Team</Link>
+            <Link to="/team" activeClassName="active">
+              Our Team
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" activeClassName="active">
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

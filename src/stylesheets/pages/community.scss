@@ -1,0 +1,68 @@
+.CommunityPage {
+  section.organizations ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0;
+    margin-left: -1.5rem;
+    margin-top: -0.5rem;
+  }
+
+  section.organizations ul li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  li.org {
+    background-color: darken($cream, 5%);
+    color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0.2rem 0.2rem 0 rgba(51, 51, 51, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 6rem;
+    flex: 1 0 22rem;
+
+    a {
+      color: rgba(51, 51, 51, 0.8);
+      text-shadow: 1px 1px 0 rgba(51, 51, 51, 0.2);
+      text-decoration: underline;
+    }
+
+    img {
+      margin: 8px;
+      margin: 0.5rem;
+      max-width: 80px;
+      max-height: 80px;
+      align-self: center;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media (min-width: 24rem) {
+    li.org {
+      max-width: calc(100% - 1.5rem);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    li.org {
+      max-width: calc(50% - 1.5rem);
+    }
+  }
+}

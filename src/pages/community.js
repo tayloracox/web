@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Organization from '../components/Organization'
+import Meetup from '../components/Meetup'
+import orgs from '../orgs.json'
 
 const CommunityPage = ({ data }) => (
   <div className="CommunityPage">
@@ -10,37 +11,17 @@ const CommunityPage = ({ data }) => (
         Suncoast Developers Guild is proud to help connect dozens of local tech
         organizations.
       </p>
-      <div className="organizations">
+      <section className="organizations">
+        <h2>Our Member Organizations</h2>
+
         <ul>
-          {data.allOrganizationsJson.edges.map(({ node }) => (
-            <li key={node.internal.contentDigest}>
-              <img src={node.thumbnail} width="32" />
-              <h4>
-                <a href={node.url}>{node.title}</a>
-              </h4>
-            </li>
-          ))}
+          {orgs
+            .sort((a, b) => a.created - b.created)
+            .map(org => <Meetup group={org} />)}
         </ul>
-      </div>
+      </section>
     </div>
   </div>
 )
-
-export const query = graphql`
-  query OrganizationsQuery {
-    allOrganizationsJson(sort: { fields: [founded_on], order: ASC }) {
-      edges {
-        node {
-          internal {
-            contentDigest
-          }
-          title
-          url
-          thumbnail
-        }
-      }
-    }
-  }
-`
 
 export default CommunityPage

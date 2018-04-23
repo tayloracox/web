@@ -1,0 +1,64 @@
+.ContactPage {
+  form {
+    display: flex;
+    justify-content: center;
+    fieldset.contact label {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8rem;
+      color: lighten($darkGrey, 20%);
+    }
+
+    input,
+    textarea,
+    button[type='submit'] {
+      border: thin solid darken($cream, 20%);
+      border-radius: 0.2rem;
+      font-size: 1rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      padding: 0.5rem;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    textarea {
+      width: 100%;
+    }
+
+    fieldset.interests {
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0.5rem 0;
+      }
+
+      input {
+        margin-right: 0.5rem;
+      }
+
+      label {
+        font-size: 1rem;
+      }
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    .action {
+      margin: 2rem auto;
+      text-align: center;
+      button[type='submit'] {
+        border-color: $seaGreen;
+        background-color: $blue;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0 $darkGrey;
+      }
+    }
+  }
+}

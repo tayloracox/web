@@ -112,6 +112,21 @@ const AcademyAdmissionsPage = () => (
         The tools and materials used in our program are open source and free. No
         additional software is required.
       </p>
+
+      <h3>Notice of Nondiscriminatory Policy as to Students</h3>
+
+      <p>
+        Suncoast Developers Guild, Inc. does not and shall not discriminate on
+        the basis of race, color, national origin, religion, creed, age,
+        disability, military or veteran's status, sexual orientation, gender,
+        gender identity, or gender expression, in any of its activities or
+        operations. These activities include, but are not limited to: hiring and
+        firing of staff, selection of volunteers and vendors, and provision of
+        services, administration of its educational policies, admissions
+        policies, scholarships, and other programs. We are committed to
+        providing an inclusive and welcoming environment for our staff,
+        students, volunteers, and members.
+      </p>
     </div>
   </div>
 )

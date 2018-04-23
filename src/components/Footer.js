@@ -27,8 +27,8 @@ const Footer = () => (
       <div className="locate">
         <h3>Location</h3>
         <p>
-          100 7th St S<br />
-          St Petersburg, FL 33701
+          2220 Cental Ave<br />
+          St Petersburg, FL 33712
         </p>
         <h3>Mailing Address</h3>
         <p>
