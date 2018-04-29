@@ -5,46 +5,84 @@ const ContactPage = () => (
     <div className="wrap">
       <h2>Contact Us</h2>
       <p>Question? Comments? Just want to chat and say "Hello"?</p>
-      <form action="">
+      <form action="https://formspree.io/hello@suncoast.io" method="POST">
+        <input type="hidden" name="_next" value="https://suncoast.io/thanks" />
         <fieldset className="contact">
           <p>
             <label htmlFor="">Name</label>
-            <input type="text" />
+            <input type="text" name="name" />
           </p>
           <p>
             <label htmlFor="">Email Address</label>
-            <input type="email" />
+            <input type="email" name="email" />
           </p>
           <p>
             <label htmlFor="">Telephone Number</label>
-            <input type="tel" />
+            <input type="tel" name="phone" />
           </p>
           <p>
             <label htmlFor="">Message</label>
-            <textarea name="" id="" cols="30" rows="10" />
+            <textarea name="message" id="" cols="30" rows="10" />
           </p>
         </fieldset>
         <fieldset className="interests">
           <p>I'm interested in:</p>
           <ul>
             <li>
-              <input type="checkbox" /> <label>Learning web development</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="interests"
+                  value="Learning web development"
+                />
+                Learning web development
+              </label>
             </li>
             <li>
-              <input type="checkbox" /> <label>Demo Day & hiring events</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="interests"
+                  value="Demo Day & hiring events"
+                />
+                Demo Day & hiring events
+              </label>
             </li>
             <li>
-              <input type="checkbox" /> <label>Community events</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="interests"
+                  value="Community events"
+                />
+                Community events
+              </label>
             </li>
             <li>
-              <input type="checkbox" />{' '}
-              <label>Donating or becoming a sponsor</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="interests"
+                  value="Donating or becoming a sponsor"
+                />
+                Donating or becoming a sponsor
+              </label>
             </li>
             <li>
-              <input type="checkbox" /> <label>Volunteering</label>
+              <label>
+                <input type="checkbox" name="interests" value="Volunteering" />
+                Volunteering
+              </label>
             </li>
             <li>
-              <input type="checkbox" /> <label>Hiring a developer</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="interests"
+                  value="Hiring a developer"
+                />
+                Hiring a developer
+              </label>
             </li>
           </ul>
           <p className="action">
@@ -59,7 +97,7 @@ const ContactPage = () => (
       width="100%"
       height="450"
       frameBorder="0"
-      allowFullscreen
+      allowFullScreen
     />
   </div>
 )

@@ -95,6 +95,15 @@
       filter: blur(5px);
     }
   }
+
+  @media screen and (max-width: 32rem) {
+    flex-direction: column;
+
+    .Community,
+    .Academy {
+      justify-content: center;
+    }
+  }
 }
 
 .Yolo {
@@ -143,6 +152,14 @@
 
     h4 {
       margin-left: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 44rem) {
+    flex-direction: column;
+
+    .Swag {
+      margin-top: 2rem;
     }
   }
 }
@@ -382,6 +399,15 @@
       .cta {
         margin: 0;
         text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 58rem) {
+      flex-direction: column;
+      align-items: center;
+
+      aside {
+        max-width: 16rem;
       }
     }
   }

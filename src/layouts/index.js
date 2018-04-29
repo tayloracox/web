@@ -8,10 +8,10 @@ import Footer from '../components/Footer'
 import '../stylesheets/screen.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div id="outer-container">
     <Head />
     <Header />
-    {children()}
+    <div id="page-wrap">{children()}</div>
     <Footer />
   </div>
 )

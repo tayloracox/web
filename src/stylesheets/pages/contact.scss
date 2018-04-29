@@ -2,6 +2,7 @@
   form {
     display: flex;
     justify-content: center;
+
     fieldset.contact label {
       display: block;
       text-transform: uppercase;
@@ -59,6 +60,10 @@
         text-transform: uppercase;
         text-shadow: 1px 1px 0 $darkGrey;
       }
+    }
+
+    @media screen and (max-width: 46rem) {
+      flex-direction: column;
     }
   }
 }

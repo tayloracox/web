@@ -62,8 +62,8 @@ const IndexPage = () => (
         </p>
         <nav>
           <span className="active">Mission</span>
-          <span>Vision</span>
-          <span>Values</span>
+          {/* <span>Vision</span>
+          <span>Values</span> */}
         </nav>
       </aside>
     </div>

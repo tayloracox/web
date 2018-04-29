@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { elastic as Menu } from 'react-burger-menu'
 
 import logoBanner from '../../images/icon-logo.svg'
 
@@ -43,6 +44,23 @@ const Header = () => (
           </Link>
         </li>
       </ul>
+      <div className="mobile-nav">
+        <Menu right pageWrapId="page-wrap" outerContainerId="outer-container">
+          <Link to="/" exact activeClassName="active">
+            Home
+          </Link>
+          <Link to="/community" activeClassName="active">
+            Community
+          </Link>
+          <Link to="/team" activeClassName="active">
+            Our Team
+          </Link>
+          <Link to="/contact" activeClassName="active">
+            Contact
+          </Link>
+          <p>+1 (727) 201-2012</p>
+        </Menu>
+      </div>
     </div>
   </header>
 )
