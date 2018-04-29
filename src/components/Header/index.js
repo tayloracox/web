@@ -18,11 +18,11 @@ const Header = () => (
               Community
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/academy" activeClassName="active">
               Academy
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/team" activeClassName="active">
               Our Team

@@ -27,7 +27,7 @@ const IndexPage = () => (
             <span className="or">
               &mdash; <em>or</em> &mdash;
             </span>
-            <a href="#">
+            <a href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
               Join us on Slack <Icon name="slack" />
             </a>
           </p>
@@ -44,7 +44,8 @@ const IndexPage = () => (
             can be.
           </p>
           <p className="cta">
-            <Link to="/academy">Find out more.</Link>
+            Coming Soon&trade;
+            {/* <Link to="/academy">Find out more.</Link> */}
           </p>
         </aside>
       </div>
@@ -142,7 +143,10 @@ const IndexPage = () => (
             Join our next cohort of students and learn to be a web developer.
           </p>
           <p className="cta">
-            <Link to="/academy">Apply Now</Link>
+            <a>
+              <strong>Soon&trade;</strong>
+            </a>
+            {/* <Link to="/academy">Apply Now</Link> */}
           </p>
         </aside>
       </div>

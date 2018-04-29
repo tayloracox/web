@@ -88,6 +88,12 @@
       color: $brightGreen;
       text-shadow: 1px 1px 0 transparentize(darken($green, 25%), 0.5);
     }
+
+    h2,
+    h3,
+    p:not(.cta) {
+      filter: blur(5px);
+    }
   }
 }
 
