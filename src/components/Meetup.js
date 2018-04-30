@@ -25,7 +25,7 @@ const ESTIMATES = [
   'pretty near',
   'relatively',
   'virtually',
-  'within sight of'
+  'within sight of',
 ]
 
 const photo = group => {
@@ -47,9 +47,9 @@ const population = group => {
 }
 
 const Meetup = ({ group }) => (
-  <li class="org">
+  <li className="org">
     <img src={photo(group)} alt={`${group.name} Logo`} />
-    <div class="info">
+    <div className="info">
       <h3>
         <a href={group.link}>{group.name}</a>
       </h3>

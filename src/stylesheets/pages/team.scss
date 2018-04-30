@@ -23,4 +23,15 @@
       margin-top: 0;
     }
   }
+
+  @media screen and (max-width: 46rem) {
+    .member > div {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin: 1rem;
+      }
+    }
+  }
 }
