@@ -44,8 +44,7 @@ const IndexPage = () => (
             can be.
           </p>
           <p className="cta">
-            Coming Soon&trade;
-            {/* <Link to="/academy">Find out more.</Link> */}
+            <Link to="/academy">Find out more.</Link>
           </p>
         </aside>
       </div>
@@ -60,11 +59,11 @@ const IndexPage = () => (
           community among local technology organizations, supporting members in
           a way that strengthens our community and promotes the common good.
         </p>
-        <nav>
+        {/* <nav>
           <span className="active">Mission</span>
-          {/* <span>Vision</span>
-          <span>Values</span> */}
-        </nav>
+          <span>Vision</span>
+          <span>Values</span>
+        </nav> */}
       </aside>
     </div>
 
@@ -143,10 +142,7 @@ const IndexPage = () => (
             Join our next cohort of students and learn to be a web developer.
           </p>
           <p className="cta">
-            <a>
-              <strong>Soon&trade;</strong>
-            </a>
-            {/* <Link to="/academy">Apply Now</Link> */}
+            <Link to="/academy">Apply Now</Link>
           </p>
         </aside>
       </div>

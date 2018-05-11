@@ -31,11 +31,11 @@ class Header extends React.Component {
                   Community
                 </Link>
               </li>
-              {/* <li>
-            <Link to="/academy" activeClassName="active">
-              Academy
-            </Link>
-          </li> */}
+              <li>
+                <Link to="/academy" activeClassName="active">
+                  Academy
+                </Link>
+              </li>
               <li>
                 <Link to="/team" activeClassName="active">
                   Our Team
@@ -52,7 +52,7 @@ class Header extends React.Component {
             <li>+1 (727) 201-2012</li>
             <li>
               <Link className="cta" to="/#getting-involved">
-                Get Involved
+                Code with Us
               </Link>
             </li>
           </ul>

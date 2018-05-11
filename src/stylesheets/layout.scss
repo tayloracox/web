@@ -41,8 +41,15 @@
     text-decoration: none;
     background-color: $purple;
     color: lighten($cream, 25%);
-    padding: 0.5rem;
+    border: 0.2rem solid $purple;
+    padding: 0.3rem;
     border-radius: 0.2rem;
+    transition: all 200ms ease;
+
+    &:hover {
+      background-color: darken($brightPurple, 5%);
+      color: $cream;
+    }
   }
 
   .wrap > {
@@ -176,6 +183,10 @@
       &:link,
       &:visited {
         color: $purple;
+      }
+
+      &:hover {
+        color: lighten($purple, 10%);
       }
     }
   }

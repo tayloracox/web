@@ -1,8 +1,7 @@
 import React from 'react'
 
-import portraitJason from '../images/team/jason.png'
+import portraitJason from '../images/team/jason.jpg'
 import portraitToni from '../images/team/toni.jpg'
-import portraitHolly from '../images/team/holly.jpg'
 import portraitGavin from '../images/team/gavin.jpg'
 import portraitMark from '../images/team/mark.jpg'
 
@@ -58,30 +57,6 @@ const TeamPage = () => (
             St. Petersburg/Tampa and looks forward to collaborating with the
             community to develop amazing developers who want to make awesome
             things.
-          </p>
-        </div>
-      </div>
-
-      <div className="member">
-        <h3>Holly Valenty, Program Director</h3>
-        <div>
-          <img
-            src={portraitHolly}
-            alt="A portrait of Holly"
-            width="160"
-            height="160"
-          />
-          <p>
-            Holly is born and raised in St. Petersburg, Florida. She is a
-            graduate of the University of Florida, where she studied Family,
-            Youth, and Community Science and became an avid Gator football fan.
-            After completing her degree, Holly worked within Marketing and the
-            Tech industry. She found what she loved most was connecting people
-            to their passions, and exploring new ways to improve the world
-            around us. Holly is passionate about helping students change their
-            lives through a new career. When not working with students, Holly
-            can be found cuddling her dog, Lola, learning to code, or exploring
-            new restaurants.
           </p>
         </div>
       </div>

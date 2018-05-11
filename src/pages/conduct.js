@@ -304,7 +304,7 @@ const ConductPage = ({ data }) => (
               <td>Tampa.rb</td>
               <td>Jason L Perry</td>
               <td>
-                <a href="mailto:jasper@ambethia.com">jasper@ambethia.com</a>
+                <a href="mailto:jasper@ambethia.com">jason@suncoast.io</a>
               </td>
               <td>@ambethia</td>
               <td>@ambethia</td>
@@ -313,7 +313,7 @@ const ConductPage = ({ data }) => (
               <td>Tampa.rb</td>
               <td>Gavin Stark</td>
               <td>
-                <a href="mailto:gavin@gstark.com">gavin@gstark.com</a>
+                <a href="mailto:gavin@gstark.com">gavin@suncoast.io</a>
               </td>
               <td>@gavinstark</td>
               <td>@gavinstark</td>

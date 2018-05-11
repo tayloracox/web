@@ -23,6 +23,12 @@ a {
     font-weight: 600;
     text-decoration: none;
   }
+
+  transition: all 200ms ease;
+
+  &:hover {
+    color: lighten($seaGreen, 10%);
+  }
 }
 
 ul {

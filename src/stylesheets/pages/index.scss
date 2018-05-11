@@ -92,12 +92,6 @@
       color: $brightGreen;
       text-shadow: 1px 1px 0 transparentize(darken($green, 25%), 0.5);
     }
-
-    h2,
-    h3,
-    p:not(.cta) {
-      filter: blur(5px);
-    }
   }
 
   @media screen and (max-width: 32rem) {
@@ -137,8 +131,15 @@
         text-decoration: none;
         background-color: $purple;
         color: lighten($cream, 25%);
-        padding: 0.5rem;
+        border: 0.2rem solid $purple;
+        padding: 0.3rem;
         border-radius: 0.2rem;
+        transition: all 200ms ease;
+
+        &:hover {
+          background-color: darken($brightPurple, 5%);
+          color: $cream;
+        }
       }
     }
   }
@@ -391,10 +392,16 @@
 
       .cta {
         background-color: $seaGreen;
-        padding: 0.5rem 0.5rem 0.5rem;
-        border: thick solid $blue;
+        border: 0.3rem solid $blue;
         border-radius: 0.25rem;
         box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+        padding: 0.4rem;
+        border-radius: 0.2rem;
+        transition: all 200ms ease;
+
+        &:hover {
+          background-color: lighten($seaGreen, 10%);
+        }
 
         a {
           color: white;
