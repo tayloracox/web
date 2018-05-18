@@ -49,7 +49,7 @@ class Header extends React.Component {
             </ul>
           </nav>
           <ul>
-            <li>+1 (727) 201-2012</li>
+            <li><a href="tel:7272012012">+1 (727) 201-2012</a></li>
             <li>
               <Link className="cta" to="/#getting-involved">
                 Code with Us
@@ -93,7 +93,7 @@ class Header extends React.Component {
               >
                 Contact
               </Link>
-              <p>+1 (727) 201-2012</p>
+              <p><a href="tel:7272012012">+1 (727) 201-2012</a></p>
             </Menu>
           </div>
         </div>

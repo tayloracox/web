@@ -12,7 +12,7 @@
   text-align: center;
   padding: 1rem;
   color: lighten($cream, 5%);
-  text-shadow: 2px 2px 0 transparentize(darken($cream, 80%), 0.5);
+  text-shadow: 2px 2px 0 transparentize(darken($cream, 80%), 0.4);
   height: 32vh;
   min-height: 16rem;
   border-bottom: 4px solid $seaGreen;
@@ -41,7 +41,26 @@
 
     .cta {
       text-align: center;
-      margin-bottom: 0;
+      margin: 0px auto;
+      a {
+        text-decoration: none;
+        background-color: $purple;
+        color: lighten($cream, 25%);
+        border: 0.2rem solid $purple;
+        padding: 0.3rem;
+        border-radius: 0.2rem;
+        transition: all 200ms ease;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        display: block;
+        max-width: 90%;
+        margin: 5px 0;
+
+        &:hover {
+          background-color: darken($brightPurple, 5%);
+          color: $cream;
+        }
+      }
     }
 
     aside {
@@ -64,7 +83,7 @@
 
     h2 {
       color: $brightOrange;
-      text-shadow: 1px 1px 0 transparentize(darken($orange, 25%), 0.25);
+      text-shadow: 1px 1px 0 transparentize(darken($orange, 25%), 0.4);
     }
 
     .or {
@@ -113,18 +132,6 @@
   .Junior,
   .Swag {
     margin: 0 1rem;
-  }
-
-  .Junior {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    aside {
-      margin-left: 1rem;
-    }
-
     .cta {
       text-align: center;
       a {
@@ -135,12 +142,29 @@
         padding: 0.3rem;
         border-radius: 0.2rem;
         transition: all 200ms ease;
+        text-transform: uppercase;
+        padding: 5px 10px;
 
         &:hover {
           background-color: darken($brightPurple, 5%);
           color: $cream;
         }
       }
+    }
+    p {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .Junior {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    aside {
+      margin-left: 1rem;
     }
   }
 
@@ -153,10 +177,7 @@
     h4,
     img {
       margin-bottom: 0;
-    }
-
-    h4 {
-      margin-left: 1rem;
+      padding-right: 15px;
     }
   }
 
