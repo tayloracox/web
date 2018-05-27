@@ -24,9 +24,6 @@ const IndexPage = () => (
           </p>
           <p className="cta">
             <Link to="/community">Explore our community</Link>
-            <span className="or">
-              &mdash; <em>or</em> &mdash;
-            </span>
             <a href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
               Join us on Slack <Icon name="slack" />
             </a>
@@ -44,7 +41,7 @@ const IndexPage = () => (
             can be.
           </p>
           <p className="cta">
-            <Link to="/academy">Find out more.</Link>
+            <Link to="/academy">Find out more</Link>
           </p>
         </aside>
       </div>
@@ -78,18 +75,17 @@ const IndexPage = () => (
         </aside>
       </div>
       <div className="Swag">
-        <a href="http://store.suncoast.io/">
-          <img
-            src={swagIllustration}
-            alt="An illustration of a t-shirt and some stickers"
-            width="200"
-          />
-        </a>
-        <h4>
-          <a href="http://store.suncoast.io/">
-            Get shirts, stickers and other stunning swag from our store.
-          </a>
-        </h4>
+        <img
+          src={swagIllustration}
+          alt="An illustration of a t-shirt and some stickers"
+          width="170"
+        />
+        <aside>
+          <p>Get shirts, stickers and other stunning swag from our store.</p>
+          <p className="cta">
+            <a href="http://store.suncoast.io/">Shop now</a>
+          </p>
+        </aside>
       </div>
     </section>
 
