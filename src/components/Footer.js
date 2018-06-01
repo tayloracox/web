@@ -15,7 +15,7 @@ const Footer = () => (
         />
         <p>
           <strong>Suncoast Developers Guild, Inc.</strong> is a Florida
-          not-for-profit corporation.
+          not-for-profit corporation and registered 501(c)(3) organization.
         </p>
         <p>
           <a href="mailto:hello@suncoast.io">hello@suncoast.io</a>
@@ -33,11 +33,17 @@ const Footer = () => (
           <br />
           St Petersburg, FL 33712
         </p>
-        <h3>Mailing Address</h3>
-        <p>
-          7619 4th Ave N<br />
-          St Petersburg, FL 33710
-        </p>
+        <ul>
+          <li>
+            <Link to="/conduct">Code of Conduct</Link>
+          </li>
+          <li>
+            <Link to="/privacy">Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to="/terms">Terms of Service</Link>
+          </li>
+        </ul>
       </div>
       <div className="site">
         <ul className="social">
@@ -75,11 +81,6 @@ const Footer = () => (
             </li>
             <li>
               <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="/conduct">Code of Conduct</Link>
             </li>
           </ul>
         </nav>
