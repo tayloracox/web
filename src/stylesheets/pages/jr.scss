@@ -1,22 +1,33 @@
 .JuniorPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 1em;
-
+    margin: 1rem;
     .row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 1rem;
-
+        .intro {
+            margin: 1em;
+            p {
+                max-width: 500px;
+            }
+        }
         .column {
-            display: flex;
-            flex-direction: column;
-            padding: 1em;
+            margin: 0.55rem;
+            max-width: 300px;
+        }
+    }
+    .overview {
+        align-items: center;
+        // img {
+        //     margin-top: 1em;
+        // }
+    }
+    @media screen and (max-width: 647px) {
+        .column {
+            margin: 1rem;
+            max-width: 90%;
+            min-width: 160px;
         }
     }
 }
+// 674
