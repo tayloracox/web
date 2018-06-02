@@ -1,10 +1,10 @@
 import React from 'react'
 import logoJunior from '../images/junior.svg'
 import ClassImg1 from '../images/SDGJr/october2017.jpg'
-import ClassImg2 from '../images/SDGJr/april2018.jpg'
+import ClassImg2 from '../images/SDGJr/august2017.jpg'
 
 const IntroText =
-  'Suncoast Developers Guild believes strongly that programming must be accessible at all ages, and our kids classes are one way we inch toward making that belief a reality. Suncoast Deverlopers Guild Jr provides free coding classes to children ages 8-16 in the Tampa Bay area.  We strive to make learning fun and teach our students new skills.  SDG Jr is completely volunteer organized and staffed.  We currently provide three different classes, but we working to provide other languages and programs in the near future.'
+  'Suncoast Developers Guild believes strongly that programming must be accessible at all ages, and our kids classes are one way we inch toward making that belief a reality. Suncoast Deverlopers Guild Jr provides free coding classes to children ages 8-16 in the Tampa Bay area.  We strive to make learning fun and teach our students new skills.  We currently offer three classes, but we are working to provide more programs.'
 
 const ScratchLink = (
   <a href="https://scratch.mit.edu/" target="_blank">
@@ -26,11 +26,16 @@ const KidsEmail = (
     contact us
   </a>
 )
+const OutsideHost = (
+  <a href="https://gooee.com/" target="_blank">
+    Gooee
+  </a>
+)
 
 const JuniorPage = () => (
   <div className="JuniorPage">
-    <div className="row overview">
-      <img
+    <div className="row">
+      <img className="logo"
         src={logoJunior}
         alt="Suncoast Developers Guild Jr Logo"
         height="280"
@@ -41,24 +46,26 @@ const JuniorPage = () => (
         <p> {IntroText} </p>
       </div>
     </div>
+
     <div className="row">
-      <div className="column">
+      <div className="class">
         <h3>Scratch</h3>
         <p>
           {ScratchLink} {ScratchClass}
         </p>
       </div>
-      <div className="column">
+      <div className="class">
         <h3>HTML & CSS</h3>
         <p>{HTMLCSS}</p>
       </div>
-      <div className="column">
+      <div className="class">
         <h3>Javascript</h3>
         <p>{JsClass}</p>
       </div>
     </div>
+
     <div className="row overview">
-      <div className="intro">
+      <div className="overview">
         <h3>Class Overview</h3>
         <p>
           Suncoast Deverlopers Guild Jr offers single and multi night classes
@@ -91,26 +98,25 @@ const JuniorPage = () => (
           entirety of the course for students under the age of 16.
         </p>
       </div>
-      <div className='column' >
-        <img
+      <div className="imgColumn">
+        <img className="classImages"
           src={ClassImg1}
-          alt="Picture of the students from our October 2017 class"
-          height="280"
-          width="auto"
+          alt="Picture of the students from our October 2017 javascript class holding certificates."
         />
-        <img
+        <p className="caption">
+          Students after a javascript class at {OutsideHost} in October 2017.
+        </p>
+        <img className="classImages"
           src={ClassImg2}
           alt="Picture of the students from our April 2018 class"
-          height="280"
-          width="auto"
         />
       </div>
     </div>
-    {/* <div className="wrap">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
-        Loading...
-      </iframe>
-    </div> */}
+  // {/* <div className="wrap">
+  //   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
+  //     Loading...
+  //   </iframe>
+  // </div> */}
   </div>
 )
 
