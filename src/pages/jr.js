@@ -129,3 +129,5 @@ export default JuniorPage
 // src="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkch
 // ijZGh5oZAtKgnQMwg/viewform?embedded=true">     Loading...   </iframe> </div>
 // */}
+
+// for bio cards https://codepen.io/tayloracox/pen/bKNwLV
