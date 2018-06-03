@@ -22,7 +22,7 @@ const JsClass =
   'Javascript is a powerful programming language that is used in every web browser.  We utilize fun activities and animations to teach kids about functions, strings, arrays and more.  We offer both introductory and intermediate javascript classes.  Come prepared to look for every last quote, period and semi-colon!'
 
 const KidsEmail = (
-  <a href="mailto:kids@suncoast.io?Subject=Kids%20Class" target="_top">
+  <a href="mailto:kids@suncoast.io?Subject=Host%20a%20Kids%20Class" target="_top">
     contact us
   </a>
 )
@@ -64,60 +64,55 @@ const JuniorPage = () => (
       </div>
     </div>
 
-    <div className="row overview">
+    <div className="overviewRow">
       <div className="overview">
         <h3>Class Overview</h3>
         <p>
-          Suncoast Deverlopers Guild Jr offers single and multi night classes
-          throughout the year. Most meet ups are hosted on the Suncoast
-          Developers Guild campus in St. Pete. Our Tampa classes are hosted at
-          local companies who volunteer their locations. If your company is
-          interested in hosting one of our classes please {KidsEmail}.
+          Suncoast Deverlopers Guild Jr offers single and multi night classes throughout the year. Students are required to bring their own computer.  Both Mac and PCs are welcome, as long as it is in working shape and fully charged.  All software used is free online--no downloading required! We recommend using Chrome or Firefox in our classes, and we cannot guarantee that other web browsers will work. 
         </p>
         <p>
-          Students are required to bring their own computer with them, but all
-          software used is free and available online--no downloading required!
-          We recommend using Chrome or Firefox in our classes, and we cannot
-          guarantee that other web browsers will work. As our classes are web
-          based Macs and PCs are welcome as long as it is in working shape and
-          has a charger.
-        </p>
-        <p>
-          Basic typing skills are helpful, but we will go at a slow enough pace
-          for students that are not as familiar with typing. Our introductory
-          classes are for beginners with no prerequisites and we recommend
-          attending our intro class before any of our intermedia classes.
-          Imagination and love for computers are the only requirements for our
-          classes.
-        </p>
-        <p>
-          Our goal is for students to have a great time learning and playing
-          with new tools and ideas. There are no tests, grades or homework. That
-          said, we do expect students to be engaged in every class. We also
-          require a parent or a guardian to remain with the student for the
-          entirety of the course for students under the age of 16.
+          Imagination and love for computers are the only requirements for our classes. Basic typing skills are helpful, but we will go at a slow enough pace for students that are not as familiar with typing. Our introductory classes are for beginners with no prerequisites and we recommend attending our intro class before any of our intermediate classes. 
         </p>
       </div>
-      <div className="imgColumn">
+      <div className="overview">
         <img className="classImages"
           src={ClassImg1}
           alt="Picture of the students from our October 2017 javascript class holding certificates."
         />
         <p className="caption">
-          Students after a javascript class at {OutsideHost} in October 2017.
+            October 2017 javascript class at {OutsideHost}.
         </p>
-        <img className="classImages"
-          src={ClassImg2}
-          alt="Picture of the students from our April 2018 class"
-        />
       </div>
     </div>
-  // {/* <div className="wrap">
-  //   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
-  //     Loading...
-  //   </iframe>
-  // </div> */}
+    <div className="overviewRow2">
+      <div className="overview">
+        <p>
+          Basic typing skills are helpful, but we will go at a slow enough pace for students that are not as familiar with typing. Our introductory classes are for beginners with no prerequisites and we recommend attending our intro class before any of our intermedia classes. Imagination and love for computers are the only requirements for our classes.
+        </p>
+        <p>
+          Our goal is for students to have a great time learning and playing  with new tools and ideas. There are no tests, grades or homework. That said, we do expect students to be engaged in every class. We also require a parent or a guardian to remain with the student for the entirety of the course for students under the age of 16.
+        </p>
+        <p>
+          Most classes are hosted on our St. Pete campus.  Our Tampa classes are hosted at local companies who volunteer their location. If your company is interested in hosting one of our classes please {KidsEmail}.
+        </p>
+      </div>
+      <div className="overview">
+        <img className="classImages"
+          src={ClassImg2}
+          alt="Picture of the students from our August 2017 scratch class holding certificates."
+        />
+        <p className="caption">
+            Students after our August 2017 {ScratchLink} class.
+        </p>
+      </div>
+    </div>
   </div>
 )
 
 export default JuniorPage
+
+
+// {/* <div className="wrap">   <iframe
+// src="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkch
+// ijZGh5oZAtKgnQMwg/viewform?embedded=true">     Loading...   </iframe> </div>
+// */}
