@@ -11,7 +11,6 @@ const ScratchLink = (
     Scratch
   </a>
 )
-
 const ScratchClass =
   'is a visual program language provided by Lifelong Kindergarten Group at the MIT Media Lab. We like to use Scratch to break down many barriers that prevent students from learning to code, while still teaching the basics and logic behind programming.  Parents: you might want some ear plugs after we teach them how to program sounds.'
 
@@ -31,7 +30,17 @@ const OutsideHost = (
     Gooee
   </a>
 )
+const MeetupLink = (
+  <a href="https://www.meetup.com/suncoast-developers-guild/">
+    MeetUp.com
+  </a>
+)
+const ConsetForm = (
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
+    our mailing list.
+  </a>
 
+)
 const JuniorPage = () => (
   <div className="JuniorPage">
     <div className="row">
@@ -106,9 +115,13 @@ const JuniorPage = () => (
         </p>
       </div>
     </div>
+    <div className="row">
+      <p>
+        You can find our next class on {MeetupLink}.  In the mean time, you can join {ConsetForm}
+      </p>
+    </div>
   </div>
 )
-
 export default JuniorPage
 
 
