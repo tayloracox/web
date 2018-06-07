@@ -27,7 +27,7 @@ const Footer = () => (
       <div className="locate">
         <h3>Location</h3>
         <p>
-          <a href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z">
+          <a href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z" target="_blank">
             2220 Cental Ave
           </a>
           <br />
@@ -48,27 +48,27 @@ const Footer = () => (
       <div className="site">
         <ul className="social">
           <li>
-            <a href="https://www.facebook.com/SuncoastDevelopersGuild/">
+            <a href="https://www.facebook.com/SuncoastDevelopersGuild/" target="_blank">
               <Icon name="facebook" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/suncoastio">
+            <a href="https://twitter.com/suncoastio" target="_blank">
               <Icon name="twitter" />
             </a>
           </li>
           <li>
-            <a href="https://www.meetup.com/suncoast-developers-guild/">
+            <a href="https://www.meetup.com/suncoast-developers-guild/" target="_blank">
               <Icon name="meetup" />
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg">
+            <a href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg" target="_blank">
               <Icon name="youtube" />
             </a>
           </li>
           <li>
-            <a href="https://suncoast-devs.now.sh/">
+            <a href="https://suncoast-devs.now.sh/" target="_blank">
               <Icon name="slack" />
             </a>
           </li>
@@ -93,7 +93,7 @@ const Footer = () => (
     </section>
     <p className="copyright">
       &copy; 2018 Suncoast Developers Guild, Inc.&nbsp;
-      <a href="https://github.com/suncoast-devs/web">
+      <a href="https://github.com/suncoast-devs/web" target="_blank">
         <Icon name="github" />
       </a>
     </p>
