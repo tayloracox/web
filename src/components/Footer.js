@@ -67,6 +67,11 @@ const Footer = () => (
               <Icon name="youtube" />
             </a>
           </li>
+          <li>
+            <a href="https://suncoast-devs.now.sh/">
+              <Icon name="slack" />
+            </a>
+          </li>
         </ul>
         <nav>
           <ul>
