@@ -48,23 +48,28 @@ const Footer = () => (
       <div className="site">
         <ul className="social">
           <li>
-            <a href="https://www.facebook.com/SuncoastDevelopersGuild/">
+            <a href="https://www.facebook.com/SuncoastDevelopersGuild/" target="_blank">
               <Icon name="facebook" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/suncoastio">
+            <a href="https://twitter.com/suncoastio" target="_blank">
               <Icon name="twitter" />
             </a>
           </li>
           <li>
-            <a href="https://www.meetup.com/suncoast-developers-guild/">
+            <a href="https://www.meetup.com/suncoast-developers-guild/" target="_blank">
               <Icon name="meetup" />
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg">
+            <a href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg" target="_blank">
               <Icon name="youtube" />
+            </a>
+          </li>
+          <li>
+            <a href="https://suncoast-devs.slack.com/messages" target="_blank">
+              <Icon name="slack" />
             </a>
           </li>
         </ul>
