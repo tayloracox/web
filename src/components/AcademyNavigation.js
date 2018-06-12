@@ -24,7 +24,7 @@ const AcademyNavigation = () => (
       <li>
         <Link to="/academy/refer" activeClassName="active">
           <figure>
-            <Icon name="admissions" />
+            <Icon name="referrals" />
           </figure>
           Refer
         </Link>

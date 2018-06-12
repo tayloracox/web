@@ -4,11 +4,13 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import {
   faCode,
+  faComment,
   faGraduationCap,
-  faHandshakeAlt,
+  faHandshake,
   faHeart,
+  faLaptop,
   faPuzzlePiece,
-} from '@fortawesome/fontawesome-pro-solid'
+} from '@fortawesome/fontawesome-free-solid'
 
 import {
   faFacebook,
@@ -24,8 +26,9 @@ fontawesome.library.add(
   faFacebook,
   faGithub,
   faGraduationCap,
-  faHandshakeAlt,
+  faHandshake,
   faHeart,
+  faLaptop,
   faMeetup,
   faPuzzlePiece,
   faSlack,
@@ -35,7 +38,7 @@ fontawesome.library.add(
 
 const ICONS = {
   admissions: ['fas', 'graduation-cap'],
-  apply: ['fas', 'graduation-cap'],
+  apply: ['fas', 'laptop'],
   facebook: ['fab', 'facebook'],
   faq: ['fas', 'puzzle-piece'],
   github: ['fab', 'github'],
@@ -43,6 +46,7 @@ const ICONS = {
   meetup: ['fab', 'meetup'],
   network: ['fas', 'handshake-alt'],
   program: ['fas', 'code'],
+  referrals: ['fas', 'comment'],
   slack: ['fab', 'slack'],
   twitter: ['fab', 'twitter'],
   youtube: ['fab', 'youtube'],
