@@ -5,7 +5,7 @@ const AcademyApplyPage = () => (
   <div className="AcademyPage Apply">
     <AcademyNavigation />
     <div className="wrap">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScngYiijwiO8wYDvG1POJy5AAp4A5eGgk8LWdlmRZrPc4lDIg/viewform?embedded=true">Loading...</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2ZJsD6RqOnGq2lAYz9DDD7JZ5hjKDvUXxeG3AraQFeyctbw/viewform?embedded=true">Loading...</iframe>
     </div>
   </div>
 )
