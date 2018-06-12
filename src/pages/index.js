@@ -43,6 +43,7 @@ const IndexPage = () => (
           <p className="cta">
             <Link to="/academy/apply">Apply now</Link>
             <Link to="/academy">Find out more</Link>
+            <Link to="/academy/apply">Apply now</Link>
           </p>
         </aside>
       </div>

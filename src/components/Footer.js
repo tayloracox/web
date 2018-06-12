@@ -27,7 +27,7 @@ const Footer = () => (
       <div className="locate">
         <h3>Location</h3>
         <p>
-          <a href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z">
+          <a href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z" target="_blank">
             2220 Cental Ave
           </a>
           <br />
@@ -68,7 +68,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href="https://suncoast-devs.slack.com/messages" target="_blank">
+            <a href="https://suncoast-devs.slack.com" target="_blank">
               <Icon name="slack" />
             </a>
           </li>
@@ -93,7 +93,7 @@ const Footer = () => (
     </section>
     <p className="copyright">
       &copy; 2018 Suncoast Developers Guild, Inc.&nbsp;
-      <a href="https://github.com/suncoast-devs/web">
+      <a href="https://github.com/suncoast-devs/web" target="_blank">
         <Icon name="github" />
       </a>
     </p>
