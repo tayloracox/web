@@ -68,7 +68,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href="https://suncoast-devs.now.sh/" target="_blank">
+            <a href="https://suncoast-devs.slack.com" target="_blank">
               <Icon name="slack" />
             </a>
           </li>
