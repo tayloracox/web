@@ -56,7 +56,7 @@ const AcademyAdmissionsPage = () => (
 
       <h4>Financing &amp; Payment Options</h4>
 
-      <p>Options for finacing are coming soon!</p>
+      <p>Options for financing are coming soon!</p>
 
       {/* <h5>Example Lender</h5>
 
