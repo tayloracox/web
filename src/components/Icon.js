@@ -48,6 +48,7 @@ const ICONS = {
   program: ['fas', 'code'],
   referrals: ['fas', 'comment'],
   slack: ['fab', 'slack'],
+  success: ['fas', 'heart'],
   twitter: ['fab', 'twitter'],
   youtube: ['fab', 'youtube'],
 }

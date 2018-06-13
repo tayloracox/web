@@ -29,6 +29,14 @@ const AcademyNavigation = () => (
           Refer
         </Link>
       </li>
+      <li>
+        <Link to="/academy/success" activeClassName="active">
+          <figure>
+            <Icon name="success" />
+          </figure>
+          Success Stories
+        </Link>
+      </li>
       {/* <li>
         <Link to="/academy/network" activeClassName="active">
           <figure>
