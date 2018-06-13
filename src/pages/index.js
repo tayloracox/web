@@ -129,7 +129,7 @@ const IndexPage = () => (
           <h3>Donate</h3>
           <p className="desc">Every dollar helps us fulfill our mission.</p>
           <p className="cta">
-            <Link to="/donate">Give Today</Link>
+            <a href="http://store.suncoast.io/">Give Today</a>
           </p>
         </aside>
 
