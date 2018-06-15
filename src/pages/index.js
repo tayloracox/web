@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Icon from '../components/Icon'
+import Engagement from '../components/Engagement'
 import logoBanner from '../images/banner.svg'
 import swagIllustration from '../images/swag.svg'
 import logoJunior from '../images/junior.svg'
@@ -94,54 +95,30 @@ const IndexPage = () => (
       <h2 id="getting-involved">Getting Involved</h2>
 
       <div className="ways">
-        <aside className="engage">
-          <h3>Engage</h3>
-          <p className="desc">
-            Checkout an event, or chat with us on our public Slack.
-          </p>
-          <p className="cta">
-            <Link to="/community">Join Us</Link>
-          </p>
-        </aside>
+        <Engagement title="Engage" link="/community" label="Join Us">
+          Checkout an event, or chat with us on our public Slack.
+        </Engagement>
 
-        <aside className="volunteer">
-          <h3>Volunteer</h3>
-          <p className="desc">
-            Help us by mentoring the next generation of software engineers.
-          </p>
-          <p className="cta">
-            <Link to="/volunteer">Sign Up</Link>
-          </p>
-        </aside>
+        <Engagement title="Volunteer" link="/volunteer" label="Sign Up">
+          Help us by mentoring the next generation of software engineers.
+        </Engagement>
 
-        <aside className="hire">
-          <h3>Hire</h3>
-          <p className="desc">
-            See which of our highly sought-after graduates might be a fit for
-            your company.
-          </p>
-          <p className="cta">
-            <Link to="/academy/network">Meet Alumni</Link>
-          </p>
-        </aside>
+        <Engagement title="Hire" link="/academy/network" label="Meet Alumni">
+          See which of our highly sought-after graduates might be a fit for your
+          company.
+        </Engagement>
 
-        <aside className="donate">
-          <h3>Donate</h3>
-          <p className="desc">Every dollar helps us fulfill our mission.</p>
-          <p className="cta">
-            <a href="http://store.suncoast.io/">Give Today</a>
-          </p>
-        </aside>
+        <Engagement
+          title="Donate"
+          link="http://store.suncoast.io/"
+          label="Give Today"
+        >
+          Every dollar helps us fulfill our mission.
+        </Engagement>
 
-        <aside className="learn">
-          <h3>Learn</h3>
-          <p className="desc">
-            Join our next cohort of students and learn to be a web developer.
-          </p>
-          <p className="cta">
-            <Link to="/academy">Apply Now</Link>
-          </p>
-        </aside>
+        <Engagement title="Learn" link="/academy" label="Apply Now">
+          Join our next cohort of students and learn to be a web developer.
+        </Engagement>
       </div>
     </section>
   </div>
