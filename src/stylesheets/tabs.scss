@@ -1,0 +1,23 @@
+.react-tabs {
+  &__tab-list {
+    border-bottom: 1px solid darken($cream, 20%);
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &__tab {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-bottom: thick solid transparent;
+
+    &--selected {
+      border-color: darken($cream, 20%);
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
