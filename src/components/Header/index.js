@@ -81,15 +81,13 @@ class Header extends React.Component {
               >
                 Community
               </Link>
-              <li>
-                <Link
-                  to="/academy"
-                  activeClassName="active"
-                  onClick={this.closeMenu}
-                >
-                  Academy
-                </Link>
-              </li>
+              <Link
+                to="/academy"
+                activeClassName="active"
+                onClick={this.closeMenu}
+              >
+                Academy
+              </Link>
               <Link
                 to="/team"
                 activeClassName="active"
