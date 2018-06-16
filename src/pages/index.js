@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Icon from '../components/Icon'
 import Engagement from '../components/Engagement'
 import logoBanner from '../images/banner.svg'
@@ -25,9 +26,9 @@ const IndexPage = () => (
           </p>
           <p className="cta">
             <Link to="/community">Explore our community</Link>
-            <a href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
+            <OutboundLink href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
               Join us on Slack <Icon name="slack" />
-            </a>
+            </OutboundLink>
           </p>
         </aside>
       </div>
@@ -85,7 +86,9 @@ const IndexPage = () => (
         <aside>
           <p>Get shirts, stickers and other stunning swag from our store.</p>
           <p className="cta">
-            <a href="http://store.suncoast.io/">Shop now</a>
+            <OutboundLink href="http://store.suncoast.io/">
+              Shop now
+            </OutboundLink>
           </p>
         </aside>
       </div>

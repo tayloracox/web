@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Icon from './Icon'
 import logoMain from '../images/logo.svg'
 
@@ -18,7 +19,9 @@ const Footer = () => (
           not-for-profit corporation and registered 501(c)(3) organization.
         </p>
         <p>
-          <a href="mailto:hello@suncoast.io">hello@suncoast.io</a>
+          <OutboundLink href="mailto:hello@suncoast.io">
+            hello@suncoast.io
+          </OutboundLink>
         </p>
         <p>
           Questions? <Link to="/contact">Contact Us</Link>.
@@ -27,14 +30,14 @@ const Footer = () => (
       <div className="locate">
         <h3>Location</h3>
         <p>
-          <a
+          <OutboundLink
             href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z"
             target="_blank"
           >
             2220 Cental Ave
-          </a>
-          <br />
-          St Petersburg, FL 33712
+            <br />
+            St Petersburg, FL 33712
+          </OutboundLink>
         </p>
         <ul>
           <li>
@@ -51,38 +54,41 @@ const Footer = () => (
       <div className="site">
         <ul className="social">
           <li>
-            <a
+            <OutboundLink
               href="https://www.facebook.com/SuncoastDevelopersGuild/"
               target="_blank"
             >
               <Icon name="facebook" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href="https://twitter.com/suncoastio" target="_blank">
+            <OutboundLink href="https://twitter.com/suncoastio" target="_blank">
               <Icon name="twitter" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a
+            <OutboundLink
               href="https://www.meetup.com/suncoast-developers-guild/"
               target="_blank"
             >
               <Icon name="meetup" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a
+            <OutboundLink
               href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg"
               target="_blank"
             >
               <Icon name="youtube" />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href="https://suncoast-devs.slack.com" target="_blank">
+            <OutboundLink
+              href="https://suncoast-devs.slack.com"
+              target="_blank"
+            >
               <Icon name="slack" />
-            </a>
+            </OutboundLink>
           </li>
         </ul>
         <nav>
@@ -105,9 +111,9 @@ const Footer = () => (
     </section>
     <p className="copyright">
       &copy; 2018 Suncoast Developers Guild, Inc.&nbsp;
-      <a href="https://github.com/suncoast-devs/web" target="_blank">
+      <OutboundLink href="https://github.com/suncoast-devs/web" target="_blank">
         <Icon name="github" />
-      </a>
+      </OutboundLink>
     </p>
     <p className="love">
       Made with <Icon name="heart" /> in St Petersburg, Florida.

@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
 import Link, { navigateTo } from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 class Engagement extends Component {
-  constructor(props) {
-    super(props)
-    this.linkRef = React.createRef()
-  }
-
-  _click = () => {
-    console.log('Clicked', this.linkRef.current)
-    if (this.linkRef.current.click) {
-      this.linkRef.current.click()
-    } else {
-      navigateTo(this.linkRef.current.props.to)
-    }
+  _click = event => {
+    const a = event.target.querySelector('a')
+    if (a) a.click()
   }
 
   render() {
@@ -23,13 +15,11 @@ class Engagement extends Component {
         <p className="desc">{this.props.children}</p>
         <p className="cta">
           {/^\//.test(this.props.link) ? (
-            <Link to={this.props.link} ref={this.linkRef}>
-              {this.props.label}
-            </Link>
+            <Link to={this.props.link}>{this.props.label}</Link>
           ) : (
-            <a href={this.props.link} ref={this.linkRef}>
+            <OutboundLink href={this.props.link}>
               {this.props.label}
-            </a>
+            </OutboundLink>
           )}
         </p>
       </aside>

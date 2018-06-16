@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Meetup from '../components/Meetup'
 import orgs from '../orgs.json'
 
@@ -304,7 +305,9 @@ const ConductPage = ({ data }) => (
               <td>Tampa.rb</td>
               <td>Jason L Perry</td>
               <td>
-                <a href="mailto:jasper@ambethia.com">jason@suncoast.io</a>
+                <OutboundLink href="mailto:jasper@ambethia.com">
+                  jason@suncoast.io
+                </OutboundLink>
               </td>
               <td>@ambethia</td>
               <td>@ambethia</td>
@@ -313,7 +316,9 @@ const ConductPage = ({ data }) => (
               <td>Tampa.rb</td>
               <td>Gavin Stark</td>
               <td>
-                <a href="mailto:gavin@gstark.com">gavin@suncoast.io</a>
+                <OutboundLink href="mailto:gavin@gstark.com">
+                  gavin@suncoast.io
+                </OutboundLink>
               </td>
               <td>@gavinstark</td>
               <td>@gavinstark</td>
@@ -322,7 +327,9 @@ const ConductPage = ({ data }) => (
               <td>Suncoast.js</td>
               <td>Julian Duque</td>
               <td>
-                <a href="mailto:julianduque@gmail.com">julianduque@gmail.com</a>
+                <OutboundLink href="mailto:julianduque@gmail.com">
+                  julianduque@gmail.com
+                </OutboundLink>
               </td>
               <td>@julian_duque</td>
               <td>@julianduque</td>
@@ -331,9 +338,9 @@ const ConductPage = ({ data }) => (
               <td>Suncoast.js</td>
               <td>Alyssa Amrhein</td>
               <td>
-                <a href="mailto:heyahharissa@gmail.com">
+                <OutboundLink href="mailto:heyahharissa@gmail.com">
                   heyahharissa@gmail.com
-                </a>
+                </OutboundLink>
               </td>
               <td>@ahharissa</td>
               <td>@ahharissa</td>
@@ -342,9 +349,9 @@ const ConductPage = ({ data }) => (
               <td>Girl Develop It</td>
               <td>Andrea Cannistra</td>
               <td>
-                <a href="mailto:andrea@girldevelopit.com">
+                <OutboundLink href="mailto:andrea@girldevelopit.com">
                   andrea@girldevelopit.com
-                </a>
+                </OutboundLink>
               </td>
               <td>@acannist</td>
               <td>@andrea_gditampabay</td>
@@ -381,24 +388,24 @@ const ConductPage = ({ data }) => (
         </p>
         <p>
           The Suncoast Developers Guild developed this code of conduct using the{' '}
-          <a
+          <OutboundLink
             href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy"
             rel="nofollow"
           >
             anti-harassment policy
-          </a>{' '}
+          </OutboundLink>{' '}
           created by the{' '}
-          <a href="https://adainitiative.org" rel="nofollow">
+          <OutboundLink href="https://adainitiative.org" rel="nofollow">
             Ada Initiative
-          </a>{' '}
+          </OutboundLink>{' '}
           (and other volunteers) as well as{' '}
-          <a href="https://github.com/rubyberlin/code-of-conduct">
+          <OutboundLink href="https://github.com/rubyberlin/code-of-conduct">
             Ruby Berlin's Code of Conduct
-          </a>{' '}
+          </OutboundLink>{' '}
           and the{' '}
-          <a href="http://citizencodeofconduct.org" rel="nofollow">
+          <OutboundLink href="http://citizencodeofconduct.org" rel="nofollow">
             Citizen Code of Conduct
-          </a>{' '}
+          </OutboundLink>{' '}
           as starting points.
         </p>
         <p>

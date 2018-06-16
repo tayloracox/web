@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { elastic as Menu } from 'react-burger-menu'
-
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import logoBanner from '../../images/icon-logo.svg'
 
 class Header extends React.Component {
@@ -50,7 +50,9 @@ class Header extends React.Component {
           </nav>
           <ul>
             <li>
-              <a href="tel:7272012012">+1 (727) 201-2012</a>
+              <OutboundLink href="tel:7272012012">
+                +1 (727) 201-2012
+              </OutboundLink>
             </li>
             <li>
               <Link className="cta" to="/#getting-involved">
@@ -103,7 +105,9 @@ class Header extends React.Component {
                 Contact
               </Link>
               <p>
-                <a href="tel:7272012012">+1 (727) 201-2012</a>
+                <OutboundLink href="tel:7272012012">
+                  +1 (727) 201-2012
+                </OutboundLink>
               </p>
             </Menu>
           </div>

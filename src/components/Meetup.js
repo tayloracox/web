@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const UPTO = 20
 
@@ -51,7 +52,7 @@ const Meetup = ({ group }) => (
     <img src={photo(group)} alt={`${group.name} Logo`} />
     <div className="info">
       <h3>
-        <a href={group.link}>{group.name}</a>
+        <OutboundLink href={group.link}>{group.name}</OutboundLink>
       </h3>
       <p>{population(group)}</p>
     </div>

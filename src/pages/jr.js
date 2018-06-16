@@ -1,37 +1,40 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import logoJunior from '../images/junior.svg'
 import ClassImg1 from '../images/jr/october2017.jpg'
 import ClassImg2 from '../images/jr/august2017.jpg'
 
 const ScratchLink = (
-  <a href="https://scratch.mit.edu/" target="_blank">
+  <OutboundLink href="https://scratch.mit.edu/" target="_blank">
     Scratch
-  </a>
+  </OutboundLink>
 )
 
 const KidsEmail = (
-  <a
+  <OutboundLink
     href="mailto:kids@suncoast.io?Subject=Host%20a%20Kids%20Class"
     target="_top"
   >
     contact us
-  </a>
+  </OutboundLink>
 )
 
 const OutsideHost = (
-  <a href="https://gooee.com/" target="_blank">
+  <OutboundLink href="https://gooee.com/" target="_blank">
     Gooee
-  </a>
+  </OutboundLink>
 )
 
 const MeetupLink = (
-  <a href="https://www.meetup.com/suncoast-developers-guild/">MeetUp.com</a>
+  <OutboundLink href="https://www.meetup.com/suncoast-developers-guild/">
+    MeetUp.com
+  </OutboundLink>
 )
 
 const ConsetForm = (
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
+  <OutboundLink href="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
     our mailing list.
-  </a>
+  </OutboundLink>
 )
 
 const JuniorPage = () => (
