@@ -77,14 +77,18 @@
 
   &.Success {
     .quote-wrap {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
     .quote-box {
       width: 30%;
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
     }
     .quote-box, .quote-box-full {
       .author {
@@ -94,13 +98,12 @@
     }
     .cta {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 30px;
       a {
         text-decoration: none;
         background-color: $purple;
         color: lighten($cream, 25%);
         border: 0.2rem solid $purple;
-        padding: 0.3rem;
         border-radius: 0.2rem;
         transition: all 200ms ease;
         text-transform: uppercase;
