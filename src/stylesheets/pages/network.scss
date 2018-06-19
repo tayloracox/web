@@ -1,0 +1,27 @@
+.AcademyPage.Network {
+  .companies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      margin: 1rem;
+      width: 100%;
+      max-width: 300px;
+
+      &.netsvs {
+        max-width: 120px;
+      }
+    }
+
+    @media (max-width: 48rem) {
+      flex-direction: column;
+    }
+  }
+
+  .why {
+    margin-left: 1rem;
+    list-style: disc;
+  }
+}

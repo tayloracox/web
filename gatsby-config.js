@@ -7,6 +7,9 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -14,9 +17,15 @@ module.exports = {
         path: `${__dirname}/data/organizations/`,
       },
     },
-    'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-120953554-1',
       },
