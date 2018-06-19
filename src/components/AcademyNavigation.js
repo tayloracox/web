@@ -37,14 +37,14 @@ const AcademyNavigation = () => (
           Success Stories
         </Link>
       </li>
-      {/* <li>
+      <li>
         <Link to="/academy/network" activeClassName="active">
           <figure>
             <Icon name="network" />
           </figure>
           Hiring Network
         </Link>
-      </li> */}
+      </li>
       {/* <li>
         <Link to="/academy/faq" activeClassName="active">
           <figure>
