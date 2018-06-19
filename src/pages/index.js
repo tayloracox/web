@@ -106,7 +106,7 @@ const IndexPage = () => (
           Help us by mentoring the next generation of software engineers.
         </Engagement>
 
-        <Engagement title="Hire" link="/academy/network" label="Meet Alumni">
+        <Engagement title="Hire" link="/academy/success" label="Meet Alumni">
           See which of our highly sought-after graduates might be a fit for your
           company.
         </Engagement>
