@@ -13,6 +13,7 @@
 
     ul {
       display: flex;
+      flex-wrap: wrap;
       border-left: thin solid lighten($darkGrey, 10%);
       margin: 0;
     }
@@ -21,6 +22,7 @@
       text-align: center;
       border-right: thin solid lighten($darkGrey, 10%);
       flex-basis: 12rem;
+      flex: 1;
       display: flex;
 
       a {
@@ -77,16 +79,17 @@
 
   &.Success {
     .quote-wrap {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
     .quote-box {
       width: 30%;
     }
-    .quote-box, .quote-box-full {
+    .quote-box,
+    .quote-box-full {
       .author {
         text-align: right;
         font-weight: 800;
