@@ -30,6 +30,13 @@ const AcademyNetworkPage = props => (
         <li>
           <Img title="Gooee" alt="Gooee Logo" sizes={props.data.gooee.sizes} />
         </li>
+        <li>
+          <Img
+            title="Clarity Services"
+            alt="Clarity Services"
+            sizes={props.data.clarity.sizes}
+          />
+        </li>
         <li className="netsvs">
           <Img
             title="NetSynergy Virtual Solutions"
@@ -66,6 +73,11 @@ export const pageQuery = graphql`
       }
     }
     bisk: imageSharp(id: { regex: "/network/bisk/" }) {
+      sizes(maxWidth: 300) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    clarity: imageSharp(id: { regex: "/network/clarity/" }) {
       sizes(maxWidth: 300) {
         ...GatsbyImageSharpSizes
       }

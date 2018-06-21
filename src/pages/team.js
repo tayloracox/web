@@ -1,21 +1,22 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
-import portraitJason from '../images/team/jason.jpg'
-import portraitToni from '../images/team/toni.jpg'
-import portraitGavin from '../images/team/gavin.jpg'
-import portraitMark from '../images/team/mark.jpg'
+import portraitJason from '../images/people/jason.jpg'
+import portraitToni from '../images/people/toni.jpg'
+import portraitGavin from '../images/people/gavin.jpg'
+import portraitMark from '../images/people/mark.jpg'
+import portraitJim from '../images/people/jim-james.jpg'
+import portraitAdam from '../images/people/adam-recvlohe.jpg'
 
-const TeamPage = () => (
+const TeamPage = props => (
   <div className="TeamPage">
     <div className="wrap">
       <h2>Our Team</h2>
 
-      <div className="team-bios">
-        <div className="card-deck">
+      <div className="bios">
           <div className="card">
-            <img
-              className="card-img-top"
-              src={portraitJason}
+            <Img
+              sizes={{ ...props.data.jason.sizes, aspectRatio: 1.6 }}
               alt="A portrait of Jason"
             />
             <div className="card-body tab">
@@ -46,9 +47,8 @@ const TeamPage = () => (
           </div>
 
           <div className="card">
-            <img
-              className="card-img-top"
-              src={portraitToni}
+            <Img
+              sizes={{ ...props.data.toni.sizes, aspectRatio: 1.6 }}
               alt="A portrait of Toni"
             />
             <div className="card-body tab">
@@ -80,9 +80,8 @@ const TeamPage = () => (
 
         <div className="card-deck">
           <div className="card">
-            <img
-              className="card-img-top"
-              src={portraitGavin}
+            <Img
+              sizes={{ ...props.data.gavin.sizes, aspectRatio: 1.6 }}
               alt="A portrait of Gavin"
             />
             <div className="card-body tab">
@@ -112,9 +111,8 @@ const TeamPage = () => (
           </div>
 
           <div className="card">
-            <img
-              className="card-img-top"
-              src={portraitMark}
+            <Img
+              sizes={{ ...props.data.mark.sizes, aspectRatio: 1.6 }}
               alt="A portrait of Mark"
             />
             <div className="card-body tab">
@@ -142,10 +140,78 @@ const TeamPage = () => (
               </p>
             </div>
           </div>
+
+      <h2>Our Supporters</h2>
+
+      <div className="bios">
+        <div className="card">
+          <Img
+            sizes={{ ...props.data.jimJames.sizes, aspectRatio: 1.6 }}
+            alt="A portrait of Jim"
+          />
+          <h4>Jim James</h4>
+          <p>
+            I came to Tampa to help start a FinTech company that helps ordinary
+            Americans get fair access to small-dollar loans. We sold it to
+            Experian in 2017 and I decided to stay for the hurricanes, termites,
+            humidity, and the awesome Ruby community we discovered in the
+            Suncoast Developers Guild. Let&lsquo;s build something new together.
+          </p>
+        </div>
+
+        <div className="card">
+          <Img
+            sizes={{ ...props.data.adamRecvlohe.sizes, aspectRatio: 1.6 }}
+            alt="A portrait of Adam"
+          />
+          <h4>Adam Recvlohe</h4>
+          <p>
+            The main reason I wanted to support the Suncoast Developers Guild
+            was because of the sense of community Toni was able to foster
+            amongst the entire Tampa Bay tech scene. There were over forty plus
+            meetup groups at the previous coding bootcamp location and Toni was
+            able to coordinate them all seamlessly. It was important to me that
+            this sense of community shared amongst everyone in the tech industry
+            continued on, hopefully for many more years to come.
+          </p>
         </div>
       </div>
-    </div>
   </div>
 )
+
+export const pageQuery = graphql`
+  query TeamPageQuery {
+    jason: imageSharp(id: { regex: "/people/jason/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    toni: imageSharp(id: { regex: "/people/toni/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    gavin: imageSharp(id: { regex: "/people/gavin/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    mark: imageSharp(id: { regex: "/people/mark/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    jimJames: imageSharp(id: { regex: "/people/jim-james/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    adamRecvlohe: imageSharp(id: { regex: "/people/adam-recvlohe/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
 
 export default TeamPage

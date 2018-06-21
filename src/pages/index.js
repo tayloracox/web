@@ -119,7 +119,7 @@ const IndexPage = () => (
           Every dollar helps us fulfill our mission.
         </Engagement>
 
-        <Engagement title="Learn" link="/academy" label="Apply Now">
+        <Engagement title="Learn" link="/academy/apply" label="Apply Now">
           Join our next cohort of students and learn to be a web developer.
         </Engagement>
       </div>

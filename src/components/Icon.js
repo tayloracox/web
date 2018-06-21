@@ -44,7 +44,7 @@ const ICONS = {
   github: ['fab', 'github'],
   heart: ['fas', 'heart'],
   meetup: ['fab', 'meetup'],
-  network: ['fas', 'handshake-alt'],
+  network: ['fas', 'handshake'],
   program: ['fas', 'code'],
   referrals: ['fas', 'comment'],
   slack: ['fab', 'slack'],

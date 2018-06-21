@@ -1,56 +1,42 @@
 .TeamPage {
-  .team-bios {
+  .bios {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  .card-deck {
-    display: -ms-flexbox;
-    display: flex;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
-    & .card {
-      margin-bottom: 15px;
-    }
-    .card {
-      position: relative;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      min-width: 0;
-      word-wrap: break-word;
-      background-color: rgba(255, 255, 255, .6);
-      background-clip: border-box;
-      width: 50%;
-      margin-right: 15px;
-      border-bottom: 10px solid #5a9090;
+  }
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+  .card {
+    background-color: transparentize(lighten($cream, 60%), 0.6);
+    padding: 1rem;
+    border-bottom: thick solid #5a9090;
+    flex: 1;
+    flex-basis: 18rem;
+    max-width: 26rem;
+    margin: 1rem;
 
-      img.card-img-top {
-        padding: 20px;
-      }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
-  .card-body {
-    padding: 20px;
-    line-height: 1.3em;
+  h4 {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    margin: 0.5rem 0 0 0;
+  }
 
-    .card-title {
-      font-size: 1.3em;
-      margin: 0;
-    }
+  h6 {
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1rem;
+    margin: 0;
+    font-weight: 300;
+  }
 
-    .card-subtitle {
-      font-size: 1.1em;
-      margin: 0;
-      font-weight: 300;
-    }
+  p {
+    line-height: 1.4rem;
   }
 
   .read-more {
@@ -63,68 +49,39 @@
     z-index: -1;
   }
 
-  @media screen and (max-width: 1000px) {
-    .card-deck {
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .card {
-        width: 75%;
-        margin-right: 0;
-      }
-
-      img.card-img-top {
-        width: calc(95% - 20px);
-        height: auto;
+  @media screen and (max-width: 48rem) {
+    .card {
+      max-width: 42rem;
+      p {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
       }
     }
   }
 
-  @media screen and (max-width: 700px) {
+  /* Accordion styles */
 
-    .card-deck {
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .read-more {
+    display: block;
+    color: $purple;
+  }
 
-      .card {
-        width: 100%;
-        margin-right: 0;
-      }
+  .tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 90%;
+    overflow: hidden;
+  }
 
-      img.card-img-top {
-        width: calc(95% - 20px);
-        height: auto;
-      }
-    }
-
-    /* Accordion styles */
-
-    .read-more {
-      display: block;
-      color: $purple;
-    }
-
-    .tab {
-      position: relative;
-      margin-bottom: 1px;
-      width: 90%;
-      overflow: hidden;
-    }
-
-    .tab-content {
-      max-height: 0;
-      overflow: hidden;
-      -webkit-transition: max-height .35s;
-      -o-transition: max-height .35s;
-      transition: max-height .35s;
-    }
-    /* :checked */
-    input:checked ~ .tab-content {
-      max-height: 500px;
-    }
+  .tab-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+  }
+  /* :checked */
+  input:checked ~ .tab-content {
+    max-height: 500px;
   }
 }

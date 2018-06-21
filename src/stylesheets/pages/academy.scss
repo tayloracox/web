@@ -13,6 +13,7 @@
 
     ul {
       display: flex;
+      flex-wrap: wrap;
       border-left: thin solid lighten($darkGrey, 10%);
       margin: 0;
     }
@@ -21,6 +22,7 @@
       text-align: center;
       border-right: thin solid lighten($darkGrey, 10%);
       flex-basis: 12rem;
+      flex: 1;
       display: flex;
 
       a {
@@ -90,7 +92,8 @@
         width: 100%;
       }
     }
-    .quote-box, .quote-box-full {
+    .quote-box,
+    .quote-box-full {
       .author {
         text-align: right;
         font-weight: 800;
