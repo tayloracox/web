@@ -84,9 +84,15 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 48rem) {
+        flex-direction: column;
+      }
     }
     .quote-box {
       width: 30%;
+      @media (max-width: 48rem) {
+        width: 100%;
+      }
     }
     .quote-box,
     .quote-box-full {
