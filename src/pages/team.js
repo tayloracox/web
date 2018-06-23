@@ -13,7 +13,8 @@ const TeamPage = props => (
     <div className="wrap">
       <h2>Our Team</h2>
 
-      <div className="bios">
+      <div className="team-bios">
+        <div className="card-deck">
           <div className="card">
             <Img
               sizes={{ ...props.data.jason.sizes, aspectRatio: 1.6 }}
@@ -140,42 +141,57 @@ const TeamPage = props => (
               </p>
             </div>
           </div>
-
-      <h2>Our Supporters</h2>
-
+        </div>
+      </div>
       <div className="bios">
         <div className="card">
           <Img
             sizes={{ ...props.data.jimJames.sizes, aspectRatio: 1.6 }}
             alt="A portrait of Jim"
           />
-          <h4>Jim James</h4>
-          <p>
-            I came to Tampa to help start a FinTech company that helps ordinary
-            Americans get fair access to small-dollar loans. We sold it to
-            Experian in 2017 and I decided to stay for the hurricanes, termites,
-            humidity, and the awesome Ruby community we discovered in the
-            Suncoast Developers Guild. Let&lsquo;s build something new together.
-          </p>
+          <div className="card-body tab">
+            <input id="tab-jj" type="checkbox" name="tabs" />
+            <label htmlFor="tab-jj">
+              <h4 className="card-title">Jim James</h4>
+              <p className="read-more cta">
+                <a>Read More</a>
+              </p>
+            </label>
+            <p className="card-text tab-content">
+              I came to Tampa to help start a FinTech company that helps ordinary
+              Americans get fair access to small-dollar loans. We sold it to
+              Experian in 2017 and I decided to stay for the hurricanes, termites,
+              humidity, and the awesome Ruby community we discovered in the
+              Suncoast Developers Guild. Let&lsquo;s build something new together.
+            </p>
+          </div>
         </div>
-
         <div className="card">
           <Img
             sizes={{ ...props.data.adamRecvlohe.sizes, aspectRatio: 1.6 }}
             alt="A portrait of Adam"
           />
-          <h4>Adam Recvlohe</h4>
-          <p>
-            The main reason I wanted to support the Suncoast Developers Guild
-            was because of the sense of community Toni was able to foster
-            amongst the entire Tampa Bay tech scene. There were over forty plus
-            meetup groups at the previous coding bootcamp location and Toni was
-            able to coordinate them all seamlessly. It was important to me that
-            this sense of community shared amongst everyone in the tech industry
-            continued on, hopefully for many more years to come.
-          </p>
+          <div className="card-body tab">
+            <input id="tab-adam" type="checkbox" name="tabs" />
+            <label htmlFor="tab-adam">
+              <h4 className="card-title">Adam Recvlohe</h4>
+              <p className="read-more cta">
+                <a>Read More</a>
+              </p>
+            </label>
+            <p className="card-text tab-content">
+              The main reason I wanted to support the Suncoast Developers Guild
+              was because of the sense of community Toni was able to foster
+              amongst the entire Tampa Bay tech scene. There were over forty plus
+              meetup groups at the previous coding bootcamp location and Toni was
+              able to coordinate them all seamlessly. It was important to me that
+              this sense of community shared amongst everyone in the tech industry
+              continued on, hopefully for many more years to come.
+            </p>
+          </div>
         </div>
       </div>
+    </div>
   </div>
 )
 
