@@ -158,11 +158,7 @@ const TeamPage = props => (
               </p>
             </label>
             <p className="card-text tab-content">
-              I came to Tampa to help start a FinTech company that helps ordinary
-              Americans get fair access to small-dollar loans. We sold it to
-              Experian in 2017 and I decided to stay for the hurricanes, termites,
-              humidity, and the awesome Ruby community we discovered in the
-              Suncoast Developers Guild. Let&lsquo;s build something new together.
+              I came to Tampa to help start a FinTech company that helps ordinary Americans get fair access to small-dollar loans. We sold it to Experian in 2017 and I decided to stay for the hurricanes, termites, humidity, and the awesome Ruby community we discovered in the Suncoast Developers Guild. Let&lsquo;s build something new together.
             </p>
           </div>
         </div>
@@ -180,13 +176,7 @@ const TeamPage = props => (
               </p>
             </label>
             <p className="card-text tab-content">
-              The main reason I wanted to support the Suncoast Developers Guild
-              was because of the sense of community Toni was able to foster
-              amongst the entire Tampa Bay tech scene. There were over forty plus
-              meetup groups at the previous coding bootcamp location and Toni was
-              able to coordinate them all seamlessly. It was important to me that
-              this sense of community shared amongst everyone in the tech industry
-              continued on, hopefully for many more years to come.
+              The main reason I wanted to support the Suncoast Developers Guild was because of the sense of community Toni was able to foster amongst the entire Tampa Bay tech scene. There were over forty plus meetup groups at the previous coding bootcamp location and Toni was able to coordinate them all seamlessly. It was important to me that this sense of community shared amongst everyone in the tech industry continued on, hopefully for many more years to come.
             </p>
           </div>
         </div>
