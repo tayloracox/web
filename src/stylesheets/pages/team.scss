@@ -39,6 +39,16 @@
     line-height: 1.4rem;
   }
 
+  .read-more {
+    display: none;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
   @media screen and (max-width: 48rem) {
     .card {
       max-width: 42rem;
@@ -47,5 +57,31 @@
         line-height: 1.2rem;
       }
     }
+  }
+
+  /* Accordion styles */
+
+  .read-more {
+    display: block;
+    color: $purple;
+  }
+
+  .tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .tab-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+  }
+  /* :checked */
+  input:checked ~ .tab-content {
+    max-height: 500px;
   }
 }
