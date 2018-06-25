@@ -111,14 +111,10 @@ const TeamPage = props => (
         </Card>
       </div>
 
-      <h2>Our Supporters</h2>
+      <h2>Our Supporters & Volunteers</h2>
 
       <div className="bios">
-        <Card
-          id="jimJames"
-          name="Jim James"
-          imgData={props.data.jimJames.sizes}
-        >
+        <Card id="jim" name="Jim James" imgData={props.data.jim.sizes}>
           I came to Tampa to help start a FinTech company that helps ordinary
           Americans get fair access to small-dollar loans. We sold it to
           Experian in 2017 and I decided to stay for the hurricanes, termites,
@@ -126,18 +122,26 @@ const TeamPage = props => (
           Developers Guild. Let&lsquo;s build something new together.
         </Card>
 
-        <Card
-          id="adamRecvlohe"
-          name="Adam Recvlohe"
-          imgData={props.data.adamRecvlohe.sizes}
-        >
-          The main reason I wanted to support the Suncoast Developers Guild was
-          because of the sense of community Toni was able to foster amongst the
-          entire Tampa Bay tech scene. There were over forty plus meetup groups
-          at the previous coding bootcamp location and Toni was able to
-          coordinate them all seamlessly. It was important to me that this sense
-          of community shared amongst everyone in the tech industry continued
-          on, hopefully for many more years to come.
+        <Card id="liz" name="Liz Tiller" imgData={props.data.liz.sizes}>
+          Liz is a recovering academic turned javascript developer thanks to The
+          Iron Yard. When TIY shut down and the meetups scattered, she wanted to
+          make sure the kids classes weren’t forgotten. She helped rebrand and
+          continue the classes as SDG Jr so children could continue to learn to
+          code for free. Liz became the first Tampa City Organizer for Tech
+          Ladies in order to support and lift up women in all branches of
+          technology.
+        </Card>
+
+        <Card id="taylor" name="Taylor Cox" imgData={props.data.taylor.sizes}>
+          Hailing from Indiana, Taylor is a digital designer turned front-end
+          developer by way of The Iron Yard and stealing her parents' ThinkPad
+          as a child to write CSS for her Neopets profile page. As a student in
+          the final cohort of The Iron Yard in Tampa Bay, Taylor became
+          ingrained in the community through the staff's encouragement to
+          participate in local hackathons, meetups, and conferences. Now, she
+          serves as a co-organizer for SDG Jr. to promote the importance of
+          learning technology and problem solving skills to a younger
+          generation.
         </Card>
       </div>
     </div>
@@ -166,12 +170,17 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    jimJames: imageSharp(id: { regex: "/people/jim-james/" }) {
+    jim: imageSharp(id: { regex: "/people/jim/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
     }
-    adamRecvlohe: imageSharp(id: { regex: "/people/adam-recvlohe/" }) {
+    liz: imageSharp(id: { regex: "/people/liz/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    taylor: imageSharp(id: { regex: "/people/taylor/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
