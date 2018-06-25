@@ -16,7 +16,7 @@ const Card = ({ id, name, title, children, imgData }) => (
     />
     <div className="tab">
       <input id={`tab-${id}`} type="checkbox" name="tabs" />
-      <label for={`tab-${id}`}>
+      <label htmlFor={`tab-${id}`}>
         <h4>{name}</h4>
         <h6>{title}</h6>
         <p className="read-more cta">
