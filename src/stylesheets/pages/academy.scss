@@ -84,11 +84,13 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 48rem) {
+        flex-direction: column;
+      }
     }
     .quote-box {
       width: 30%;
-
-      @media screen and (max-width: 1000px) {
+      @media (max-width: 48rem) {
         width: 100%;
       }
     }
