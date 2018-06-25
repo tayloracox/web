@@ -33,8 +33,22 @@ const AcademyNetworkPage = props => (
         <li>
           <Img
             title="Clarity Services"
-            alt="Clarity Services"
+            alt="Clarity Services Logo"
             sizes={props.data.clarity.sizes}
+          />
+        </li>
+        <li>
+          <Img
+            title="Gitlab"
+            alt="Gitlab Logo"
+            sizes={props.data.gitlab.sizes}
+          />
+        </li>
+        <li>
+          <Img
+            title="Presence"
+            alt="Presence Logo"
+            sizes={props.data.presence.sizes}
           />
         </li>
         <li className="netsvs">
@@ -67,11 +81,6 @@ const AcademyNetworkPage = props => (
 
 export const pageQuery = graphql`
   query NetworkPageQuery {
-    gooee: imageSharp(id: { regex: "/network/gooee/" }) {
-      sizes(maxWidth: 300) {
-        ...GatsbyImageSharpSizes
-      }
-    }
     bisk: imageSharp(id: { regex: "/network/bisk/" }) {
       sizes(maxWidth: 300) {
         ...GatsbyImageSharpSizes
@@ -82,12 +91,27 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
+    gitlab: imageSharp(id: { regex: "/network/gitlab/" }) {
+      sizes(maxWidth: 300) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    gooee: imageSharp(id: { regex: "/network/gooee/" }) {
+      sizes(maxWidth: 300) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     netsvs: imageSharp(id: { regex: "/network/netsvs/" }) {
       sizes(maxWidth: 120) {
         ...GatsbyImageSharpSizes
       }
       resolutions(width: 120, height: 120) {
         ...GatsbyImageSharpResolutions
+      }
+    }
+    presence: imageSharp(id: { regex: "/network/presence/" }) {
+      sizes(maxWidth: 300) {
+        ...GatsbyImageSharpSizes
       }
     }
     proforma: imageSharp(id: { regex: "/network/proforma/" }) {

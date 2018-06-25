@@ -9,9 +9,16 @@
       margin: 1rem;
       width: 100%;
       max-width: 300px;
-
+      
       &.netsvs {
         max-width: 120px;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+      }
+
+      img {
+        border-radius: 0.5rem;
       }
     }
 
