@@ -21,11 +21,11 @@ const Head = () => (
       { name: 'twitter:creator', content: '@suncoastio' },
       {
         name: 'twitter:image:src',
-        content: 'https://suncoast.io/1024-512.png',
+        content: 'https://suncoast.io/assets/1024-512.png',
       },
       { name: 'og:title', content: 'Suncoast Developers Guild' },
       { name: 'og:description', content: DESCRIPTION },
-      { name: 'og:image', content: 'https://suncoast.io/1200-630.png' },
+      { name: 'og:image', content: 'https://suncoast.io/assets/1200-630.png' },
       { name: 'og:url', content: 'https://suncoast.io' },
       { name: 'og:site_name', content: 'Suncoast Developers Guild' },
       { name: 'og:locale', content: 'en_US' },
