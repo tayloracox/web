@@ -1,7 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-const DESCRIPTION = DESCRIPTION
+const DESCRIPTION =
+  'Suncoast Developers Guild is a collective of software engineers, programmers, and designers in Tampa Bay.'
 
 const Head = () => (
   <Helmet
