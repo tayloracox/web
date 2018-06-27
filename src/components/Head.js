@@ -20,7 +20,7 @@ const Head = () => (
       { name: 'twitter:site', content: '@suncoastio' },
       { name: 'twitter:creator', content: '@suncoastio' },
       {
-        name: 'twitter:image:src',
+        name: 'twitter:image',
         content: 'https://suncoast.io/assets/1024-512.png',
       },
       { name: 'og:title', content: 'Suncoast Developers Guild' },
