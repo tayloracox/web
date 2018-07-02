@@ -6,18 +6,18 @@ media_folder: static/media
 public_folder: /media
 collections:
   - name: faqs
-  - label: FAQs
-  folder: data/faqs
-  create: true
-  fields:
-    - name: title
-      label: Question
-    - name: body
-      label: Answer
-      widget: markdown
-    - label: position
-      name: Position (for ordering)
-      widget: number
+    label: FAQs
+    folder: data/faqs
+    create: true
+    fields:
+      - name: title
+        label: Question
+      - name: body
+        label: Answer
+        widget: markdown
+      - label: position
+        name: Position (for ordering)
+        widget: number
   - name: organizations
     label: Organizations
     folder: data/organizations

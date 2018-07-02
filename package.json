@@ -16,14 +16,16 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-sharp": "^1.6.27",
+    "immutable": "^3.8.2",
     "netlify-cms": "^1.9.2",
-    "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-burger-menu": "^2.4.4",
     "react-dom": "^16.3.1",
     "react-helmet": "^5.2.0",
-    "react-tabs": "^2.2.2"
+    "react-tabs": "^2.2.2",
+    "slate": "^0.34.2",
+    "systematize": "^3.1.0"
   },
   "license": "MIT",
   "scripts": {
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
+    "caniuse-db": "^1.0.30000861",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
