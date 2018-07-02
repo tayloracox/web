@@ -58,6 +58,13 @@ const AcademyAdmissionsPage = () => (
             programs. We are committed to providing an inclusive and welcoming
             environment for our staff, students, volunteers, and members.
           </p>
+
+          <h3>Program Catalog</h3>
+
+          <p>
+            For more information about our program and the admissions process{' '}
+            <a href="/catalog.pdf">download our program catalog</a>.
+          </p>
         </TabPanel>
         <TabPanel>
           <h3>Tuition</h3>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import AcademyNavigation from '../components/AcademyNavigation'
+import AcademyNavigation from '../../components/AcademyNavigation'
 
 const AcademyPage = () => (
   <div className="AcademyPage">

@@ -62,6 +62,9 @@ const AcademyNavigation = () => (
         </Link>
       </li>
     </ul>
+    <div className="note">
+      Our Summer 2018 cohort begins July 23<sup>rd</sup>!
+    </div>
   </nav>
 )
 
