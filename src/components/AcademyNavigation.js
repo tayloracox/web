@@ -22,6 +22,14 @@ const AcademyNavigation = () => (
         </Link>
       </li>
       <li>
+        <Link to="/academy/tuition" activeClassName="active">
+          <figure>
+            <Icon name="tuition" />
+          </figure>
+          Tuition &amp; Financing
+        </Link>
+      </li>
+      <li>
         <Link to="/academy/refer" activeClassName="active">
           <figure>
             <Icon name="referrals" />

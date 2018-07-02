@@ -130,4 +130,19 @@
       }
     }
   }
+
+  &.Tuition {
+    .financeOption {
+      font-size: 0.9rem;
+      border-bottom: thin solid darken($cream, 25%);
+      ul {
+        list-style: disc;
+        margin-left: 1rem;
+      }
+      .action {
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+  }
 }

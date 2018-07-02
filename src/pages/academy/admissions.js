@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+
 import AcademyNavigation from '../../components/AcademyNavigation'
 
 const AcademyAdmissionsPage = () => (
@@ -10,7 +11,6 @@ const AcademyAdmissionsPage = () => (
       <Tabs>
         <TabList>
           <Tab>Application Process</Tab>
-          <Tab>Tuition</Tab>
           <Tab>Requirements</Tab>
         </TabList>
 
@@ -65,43 +65,6 @@ const AcademyAdmissionsPage = () => (
             For more information about our program and the admissions process{' '}
             <a href="/catalog.pdf">download our program catalog</a>.
           </p>
-        </TabPanel>
-        <TabPanel>
-          <h3>Tuition</h3>
-
-          <p>
-            Tuition is a flat fee of $14,900 for the entire three-month program.
-            The tuition does not include any costs associated with parking,
-            meals, or any other fees not specifically provided for in this
-            catalog or the enrollment agreement. The tuition does not include
-            any costs that may be required for, or associated with, the purchase
-            of a laptop computer.
-          </p>
-
-          <h4>Payment</h4>
-
-          <p>
-            After being accepted in to the program, you can reserve a seat in
-            our course with a deposit of $1,000. The entire amount of the
-            deposit will be applied to your tuition balance, and the remaining
-            funds will be due before the first day of class. Payment can be made
-            by check, money order, debit, or credit card.
-          </p>
-
-          <h4>Financing &amp; Payment Options</h4>
-
-          <p>Options for financing are coming soon!</p>
-
-          {/* <h5>Example Lender</h5>
-
-          <ul>
-            <li>Loan Amount $14,900</li>
-            <li>Monthly Payments $250 - $350</li>
-            <li>Loan Term 36 - 60 months</li>
-            <li>Total Interest $2,500 - $3,000</li>
-            <li>Total Repayment $17,400 - $17,900</li>
-            <li>Notes 5% - 17% APR.</li>
-          </ul> */}
         </TabPanel>
         <TabPanel>
           <h3>Hardware Requirements</h3>

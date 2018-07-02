@@ -37,21 +37,6 @@
     display: flex;
   }
 
-  .cta {
-    text-decoration: none;
-    background-color: $purple;
-    color: lighten($cream, 25%);
-    border: 0.2rem solid $purple;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    transition: all 200ms ease;
-
-    &:hover {
-      background-color: darken($brightPurple, 5%);
-      color: $cream;
-    }
-  }
-
   .wrap > {
     nav,
     ul {

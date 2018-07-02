@@ -55,7 +55,7 @@ class Header extends React.Component {
               </OutboundLink>
             </li>
             <li>
-              <Link className="cta" to="/#getting-involved">
+              <Link className="cta-button" to="/#getting-involved">
                 Code with Us
               </Link>
             </li>

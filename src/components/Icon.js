@@ -9,6 +9,7 @@ import {
   faHandshake,
   faHeart,
   faLaptop,
+  faMoneyCheck,
   faPuzzlePiece,
 } from '@fortawesome/fontawesome-free-solid'
 
@@ -30,6 +31,7 @@ fontawesome.library.add(
   faHeart,
   faLaptop,
   faMeetup,
+  faMoneyCheck,
   faPuzzlePiece,
   faSlack,
   faTwitter,
@@ -49,6 +51,7 @@ const ICONS = {
   referrals: ['fas', 'comment'],
   slack: ['fab', 'slack'],
   success: ['fas', 'heart'],
+  tuition: ['fas', 'money-check'],
   twitter: ['fab', 'twitter'],
   youtube: ['fab', 'youtube'],
 }
