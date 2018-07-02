@@ -15,8 +15,8 @@ collections:
       - name: body
         label: Answer
         widget: markdown
-      - label: position
-        name: Position (for ordering)
+      - name: position
+        label: Position (for ordering)
         widget: number
   - name: organizations
     label: Organizations

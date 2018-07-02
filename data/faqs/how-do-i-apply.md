@@ -1,6 +1,6 @@
 ---
 title: How do I apply?
-Position (for ordering): '0'
+position: '0'
 ---
 It's easy and free. There is no cost or obligation to attend if you apply, but it starts the process and moves you to the next step of the application process where you meet with our PD and others like you in the program where some of your questions or concerns will be answered. The next step of the interview process is to meet with someone on the instruction staff.
 

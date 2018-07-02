@@ -10,6 +10,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'faqs',
+        path: `${__dirname}/data/faqs/`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

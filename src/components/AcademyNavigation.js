@@ -45,14 +45,14 @@ const AcademyNavigation = () => (
           Hiring Network
         </Link>
       </li>
-      {/* <li>
+      <li>
         <Link to="/academy/faq" activeClassName="active">
           <figure>
             <Icon name="faq" />
           </figure>
           FAQ
         </Link>
-      </li> */}
+      </li>
       <li>
         <Link to="/academy/apply" activeClassName="active">
           <figure>

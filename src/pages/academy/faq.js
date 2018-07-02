@@ -1,23 +1,49 @@
 import React from 'react'
 import AcademyNavigation from '../../components/AcademyNavigation'
 
-const AcademyFAQPage = () => (
+const FAQItem = ({ answer, question }) => (
+  <div className="faq">
+    <h3>{question}</h3>
+    <div dangerouslySetInnerHTML={{ __html: answer }} />
+  </div>
+)
+
+const AcademyFAQPage = ({ data }) => (
   <div className="AcademyPage FAQ">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>FAQ</h2>
-      <p>Fact Sheet content</p>
+      <h2>Frequently Asked Questions</h2>
 
-      <p>FAQs</p>
-
-      <p>
-        Financial Aid & Scholarships Suncoast Developers Guild does not current
-        participate in any Federal Guarantee Student Loans or Pell Grant
-        programs. Suncoast Developers Guild does not currently offer a
-        scholarship program.
-      </p>
+      <div className="faqs">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <FAQItem
+            key={node.frontmatter.position}
+            question={node.frontmatter.title}
+            answer={node.html}
+          />
+        ))}
+      </div>
     </div>
   </div>
 )
+
+export const pageQuery = graphql`
+  query FAQPageQuery {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/data/faqs/" } }
+      sort: { fields: [frontmatter___position], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            position
+          }
+          html
+        }
+      }
+    }
+  }
+`
 
 export default AcademyFAQPage
