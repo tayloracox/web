@@ -1,5 +1,5 @@
 backend:
-  name: githu
+  name: github
   repo: suncoast-devs/web
 display_url: https://suncoast.io
 media_folder: static/media
