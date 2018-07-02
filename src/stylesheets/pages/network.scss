@@ -8,13 +8,16 @@
     li {
       margin: 1rem;
       width: 100%;
-      max-width: 300px;
+      max-width: 200px;
       
-      &.netsvs {
-        max-width: 120px;
+      &.padWhite {
         padding: 0.5rem;
         border-radius: 0.5rem;
         background-color: white;
+      }
+
+      &.netsvs {
+        max-width: 120px;
       }
     }
 

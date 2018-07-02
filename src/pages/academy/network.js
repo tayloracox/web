@@ -8,8 +8,6 @@ const AcademyNetworkPage = props => (
     <div className="wrap">
       <h2>Hiring Network</h2>
 
-      {/* <p>Talk about the kind of companies we have for hiring partners.</p> */}
-
       <h3>Some of the great companies where our alumni work:</h3>
 
       <ul className="companies">
@@ -32,6 +30,27 @@ const AcademyNetworkPage = props => (
         </li>
         <li>
           <Img
+            title="Haneke"
+            alt="Haneke Design Logo"
+            sizes={props.data.haneke.sizes}
+          />
+        </li>
+        <li>
+          <Img
+            title="Malware Bytes"
+            alt="Malware Bytes Logo"
+            sizes={props.data.malwarebytes.sizes}
+          />
+        </li>
+        <li>
+          <Img
+            title="Raymond James"
+            alt="Raymond James Logo"
+            sizes={props.data.raymondJames.sizes}
+          />
+        </li>
+        <li>
+          <Img
             title="Clarity Services"
             alt="Clarity Services Logo"
             sizes={props.data.clarity.sizes}
@@ -51,7 +70,14 @@ const AcademyNetworkPage = props => (
             sizes={props.data.presence.sizes}
           />
         </li>
-        <li className="netsvs">
+        <li className="padWhite">
+          <Img
+            title="Bank of the Ozarks"
+            alt="Bank of the Ozarks Logo"
+            sizes={props.data.ozarks.sizes}
+          />
+        </li>
+        <li className="padWhite netsvs">
           <Img
             title="NetSynergy Virtual Solutions"
             alt="NetSynergy Virtual Solutions Logo"
@@ -82,45 +108,62 @@ const AcademyNetworkPage = props => (
 export const pageQuery = graphql`
   query NetworkPageQuery {
     bisk: imageSharp(id: { regex: "/network/bisk/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     clarity: imageSharp(id: { regex: "/network/clarity/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     gitlab: imageSharp(id: { regex: "/network/gitlab/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     gooee: imageSharp(id: { regex: "/network/gooee/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    haneke: imageSharp(id: { regex: "/network/haneke/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    malwarebytes: imageSharp(id: { regex: "/network/malwarebytes/" }) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     netsvs: imageSharp(id: { regex: "/network/netsvs/" }) {
-      sizes(maxWidth: 120) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
-      resolutions(width: 120, height: 120) {
-        ...GatsbyImageSharpResolutions
+    }
+    ozarks: imageSharp(id: { regex: "/network/ozarks/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
       }
     }
     presence: imageSharp(id: { regex: "/network/presence/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     proforma: imageSharp(id: { regex: "/network/proforma/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    raymondJames: imageSharp(id: { regex: "/network/raymond-james/" }) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
     spatialNetworks: imageSharp(id: { regex: "/network/spatial-networks/" }) {
-      sizes(maxWidth: 300) {
+      sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
     }
