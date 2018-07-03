@@ -26,7 +26,7 @@ const Head = () => (
       },
       { name: 'og:title', content: 'Suncoast Developers Guild' },
       { name: 'og:description', content: DESCRIPTION },
-      { property: 'og:image', content: '//suncoast.io/assets/1200-630.png' },
+      { name: "image", property: 'og:image', content: '//suncoast.io/assets/1200-630.png?v=1' },
       { name: 'og:image', content: 'https://suncoast.io/assets/1200-630.png' },
       { name: 'og:url', content: 'https://suncoast.io' },
       { name: 'og:site_name', content: 'Suncoast Developers Guild' },
