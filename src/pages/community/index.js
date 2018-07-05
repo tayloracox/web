@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Meetup from '../components/Meetup'
-import orgs from '../orgs.json'
+import Meetup from '../../components/Meetup'
+import orgs from '../../orgs.json'
+import CommunityNavigation from '../../components/CommunityNavigation'
 
 const CommunityPage = ({ data }) => (
   <div className="CommunityPage">
+    <CommunityNavigation />
     <div className="wrap">
       <h2>Community</h2>
       <p>

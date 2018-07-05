@@ -54,6 +54,10 @@ const ICONS = {
   tuition: ['fas', 'money-check'],
   twitter: ['fab', 'twitter'],
   youtube: ['fab', 'youtube'],
+  organizations: ['fas', 'users'],
+  sponsors: ['fas', 'handshake'],
+  'joint-training': ['fas', 'laptop'],
+  hiring: ['fas', 'user-plus'],
 }
 
 const Icon = ({ name }) => <FontAwesomeIcon icon={ICONS[name]} />
