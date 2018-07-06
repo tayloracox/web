@@ -17,15 +17,12 @@
       flex-wrap: wrap;
       margin: 0 auto;
       max-width: $desktop-width;
-      .first-icon{
-        border-left: thin solid lighten($darkGrey, 10%);
-
-      }
     }
 
     li {
       text-align: center;
       border-right: thin solid lighten($darkGrey, 10%);
+      border-left: thin solid lighten($darkGrey, 10%);
       flex-basis: 12rem;
       display: flex;
 
