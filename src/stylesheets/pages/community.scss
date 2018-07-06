@@ -49,14 +49,12 @@
 
     @media (max-width: 480px) {
       li{
-        border: 1px green solid;
         flex-basis: 9rem;
       }
     }
 
     @media (max-width: 310px) {
       li{
-        border: 1px green solid;
         flex-basis: 7rem;
       }
     }
