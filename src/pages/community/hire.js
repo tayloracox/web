@@ -12,8 +12,7 @@ const Card = ({ id, name, title, children, imgData }) => (
     />
     <div>
       <h4>{name}</h4>
-      <h6>{title}</h6>
-      <p className="tab-content">{children}</p>
+      <div className="tab-content">{children}</div>
     </div>
   </div>
 )
@@ -22,12 +21,12 @@ const HireAlumniPage = props => (
   <div className="HireAlumniPage">
     <div className="wrap">
       <h2>Alumni</h2>
+      <h3>Below is a list of graduates who are pursuing career opportunities and freelance work with their portfolios, areas of expertise, and contact information.</h3>
 
       <div className="bios">
         <Card
           id="julius"
           name="Julius Bzozowski"
-          title="Back End Engineering - Ruby on Rails"
           imgData={props.data.julius.sizes}
         >
           <p>Github: <a href="https://github.com/jbzozowski?tab=repositories" target="_blank">bzozowski</a></p>
@@ -37,7 +36,6 @@ const HireAlumniPage = props => (
         <Card
           id="brian"
           name="Brian Bycynski"
-          title="Front End Engineering"
           imgData={props.data.brian.sizes}
         >
           <p>Github: <a href="https://github.com/bdog72" target="_blank">bdog72</a></p>
@@ -47,7 +45,6 @@ const HireAlumniPage = props => (
         <Card
           id="marianne"
           name="Marianne Kelly"
-          title="Front End Engineering"
           imgData={props.data.marianne.sizes}
         >
           <p>Github: <a href="https://github.com/maresThere" target="_blank">maresThere</a></p>
@@ -57,11 +54,10 @@ const HireAlumniPage = props => (
         <Card
           id="jasmine"
           name="Jasmine Frantz"
-          title="Back End Engineering - Ruby on Rails"
           imgData={props.data.jasmine.sizes}
         >
-          <p>Github: <a href="" target="_blank"></a></p>
-          <p>Portfolio: <a href="" target="_blank"></a></p>
+          <p>Github: <a href="https://github.com/dubistdu" target="_blank">dubistdu</a></p>
+          <p>Portfolio: <a href="http://www.jasfrantz.com/" target="_blank">jasfrantz.com/</a></p>
           <p>LinkedIn: <a href="https://www.linkedin.com/in/jasmine-frantz/" target="_blank">jasmine-frantz</a></p>
         </Card>
       </div>
