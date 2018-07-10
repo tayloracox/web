@@ -75,7 +75,7 @@ const TeamPage = props => (
         <Card
           id="gavin"
           name="Gavin Stark"
-          title="hief Technology Officer"
+          title="Chief Technology Officer"
           imgData={props.data.gavin.sizes}
         >
           Gavin is a native of Florida and currently resides in St. Petersburg.
