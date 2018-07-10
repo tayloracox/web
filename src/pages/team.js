@@ -9,7 +9,7 @@ import portraitJim from '../images/people/jim-james.jpg'
 import portraitAdam from '../images/people/adam-recvlohe.jpg'
 
 const Card = ({ id, name, title, children, imgData }) => (
-  <div className="card">
+  <div className="card" id={`${id}`}>
     <Img
       sizes={{ ...imgData, aspectRatio: 1.6 }}
       alt={`A portrait of ${name}`}

@@ -34,7 +34,7 @@ const Footer = () => (
             href="https://www.google.com/maps/place/2220+Central+Ave,+St.+Petersburg,+FL+33712/@27.770774,-82.663524,16z"
             target="_blank"
           >
-            2220 Cental Ave
+            2220 Central Ave
             <br />
             St Petersburg, FL 33712
           </OutboundLink>

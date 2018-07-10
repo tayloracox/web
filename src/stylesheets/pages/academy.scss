@@ -87,29 +87,91 @@
   }
 
   &.Success {
-    .quote-wrap {
+    .bios {
       display: flex;
-      width: 100%;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      @media (max-width: 48rem) {
-        flex-direction: column;
-      }
+      align-items: flex-start;
+      justify-content: center;
     }
-    .quote-box {
-      width: 30%;
-      @media (max-width: 48rem) {
+
+    .card {
+      background-color: transparentize(lighten($cream, 60%), 0.6);
+      padding: 1rem;
+      border-bottom: thick solid #5a9090;
+      flex: 1;
+      flex-basis: 18rem;
+      max-width: 26rem;
+      margin: 1rem;
+
+      img {
         width: 100%;
+        height: auto;
       }
     }
-    .quote-box,
-    .quote-box-full {
-      .author {
-        text-align: right;
-        font-weight: 800;
+
+    h4 {
+      font-size: 1.3rem;
+      line-height: 1rem;
+      margin: 0.5rem 0 0 0;
+    }
+
+    h6 {
+      font-size: 0.8rem;
+      font-style: italic;
+      line-height: 1rem;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    p {
+      line-height: 1.4rem;
+    }
+
+    .read-more {
+      display: none;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 48rem) {
+      .card {
+        max-width: 42rem;
+        p {
+          font-size: 0.9rem;
+          line-height: 1.2rem;
+        }
       }
     }
+
+    /* Accordion styles */
+
+    .read-more {
+      display: block;
+      color: $purple;
+      background-color: none;
+      text-transform:none;
+    }
+
+    .tab {
+      position: relative;
+      margin-bottom: 1px;
+      overflow: hidden;
+    }
+
+    .tab-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s;
+    }
+    /* :checked */
+    input:checked ~ .tab-content {
+      max-height: 500px;
+    }
+
     .cta {
       text-align: center;
       margin-top: 30px;
