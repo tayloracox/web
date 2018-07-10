@@ -7,7 +7,7 @@ const CommunityNetworkPage = props => (
     <CommunityNavigation />
     <div className="wrap">
       <h2>Corporate Supporters</h2>
-      <div class="blockquote">
+      <div className="blockquote">
         <blockquote className="quote">
           <span className="quotation-mark">&quot;</span>
           The Proforma / SDG collaboration selected passionate junior level
@@ -16,7 +16,7 @@ const CommunityNetworkPage = props => (
           the skillsets necessary to be successful at Proforma.
           <span className="quotation-mark">&quot;</span>
         </blockquote>
-        <p class="author">- PROforma</p>
+        <p className="author">- PROforma</p>
       </div>
 
       <ul className="companies">

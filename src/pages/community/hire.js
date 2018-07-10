@@ -1,7 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import CommunityNavigation from '../../components/CommunityNavigation'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 
 const Card = ({ id, name, title, children, imgData }) => (
@@ -18,7 +17,8 @@ const Card = ({ id, name, title, children, imgData }) => (
 )
 
 const HireAlumniPage = props => (
-  <div className="HireAlumniPage">
+  <div className="CommunityPage HireAlumniPage">
+    <CommunityNavigation />
     <div className="wrap">
       <h2>Alumni</h2>
       <h3>Below is a list of graduates who are pursuing career opportunities and freelance work with their portfolios, areas of expertise, and contact information.</h3>
