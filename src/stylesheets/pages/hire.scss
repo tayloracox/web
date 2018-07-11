@@ -1,0 +1,52 @@
+.HireAlumniPage {
+
+  .bios {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: transparentize(lighten($cream, 60%), 0.6);
+    padding: 1rem;
+    border-bottom: thick solid #5a9090;
+    flex: 1;
+    flex-basis: 18rem;
+    max-width: 26rem;
+    margin: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    margin: 0.5rem 0 0 0;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1rem;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  p {
+    line-height: 1.4rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    .card {
+      max-width: 42rem;
+      p {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}
