@@ -1,6 +1,4 @@
 .CommunityPage {
-
- 
   nav {
     background-color: $darkGrey;
 
@@ -26,7 +24,6 @@
       flex-basis: 12rem;
       display: flex;
 
-
       a {
         padding: 0.5rem;
         display: flex;
@@ -45,17 +42,16 @@
     }
 
     @media (max-width: 480px) {
-      li{
+      li {
         flex-basis: 9rem;
       }
     }
 
     @media (max-width: 310px) {
-      li{
+      li {
         flex-basis: 7rem;
       }
     }
-    
 
     figure {
       margin: 0;
@@ -74,18 +70,17 @@
       border-bottom: thick solid $green;
     }
   }
-  &.Network{
-    
-    .blockquote{
+  &.Network {
+    .blockquote {
       background-color: #f2e8c5;
       color: rgba(51, 51, 51, 0.8);
-      box-shadow: 0.2rem 0.2rem 0 rgba(51, 51, 51, 0.3);  
-      padding:1em;
+      box-shadow: 0.2rem 0.2rem 0 rgba(51, 51, 51, 0.3);
+      padding: 1em;
       font-size: 1.25em;
       font-weight: bold;
       display: flex;
       flex-direction: column;
-      p.author{
+      p.author {
         align-self: flex-end;
       }
     }
@@ -95,48 +90,45 @@
       justify-content: center;
       flex-wrap: wrap;
 
-    li {
-      margin: 1rem;
-      width: 100%;
-      max-width: 200px;
-      background-color: #f2e8c5;
-      color: rgba(51, 51, 51, 0.8);
-      box-shadow: 0.2rem 0.2rem 0 rgba(51, 51, 51, 0.3);  
-      padding:1em;
-      .logo{
-        padding-top: 1em;
-        padding-bottom: 1em;
-      }
-      .logo-half{
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        
-      }
-      &.padWhite {
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        background-color: white;
+      li {
+        margin: 1rem;
+        width: 100%;
+        max-width: 200px;
+        background-color: #f2e8c5;
+        color: rgba(51, 51, 51, 0.8);
+        box-shadow: 0.2rem 0.2rem 0 rgba(51, 51, 51, 0.3);
+        padding: 1em;
+        .logo {
+          padding-top: 1em;
+          padding-bottom: 1em;
+        }
+        .logo-half {
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+        }
+        &.padWhite {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          background-color: white;
+        }
+
+        &.netsvs {
+          max-width: 120px;
+        }
       }
 
-      &.netsvs {
-        max-width: 120px;
+      @media (max-width: 48rem) {
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 48rem) {
-      flex-direction: column;
+    .why {
+      margin-left: 1rem;
+      list-style: disc;
     }
-    }
-
-  .why {
-    margin-left: 1rem;
-    list-style: disc;
   }
+  &.HireAlumni {
   }
-  &.HireAlumni{
-    
-  }
-
 
   section.organizations ul {
     display: flex;

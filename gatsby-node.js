@@ -8,6 +8,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     const slug = createFilePath({ node, getNode, basePath: 'posts' })
     createNodeField({ node, name: 'slug', value: slug })
 
+    // TODO: Generalize this for more fields, not just 'image'
     const { frontmatter } = node
     if (frontmatter) {
       const { image } = frontmatter
@@ -17,7 +18,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
             path.dirname(node.fileAbsolutePath),
             path.join(__dirname, '/static/', image)
           )
-          createNodeField({ node, name: 'imageRel', value: relativePath })
+          createNodeField({ node, name: 'image', value: relativePath })
         }
       }
     }
@@ -67,7 +68,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   }
                   fields {
                     slug
-                    imageRel
                   }
                 }
               }
