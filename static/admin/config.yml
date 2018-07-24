@@ -87,5 +87,5 @@ collections:
         label: Post Author
         widget: relation
         collection: people
-        searchFields: ["name"]
-        valueField: name
+        searchFields: ["title"]
+        valueField: title
