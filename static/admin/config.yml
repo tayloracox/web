@@ -36,6 +36,23 @@ collections:
       - name: founded_on
         label: Foundation Date
         widget: date
+  - name: people
+    label: People
+    folder: data/people
+    create: true
+    fields:
+      - name: title
+        label: Name
+        widget: string
+      - name: long_bio
+        label: Long Biography
+        widget: markdown
+      - name: short_bio
+        label: Short Biography
+        widget: markdown
+      - name: photo
+        label: Photo/Headshot
+        widget: image
   - name: posts
     label: Posts
     folder: data/posts
@@ -63,3 +80,9 @@ collections:
         label: Draft?
         widget: boolean
         default: true
+      - name: author
+        label: Post Author
+        widget: relation
+        collection: people
+        searchFields: ["name"]
+        valueField: name

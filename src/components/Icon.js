@@ -3,6 +3,7 @@ import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import {
+  faCalendar,
   faCode,
   faComment,
   faGraduationCap,
@@ -23,6 +24,7 @@ import {
 } from '@fortawesome/fontawesome-free-brands'
 
 fontawesome.library.add(
+  faCalendar,
   faCode,
   faFacebook,
   faGithub,
@@ -41,6 +43,7 @@ fontawesome.library.add(
 const ICONS = {
   admissions: ['fas', 'graduation-cap'],
   apply: ['fas', 'laptop'],
+  calendar: ['fas', 'calendar'],
   facebook: ['fab', 'facebook'],
   faq: ['fas', 'puzzle-piece'],
   github: ['fab', 'github'],
@@ -56,10 +59,10 @@ const ICONS = {
   youtube: ['fab', 'youtube'],
   organizations: ['fas', 'users'],
   sponsors: ['fas', 'handshake'],
-  'joint-training': ['fas', 'laptop'],
+  jointTraining: ['fas', 'laptop'],
   hiring: ['fas', 'user-plus'],
 }
 
-const Icon = ({ name }) => <FontAwesomeIcon icon={ICONS[name]} />
+const Icon = ({ name }) => <FontAwesomeIcon icon={ICONS[name]} size="lg" />
 
 export default Icon

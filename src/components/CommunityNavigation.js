@@ -29,7 +29,7 @@ const CommunityNavigation = () => (
       <li>
         <Link to="/community/joint-training" activeClassName="active">
           <figure>
-            <Icon name="joint-training" />
+            <Icon name="jointTraining" />
           </figure>
           Joint Training
         </Link>
