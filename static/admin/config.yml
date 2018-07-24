@@ -44,6 +44,9 @@ collections:
       - name: title
         label: Name
         widget: string
+      - name: role
+        lable: Title/Role
+        widget: string
       - name: long_bio
         label: Long Biography
         widget: markdown
