@@ -1,5 +1,6 @@
 ---
 title: Jason L Perry
+role: Chief Executive Officer
 long_bio: >-
   Jason is a native Floridian who started building for the web as a teen in the
   mid-’90s, so he’s been a web developer for about as long as anybody.
