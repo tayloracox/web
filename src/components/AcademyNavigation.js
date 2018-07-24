@@ -71,7 +71,7 @@ const AcademyNavigation = () => (
       </li>
     </ul>
     <div className="note">
-      We are now enrolling for our September 10<sup>th</sup>
+      We are now enrolling for our September 4<sup>th</sup>
       and October 22<sup>nd</sup> cohorts!
     </div>
   </nav>
