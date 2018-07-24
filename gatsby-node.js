@@ -65,6 +65,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                     image
                     published_on
                     description
+                    author
                   }
                   fields {
                     slug

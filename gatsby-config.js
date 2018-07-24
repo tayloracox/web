@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Suncoast Developers Guild',
+    siteUrl: `https://suncoast.io`,
   },
   plugins: [
     'gatsby-plugin-netlify',

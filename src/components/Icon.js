@@ -12,6 +12,7 @@ import {
   faLaptop,
   faMoneyCheck,
   faPuzzlePiece,
+  faUser,
 } from '@fortawesome/fontawesome-free-solid'
 
 import {
@@ -37,6 +38,7 @@ fontawesome.library.add(
   faPuzzlePiece,
   faSlack,
   faTwitter,
+  faUser,
   faYoutube
 )
 
@@ -61,6 +63,7 @@ const ICONS = {
   sponsors: ['fas', 'handshake'],
   jointTraining: ['fas', 'laptop'],
   hiring: ['fas', 'user-plus'],
+  user: ['fas', 'user'],
 }
 
 const Icon = ({ name }) => <FontAwesomeIcon icon={ICONS[name]} size="lg" />
