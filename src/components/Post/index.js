@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'gatsby-image'
+import moment from 'moment'
+import Icon from '../Icon'
 
 export default ({ data }) => {
   const { markdownRemark: post } = data
@@ -7,6 +9,9 @@ export default ({ data }) => {
     <div className="BlogPage Post">
       <div className="wrap">
         <h1>{post.frontmatter.title}</h1>
+        <div className="meta">
+          <Icon name="calendar" /> <time>{post.frontmatter.published_on}</time>
+        </div>
         <figure className="featured">
           <Image sizes={post.fields.image.childImageSharp.sizes} />
         </figure>
@@ -22,7 +27,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        image
+        published_on
       }
       fields {
         image {
