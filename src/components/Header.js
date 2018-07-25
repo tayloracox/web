@@ -41,11 +41,11 @@ class Header extends React.Component {
                   Our Team
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blog" activeClassName="active">
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" activeClassName="active">
                   Contact
@@ -109,13 +109,13 @@ class Header extends React.Component {
               >
                 Contact
               </Link>
-              <Link
+              {/* <Link
                 to="/blog"
                 activeClassName="active"
                 onClick={this.closeMenu}
               >
                 Blog
-              </Link>
+              </Link> */}
               <p>
                 <OutboundLink href="tel:7272012012">
                   +1 (727) 201-2012

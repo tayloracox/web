@@ -30,7 +30,7 @@ export default ({ data }) => {
             <div className="publish-date">
               <Icon name="calendar" />{' '}
               <time>
-                {moment(post.frontmatter.published_on).format('MMMM Do YYYY')}
+                {moment(post.frontmatter.date).format('MMMM Do YYYY')}
               </time>
             </div>
             <div className="author">
@@ -105,7 +105,7 @@ export const query = graphql`
       frontmatter {
         description
         title
-        published_on
+        date
         author
       }
       fields {

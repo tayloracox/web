@@ -53,20 +53,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             allMarkdownRemark(
               filter: {
                 fileAbsolutePath: { regex: "/data/posts/" }
-                frontmatter: { draft: { eq: true } }
+                frontmatter: { draft: { ne: true } }
               }
             ) {
               edges {
                 node {
-                  id
-                  html
-                  frontmatter {
-                    title
-                    image
-                    published_on
-                    description
-                    author
-                  }
                   fields {
                     slug
                   }
