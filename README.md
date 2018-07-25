@@ -11,7 +11,7 @@ This is the SDG website, at [https://suncoast.io](https://suncoast.io).
 
 The project is a [Gatsby](https://www.gatsbyjs.org/) based site. We also use [Netlify CMS](https://www.netlifycms.org/) for some content management.
 
-After cloning the project, run `yarn` to install dependencies, and `yarn start` to launch the development server on http://localhost:8000/.
+After cloning the project, run `npm install` to install dependencies, and `npm start` to launch the development server on http://localhost:8000/.
 
 ## Issues
 
@@ -29,7 +29,7 @@ In general, we follow this workflow:
 
 **NOTE**: Be sure to merge the latest from _upstream_ before making a Pull Request.
 
-Before committing be sure to run `yarn lint` against your project and fix any formatting issues. Pull Requests won't be merged without clean linter output.
+Before committing be sure to run `npm run lint` against your project and fix any formatting issues. Pull Requests won't be merged without clean linter output.
 
 ## License
 

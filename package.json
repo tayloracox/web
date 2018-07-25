@@ -35,8 +35,6 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "predeploy": "yarn build",
-    "deploy": "surge ./public -d sdg-web.surge.sh",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js"
   },
