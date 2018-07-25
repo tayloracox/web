@@ -42,6 +42,11 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" activeClassName="active">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" activeClassName="active">
                   Contact
                 </Link>
@@ -103,6 +108,13 @@ class Header extends React.Component {
                 onClick={this.closeMenu}
               >
                 Contact
+              </Link>
+              <Link
+                to="/blog"
+                activeClassName="active"
+                onClick={this.closeMenu}
+              >
+                Blog
               </Link>
               <p>
                 <OutboundLink href="tel:7272012012">

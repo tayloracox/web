@@ -66,6 +66,10 @@ const ICONS = {
   user: ['fas', 'user'],
 }
 
-const Icon = ({ name }) => <FontAwesomeIcon icon={ICONS[name]} size="lg" />
+const Icon = ({ name }) => (
+  <span className="icon">
+    <FontAwesomeIcon icon={ICONS[name]} size="lg" />
+  </span>
+)
 
 export default Icon

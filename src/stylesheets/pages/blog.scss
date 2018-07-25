@@ -5,9 +5,8 @@
 
   &.Post {
     h1 {
-      margin-bottom: 0;
       line-height: 1em;
-      border-bottom: thin solid darken($cream, 10%);
+      text-align: center;
     }
     .meta {
       display: flex;
@@ -15,6 +14,11 @@
       align-items: center;
       margin: 0.2rem 0;
       font-size: 0.8rem;
+    }
+    .icon {
+      margin-right: 0.2rem;
+      font-size: 0.6rem;
+      vertical-align: middle;
     }
   }
 
