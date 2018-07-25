@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PageHeading from '../components/PageHeading'
 import Meetup from '../components/Meetup'
 import orgs from '../orgs.json'
 
 const ConductPage = ({ data }) => (
   <div className="ConductPage">
     <div className="wrap">
+      <PageHeading hidden>Code of Conduct</PageHeading>
       <article className="markdown-body entry-content" itemProp="text">
         <h1>Code of Conduct</h1>
         <p>

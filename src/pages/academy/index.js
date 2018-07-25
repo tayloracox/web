@@ -2,12 +2,13 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import AcademyNavigation from '../../components/AcademyNavigation'
+import PageHeading from '../../components/PageHeading'
 
 const AcademyPage = () => (
   <div className="AcademyPage">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Web Developent Program</h2>
+      <PageHeading>Web Developent Program</PageHeading>
 
       <Tabs>
         <TabList>

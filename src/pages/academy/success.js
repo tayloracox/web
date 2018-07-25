@@ -1,6 +1,7 @@
 import React from 'react'
-import AcademyNavigation from '../../components/AcademyNavigation'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import AcademyNavigation from '../../components/AcademyNavigation'
+import PageHeading from '../../components/PageHeading'
 import Img from 'gatsby-image'
 
 const Card = ({ id, name, title, children, sizes }) => (
@@ -28,7 +29,7 @@ const SuccessStoriesPage = props => (
   <div className="AcademyPage Success">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Success Stories</h2>
+      <PageHeading>Success Stories</PageHeading>
       <div className="bios">
         <Card
           id="kristen"

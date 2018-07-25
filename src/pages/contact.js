@@ -1,9 +1,10 @@
 import React from 'react'
+import PageHeading from '../components/PageHeading'
 
 const ContactPage = () => (
   <div className="ContactPage">
     <div className="wrap">
-      <h2>Contact Us</h2>
+      <PageHeading>Contact Us</PageHeading>
       <p>Question? Comments? Just want to chat and say "Hello"?</p>
       <form action="https://formspree.io/hello@suncoast.io" method="POST">
         <input type="hidden" name="_next" value="https://suncoast.io/thanks" />

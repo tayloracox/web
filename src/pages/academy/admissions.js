@@ -1,13 +1,13 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-
+import PageHeading from '../../components/PageHeading'
 import AcademyNavigation from '../../components/AcademyNavigation'
 
 const AcademyAdmissionsPage = () => (
   <div className="AcademyPage Admissions">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Admissions</h2>
+      <PageHeading>Admissions</PageHeading>
       <Tabs>
         <TabList>
           <Tab>Application Process</Tab>

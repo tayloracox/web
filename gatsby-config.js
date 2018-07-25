@@ -13,6 +13,9 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
     {
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',

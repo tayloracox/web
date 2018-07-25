@@ -1,10 +1,11 @@
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PageHeading from '../components/PageHeading'
 
 const PrivacyPage = () => (
   <div className="PrivacyPage">
     <div className="wrap">
-      <h2>Privacy Policy</h2>
+      <PageHeading>Privacy Policy</PageHeading>
       <p>
         Your privacy is important to us. It is Suncoast Developers Guild&rsquo;s
         policy to respect your privacy regarding any information we may collect

@@ -1,13 +1,13 @@
 import React from 'react'
 import Img from 'gatsby-image'
-
+import PageHeading from '../../components/PageHeading'
 import AcademyNavigation from '../../components/AcademyNavigation'
 
 const AcademyTuitionPage = ({ data }) => (
   <div className="AcademyPage Tuition">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Tuition & Financing</h2>
+      <PageHeading>Tuition & Financing</PageHeading>
 
       <p>
         Tuition is a flat fee of $14,900 for the entire three-month program. The

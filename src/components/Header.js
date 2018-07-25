@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { elastic as Menu } from 'react-burger-menu'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import logoBanner from '../../images/icon-logo.svg'
+import logoBanner from '../images/icon-logo.svg'
 
 class Header extends React.Component {
   state = { menuOpen: false }

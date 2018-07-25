@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import CommunityNavigation from '../../components/CommunityNavigation'
+import PageHeading from '../../components/PageHeading'
 
 const Card = ({ id, name, title, children, imgData }) => (
   <div className="card">
@@ -20,7 +21,7 @@ const HireAlumniPage = props => (
   <div className="CommunityPage HireAlumniPage">
     <CommunityNavigation />
     <div className="wrap">
-      <h2>Alumni</h2>
+      <PageHeading>Alumni</PageHeading>
       <h3>
         Below is a list of graduates who are pursuing career opportunities and
         freelance work with their portfolios, areas of expertise, and contact

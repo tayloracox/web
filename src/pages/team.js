@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-
+import PageHeading from '../components/PageHeading'
 import portraitJason from '../images/people/jason.jpg'
 import portraitToni from '../images/people/toni.jpg'
 import portraitGavin from '../images/people/gavin.jpg'
@@ -31,7 +31,7 @@ const Card = ({ id, name, title, children, imgData }) => (
 const TeamPage = props => (
   <div className="TeamPage">
     <div className="wrap">
-      <h2>Our Team</h2>
+      <PageHeading>Our Team</PageHeading>
 
       <div className="bios">
         <Card

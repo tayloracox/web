@@ -1,12 +1,13 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import CommunityNavigation from '../../components/CommunityNavigation'
+import PageHeading from '../../components/PageHeading'
 
 const CommunityNetworkPage = props => (
   <div className="CommunityPage Network">
     <CommunityNavigation />
     <div className="wrap">
-      <h2>Corporate Supporters</h2>
+      <PageHeading>Corporate Supporters</PageHeading>
       <div className="blockquote">
         <blockquote className="quote">
           <span className="quotation-mark">&quot;</span>

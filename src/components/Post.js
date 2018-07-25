@@ -13,7 +13,7 @@ import {
   RedditIcon,
 } from 'react-share'
 
-import Icon from '../Icon'
+import Icon from './Icon'
 
 export default ({ data }) => {
   const { markdownRemark: post } = data

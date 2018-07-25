@@ -1,12 +1,13 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import AcademyNavigation from '../../components/AcademyNavigation'
+import PageHeading from '../../components/PageHeading'
 
 const AcademyNetworkPage = props => (
   <div className="AcademyPage Network">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Hiring Network</h2>
+      <PageHeading>Hiring Network</PageHeading>
 
       <h3>Some of the great companies where our alumni work:</h3>
 

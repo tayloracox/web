@@ -1,10 +1,11 @@
 import React from 'react'
+import PageHeading from '../components/PageHeading'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const TermsPage = () => (
   <div className="TermsPage">
     <div className="wrap">
-      <h2>Suncoast Developers Guild Terms of Service</h2>
+      <PageHeading>Terms of Service</PageHeading>
       <h3>1. Terms</h3>
       <p>
         By accessing the website at{' '}

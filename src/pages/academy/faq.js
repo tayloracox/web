@@ -1,5 +1,6 @@
 import React from 'react'
 import AcademyNavigation from '../../components/AcademyNavigation'
+import PageHeading from '../../components/PageHeading'
 
 const sluggify = text =>
   text
@@ -32,7 +33,7 @@ const AcademyFAQPage = ({ data }) => (
   <div className="AcademyPage FAQ">
     <AcademyNavigation />
     <div className="wrap">
-      <h2>Frequently Asked Questions</h2>
+      <PageHeading>Frequently Asked Questions</PageHeading>
 
       <ul className="faqs-list">
         {data.allMarkdownRemark.edges.map(({ node }) => (

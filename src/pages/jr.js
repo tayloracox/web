@@ -1,5 +1,6 @@
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PageHeading from '../components/PageHeading'
 import logoJunior from '../images/junior.svg'
 import ClassImg1 from '../images/jr/october2017.jpg'
 import ClassImg2 from '../images/jr/august2017.jpg'
@@ -48,7 +49,7 @@ const JuniorPage = () => (
         width="auto"
       />
       <div className="intro">
-        <h2>Kids Code Classes</h2>
+        <PageHeading>Kids Code Classes</PageHeading>
         <p>
           Suncoast Developers Guild believes strongly that programming must be
           accessible at all ages, and our kids classes are one way we inch

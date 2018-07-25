@@ -44,7 +44,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const Post = path.resolve('src/components/Post/index.js')
+    const Post = path.resolve('src/components/Post.js')
 
     resolve(
       graphql(
