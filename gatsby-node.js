@@ -1,4 +1,7 @@
 const path = require('path')
+const fs = require('fs')
+const Feed = require('feed')
+const config = require('./gatsby-config')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
@@ -40,6 +43,91 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   })
 }
 
+exports.onPostBuild = ({ graphql }) => {
+  console.log('OPB 1')
+  return new Promise((resolve, reject) => {
+    console.log('OPB 2')
+    resolve(
+      graphql(`
+        {
+          allMarkdownRemark(
+            filter: {
+              fileAbsolutePath: { regex: "/data/posts/" }
+              frontmatter: { draft: { ne: true } }
+            }
+            sort: { order: DESC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                html
+                frontmatter {
+                  title
+                  date
+                  description
+                  author
+                }
+                fields {
+                  slug
+                  image {
+                    childImageSharp {
+                      feature: sizes(maxWidth: 640, maxHeight: 480) {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `).then(result => {
+        console.log('OPB 3')
+        if (result.errors) reject(result.errors)
+        console.log('OPB 4')
+        let feed = new Feed({
+          title: config.siteMetadata.title,
+          description: config.siteMetadata.description,
+          favicon: `${config.siteMetadata.siteUrl}/favicon.ico`,
+          link: config.siteMetadata.siteUrl,
+          id: config.siteMetadata.siteUrl,
+          copyright:
+            'All rights reserved 2018, SUNCOAST DEVELOPERS GUILD, INC.',
+          // updated: new Date(2013, 06, 14), // TODO: latest post date
+          feedLinks: {
+            atom: `${config.siteMetadata.siteUrl}/atom.xml`,
+            json: `${config.siteMetadata.siteUrl}/feed.json`,
+          },
+          author: {
+            name: 'Suncoast Developers Guild',
+            email: 'hello@suncoast.io',
+          },
+        })
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          console.log('OPB 5')
+          feed.addItem({
+            id: node.fields.slug,
+            link: `${config.siteMetadata.siteUrl}/blog${node.fields.slug}`,
+            title: node.frontmatter.title,
+            description: node.frontmatter.description,
+            date: new Date(node.frontmatter.date),
+            image:
+              config.siteMetadata.siteUrl +
+              node.fields.image.childImageSharp.feature.src,
+            content: node.html,
+            author: {
+              name: node.frontmatter.author,
+            },
+          })
+        })
+        console.log('OPB 6', feed)
+        fs.writeFileSync('./public/atom.xml', feed.atom1())
+        fs.writeFileSync('./public/rss.xml', feed.rss2())
+        fs.writeFileSync('./public/feed.json', feed.json1())
+      })
+    )
+  })
+}
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
@@ -67,9 +155,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           }
         `
       ).then(result => {
-        if (result.errors) {
-          reject(result.errors)
-        }
+        if (result.errors) reject(result.errors)
 
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
