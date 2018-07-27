@@ -44,9 +44,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 }
 
 exports.onPostBuild = ({ graphql }) => {
-  console.log('OPB 1')
   return new Promise((resolve, reject) => {
-    console.log('OPB 2')
     resolve(
       graphql(`
         {
@@ -81,9 +79,7 @@ exports.onPostBuild = ({ graphql }) => {
           }
         }
       `).then(result => {
-        console.log('OPB 3')
         if (result.errors) reject(result.errors)
-        console.log('OPB 4')
         let feed = new Feed({
           title: config.siteMetadata.title,
           description: config.siteMetadata.description,
@@ -103,7 +99,6 @@ exports.onPostBuild = ({ graphql }) => {
           },
         })
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          console.log('OPB 5')
           feed.addItem({
             id: node.fields.slug,
             link: `${config.siteMetadata.siteUrl}/blog${node.fields.slug}`,
@@ -119,7 +114,6 @@ exports.onPostBuild = ({ graphql }) => {
             },
           })
         })
-        console.log('OPB 6', feed)
         fs.writeFileSync('./public/atom.xml', feed.atom1())
         fs.writeFileSync('./public/rss.xml', feed.rss2())
         fs.writeFileSync('./public/feed.json', feed.json1())
