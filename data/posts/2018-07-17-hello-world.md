@@ -2,7 +2,7 @@
 title: 'Hello, World!'
 date: '2018-07-25T14:59:14-04:00'
 image: /media/suncoast-developers-guild-code-school-tampa-bay-team-v2.png
-description: >-
+description: >
   It has been a year since The Iron Yard, the largest national coding school and
   bootcamp, announced it was ceasing all operations and shutting down fifteen
   campuses nationwide. At the time our campus in Tampa Bay had the highest
@@ -10,15 +10,6 @@ description: >-
   seven employees and ~150 alumni. Although the announcement took us by somewhat
   of a surprise, the code school industry is still emerging and navigating the
   path to a successful model. 
-
-
-  When the community asked our team to step up and keep the school’s momentum,
-  we knew there would be challenges ahead. We also knew that this type of
-  education is essential for our community and ecosystem, which is why we opened
-  the Academy at Suncoast Developers Guild and are paving the way for a
-  sustainable model to continue to deliver high quality education that provides
-  people with the skills that make them valuable and competitive in the
-  workforce.
 draft: false
 author: Toni Warren
 ---
