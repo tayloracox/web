@@ -44,6 +44,8 @@
       figure {
         width: 320px;
         margin-right: 1rem;
+        border: 0.5rem solid white;
+        box-shadow: 0 0 0.2rem transparentize($darkGrey, 0.5);
       }
 
       h3 {
@@ -56,6 +58,11 @@
         font-size: 0.8rem;
         font-weight: 100;
         text-transform: uppercase;
+      }
+
+      article p {
+        font-size: 1.1rem;
+        line-height: 1.2rem;
       }
 
       @media screen and (max-width: 46rem) {

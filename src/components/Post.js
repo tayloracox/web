@@ -20,6 +20,7 @@ export default ({ data }) => {
   const { siteUrl, title: siteTitle } = data.site.siteMetadata
   const url = `${siteUrl}/blog${post.fields.slug}`
   const pageTitle = `${post.frontmatter.title} @ ${siteTitle}`
+  const shareTitle = `"${post.frontmatter.title}" from the blog @ ${siteTitle}`
   const iconSize = 32
   return (
     <div className="BlogPage Post">
@@ -66,7 +67,7 @@ export default ({ data }) => {
         meta={[
           {
             name: 'twitter:title',
-            content: pageTitle,
+            content: shareTitle,
           },
           {
             name: 'twitter:description',
@@ -79,7 +80,7 @@ export default ({ data }) => {
           {
             property: 'og:title',
             name: 'title',
-            content: pageTitle,
+            content: shareTitle,
           },
           {
             property: 'og:description',
