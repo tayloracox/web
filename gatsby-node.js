@@ -8,8 +8,25 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent)
-    const slug = createFilePath({ node, getNode, basePath: 'posts' })
-    createNodeField({ node, name: 'slug', value: slug })
+
+    // Blog posts
+    if (/data\/posts/.test(node.id)) {
+      const slug = createFilePath({ node, getNode, basePath: 'posts' })
+      createNodeField({ node, name: 'slug', value: slug })
+    }
+
+    // Handbook
+    if (/data\/handbook/.test(node.id)) {
+      const parsedFilePath = path.parse(fileNode.relativePath)
+      if (parsedFilePath.name !== 'README' && parsedFilePath.dir !== '') {
+        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+      } else if (parsedFilePath.dir === '') {
+        slug = `/${parsedFilePath.name}/`
+      } else {
+        slug = `/${parsedFilePath.dir}/`
+      }
+      createNodeField({ node, name: 'slug', value: slug })
+    }
 
     // TODO: Generalize this for more fields, not just 'image'
     const { frontmatter } = node
@@ -127,6 +144,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return new Promise((resolve, reject) => {
     const Post = path.resolve('src/components/Post.js')
+    const Handbook = path.resolve('src/components/Handbook/Content.js')
 
     resolve(
       graphql(
@@ -134,12 +152,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           {
             allMarkdownRemark(
               filter: {
-                fileAbsolutePath: { regex: "/data/posts/" }
+                fileAbsolutePath: { regex: "/data/(posts|handbook)/" }
                 frontmatter: { draft: { ne: true } }
               }
             ) {
               edges {
                 node {
+                  id
                   fields {
                     slug
                   }
@@ -152,12 +171,20 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         if (result.errors) reject(result.errors)
 
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          createPage({
-            path: '/blog' + node.fields.slug,
-            component: Post,
-            context: { ...node.fields },
-            // layout: `blog-layout`,
-          })
+          if (/data\/posts/.test(node.id)) {
+            createPage({
+              path: '/blog' + node.fields.slug,
+              component: Post,
+              context: { ...node.fields },
+            })
+          } else {
+            createPage({
+              path: node.fields.slug,
+              component: Handbook,
+              context: { ...node.fields },
+              layout: `handbook`,
+            })
+          }
         })
       })
     )

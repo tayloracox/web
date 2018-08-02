@@ -3,6 +3,7 @@ import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import {
+  faBars,
   faCalendar,
   faCode,
   faComment,
@@ -25,6 +26,7 @@ import {
 } from '@fortawesome/fontawesome-free-brands'
 
 fontawesome.library.add(
+  faBars,
   faCalendar,
   faCode,
   faFacebook,
@@ -45,6 +47,7 @@ fontawesome.library.add(
 const ICONS = {
   admissions: ['fas', 'graduation-cap'],
   apply: ['fas', 'laptop'],
+  bars: ['fas', 'bars'],
   calendar: ['fas', 'calendar'],
   facebook: ['fab', 'facebook'],
   faq: ['fas', 'puzzle-piece'],

@@ -16,14 +16,30 @@ module.exports = {
     siteUrl,
   },
   plugins: [
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-sitemap',
     },

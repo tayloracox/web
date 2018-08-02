@@ -1,0 +1,66 @@
+$nav-width: 3rem;
+
+.Handbook {
+  // TODO: Refactor entire site to use Bulma?
+
+  nav {
+    background-color: $seaGreen;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $nav-width;
+    transition: width 200ms ease;
+
+    a {
+      color: white;
+    }
+
+    &.open {
+      width: 12rem;
+    }
+
+    &.closed {
+      > ul {
+        display: none;
+      }
+    }
+
+    ul a {
+      font-weight: normal;
+      font-size: 0.9rem;
+    }
+
+    ul li li {
+      padding-left: 0.5rem;
+    }
+
+    ul li a {
+      display: block;
+      padding: 0 0.5rem;
+
+      &.active {
+        background-color: $blue;
+      }
+    }
+
+    > ul > li > a {
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: lighten($seaGreen, 10%);
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0.5rem calc(1.8rem - 0.875em);
+    }
+  }
+
+  @media screen and (max-width: $desktop-width + ($nav-width * 2) + 1rem) {
+    .wrap {
+      margin-left: $nav-width;
+    }
+  }
+}
