@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       createNodeField({ node, name: 'slug', value: slug })
     }
 
-    // Handbook
+    // Handbook, NOTE: Trailing slashes here are significant.
     if (/data\/handbook/.test(node.id)) {
       const parsedFilePath = path.parse(fileNode.relativePath)
       if (parsedFilePath.name !== 'README' && parsedFilePath.dir !== '') {
@@ -142,51 +142,74 @@ exports.onPostBuild = ({ graphql }) => {
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
-  return new Promise((resolve, reject) => {
-    const Post = path.resolve('src/components/Post.js')
-    const Handbook = path.resolve('src/components/Handbook/Content.js')
-
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              filter: {
-                fileAbsolutePath: { regex: "/data/(posts|handbook)/" }
-                frontmatter: { draft: { ne: true } }
-              }
-            ) {
-              edges {
-                node {
-                  id
-                  fields {
-                    slug
+  return Promise.all([
+    new Promise((resolve, reject) => {
+      resolve(
+        graphql(
+          `
+            {
+              allMarkdownRemark(
+                filter: {
+                  fileAbsolutePath: { regex: "/data/handbook/(?!meta)/" }
+                }
+              ) {
+                edges {
+                  node {
+                    id
+                    fields {
+                      slug
+                    }
                   }
                 }
               }
             }
-          }
-        `
-      ).then(result => {
-        if (result.errors) reject(result.errors)
-
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          if (/data\/posts/.test(node.id)) {
-            createPage({
-              path: '/blog' + node.fields.slug,
-              component: Post,
-              context: { ...node.fields },
-            })
-          } else {
+          `
+        ).then(result => {
+          if (result.errors) reject(result.errors)
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
             createPage({
               path: node.fields.slug,
-              component: Handbook,
+              component: path.resolve('src/components/Handbook/Content.js'),
               context: { ...node.fields },
               layout: `handbook`,
             })
-          }
+          })
         })
-      })
-    )
-  })
+      )
+    }),
+    new Promise((resolve, reject) => {
+      resolve(
+        graphql(
+          `
+            {
+              allMarkdownRemark(
+                filter: {
+                  fileAbsolutePath: { regex: "/data/posts/" }
+                  frontmatter: { draft: { ne: true } }
+                }
+              ) {
+                edges {
+                  node {
+                    id
+                    fields {
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          `
+        ).then(result => {
+          if (result.errors) reject(result.errors)
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+            createPage({
+              path: '/blog' + node.fields.slug,
+              component: path.resolve('src/components/Post.js'),
+              context: { ...node.fields },
+            })
+          })
+        })
+      )
+    }),
+  ])
 }

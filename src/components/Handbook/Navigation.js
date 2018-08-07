@@ -17,13 +17,13 @@ class Navigation extends Component {
         </header>
         <ul>
           <li>
-            <Link to="/handbook/curriculum" activeClassName="active">
+            <Link to="/handbook/curriculum/" activeClassName="active">
               Curriculum
             </Link>
             <ul>
               <li>
                 <Link
-                  to="/handbook/curriculum/fundamentals"
+                  to="/handbook/curriculum/fundamentals/"
                   activeClassName="active"
                 >
                   Fundamentals
@@ -32,17 +32,17 @@ class Navigation extends Component {
             </ul>
           </li>
           <li>
-            <Link to="/handbook/tools" activeClassName="active">
+            <Link to="/handbook/tools/" activeClassName="active">
               Tools
             </Link>
           </li>
           <li>
-            <Link to="/handbook/skills" activeClassName="active">
+            <Link to="/handbook/skills/" activeClassName="active">
               Skills
             </Link>
           </li>
           <li>
-            <Link to="/handbook/career" activeClassName="active">
+            <Link to="/handbook/career/" activeClassName="active">
               Career
             </Link>
           </li>

@@ -42,7 +42,10 @@ export default ({ data }) => {
         <figure className="featured">
           <Image sizes={post.fields.image.childImageSharp.feature} />
         </figure>
-        <article dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article
+          className="content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <div className="social-links">
           <RedditShareButton url={url} title={post.frontmatter.title}>
             <RedditIcon round size={iconSize} />

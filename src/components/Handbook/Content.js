@@ -3,7 +3,7 @@ import React from 'react'
 const Content = ({ data }) => {
   const { markdownRemark: page } = data
   return (
-    <div className="Content">
+    <div className="content">
       <h1>{page.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </div>
