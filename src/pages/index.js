@@ -36,6 +36,10 @@ const IndexPage = () => (
         <aside>
           <h2>Academy</h2>
           <h3>Learn to code with us.</h3>
+          <h3>
+            We are now enrolling for our September 4<sup>th</sup>
+            and October 22<sup>nd</sup> cohorts!
+          </h3>
           <p>
             The <strong>Academy at Suncoast Developers Guild</strong> is a code
             school that serves <em>people</em>, not profit. We are changing
