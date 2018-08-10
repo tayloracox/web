@@ -1,6 +1,6 @@
 ---
 title: Why do we teach Ruby?
-position: '10'
+position: 'k'
 ---
 Ruby is powerful programing language that has a very loyal and vast ecosystem. Ruby was designed with a few key ideas in mind; an easy to use object oriented focused scripting language that maximizes developer happiness. These core principles lead to Ruby being a popular language to quickly create powerful and useful applications. 
 

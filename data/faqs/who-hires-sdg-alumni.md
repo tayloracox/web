@@ -1,6 +1,6 @@
 ---
 title: Who hires SDG Alumni?
-position: '15'
+position: 'o'
 ---
 Raymond James, Clarity Services, Amazon, Malwarebytes, Gooee, PROforma, Mad Mobile, Spatial Networks, GitLab, Bank of the Ozarks, Healthesytems, Haneke Design, Symphonic Distribution, Hivelocity and Script are just a few. 
 

@@ -1,6 +1,6 @@
 ---
 title: Why do we teach .NET?
-position: '11'
+position: 'l'
 ---
 Apart from being a strong, versatile, and extremely popular language, .NET is a somewhat unusual choice for a boot camp to teach. Its a vast language that can go from sweet and simple to deep and complex very quickly. We have chosen for a few key reasons. Not only is a strong market need for .NET developers, but the syntax and basic concepts of the language offers a strong springboard to learn other languages.
 

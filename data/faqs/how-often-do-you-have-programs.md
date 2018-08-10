@@ -1,5 +1,5 @@
 ---
 title: How often do you have programs?
-position: '2'
+position: 'c'
 ---
 We have new cohorts every three to four months.
