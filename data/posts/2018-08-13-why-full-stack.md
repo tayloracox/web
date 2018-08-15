@@ -63,9 +63,7 @@ Not only do they understand the whole stack, which makes them valuable on a team
 
 Being a full-stack developer means having knowledge in all areas of the web site. That's a tall order. How to do we manage this tall order at SDG? We focus on creating what a has been known as a "T-shaped" developer:
 
-//TODO: t shape graphic
-
-A "T-shaped" developer has that wide breadth of knowledge (i.e. across the spectrum of the web stack) with 1 or more fields of deep knowledge and interest. This doesn't mean that every new developer we teach will be an expert in every aspect of web development. That can take years of training. Being "T-shaped" means that a developer can talk to and even create ideas anywhere in the stack, but has their focus has to be in one or a handful of areas. To do this, we are sacrificing depth of knowledge for a more broader approach.
+A "T-shaped" developer has that wide breadth of knowledge, across the spectrum of the web stack (the top of the "T") with 1 or more fields of deep knowledge and interest (the leg of the "T") . This doesn't mean that every new developer we teach will be an expert in every aspect of web development. That can take years of training. Being "T-shaped" means that a developer can talk to and even create ideas anywhere in the stack, but has their focus has to be in one or a handful of areas. To do this, we are sacrificing depth of knowledge for a more broader approach.
 
 ## But, don't we want depth?
 
