@@ -149,7 +149,11 @@ const TeamPage = props => (
           name="Katherine Trammell"
           imgData={props.data.katherine.sizes}
         >
-          A Florida transplant that originated from Michigan, Katherine is an alumnus from The Iron Yard. After joining the TIY team she soon found her love for supporting the local tech community, especially the Kids Academy classes. She uses her experiences as a developer and former student to help elevate the experience on the SDG campus.
+          A Florida transplant that originated from Michigan, Katherine is an
+          alumnus from The Iron Yard. After joining the TIY team she soon found
+          her love for supporting the local tech community, especially the Kids
+          Academy classes. She uses her experiences as a developer and former
+          student to help elevate the experience on the SDG campus.
         </Card>
       </div>
     </div>
