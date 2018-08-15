@@ -88,6 +88,20 @@ const AcademyNetworkPage = props => (
         <li>
           <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
         </li>
+        <li className="padWhite echnobind">
+          <Img
+            title="Echnobind"
+            alt="Echnobind Logo"
+            sizes={props.data.echnobind.sizes}
+          />
+        </li>
+        <li>
+          <Img
+            title="Zeni Software"
+            alt="Zeni Software Logo"
+            sizes={props.data.zeniSoftware.sizes}
+          />
+        </li>
       </ul>
 
       <h3>Why become part of our Hiring Network?</h3>
@@ -164,6 +178,16 @@ export const pageQuery = graphql`
       }
     }
     spatialNetworks: imageSharp(id: { regex: "/network/spatial-networks/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    echnobind: imageSharp(id: { regex: "/network/echnobind/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    zeniSoftware: imageSharp(id: { regex: "/network/zeni-software/" }) {
       sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
