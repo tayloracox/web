@@ -1,6 +1,6 @@
 ---
 title: How do I apply?
-position: 'a'
+position: 'ab'
 ---
 It's easy and free. There is no cost or obligation to attend if you apply. First, you'll meet with our admissions team where some of your questions or concerns will be answered. The next step of the interview process is to meet with the instructional staff.
 
