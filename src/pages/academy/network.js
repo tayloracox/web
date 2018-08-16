@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import AcademyNavigation from '../../components/AcademyNavigation'
 import PageHeading from '../../components/PageHeading'
 
@@ -13,94 +14,126 @@ const AcademyNetworkPage = props => (
 
       <ul className="companies">
         <li>
-          <Img
-            title="Spatial Networks"
-            alt="Spatial Networks Logo"
-            sizes={props.data.spatialNetworks.sizes}
-          />
+          <OutboundLink href="https://spatialnetworks.com/" target="_blank">
+            <Img
+              title="Spatial Networks"
+              alt="Spatial Networks Logo"
+              sizes={props.data.spatialNetworks.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="PROforma"
-            alt="PROforma Logo"
-            sizes={props.data.proforma.sizes}
-          />
+          <OutboundLink href="http://www.proforma.com/usa/" target="_blank">
+            <Img
+              title="PROforma"
+              alt="PROforma Logo"
+              sizes={props.data.proforma.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img title="Gooee" alt="Gooee Logo" sizes={props.data.gooee.sizes} />
+          <OutboundLink href="https://gooee.com/" target="_blank">
+            <Img
+              title="Gooee"
+              alt="Gooee Logo"
+              sizes={props.data.gooee.sizes}
+            />
+          </OutboundLink>
+        </li>
+        <li className="haneke">
+          <OutboundLink href="https://www.hanekedesign.com/" target="_blank">
+            <Img
+              title="Haneke"
+              alt="Haneke Design Logo"
+              sizes={props.data.haneke.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Haneke"
-            alt="Haneke Design Logo"
-            sizes={props.data.haneke.sizes}
-          />
+          <OutboundLink href="https://www.malwarebytes.com/" target="_blank">
+            <Img
+              title="Malware Bytes"
+              alt="Malware Bytes Logo"
+              sizes={props.data.malwarebytes.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Malware Bytes"
-            alt="Malware Bytes Logo"
-            sizes={props.data.malwarebytes.sizes}
-          />
+          <OutboundLink href="https://www.raymondjames.com/" target="_blank">
+            <Img
+              title="Raymond James"
+              alt="Raymond James Logo"
+              sizes={props.data.raymondJames.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Raymond James"
-            alt="Raymond James Logo"
-            sizes={props.data.raymondJames.sizes}
-          />
+          <OutboundLink href="https://www.clarityservices.com/" target="_blank">
+            <Img
+              title="Clarity Services"
+              alt="Clarity Services Logo"
+              sizes={props.data.clarity.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Clarity Services"
-            alt="Clarity Services Logo"
-            sizes={props.data.clarity.sizes}
-          />
+          <OutboundLink href="https://about.gitlab.com/" target="_blank">
+            <Img
+              title="Gitlab"
+              alt="Gitlab Logo"
+              sizes={props.data.gitlab.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Gitlab"
-            alt="Gitlab Logo"
-            sizes={props.data.gitlab.sizes}
-          />
+          <OutboundLink href="http://www.presence.io/" target="_blank">
+            <Img
+              title="Presence"
+              alt="Presence Logo"
+              sizes={props.data.presence.sizes}
+            />
+          </OutboundLink>
         </li>
         <li>
-          <Img
-            title="Presence"
-            alt="Presence Logo"
-            sizes={props.data.presence.sizes}
-          />
+          <OutboundLink href="https://www.bisk.com/" target="_blank">
+            <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
+          </OutboundLink>
         </li>
         <li>
-          <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
-        </li>
-        <li>
-          <Img
-            title="Zeni Software"
-            alt="Zeni Software Logo"
-            sizes={props.data.zeniSoftware.sizes}
-          />
+          <OutboundLink href="https://zenisoftware.com/" target="_blank">
+            <Img
+              title="Zeni Software"
+              alt="Zeni Software Logo"
+              sizes={props.data.zeniSoftware.sizes}
+            />
+          </OutboundLink>
         </li>
         <li className="padWhite">
-          <Img
-            title="Bank of the Ozarks"
-            alt="Bank of the Ozarks Logo"
-            sizes={props.data.ozarks.sizes}
-          />
+          <OutboundLink href="https://www.ozk.com/personal" target="_blank">
+            <Img
+              title="Bank of the Ozarks"
+              alt="Bank of the Ozarks Logo"
+              sizes={props.data.ozarks.sizes}
+            />
+          </OutboundLink>
         </li>
         <li className="padWhite netsvs">
-          <Img
-            title="NetSynergy Virtual Solutions"
-            alt="NetSynergy Virtual Solutions Logo"
-            sizes={props.data.netsvs.sizes}
-          />
+          <OutboundLink href="https://www.mynetsvs.com/" target="_blank">
+            <Img
+              title="NetSynergy Virtual Solutions"
+              alt="NetSynergy Virtual Solutions Logo"
+              sizes={props.data.netsvs.sizes}
+            />
+          </OutboundLink>
         </li>
         <li className="padWhite echnobind">
-          <Img
-            title="Echnobind"
-            alt="Echnobind Logo"
-            sizes={props.data.echnobind.sizes}
-          />
+          <OutboundLink href="https://echobind.com/" target="_blank">
+            <Img
+              title="Echnobind"
+              alt="Echnobind Logo"
+              sizes={props.data.echnobind.sizes}
+            />
+          </OutboundLink>
         </li>
       </ul>
 
