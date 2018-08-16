@@ -71,6 +71,16 @@ const AcademyNetworkPage = props => (
             sizes={props.data.presence.sizes}
           />
         </li>
+        <li>
+          <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
+        </li>
+        <li>
+          <Img
+            title="Zeni Software"
+            alt="Zeni Software Logo"
+            sizes={props.data.zeniSoftware.sizes}
+          />
+        </li>
         <li className="padWhite">
           <Img
             title="Bank of the Ozarks"
@@ -85,21 +95,11 @@ const AcademyNetworkPage = props => (
             sizes={props.data.netsvs.sizes}
           />
         </li>
-        <li>
-          <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
-        </li>
         <li className="padWhite echnobind">
           <Img
             title="Echnobind"
             alt="Echnobind Logo"
             sizes={props.data.echnobind.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Zeni Software"
-            alt="Zeni Software Logo"
-            sizes={props.data.zeniSoftware.sizes}
           />
         </li>
       </ul>
