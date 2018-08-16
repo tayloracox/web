@@ -197,7 +197,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    katherine: imageSharp(id: { regex: "/people/katherine/" }) {
+    katherine: imageSharp(id: { regex: "/people/katherinet/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
