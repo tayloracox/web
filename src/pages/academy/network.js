@@ -113,7 +113,7 @@ const AcademyNetworkPage = props => (
             <Img
               title="Bank of the Ozarks"
               alt="Bank of the Ozarks Logo"
-              sizes={props.data.ozarks.sizes}
+              sizes={props.data.ozk.sizes}
             />
           </OutboundLink>
         </li>
@@ -190,7 +190,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    ozarks: imageSharp(id: { regex: "/network/ozarks/" }) {
+    ozk: imageSharp(id: { regex: "/network/ozk/" }) {
       sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
