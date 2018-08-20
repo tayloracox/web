@@ -74,6 +74,20 @@ const SuccessStoriesPage = props => (
           I could explore a new career. This finally allowed me to do what I had
           wanted to do for many years--learn how to code."
         </Card>
+
+        <Card
+          id="mark"
+          name="Mark Lombardi-Nelson"
+          sizes={props.data.mark.sizes}
+        >
+          "I can't begin to express the gratitude and impact learning to code
+          has made on our business, as well as my life. We built Shoot To Thrill
+          Media, and I made the conscious decision to dive deep and learn to
+          code soon after. This skillset has empowered me to provide for my
+          family, impact my community, and grow my business in a way that would
+          have not been possible without you. Thank you for empowering me to
+          have the confidence and ability to follow my dreams."
+        </Card>
       </div>
 
       <p className="cta">
@@ -106,6 +120,11 @@ export const pageQuery = graphql`
       }
     }
     shaun: imageSharp(id: { regex: "/people/shaun/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    mark: imageSharp(id: { regex: "/people/mark-lombardi2/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }

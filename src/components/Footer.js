@@ -82,6 +82,14 @@ const Footer = () => (
               <Icon name="instagram" />
             </OutboundLink>
           </li>
+          <li>
+            <OutboundLink
+              href="https://www.linkedin.com/school/suncoast-developers-guild/"
+              target="_blank"
+            >
+              <Icon name="linkedin" />
+            </OutboundLink>
+          </li>
           {/* <li>
             <OutboundLink
               href="https://www.youtube.com/channel/UCHEG7eYS1ijBUjh44mpBwVg"
