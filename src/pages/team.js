@@ -119,7 +119,10 @@ const TeamPage = props => (
           alumnus from The Iron Yard. After joining the TIY team she soon found
           her love for supporting the local tech community, especially the Kids
           Academy classes. She uses her experiences as a developer and former
-          student to help elevate the experience on the SDG campus. As Operations Unicorn, Katherine assists with career support and student success. Katherine is also a community liaison for events on campus and our volunteer coordinator.
+          student to help elevate the experience on the SDG campus. As
+          Operations Unicorn, Katherine assists with career support and student
+          success. Katherine is also a community liaison for events on campus
+          and our volunteer coordinator.
         </Card>
       </div>
 
