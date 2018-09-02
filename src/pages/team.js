@@ -109,6 +109,18 @@ const TeamPage = props => (
           a passion for mentoring young and ambitious talent, and wants to bring
           developer training to the next level.
         </Card>
+        <Card
+          id="katherine"
+          name="Katherine Trammell"
+          title="Operations Unicorn"
+          imgData={props.data.katherine.sizes}
+        >
+          A Florida transplant that originated from Michigan, Katherine is an
+          alumnus from The Iron Yard. After joining the TIY team she soon found
+          her love for supporting the local tech community, especially the Kids
+          Academy classes. She uses her experiences as a developer and former
+          student to help elevate the experience on the SDG campus.
+        </Card>
       </div>
 
       <h2>Our Supporters & Volunteers</h2>
@@ -142,18 +154,6 @@ const TeamPage = props => (
           serves as a co-organizer for SDG Jr. to promote the importance of
           learning technology and problem solving skills to a younger
           generation.
-        </Card>
-
-        <Card
-          id="katherine"
-          name="Katherine Trammell"
-          imgData={props.data.katherine.sizes}
-        >
-          A Florida transplant that originated from Michigan, Katherine is an
-          alumnus from The Iron Yard. After joining the TIY team she soon found
-          her love for supporting the local tech community, especially the Kids
-          Academy classes. She uses her experiences as a developer and former
-          student to help elevate the experience on the SDG campus.
         </Card>
       </div>
     </div>
