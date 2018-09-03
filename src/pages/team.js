@@ -4,7 +4,7 @@ import PageHeading from '../components/PageHeading'
 import portraitJason from '../images/people/jason.jpg'
 import portraitToni from '../images/people/toni.jpg'
 import portraitGavin from '../images/people/gavin.jpg'
-import portraitMark from '../images/people/mark.jpg'
+import portraitMark from '../images/people/mark-dewey.jpg'
 import portraitJim from '../images/people/jim-james.jpg'
 import portraitAdam from '../images/people/adam-recvlohe.jpg'
 
@@ -180,7 +180,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    mark: imageSharp(id: { regex: "/people/mark/" }) {
+    mark: imageSharp(id: { regex: "/people/mark-dewey/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
