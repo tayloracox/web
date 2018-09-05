@@ -5,6 +5,8 @@ const {
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 
+const autoprefixer = require('autoprefixer')
+
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
@@ -20,7 +22,6 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
@@ -91,6 +92,12 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-120953554-1',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [autoprefixer()],
       },
     },
   ],
