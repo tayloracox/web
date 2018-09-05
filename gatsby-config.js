@@ -24,7 +24,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-transformer-json',
+    // 'gatsby-transformer-json', NOTE: Handbook has a `words.json` for the snowman repo that breaks this. We're not really using it anyways at the moment. (https://github.com/gatsbyjs/gatsby/issues/5483)
     {
       resolve: 'gatsby-transformer-remark',
       options: {
