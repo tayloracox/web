@@ -8,7 +8,7 @@ const AcademyPage = () => (
   <div className="AcademyPage">
     <AcademyNavigation />
     <div className="wrap">
-      <PageHeading>Web Developent Program</PageHeading>
+      <PageHeading>Web Development Program</PageHeading>
 
       <Tabs>
         <TabList>
