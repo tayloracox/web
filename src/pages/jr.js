@@ -146,7 +146,8 @@ const JuniorPage = () => (
         <p>
           Most classes are hosted on our St. Pete campus. Our Tampa classes are
           hosted at local companies who volunteer their location. If your
-          company is interested in hosting one of our classes please {KidsEmail}.
+          company is interested in hosting one of our classes please {KidsEmail}
+          .
         </p>
       </div>
       <div className="overview">
