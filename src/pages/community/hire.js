@@ -74,50 +74,6 @@ const HireAlumniPage = props => (
           </p>
         </Card>
         <Card
-          id="justin"
-          name="Justin Valentin"
-          imgData={props.data.justin.sizes}
-        >
-          <p>
-            Github: <a href="https://github.com/Jusixo" target="_blank">
-              Jusixo
-            </a>
-          </p>
-          <p>
-            Portfolio: <a href="https://jusixo.github.io/" target="_blank">
-              jusixo.github.io
-            </a>
-          </p>
-          <p>
-            LinkedIn: <a
-              href="https://www.linkedin.com/in/jusixo/"
-              target="_blank"
-            >
-              Jusixo
-            </a>
-          </p>
-        </Card>
-        <Card id="jose" name="Jose Campos" imgData={props.data.jose.sizes}>
-          <p>
-            Github: <a href="https://github.com/camposja" target="_blank">
-              camposja
-            </a>
-          </p>
-          <p>
-            Portfolio: <a href="https://camposja.github.io" target="_blank">
-              camposja.github.io
-            </a>
-          </p>
-          <p>
-            LinkedIn: <a
-              href="https://www.linkedin.com/in/jose-a-campos/"
-              target="_blank"
-            >
-              jose-a-campos/
-            </a>
-          </p>
-        </Card>
-        <Card
           id="jasmine"
           name="Jasmine Frantz"
           imgData={props.data.jasmine.sizes}
@@ -154,16 +110,6 @@ export const pageQuery = graphql`
       }
     }
     marianne: imageSharp(id: { regex: "/people/marianne/" }) {
-      sizes(maxWidth: 416) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    justin: imageSharp(id: { regex: "/people/justin/" }) {
-      sizes(maxWidth: 416) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    jose: imageSharp(id: { regex: "/people/jose/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }

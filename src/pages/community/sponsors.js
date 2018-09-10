@@ -16,12 +16,15 @@ const CommunityNetworkPage = props => (
           customized curriculum would fine tune technology concepts and focus on
           the skillsets necessary to be successful at Proforma.
           <span className="quotation-mark">&quot;</span>
+          <p>
+            <a href="supporter-testimonial">Read More</a>
+          </p>
         </blockquote>
         <p className="author">- PROforma</p>
       </div>
 
       <ul className="companies">
-        <li>
+        <li className="tab">
           <div className="logo">
             <Img
               title="PROforma"
