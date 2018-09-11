@@ -82,20 +82,17 @@ export default ({ data }) => {
           },
           {
             property: 'og:title',
-            name: 'title',
             content: shareTitle,
           },
           {
             property: 'og:description',
-            name: 'description',
             content: post.frontmatter.description,
           },
           {
             property: 'og:image',
-            name: 'image',
             content: siteUrl + post.fields.image.childImageSharp.openGraph.src,
           },
-          { property: 'og:url', name: 'url', content: url },
+          { property: 'og:url', content: url },
         ]}
       />
     </div>

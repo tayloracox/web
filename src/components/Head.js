@@ -20,37 +20,16 @@ const Head = () => (
       { name: 'twitter:description', content: description },
       { name: 'twitter:site', content: '@suncoastio' },
       { name: 'twitter:creator', content: '@suncoastio' },
-      {
-        name: 'twitter:image',
-        content: `${siteUrl}/assets/1024-512.png`,
-      },
-      {
-        property: 'og:title',
-        name: 'title',
-        content: title,
-      },
+      { name: 'twitter:image', content: `${siteUrl}/assets/1024-512.png` },
+      { property: 'og:title', content: title },
       { property: 'og:description', name: 'description', content: description },
-      {
-        property: 'og:image',
-        name: 'image',
-        content: `${siteUrl}/assets/1200-630.png`,
-      },
-      { property: 'og:url', name: 'url', content: siteUrl },
-      {
-        property: 'og:site_name',
-        name: 'site_name',
-        content: title,
-      },
+      { property: 'og:image', content: `${siteUrl}/assets/1200-630.png` },
+      { property: 'og:url', content: siteUrl },
+      { property: 'og:site_name', content: title },
       { property: 'og:locale', name: 'locale', content: 'en_US' },
-      {
-        property: 'fb:admins',
-        content: '365336690280273',
-      },
-      {
-        property: 'fb:app_id',
-        content: '228326264426970',
-      },
-      { property: 'og:type', name: 'type', content: 'website' },
+      { property: 'fb:admins', content: '365336690280273' },
+      { property: 'fb:app_id', content: '228326264426970' },
+      { property: 'og:type', content: 'website' },
     ]}
     link={[
       {
