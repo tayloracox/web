@@ -1,6 +1,8 @@
 import React from 'react'
-import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+
+config.autoAddCss = false
 
 import {
   faBars,
@@ -26,7 +28,7 @@ import {
   faInstagram,
 } from '@fortawesome/fontawesome-free-brands'
 
-fontawesome.library.add(
+library.add(
   faBars,
   faCalendar,
   faCode,
