@@ -42,8 +42,14 @@ const Head = () => (
         content: title,
       },
       { property: 'og:locale', name: 'locale', content: 'en_US' },
-      { property: 'fb:admins', name: 'fb:admins', content: '365336690280273' },
-      { property: 'fb:app_id', name: 'fb:app_id', content: '228326264426970' },
+      {
+        property: 'fb:admins',
+        content: '365336690280273',
+      },
+      {
+        property: 'fb:app_id',
+        content: '228326264426970',
+      },
       { property: 'og:type', name: 'type', content: 'website' },
     ]}
     link={[
