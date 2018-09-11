@@ -87,7 +87,21 @@ class ProgramApplication extends Component {
           )}
           {step === 1 && (
             <section>
-              <p>...</p>
+              <fieldset>
+                <h3>When are you hoping to start the program?</h3>
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="radio"
+                        name="question_responses[1][a]"
+                        value="As soon as the next program is available"
+                      />
+                      As soon as the next program is available
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </section>
           )}
           {step === 2 && (
@@ -107,8 +121,15 @@ class ProgramApplication extends Component {
                 Thanks for completing this application; that was easy right?
               </p>
               <p>
-                <Link to="/">We'll be in touch&hellip;</Link>
+                Your next step is an interview to get to learn more about the
+                program and answer any questions you may have. Please sign up
+                for a time to meet with someone from SDG at:
+                <br />
+                <a href="https://calendly.com/suncoastio/60int">
+                  https://calendly.com/suncoastio/60int
+                </a>
               </p>
+              <p>We'll be in touch&hellip;</p>
             </section>
           )}
           <div className="actions">
