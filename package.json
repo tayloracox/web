@@ -44,8 +44,7 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "lint": "eslint src/**/*.js",
-    "lint:fix": "eslint --fix src/**/*.js",
-    "postinstall": "git submodule update --init"
+    "lint:fix": "eslint --fix src/**/*.js"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
