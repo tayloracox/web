@@ -27,7 +27,6 @@ const Head = () => (
       { property: 'og:url', content: siteUrl },
       { property: 'og:site_name', content: title },
       { property: 'og:locale', name: 'locale', content: 'en_US' },
-      { property: 'fb:admins', content: '365336690280273' },
       { property: 'fb:app_id', content: '228326264426970' },
       { property: 'og:type', content: 'website' },
     ]}
