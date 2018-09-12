@@ -1,7 +1,7 @@
 ---
 title: 'It''s the Mission, not the Money'
 date: '2018-09-12T17:04:46-04:00'
-image: /media/cohortx-shirts-purple.jpg
+image: /media/41416064_1187377971409470_6719711544180998144_o.jpg
 description: >-
   Suncoast Developers Guild is currently exploring tuition models that would
   flip this basic fact on its head. Our ultimate goal is to put Junior
