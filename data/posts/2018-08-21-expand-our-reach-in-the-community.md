@@ -10,7 +10,7 @@ description: >
   it’s to improve their own business or further their personal goals, we believe
   that the development of technical skills is vital in nurturing an innovative
   community.
-draft: false
+draft: true
 author: Savanna Blackerby
 ---
 
