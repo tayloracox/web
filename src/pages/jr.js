@@ -32,8 +32,8 @@ const MeetupLink = (
   </OutboundLink>
 )
 
-const ConsetForm = (
-  <OutboundLink href="https://docs.google.com/forms/d/e/1FAIpQLScpmdobCYFKEmZsOdzS4To5kTs37zkchijZGh5oZAtKgnQMwg/viewform?embedded=true">
+const SignUpForm = (
+  <OutboundLink href="https://goo.gl/forms/h3RNx591XCPO4ZMy1">
     our mailing list.
   </OutboundLink>
 )
@@ -146,7 +146,8 @@ const JuniorPage = () => (
         <p>
           Most classes are hosted on our St. Pete campus. Our Tampa classes are
           hosted at local companies who volunteer their location. If your
-          company is interested in hosting one of our classes please {KidsEmail}.
+          company is interested in hosting one of our classes please {KidsEmail}
+          .
         </p>
       </div>
       <div className="overview">
@@ -163,7 +164,7 @@ const JuniorPage = () => (
     <div className="row">
       <p>
         You can find our next class on {MeetupLink}. In the mean time, you can
-        join {ConsetForm}
+        join {SignUpForm}
       </p>
     </div>
   </div>

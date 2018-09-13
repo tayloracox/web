@@ -12,7 +12,7 @@ module.exports = {
   siteMetadata: {
     title: 'Suncoast Developers Guild',
     description:
-      'Suncoast Developers Guild is a collective of software engineers, programmers, and designers in Tampa Bay.',
+      'Suncoast Developers Guild is a code school in Tampa Bay that serves people, not profit. More than just a developers bootcamp, we are changing lives and teaching people to be the best software developers they can be.',
     siteUrl,
   },
   plugins: [
