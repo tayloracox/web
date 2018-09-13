@@ -1,6 +1,6 @@
 ---
 title: 'Hello, World!'
-date: '2018-07-25T14:59:14-04:00'
+date: '2018-09-13T14:59:14-04:00'
 image: /media/suncoast-developers-guild-code-school-tampa-bay-team-v2.png
 description: >
   It has been a year since The Iron Yard, the largest national coding school and
