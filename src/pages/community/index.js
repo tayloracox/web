@@ -18,9 +18,9 @@ const CommunityPage = ({ data }) => (
         <h2>Our Member Organizations</h2>
 
         <ul>
-          {orgs
-            .sort((a, b) => a.created - b.created)
-            .map(org => <Meetup group={org} key={org.id} />)}
+          {orgs.sort((a, b) => a.created - b.created).map(org => (
+            <Meetup group={org} key={org.id} />
+          ))}
         </ul>
       </section>
     </div>

@@ -12,7 +12,8 @@ const PrivacyPage = () => (
         from you across our website,{' '}
         <OutboundLink href="https://suncoast.io/">
           https://suncoast.io/
-        </OutboundLink>, and other sites we own and operate.
+        </OutboundLink>
+        , and other sites we own and operate.
       </p>
       <p>
         We only ask for personal information when we truly need it to provide a

@@ -11,6 +11,7 @@ description: |
 draft: true
 author: Gavin Stark
 ---
+
 When we started Suncoast Developers Guild we decided to operate as a 501(c)3
 
 non-profit. We will likely have a blog post covering this, but we felt this
@@ -22,8 +23,6 @@ what is best for our students. This also allows us to operating in the open.
 While we were discussing this openness we decided that our curriculum would also
 
 be open.
-
-
 
 As an institution that charges a tuition for our programs you might be asking
 
@@ -47,15 +46,11 @@ feel that our "secret sauce" is the skill, commitment, and passion of our
 
 instructors and staff.
 
-
-
 Our instructors come from long histories of working as professional software
 
 developers. Our instructors mostly work with open source languages and
 
 technologies, even contributing to those projects.
-
-
 
 We also run our classes utilizing open source software including Atom, VS Code,
 
@@ -64,8 +59,6 @@ git, node, Ruby, Rails, bash/zsh, and .Net Core. These are the tools and
 languages our students will be learning. Without these projects our task would
 
 be much more difficult.
-
-
 
 Our team comes from previously operating The Iron Yard Tampa Bay and during
 
@@ -84,8 +77,6 @@ revision. We also know that since desire to teach the most up-to-date
 techniques and technologies our community is using, we must consistently update
 
 this curriculum.
-
-
 
 Open source software typically builds upon the efforts of others and extends
 
