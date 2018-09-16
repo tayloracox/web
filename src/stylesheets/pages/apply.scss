@@ -60,4 +60,27 @@ $lineSize: 0.2rem;
       }
     }
   }
+
+  .ProgramApplication {
+    fieldset {
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+    p.note {
+      margin-top: 0;
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    ul li label {
+      text-transform: none;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    ul li input {
+      margin-right: 0.5rem;
+    }
+  }
 }
