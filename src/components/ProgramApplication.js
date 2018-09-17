@@ -126,6 +126,7 @@ class ProgramApplication extends Component {
   constructor() {
     super()
     const questions = _.flatten(QUESTIONS).map(q => q.question)
+    this.scrollRef = React.createRef()
     this.state = {
       step: 0,
       responses: _.zipObject(questions, Array(questions.length).fill('')),
@@ -142,13 +143,14 @@ class ProgramApplication extends Component {
     if (this.state.step === LAST_STEP) {
       // Complete application
     }
-
     this.setState({ step: this.state.step + 1 })
+    this.scrollToTop()
   }
 
   backtrackApplication = event => {
     event.preventDefault()
     this.setState({ step: Math.max(0, this.state.step - 1) })
+    this.scrollToTop()
   }
 
   setResponse = (question, answer) => {
@@ -163,10 +165,14 @@ class ProgramApplication extends Component {
     )
   }
 
+  scrollToTop() {
+    window.scrollTo(0, this.scrollRef.current.parentNode.offsetTop)
+  }
+
   render() {
     const { step } = this.state
     return (
-      <div className="ProgramApplication">
+      <div className="ProgramApplication" ref={this.scrollRef}>
         <nav className="steps">
           <ol>
             <li className={cx({ complete: step > 0, current: step === 0 })}>
