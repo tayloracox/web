@@ -3,8 +3,11 @@ import cx from 'classnames'
 import _ from 'lodash'
 import update from 'immutability-helper'
 import Link from 'gatsby-link'
+import config from '../../gatsby-config'
 
 const LAST_STEP = 3
+
+const GATEWAY_API_URL = config.siteMetadata.apis.gateway
 
 const QUESTIONS = [
   [],
@@ -128,22 +131,43 @@ class ProgramApplication extends Component {
     const questions = _.flatten(QUESTIONS).map(q => q.question)
     this.scrollRef = React.createRef()
     this.state = {
+      token: null,
+      contact: { full_name: '', email_address: '', phone_number: '' },
       step: 0,
       responses: _.zipObject(questions, Array(questions.length).fill('')),
     }
   }
 
-  continueApplication = event => {
+  continueApplication = async event => {
     event.preventDefault()
 
     if (this.state.step === 0) {
-      // Begin application
+      const { id: token } = await fetch(GATEWAY_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+        body: JSON.stringify(this.state.contact),
+      }).then(response => response.json())
+      await this.setState({ token })
     }
 
     if (this.state.step === LAST_STEP) {
-      // Complete application
+      const { id: token } = await fetch(
+        `${GATEWAY_API_URL}/${this.state.token}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify({ question_responses: this.state.responses }),
+        }
+      ).then(response => response.json())
     }
-    this.setState({ step: this.state.step + 1 })
+
+    const step = this.state.token ? this.state.step + 1 : 0
+
+    this.setState({ step })
     this.scrollToTop()
   }
 
@@ -154,15 +178,16 @@ class ProgramApplication extends Component {
   }
 
   setResponse = (question, answer) => {
-    const { responses } = this.state
-    this.setState(
-      {
-        responses: update(responses, { [question]: { $set: answer } }),
-      },
-      () => {
-        console.log(this.state.responses)
-      }
-    )
+    this.setState({
+      responses: update(this.state.responses, { [question]: { $set: answer } }),
+    })
+  }
+
+  updateContact = event => {
+    const { name, value } = event.target
+    this.setState({
+      contact: update(this.state.contact, { [name]: { $set: value } }),
+    })
   }
 
   scrollToTop() {
@@ -192,7 +217,7 @@ class ProgramApplication extends Component {
             </li>
           </ol>
         </nav>
-        <form>
+        <form onSubmit={e => e.preventDefault()}>
           {step === 0 && (
             <section>
               <p>
@@ -207,15 +232,30 @@ class ProgramApplication extends Component {
               <fieldset>
                 <p>
                   <label htmlFor="">Name</label>
-                  <input type="text" name="contact[name]" />
+                  <input
+                    type="text"
+                    name="full_name"
+                    value={this.state.contact.full_name}
+                    onChange={this.updateContact}
+                  />
                 </p>
                 <p>
                   <label htmlFor="">Email Address</label>
-                  <input type="email" name="contact[email]" />
+                  <input
+                    type="email"
+                    name="email_address"
+                    value={this.state.contact.email_address}
+                    onChange={this.updateContact}
+                  />
                 </p>
                 <p>
                   <label htmlFor="">Telephone Number</label>
-                  <input type="tel" name="contact[phone]" />
+                  <input
+                    type="tel"
+                    name="phone_number"
+                    value={this.state.contact.phone_number}
+                    onChange={this.updateContact}
+                  />
                 </p>
               </fieldset>
               <p>

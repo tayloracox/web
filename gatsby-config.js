@@ -14,6 +14,11 @@ module.exports = {
     description:
       'Suncoast Developers Guild is a collective of software engineers, programmers, and designers in Tampa Bay.',
     siteUrl,
+    apis: {
+      gateway: isNetlifyProduction
+        ? 'https://gateway.suncoast.io/apply'
+        : 'http://localhost:3000/apply',
+    },
   },
   plugins: [
     'gatsby-plugin-catch-links',
