@@ -37,8 +37,10 @@ const IndexPage = () => (
           <h2>Academy</h2>
           <h3>Learn to code with us.</h3>
           <h3>
-            We are now enrolling for our October 22<sup>nd</sup>
-            and January 28<sup>th</sup> cohorts!
+            We are now enrolling for our October 22
+            <sup>nd</sup>
+            and January 28
+            <sup>th</sup> cohorts!
           </h3>
           <p>
             The <strong>Academy at Suncoast Developers Guild</strong> is a code
