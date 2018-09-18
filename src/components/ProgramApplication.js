@@ -341,7 +341,14 @@ const Question = ({
             {answers.map((answer, i) => (
               <li key={i}>
                 <label>
-                  <input type="radio" name={`q-${step}-${index}`} />
+                  <input
+                    type="radio"
+                    name={`q-${step}-${index}`}
+                    value={answer}
+                    onChange={e => {
+                      update(question, e.target.value)
+                    }}
+                  />
                   {answer}
                 </label>
               </li>
@@ -356,7 +363,23 @@ const Question = ({
             {answers.map((answer, i) => (
               <li key={i}>
                 <label>
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    name={`q-${step}-${index}`}
+                    value={answer}
+                    onChange={e => {
+                      update(
+                        question,
+                        Array.from(
+                          document.querySelectorAll(
+                            `input[name=q-${step}-${index}]:checked`
+                          )
+                        )
+                          .map(i => i.value)
+                          .join(', ')
+                      )
+                    }}
+                  />
                   {answer}
                 </label>
               </li>
