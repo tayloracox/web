@@ -1,73 +1,30 @@
 .ContactPage {
   form {
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+  }
 
-    fieldset.contact label {
-      display: block;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 0.8rem;
-      color: lighten($darkGrey, 20%);
+  fieldset.interests {
+    ul {
+      margin-left: 1rem;
     }
 
-    input,
-    textarea,
-    button[type='submit'] {
-      border: thin solid darken($cream, 20%);
-      border-radius: 0.2rem;
+    li {
+      list-style: disc outside none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    input {
+      margin-right: 0.5rem;
+    }
+
+    label {
       font-size: 1rem;
-      font-family: 'Source Sans Pro', sans-serif;
-      padding: 0.5rem;
     }
+  }
 
-    input[type='text'],
-    input[type='email'],
-    input[type='tel'],
-    textarea {
-      width: 100%;
-    }
-
-    fieldset.interests {
-      ul {
-        margin-left: 1rem;
-      }
-
-      li {
-        list-style: disc outside none;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      input {
-        margin-right: 0.5rem;
-      }
-
-      label {
-        font-size: 1rem;
-      }
-    }
-
-    fieldset {
-      border: none;
-    }
-
-    .action {
-      margin: 2rem auto;
-      text-align: center;
-      button[type='submit'] {
-        border-color: $seaGreen;
-        background-color: $blue;
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 0 $darkGrey;
-      }
-    }
-
-    @media screen and (max-width: 46rem) {
-      flex-direction: column;
-    }
+  .action {
+    text-align: center;
   }
 }
