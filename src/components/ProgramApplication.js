@@ -135,6 +135,13 @@ class ProgramApplication extends Component {
     }
   }
 
+  componentDidMount() {
+    const token = window.localStorage.getItem('application-token')
+    if (token && token.length > 0) {
+      this.setState({ token, step: 1 })
+    }
+  }
+
   continueApplication = async event => {
     event.preventDefault()
 
@@ -146,6 +153,7 @@ class ProgramApplication extends Component {
         },
         body: JSON.stringify(this.state.contact),
       }).then(response => response.json())
+      window.localStorage.setItem('application-token', token)
       await this.setState({ token })
     }
 
@@ -160,6 +168,7 @@ class ProgramApplication extends Component {
           body: JSON.stringify({ question_responses: this.state.responses }),
         }
       ).then(response => response.json())
+      window.localStorage.removeItem('application-token')
     }
 
     const step = this.state.token ? this.state.step + 1 : 0
