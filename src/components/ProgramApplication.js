@@ -194,6 +194,23 @@ class ProgramApplication extends Component {
     window.scrollTo(0, this.scrollRef.current.parentNode.offsetTop)
   }
 
+  // NOTE: Very naive, maybe improve later?
+  isValid() {
+    switch (this.state.step) {
+      case 0:
+        const { full_name, email_address, phone_number } = this.state.contact
+        return (
+          full_name.length > 0 &&
+          email_address.length > 0 &&
+          phone_number.length > 0
+        )
+        break
+      default:
+        return true
+    }
+    return false
+  }
+
   render() {
     const { step } = this.state
     return (
@@ -311,7 +328,11 @@ class ProgramApplication extends Component {
             </div>
             <div className="next">
               {step < LAST_STEP + 1 && (
-                <button type="submit" onClick={this.continueApplication}>
+                <button
+                  type="submit"
+                  onClick={this.continueApplication}
+                  disabled={!this.isValid()}
+                >
                   Continue
                 </button>
               )}
