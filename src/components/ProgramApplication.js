@@ -122,9 +122,6 @@ const QUESTIONS = [
   ],
 ]
 
-window.QUESTIONS = QUESTIONS
-window._ = _
-
 class ProgramApplication extends Component {
   constructor() {
     super()
