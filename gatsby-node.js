@@ -183,10 +183,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           `
             {
               allMarkdownRemark(
-                filter: {
-                  fileAbsolutePath: { regex: "/data/posts/" }
-                  frontmatter: { draft: { ne: true } }
-                }
+                filter: { fileAbsolutePath: { regex: "/data/posts/" } }
               ) {
                 edges {
                   node {
