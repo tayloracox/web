@@ -60,7 +60,7 @@ collections:
     label: Posts
     folder: data/posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{slug}}'
     fields:
       - name: title
         label: Title
@@ -87,5 +87,5 @@ collections:
         label: Post Author
         widget: relation
         collection: people
-        searchFields: ["title"]
+        searchFields: ['title']
         valueField: title
