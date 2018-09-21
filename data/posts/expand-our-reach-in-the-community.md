@@ -1,5 +1,5 @@
 ---
-title: Expand our reach in the community
+title: Expand our Reach in the Community
 date: '2018-08-21T17:08:31-04:00'
 image: /media/suncoast-developers-guild-code-school-tampa-bay-team-v2.png
 description: >
