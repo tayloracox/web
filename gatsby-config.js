@@ -14,6 +14,11 @@ module.exports = {
     description:
       'Suncoast Developers Guild is a code school in Tampa Bay that serves people, not profit. More than just a developers bootcamp, we are changing lives and teaching people to be the best software developers they can be.',
     siteUrl,
+    apis: {
+      gateway: isNetlifyProduction
+        ? 'https://gateway.suncoast.io/apply'
+        : 'http://localhost:3000/apply',
+    },
   },
   plugins: [
     'gatsby-plugin-catch-links',
