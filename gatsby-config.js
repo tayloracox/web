@@ -12,7 +12,7 @@ module.exports = {
   siteMetadata: {
     title: 'Suncoast Developers Guild',
     description:
-      'Suncoast Developers Guild is a collective of software engineers, programmers, and designers in Tampa Bay.',
+      'The only immersive code school in Tampa Bay, Suncoast Developers Guild serves people, not profit. We are changing lives and teaching people to be the best software developers they can be.',
     siteUrl,
     apis: {
       gateway: isNetlifyProduction
