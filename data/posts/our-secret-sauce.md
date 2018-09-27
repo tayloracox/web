@@ -9,7 +9,7 @@ description: >
   curriculum we will be inviting our alumni, local community, and community at
   large to contribute. We are excited to share our lessons, assignments, and
   approach with the community and look forward to your contributions.
-draft: true
+draft: false
 author: Gavin Stark
 ---
 When we started Suncoast Developers Guild we decided to operate as a 501(c)3 non-profit. We have [a blog post](https://suncoast.io/blog/it-s-the-mission-not-the-money/) covering this, but we felt this freed us from interests that were more concerned with profitability than doing what is best for our students. This also allows us to operate in the open. While we were discussing this openness we decided that our curriculum would also be open.
