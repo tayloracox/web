@@ -1,6 +1,6 @@
 ---
 title: Our "Secret Sauce"
-date: '2018-08-20T10:18:51-04:00'
+date: '2018-09-27T10:18:51-04:00'
 image: /media/gavin-secret-sauce-suncoast-developers-guild.jpg
 description: >
   Open source software typically builds upon the efforts of others and extends
