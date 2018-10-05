@@ -1,6 +1,6 @@
 ---
 title: Why do we teach the full-stack?
-date: '2018-07-25T14:59:14-04:00'
+date: '2018-10-05T14:59:14-04:00'
 image: /media/ai-codes-coding-97077.jpg
 description: >
   At SDG, we are training folks to become junior developer ready in 12 weeks.
