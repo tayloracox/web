@@ -120,6 +120,20 @@ const QUESTIONS = [
         'Other',
       ],
     },
+    {
+      type: 'select',
+      question: 'In which county are you located?',
+      answers: [
+        'Pinellas County',
+        'Hillsborough County',
+        'Pasco County',
+        'Manatee County',
+        'Sarasota County',
+        'Polk County',
+        'Elsewhere in Florida',
+        'Outside of Florida',
+      ],
+    },
   ],
 ]
 
@@ -373,6 +387,7 @@ const Question = ({
                     type="radio"
                     name={`q-${step}-${index}`}
                     value={answer}
+                    checked={response === answer}
                     onChange={e => {
                       update(question, e.target.value)
                     }}
@@ -413,6 +428,25 @@ const Question = ({
               </li>
             ))}
           </ul>
+        </div>
+      )}
+      {type === 'select' && (
+        <div className="select">
+          <select
+            name={`q-${step}-${index}`}
+            onChange={e => {
+              update(question, e.target.value)
+            }}
+          >
+            <option selected disabled>
+              Choose One
+            </option>
+            {answers.map((answer, i) => (
+              <option key={i} value={answer}>
+                {answer}
+              </option>
+            ))}
+          </select>
         </div>
       )}
       {type === 'text' && (

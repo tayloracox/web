@@ -52,6 +52,10 @@ form {
     opacity: 0.5;
   }
 
+  .select {
+    margin: 1em 0;
+  }
+
   @media screen and (max-width: 46rem) {
     flex-direction: column;
   }
