@@ -25,36 +25,52 @@ const CommunityNetworkPage = props => (
 
       <ul className="companies">
         <li className="tab">
-          <div className="logo">
-            <Img
-              title="PROforma"
-              alt="PROforma Logo"
-              sizes={props.data.proforma.sizes}
-            />
-          </div>
-          <hr />
-          <span className="supporter-tagline">Workforce Training</span>
+          <a href="http://www.proforma.com/" target="blank">
+            <div className="logo">
+              <Img
+                title="PROforma"
+                alt="PROforma Logo"
+                sizes={props.data.proforma.sizes}
+              />
+            </div>
+            <hr />
+            <span className="supporter-tagline">Workforce Training</span>
+          </a>
         </li>
         <li>
-          <Img
-            title="Carlton Fields"
-            alt="Carlton Fields Logo"
-            sizes={props.data.carltonFields.sizes}
-          />
-          <hr />
-          <span className="supporter-tagline">Legal</span>
+          <a href="https://www.carltonfields.com/" target="blank">
+            <Img
+              title="Carlton Fields"
+              alt="Carlton Fields Logo"
+              sizes={props.data.carltonFields.sizes}
+            />
+            <hr />
+            <span className="supporter-tagline">Legal</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://frontify.com/" target="blank">
+            <div className="logo-half">
+              <Img
+                title="Frontify"
+                alt="Frontify Logo"
+                sizes={props.data.frontify.sizes}
+              />
+            </div>
+            <hr />
+            <span className="supporter-tagline">Branding</span>
+          </a>
         </li>
         <li>
           <div className="logo-half">
             <Img
-              title="Frontify"
-              alt="Frontify Logo"
-              sizes={props.data.frontify.sizes}
+              title="Roane"
+              alt="Roane Logo"
+              sizes={props.data.roane.sizes}
             />
           </div>
-
           <hr />
-          <span className="supporter-tagline">Branding</span>
+          <span className="supporter-tagline">Signage</span>
         </li>
       </ul>
 
@@ -87,6 +103,11 @@ export const pageQuery = graphql`
       }
     }
     carltonFields: imageSharp(id: { regex: "/network/carlton-fields/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    roane: imageSharp(id: { regex: "/network/roane/" }) {
       sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
