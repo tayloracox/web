@@ -6,7 +6,6 @@ import portraitToni from '../images/people/toni.jpg'
 import portraitGavin from '../images/people/gavin.jpg'
 import portraitMark from '../images/people/mark-dewey.jpg'
 import portraitJim from '../images/people/jim-james.jpg'
-import portraitAdam from '../images/people/adam-recvlohe.jpg'
 
 const Card = ({ id, name, title, children, imgData }) => (
   <div className="card" id={`${id}`}>
@@ -124,6 +123,45 @@ const TeamPage = props => (
           success. Katherine is also a community liaison for events on campus
           and our volunteer coordinator.
         </Card>
+
+        <Card
+          id="denise"
+          name="Denise Roane"
+          title="Educational Apprentice"
+          imgData={props.data.denise.sizes}
+        >
+          A resident of St. Petersburg, FL and a student currently enrolled in
+          the College of Education at St. Petersburg College Denise is a simple
+          person passionate about education and is devoted to making a better,
+          smarter world we can all live in. Her professional passion revolves
+          around education, specifically finding new ways to create innovative
+          educational opportunities for all and communication stating, “I love
+          to meet, talk, and correspond with new people as I believe that
+          communication is the key to exchanging ideas and forging partnerships
+          within the educational community and beyond.” Personally, she is a
+          hobbyist and loves to dabble in anything DIY. She is also known to run
+          a mean campaign as DM (Dungeon Master) Extraordinaire and is a total
+          gaming fanatic (carpal tunnel permitting) with fave games being:
+          Destiny, PUBG, and Rocket League.
+        </Card>
+
+        <Card
+          id="lauren"
+          name="Lauren Mabra"
+          title="Student & Employer Outreach"
+          imgData={props.data.lauren.sizes}
+        >
+          Lauren was born in Missouri, moved around quite a bit to different
+          states (and even a different country), and for the past 10+ years is
+          proud to call St. Pete her home. She will soon be a graduate of USF
+          and will have her Bachelor’s degree in Marketing. In and outside of
+          work, Lauren has a strong passion for anything creative: writing,
+          video editing, drawing, and brainstorming/proposing new ideas. St.
+          Petersburg is a fitting community for Lauren because she is always
+          striving to change and grow for the better. She looks forward to
+          finding new ways to get involved with its dynamic businesses,
+          entrepreneurial individuals, and ever-growing community.
+        </Card>
       </div>
 
       <h2>Our Supporters & Volunteers</h2>
@@ -149,14 +187,13 @@ const TeamPage = props => (
 
         <Card id="taylor" name="Taylor Cox" imgData={props.data.taylor.sizes}>
           Hailing from Indiana, Taylor is a digital designer turned front-end
-          developer by way of The Iron Yard and stealing her parents' ThinkPad
-          as a child to write CSS for her Neopets profile page. As a student in
-          the final cohort of The Iron Yard in Tampa Bay, Taylor became
-          ingrained in the community through the staff's encouragement to
-          participate in local hackathons, meetups, and conferences. Now, she
-          serves as a co-organizer for SDG Jr. to promote the importance of
-          learning technology and problem solving skills to a younger
-          generation.
+          developer by way of The Iron Yard and stealing her parents'ThinkPad as
+          a child to write CSS for her Neopets profile page. As a student in the
+          final cohort of The Iron Yard in Tampa Bay, Taylor became ingrained in
+          the community through the staff's encouragement to participate in
+          local hackathons, meetups, and conferences. Now, she serves as a
+          co-organizer for SDG Jr. to promote the importance of learning
+          technology and problem solving skills to a younger generation.
         </Card>
       </div>
     </div>
@@ -201,6 +238,16 @@ export const pageQuery = graphql`
       }
     }
     katherine: imageSharp(id: { regex: "/people/katherinet/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    denise: imageSharp(id: { regex: "/people/denise/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    lauren: imageSharp(id: { regex: "/people/lauren/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
