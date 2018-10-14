@@ -31,6 +31,63 @@ const SuccessStoriesPage = props => (
     <div className="wrap">
       <PageHeading>Success Stories</PageHeading>
       <div className="bios">
+        <Card id="venel" name="Venel Rene" sizes={props.data.venel.sizes}>
+          From youth development to software development...
+          <br />
+          <br />
+          Meet Venel, a Juvenile Supervision Counselor studying human
+          development turned Software Developer. Venel spent countless hours
+          attempting to figure out ways to maximize his gaming experience to
+          level the playing field against the youth he was supervising. While
+          doing so, he found himself falling in love with everything he was
+          learning about software so much that he decided to switch careers.
+          <br />
+          <br />
+          After graduating and several months of dedicated job hunting, he
+          landed his first tech job at a local startup, Net Synergy Virtual
+          Solutions, where he was able to gain knowledge, experience, and
+          additional skills in data aggregation. In an effort to grow and expand
+          his skillset even more, Venel recently took on an exciting new role as
+          an Engineer at Salesforce.
+        </Card>
+        <Card
+          id="crystal"
+          name="Crystal McGowan"
+          sizes={props.data.crystal.sizes}
+        >
+          After years of being a customer service and marketing guru, Crystal
+          found herself to be a textbook example of someone that needed a life
+          and career pivot. While she had taken an interest in coding, she made
+          every excuse in the book to not invest in it professionally.
+          <br />
+          <br />
+          Thankfully, the SDG team and her stellar support system echoed every
+          day: “You can’t afford NOT to invest in yourself, and you’re going to
+          be great!” Crystal never looked back. The hours were studious and the
+          caffeine ran rampant, but it’s one of the decisions she’s most proud
+          of making.
+          <br />
+          <br />
+          After embracing the opportunity to work for a killer start-up company,
+          she moved onto Raymond James Financial where she is an Associate
+          Interactive Specialist. When she’s not dabbling in a CMS for Financial
+          Advisors, you can catch her assisting with SDG Jr's kids coding
+          classes and geeking out at development conferences.
+        </Card>
+        <Card id="taylor" name="Taylor Cox" sizes={props.data.taylor.sizes}>
+          Hailing from Indiana, Taylor is a digital designer turned front-end
+          developer by way of The Iron Yard and stealing her parents' ThinkPad
+          as a child to write CSS for her Neopets profile page. <br />
+          <br />
+          As a student in the final cohort of The Iron Yard in Tampa Bay, Taylor
+          became ingrained in the community through the staff/'s encouragement
+          to participate in local hackathons, meetups, and conferences. <br />
+          <br />
+          Now, she serves as a co-organizer for SDG Jr. to promote the
+          importance of learning technology and problem solving skills to a
+          younger generation. Taylor is a coordinator and in for the SDG Jr's
+          kids coding classes and has spoken at development conferences.
+        </Card>
         <Card
           id="kristen"
           name="Kristen Swan-Grashel"
@@ -44,7 +101,6 @@ const SuccessStoriesPage = props => (
           there are few things better in life than that. Achieving a goal you've
           worked hard for."
         </Card>
-
         <Card
           id="brandyn"
           name="Brandyn Sullins"
@@ -56,7 +112,6 @@ const SuccessStoriesPage = props => (
           sanctuary where people of similar mind would share ideas and learn
           from each other."
         </Card>
-
         <Card
           id="valeria"
           name="Valeria Benetti"
@@ -67,14 +122,12 @@ const SuccessStoriesPage = props => (
           since graduating have I been extremely grateful to the school for
           teaching me the valuable skill sets that I now know."
         </Card>
-
         <Card id="shaun" name="Shaun Hailey" sizes={props.data.shaun.sizes}>
           "I came to into this with zero programming background whatsoever.
           After over a decade in finance, a layoff put me into a position where
           I could explore a new career. This finally allowed me to do what I had
           wanted to do for many years--learn how to code."
         </Card>
-
         <Card
           id="markl"
           name="Mark Lombardi-Nelson"
@@ -125,6 +178,21 @@ export const pageQuery = graphql`
       }
     }
     markl: imageSharp(id: { regex: "/people/mark-/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    venel: imageSharp(id: { regex: "/people/venel/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    crystal: imageSharp(id: { regex: "/people/crystal/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    taylor: imageSharp(id: { regex: "/people/taylor/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }

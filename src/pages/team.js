@@ -127,7 +127,7 @@ const TeamPage = props => (
         <Card
           id="denise"
           name="Denise Roane"
-          title="Educational Apprentice"
+          title="Educational Coordination and Funding"
           imgData={props.data.denise.sizes}
         >
           A resident of St. Petersburg, FL and a student currently enrolled in
@@ -148,7 +148,7 @@ const TeamPage = props => (
         <Card
           id="lauren"
           name="Lauren Mabra"
-          title="Student & Employer Outreach"
+          title="Community & Employer Outreach"
           imgData={props.data.lauren.sizes}
         >
           Lauren was born in Missouri, moved around quite a bit to different
