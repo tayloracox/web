@@ -91,7 +91,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
     .card {
@@ -99,8 +99,8 @@
       padding: 1rem;
       border-bottom: thick solid #5a9090;
       flex: 1;
-      flex-basis: 18rem;
-      max-width: 26rem;
+      flex-basis: 24rem;
+      max-width: 24rem;
       margin: 1rem;
 
       img {
@@ -137,6 +137,17 @@
       z-index: -1;
     }
 
+    @media screen and (max-width: 48rem) {
+      .card {
+        flex-basis: 18rem;
+        max-width: 18rem;
+        p {
+          font-size: 0.9rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+
     @media screen and (max-width: 30rem) {
       .card {
         max-width: 42rem;
@@ -152,8 +163,6 @@
     .read-more {
       display: block;
       color: $purple;
-      background-color: none;
-      text-transform: none;
     }
 
     .tab {
@@ -169,7 +178,7 @@
     }
     /* :checked */
     input:checked ~ .tab-content {
-      max-height: 500px;
+      max-height: 700px;
     }
 
     .cta {

@@ -1,10 +1,13 @@
 ---
-title: 'Why do we teach the full-stack?'
-date: '2018-07-25T14:59:14-04:00'
+title: Why do we teach the full-stack?
+date: '2018-10-05T14:59:14-04:00'
 image: /media/ai-codes-coding-97077.jpg
 description: >
-  At SDG, we are training folks to become junior developer ready in 12 weeks. That is no easy task. After several iterations, the instructional staff, supported by the community, have determined that a "full-stack" developer curriculum produces pretty solid results.
-draft: true
+  At SDG, we are training folks to become junior developer ready in 12 weeks.
+  That is no easy task. After several iterations, the instructional staff,
+  supported by the community, have determined that a "full-stack" developer
+  curriculum produces pretty solid results.
+draft: false
 author: Mark Dewey
 ---
 
