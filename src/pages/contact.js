@@ -15,6 +15,7 @@ const ContactPage = () => (
           name="successUrl"
           value="https://suncoast.io/thanks"
         />
+        <input type="hidden" name="sources[]" value="Contact Form" />
         <fieldset className="contact">
           <p>
             <label htmlFor="">Name</label>
