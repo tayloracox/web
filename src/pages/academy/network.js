@@ -135,6 +135,24 @@ const AcademyNetworkPage = props => (
             />
           </OutboundLink>
         </li>
+        <li className="exzeo">
+          <OutboundLink href="https://exzeo.com/" target="_blank">
+            <Img
+              title="Exzeo"
+              alt="Exzeo Logo"
+              sizes={props.data.exzeo.sizes}
+            />
+          </OutboundLink>
+        </li>
+        <li className="padWhite knowbe4">
+          <OutboundLink href="https://www.knowbe4.com/" target="_blank">
+            <Img
+              title="KnowBe4"
+              alt="KnowBe4 Logo"
+              sizes={props.data.knowbe4.sizes}
+            />
+          </OutboundLink>
+        </li>
       </ul>
 
       <h3>Why become part of our Hiring Network?</h3>
@@ -221,6 +239,16 @@ export const pageQuery = graphql`
       }
     }
     zeniSoftware: imageSharp(id: { regex: "/network/zeni-software/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    knowbe4: imageSharp(id: { regex: "/network/knowbe4/" }) {
+      sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    exzeo: imageSharp(id: { regex: "/network/exzeo/" }) {
       sizes(maxWidth: 200) {
         ...GatsbyImageSharpSizes
       }
