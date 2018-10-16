@@ -31,45 +31,24 @@ const HireAlumniPage = props => (
       <div className="bios">
         <Card id="brian" name="Brian Bycynski" imgData={props.data.brian.sizes}>
           <p>
-            Github: <a href="https://github.com/bdog72" target="_blank">
+            Github:
+            <a href="https://github.com/bdog72" target="_blank">
               bdog72
             </a>
           </p>
           <p>
-            Portfolio: <a href="http://brianbycynski.surge.sh/" target="_blank">
+            Portfolio:
+            <a href="http://brianbycynski.surge.sh/" target="_blank">
               brianbycynski.surge.sh
             </a>
           </p>
           <p>
-            LinkedIn: <a
+            LinkedIn:
+            <a
               href="https://www.linkedin.com/in/brian-bycynski-374260140/"
               target="_blank"
             >
               brian-bycynski-374260140
-            </a>
-          </p>
-        </Card>
-        <Card
-          id="marianne"
-          name="Marianne Kelly"
-          imgData={props.data.marianne.sizes}
-        >
-          <p>
-            Github: <a href="https://github.com/maresThere" target="_blank">
-              maresThere
-            </a>
-          </p>
-          <p>
-            Portfolio: <a href="http://mariannekelly.com/" target="_blank">
-              mariannekelly.com
-            </a>
-          </p>
-          <p>
-            LinkedIn: <a
-              href="https://www.linkedin.com/in/marekelly/"
-              target="_blank"
-            >
-              marekelly
             </a>
           </p>
         </Card>
@@ -79,17 +58,20 @@ const HireAlumniPage = props => (
           imgData={props.data.jasmine.sizes}
         >
           <p>
-            Github: <a href="https://github.com/dubistdu" target="_blank">
+            Github:
+            <a href="https://github.com/dubistdu" target="_blank">
               dubistdu
             </a>
           </p>
           <p>
-            Portfolio: <a href="http://www.jasfrantz.com/" target="_blank">
+            Portfolio:
+            <a href="http://www.jasfrantz.com/" target="_blank">
               jasfrantz.com/
             </a>
           </p>
           <p>
-            LinkedIn: <a
+            LinkedIn:
+            <a
               href="https://www.linkedin.com/in/jasmine-frantz/"
               target="_blank"
             >
@@ -105,11 +87,6 @@ const HireAlumniPage = props => (
 export const pageQuery = graphql`
   query HireAlumniPageQuery {
     brian: imageSharp(id: { regex: "/people/brian/" }) {
-      sizes(maxWidth: 416) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    marianne: imageSharp(id: { regex: "/people/marianne/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
