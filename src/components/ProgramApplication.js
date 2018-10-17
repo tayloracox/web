@@ -166,7 +166,10 @@ class ProgramApplication extends Component {
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
         },
-        body: JSON.stringify(this.state.contact),
+        body: JSON.stringify({
+          program: 'web_development',
+          ...this.state.contact,
+        }),
       }).then(response => response.json())
       window.localStorage.setItem('application-token', token)
       await this.setState({ token })
