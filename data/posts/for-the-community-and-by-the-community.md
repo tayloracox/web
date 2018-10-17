@@ -8,7 +8,7 @@ description: >-
   community and SDG rely heavily on their participation. Their participation is
   what will help keep the program and the community moving forward, improving
   the education provided and sending talented new developers into the workforce.
-draft: true
+draft: false
 author: Katherine Trammell
 ---
 Have you ever been asked about something you believed in 100% and struggled to find the words to explain why you felt that way? When it comes to Suncoast Developers Guild (SDG) I am happy to say I don't feel that struggle. So let's pretend anyone reading this asked me why I believe in SDG so I can share my view.
