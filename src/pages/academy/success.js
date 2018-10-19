@@ -31,6 +31,31 @@ const SuccessStoriesPage = props => (
     <div className="wrap">
       <PageHeading>Success Stories</PageHeading>
       <div className="bios">
+        <Card
+          id="julius"
+          name="Julius Bzozowski"
+          sizes={props.data.julius.sizes}
+        >
+          While searching for opportunities to expand on his background in
+          graphic design & photography, Julius, explored the idea of learning to
+          code. It seemed like the perfect complement to his existing technology
+          toolbox; an in demand skill; and a challenge that would prove to be
+          both formidable and mentally stimulating.
+          <br />
+          <br />
+          After a month of researching information on various bootcamps and
+          completing a few coding tutorials online, he interviewed, was
+          accepted, quit his full-time job, moved closer to St. Pete, worked
+          tirelessly, and became a graduate of Cohort 8, affectionately dubbed
+          “The Ocho” by a fellow classmate.
+          <br />
+          <br />
+          Despite the risks and challenges, Julius, now works for a premier, web
+          design services company in Tampa. Having accomplished the personal
+          goals he set for himself one year ago, he looks forward to the
+          continued growth and development of his coding skills and to one day
+          be combined with his love of golf.
+        </Card>
         <Card id="venel" name="Venel Rene" sizes={props.data.venel.sizes}>
           From youth development to software development...
           <br />
@@ -157,6 +182,11 @@ const SuccessStoriesPage = props => (
 
 export const pageQuery = graphql`
   query SuccessPageQuery {
+    julius: imageSharp(id: { regex: "/people/julius/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     kristen: imageSharp(id: { regex: "/people/kristen/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
