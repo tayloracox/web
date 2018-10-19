@@ -182,6 +182,11 @@ const SuccessStoriesPage = props => (
 
 export const pageQuery = graphql`
   query SuccessPageQuery {
+    julius: imageSharp(id: { regex: "/people/julius/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     kristen: imageSharp(id: { regex: "/people/kristen/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
@@ -218,11 +223,6 @@ export const pageQuery = graphql`
       }
     }
     taylor: imageSharp(id: { regex: "/people/taylor/" }) {
-      sizes(maxWidth: 416) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    julius: imageSharp(id: { regex: "/people/julius/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
