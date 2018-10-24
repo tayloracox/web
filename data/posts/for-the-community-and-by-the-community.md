@@ -1,6 +1,6 @@
 ---
 title: For the Community and by the Community
-date: '2018-08-20T15:53:38-04:00'
+date: '2018-10-17T15:53:38-04:00'
 image: /media/img_0094.jpg
 description: >-
   SDG took the non-profit route in order to provide a service to the community
