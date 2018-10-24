@@ -13,6 +13,27 @@ const IndexPage = () => (
       <img src={logoBanner} alt="Suncoast Developers Guild" height="280" />
     </div>
     <div className="Duo">
+      <div className="Academy">
+        <aside>
+          <h2>Academy</h2>
+          <h3>Learn to code with us.</h3>
+          <h3>
+            We are now enrolling for our December 3<sup>rd</sup>
+            and January 28
+            <sup>th</sup> cohorts!
+          </h3>
+          <p>
+            The <strong>Academy at Suncoast Developers Guild</strong> is a code
+            school that serves <em>people</em>, not profit. We are changing
+            lives and teaching people to be the best software developers they
+            can be.
+          </p>
+          <p className="cta">
+            <Link to="/academy">Find out more</Link>
+            <Link to="/academy/apply">Apply now</Link>
+          </p>
+        </aside>
+      </div>
       <div className="Community">
         <aside>
           <h2>Community</h2>
@@ -29,28 +50,6 @@ const IndexPage = () => (
             <OutboundLink href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
               Join us on Slack <Icon name="slack" />
             </OutboundLink>
-          </p>
-        </aside>
-      </div>
-      <div className="Academy">
-        <aside>
-          <h2>Academy</h2>
-          <h3>Learn to code with us.</h3>
-          <h3>
-            We are now enrolling for our October 22
-            <sup>nd</sup>
-            and January 28
-            <sup>th</sup> cohorts!
-          </h3>
-          <p>
-            The <strong>Academy at Suncoast Developers Guild</strong> is a code
-            school that serves <em>people</em>, not profit. We are changing
-            lives and teaching people to be the best software developers they
-            can be.
-          </p>
-          <p className="cta">
-            <Link to="/academy">Find out more</Link>
-            <Link to="/academy/apply">Apply now</Link>
           </p>
         </aside>
       </div>

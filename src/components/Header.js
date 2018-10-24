@@ -27,13 +27,13 @@ class Header extends React.Component {
           <nav>
             <ul>
               <li>
-                <Link to="/community" activeClassName="active">
-                  Community
+                <Link to="/academy" activeClassName="active">
+                  Academy
                 </Link>
               </li>
               <li>
-                <Link to="/academy" activeClassName="active">
-                  Academy
+                <Link to="/community" activeClassName="active">
+                  Community
                 </Link>
               </li>
               <li>
@@ -82,18 +82,18 @@ class Header extends React.Component {
                 Home
               </Link>
               <Link
-                to="/community"
-                activeClassName="active"
-                onClick={this.closeMenu}
-              >
-                Community
-              </Link>
-              <Link
                 to="/academy"
                 activeClassName="active"
                 onClick={this.closeMenu}
               >
                 Academy
+              </Link>
+              <Link
+                to="/community"
+                activeClassName="active"
+                onClick={this.closeMenu}
+              >
+                Community
               </Link>
               <Link
                 to="/team"
