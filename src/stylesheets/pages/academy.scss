@@ -19,6 +19,7 @@
     }
 
     li {
+      list-style: none;
       text-align: center;
       border-right: thin solid lighten($darkGrey, 10%);
       flex-basis: 12rem;

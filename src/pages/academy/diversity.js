@@ -63,7 +63,7 @@ class DiversityScholarship extends Component {
               <p>
                 Suncoast Developers Guild seeks to narrow the gaps in our
                 industry by introducing local companies to diverse talent. We
-                offer a $2,000 scholarship to members of communities that are
+                offer a scholarship to members of communities that are
                 underrepresented in technology.
               </p>
               <ul>
@@ -74,8 +74,8 @@ class DiversityScholarship extends Component {
                   underrepresented groups may apply for this scholarship.
                 </li>
                 <li>
-                  We will deduct the scholarship amount ($2,000) from the total
-                  cost of tuition.
+                  We will deduct the scholarship amount from the total cost of
+                  tuition.
                 </li>
               </ul>
             </div>
