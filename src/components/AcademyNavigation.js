@@ -30,11 +30,11 @@ const AcademyNavigation = () => (
         </Link>
       </li>
       <li>
-        <Link to="/academy/refer" activeClassName="active">
+        <Link to="/academy/diversity" activeClassName="active">
           <figure>
-            <Icon name="referrals" />
+            <Icon name="diversity" />
           </figure>
-          Refer
+          Diversity
         </Link>
       </li>
       <li>
