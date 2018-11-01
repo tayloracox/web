@@ -1,0 +1,143 @@
+.SponsorPage {
+  h3 {
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 0 0 0;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .left-align {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .who {
+    h3 {
+      color: #c5a7b4;
+    }
+
+    .who-wrapper {
+      background: #c5a7b4a8;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .give {
+    h3 {
+      color: #b2d235;
+    }
+
+    .give-wrapper {
+      background: #b2d235a8;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .benefit {
+    h3 {
+      color: #f89f1b;
+    }
+    .benefit-wrapper {
+      background: #f89f1ba8;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .levels {
+    h3 {
+      color: #d5562b;
+    }
+  }
+  .card {
+    .level {
+      text-align: center;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    #friend {
+      background: #d5562ba8;
+    }
+
+    #supporter {
+      background: #f89f1ba8;
+    }
+
+    #junior {
+      background: #fff100a8;
+    }
+
+    #crash {
+      background: #b2d235a8;
+    }
+
+    #demo {
+      background: #80ced2a8;
+    }
+
+    #scholarships {
+      background: #5a9090a8;
+    }
+
+    #rooms {
+      background: #c5a7b4a8;
+    }
+  }
+
+  .scholarships {
+    h3 {
+      color: #5a9090;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-evenly;
+    }
+
+    .image-wrapper {
+      flex: 1;
+      flex-basis: 7rem;
+      max-width: 8rem;
+      margin: 0 0 3px 0;
+    }
+
+    .scholarship-desc {
+      background: #5a9090a8;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  @media screen and (min-width: 48rem) {
+    .scholarships {
+      .image-wrapper {
+        flex-basis: 15rem;
+        max-width: 15rem;
+        margin: 0 0 5px 0;
+        max-height: 150px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
+    .scholarships {
+      .image-wrapper {
+        flex-basis: 20rem;
+        max-width: 20rem;
+        margin: 0 0 5px 0;
+        max-height: 200px;
+      }
+    }
+  }
+}

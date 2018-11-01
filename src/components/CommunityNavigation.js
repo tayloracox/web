@@ -35,11 +35,11 @@ const CommunityNavigation = () => (
         </Link>
       </li>
       <li>
-        <Link to="/community/hire" activeClassName="active">
+        <Link to="/community/sponsor" activeClassName="active">
           <figure>
-            <Icon name="hiring" />
+            <Icon name="sponsor" />
           </figure>
-          Hire Alumni
+          Sponsorship
         </Link>
       </li>
     </ul>
