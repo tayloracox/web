@@ -74,6 +74,7 @@ const ICONS = {
   jointTraining: ['fas', 'laptop'],
   hiring: ['fas', 'user-plus'],
   user: ['fas', 'user'],
+  sponsor: ['fas', 'donate'],
 }
 
 const Icon = ({ name }) => (
