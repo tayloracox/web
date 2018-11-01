@@ -182,7 +182,7 @@ const SponsorPage = props => (
 )
 
 export const pageQuery = graphql`
-  query HireAlumniPageQuery {
+  query SponsorPageQuery {
     jasmine: imageSharp(id: { regex: "/people/jasmine/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
@@ -213,7 +213,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-  
+  }
 `
 
 export default SponsorPage
