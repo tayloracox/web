@@ -239,37 +239,30 @@ class ProgramApplication extends Component {
     const { step } = this.state
     return (
       <div className="ProgramApplication" ref={this.scrollRef}>
-        <nav className="steps">
-          <ol>
-            <li className={cx({ complete: step > 0, current: step === 0 })}>
-              Contact Information
-            </li>
-            <li className={cx({ complete: step > 1, current: step === 1 })}>
-              Program Start
-            </li>
-            <li className={cx({ complete: step > 2, current: step === 2 })}>
-              Your Background
-            </li>
-            <li className={cx({ complete: step > 3, current: step === 3 })}>
-              Just a Bit More
-            </li>
-            <li className={cx({ complete: step > 4, current: step === 4 })}>
-              All Done!
-            </li>
-          </ol>
-        </nav>
+        {step > 0 && (
+          <nav className="steps">
+            <ol>
+              <li className={cx({ complete: step > 0, current: step === 0 })}>
+                Contact Information
+              </li>
+              <li className={cx({ complete: step > 1, current: step === 1 })}>
+                Program Start
+              </li>
+              <li className={cx({ complete: step > 2, current: step === 2 })}>
+                Your Background
+              </li>
+              <li className={cx({ complete: step > 3, current: step === 3 })}>
+                Just a Bit More
+              </li>
+              <li className={cx({ complete: step > 4, current: step === 4 })}>
+                All Done!
+              </li>
+            </ol>
+          </nav>
+        )}
         <form onSubmit={e => e.preventDefault()}>
           {step === 0 && (
             <section>
-              <p>
-                Congratulations on making the first step to launch your career
-                in coding. Remember, there is no cost to apply or obligation to
-                join the program. Filling out the application will get you
-                fast-tracked to meet with someone on our team to see if the Web
-                Development Program is a good fit for you. This application
-                should take 15 to 30 minutes. Please be honest with yourself and
-                with us. We’re excited to get to know you!
-              </p>
               <fieldset>
                 <p>
                   <label htmlFor="">Name</label>
@@ -299,6 +292,17 @@ class ProgramApplication extends Component {
                   />
                 </p>
               </fieldset>
+              <p>
+                Congratulations on making the first step to launch your career
+                in software development. Remember, there is no cost to apply or
+                obligation to join the program.
+              </p>
+              <p>
+                Filling out the application will get you fast-tracked to meeting
+                with someone on our team to see if the Web Development Program
+                is a good fit for you. This application should take 15 to 30
+                minutes. Please be honest with yourself and with us.
+              </p>
               <p>
                 <strong>Notice:</strong> By continuing with this application,
                 you are agreeing to the terms of our{' '}
