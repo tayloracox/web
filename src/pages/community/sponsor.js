@@ -162,9 +162,14 @@ const SponsorPage = props => (
             faced by employers to date. Currently, the percentage of women
             coders in the field is less than 20% while African Americans and
             Hispanic or Latino populations represent less than 3% of the overall
-            coding community. For these reasons and more, we’ve created the
-            Diversity Scholarship. Scholarships are offered on a need-based
-            system, covering from $1,900 to $14,900 of tuition for recipients.
+            coding community.
+          </p>
+          <p>
+            For these reasons and more, we’ve created the Diversity Scholarship.
+            Scholarships are offered on a need-based system, covering from
+            $1,900 to $14,900 of tuition for recipients.
+          </p>
+          <p>
             Women, U.S. military veterans, and populations underrepresented in
             technology are eligible to apply. Scholarships are awarded based on
             financial need and the applicant's ability to meet the requirements
@@ -177,7 +182,7 @@ const SponsorPage = props => (
 )
 
 export const pageQuery = graphql`
-  query HireAlumniPageQuery {
+  query SponsorPageQuery {
     jasmine: imageSharp(id: { regex: "/people/jasmine/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
