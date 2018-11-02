@@ -156,7 +156,7 @@ const SponsorPage = props => (
             <Image name="Venel" imgData={props.data.venel.sizes} />
           </div>
         </div>
-        <div className="scholarship-desc">
+        <div className="scholarship-desc ">
           <p>
             In today’s development industry, diversity is the greatest issues
             faced by employers to date. Currently, the percentage of women
