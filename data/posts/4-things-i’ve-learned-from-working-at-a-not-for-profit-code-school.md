@@ -1,5 +1,5 @@
 ---
-title: 4 Things I’ve Learned from Working at a Not-For-Profit Code School
+title: Growing with a Not-For-Profit Code School
 date: '2018-11-06T12:27:30-05:00'
 image: /media/achievement-agreement-arms-1068523.jpg
 description: >-
