@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import CommunityNavigation from '../../components/CommunityNavigation'
 import PageHeading from '../../components/PageHeading'
@@ -105,6 +106,15 @@ const SponsorPage = props => (
               </p>
             </div>
           </div>
+          <p className="cta">
+            <a
+              className="cta-button"
+              target="_blank"
+              href="http://bit.ly/SDG-supporter-form"
+            >
+              Support SDG
+            </a>
+          </p>
         </TabPanel>
         <TabPanel>
           <div className="levels">
@@ -144,6 +154,15 @@ const SponsorPage = props => (
               </p>
             </Card>
           </div>
+          <p className="cta">
+            <a
+              className="cta-button"
+              target="_blank"
+              href="http://bit.ly/SDG-supporter-form"
+            >
+              Support SDG
+            </a>
+          </p>
         </TabPanel>
         <TabPanel>
           <div className="scholarships">
@@ -189,6 +208,15 @@ const SponsorPage = props => (
               </p>
             </div>
           </div>
+          <p className="cta">
+            <a
+              className="cta-button"
+              target="_blank"
+              href="http://bit.ly/SDG-supporter-form"
+            >
+              Support SDG
+            </a>
+          </p>
         </TabPanel>
       </Tabs>
     </div>
