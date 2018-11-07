@@ -24,7 +24,7 @@ When I first stepped into my role at SDG, I didn’t realize how much of this jo
 
 It was evident from the first day that everything SDG is and does is with the community’s best interest in mind. This is covered in more depth [here](https://suncoast.io/blog/for-the-community-and-by-the-community/). The sole reason SDG exists is to help the local tech community learn and grow. Personally, I have seen several startups not do well simply because they are failing to keeping the community’s well being and demands in mind. The organic support that this organization receives is astonishing but makes sense. The organization is solving a real problem and even offering free crash courses to teach anyone wanting to learn. As someone who plans to be an entrepreneur, I realize how important it is to always keep the community in mind with everything I do. 
 
-I also wanted to touch on the importance of SDG’s own community. It’s a support network for everyone involved and aims to be a safe and trusting space to find comfort. It’s a place to share ideas, ask questions, express creativity, and promote innovation… A place to turn to and find inspiration from like-minded people… Even on the days when we feel no fire. 
+I also wanted to touch on the importance of SDG’s own community. It’s a support network for everyone involved and aims to be a safe and trusting space to find comfort. It’s a place to share ideas, ask questions, express creativity, and promote innovation. A place to turn to and find inspiration from like-minded people… Even on the days when we feel no fire. 
 
 5. Anyone can learn how to code
 
