@@ -5,8 +5,8 @@ image: /media/image-from-ios.jpg
 description: >-
   Being involved in a code school can provide learning and growing that extends
   well beyond coding. From real world problem solving to the importance of
-  community to networking, SDG covers it all. Team member, Lauren, shares her
-  experience and insight at SDG thus far. 
+  community to networking, SDG covers it all. Team member, Lauren Mabra, shares
+  her experience and insight at SDG thus far. 
 draft: false
 author: Lauren Mabra
 ---
