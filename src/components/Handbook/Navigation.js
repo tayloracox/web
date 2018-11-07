@@ -7,7 +7,29 @@ class Navigation extends Component {
 
   toggleMenu = () => this.setState({ menuOpen: !this.state.menuOpen })
 
+  ensureEndsWithSlash = string => string.replace(/([^/])$/,'$1/')
+
   render() {
+    const curriculum = [
+      {
+        url: '/handbook/curriculum/fundamentals/',
+        title: 'Fundamentals'
+      },
+      {
+        url: '/handbook/curriculum/front-end/',
+        title: 'Front-end Frameworks'
+      },
+      {
+        url: '/handbook/curriculum/back-end/',
+        title: 'Back-end Frameworks'
+      },
+      {
+        url: '/handbook/curriculum/resources/',
+        title: 'Supplemental Resources'
+      }
+    ]
+
+
     return (
       <nav className={this.state.menuOpen ? 'open' : 'closed'}>
         <header>
@@ -21,14 +43,18 @@ class Navigation extends Component {
               Curriculum
             </Link>
             <ul>
-              <li>
-                <Link
-                  to="/handbook/curriculum/fundamentals/"
-                  activeClassName="active"
-                >
-                  Fundamentals
-                </Link>
-              </li>
+              {
+                curriculum.map((curricula, index) => (
+                  <li key={index}>
+                    <Link
+                      to={this.ensureEndsWithSlash(curricula.url)}
+                      activeClassName="active"
+                    >
+                      {curricula.title}
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
           </li>
           <li>
@@ -47,7 +73,7 @@ class Navigation extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/handbook/campus" activeClassName="active">
+            <Link to="/handbook/campus/" activeClassName="active">
               Campus
             </Link>
           </li>
