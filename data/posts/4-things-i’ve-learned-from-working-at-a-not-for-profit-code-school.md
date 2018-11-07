@@ -1,13 +1,13 @@
 ---
 title: Growing with a Not-For-Profit Code School
 date: '2018-11-06T12:27:30-05:00'
-image: /media/achievement-agreement-arms-1068523.jpg
+image: /media/image-from-ios.jpg
 description: >-
-  Being involved in a code school can provide learning that extends well beyond
-  coding. From real world problem solving to the importance of community to
-  networking, SDG covers it all. Team member, Lauren, shares her experience and
-  insight at SDG thus far. 
-draft: true
+  Being involved in a code school can provide learning and growing that extends
+  well beyond coding. From real world problem solving to the importance of
+  community to networking, SDG covers it all. Team member, Lauren, shares her
+  experience and insight at SDG thus far. 
+draft: false
 author: Lauren Mabra
 ---
 “Develop a passion for learning. If you do, you will never cease to grow.” This quote from Anthony D’Angelo has been one of my favorite quotes that has been kept in the back of my mind ever since I can remember. I’m currently a senior at the University of South Florida and as I’m wrapping up my formal education and getting ready to graduate, I’m fully aware that my learning isn’t done. In fact, my learning will never be done because, just as D’Angelo said, ceasing to learn means ceasing to grow. I have been a part of the SDG for just a short amount of time and it’s clear to me that they fully embrace this view as well. In just a month, I have learned very valuable lessons both related and unrelated to coding. 
