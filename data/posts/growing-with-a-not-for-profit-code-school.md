@@ -26,6 +26,6 @@ It was evident from the first day that everything SDG is and does is with the co
 
 I also wanted to touch on the importance of SDG’s own community. It’s a support network for everyone involved and aims to be a safe and trusting space to find comfort. It’s a place to share ideas, ask questions, express creativity, and promote innovation. A place to turn to and find inspiration from like-minded people… Even on the days when we feel no fire. 
 
-5. Anyone can learn how to code
+4. Anyone can learn how to code
 
 I’m sure you’ve heard this mantra many times before. Learning something new such as coding can be done by anyone at any age. I am not a coder, but from just listening to all the different stories from the people involved in SDG, it is apparent that though everyone has a different background, they have one thing in common… they never thought they would EVER be a coder. I’ve heard stories from people who have kids, people who attended college for a completely unrelated degree, some have (or have had) their own businesses. I’m not saying that coding is easy, but it’s evident that it is most definitely achievable by anyone who is willing to put in the work. We are most often limited by our own assumptions of what we’re capable of.
