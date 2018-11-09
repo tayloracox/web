@@ -31,6 +31,7 @@ a.cta-button {
   padding: 0.3rem;
   border-radius: 0.2rem;
   transition: all 200ms ease;
+  text-transform: uppercase;
 
   &:hover {
     background-color: darken($brightPurple, 5%);
