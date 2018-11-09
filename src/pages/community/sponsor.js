@@ -112,7 +112,7 @@ const SponsorPage = props => (
               target="_blank"
               href="http://bit.ly/SDG-supporter-form"
             >
-              Support SDG
+              SUPPORT SDG
             </a>
           </p>
         </TabPanel>
@@ -160,7 +160,7 @@ const SponsorPage = props => (
               target="_blank"
               href="http://bit.ly/SDG-supporter-form"
             >
-              Support SDG
+              SUPPORT SDG
             </a>
           </p>
         </TabPanel>
@@ -214,7 +214,7 @@ const SponsorPage = props => (
               target="_blank"
               href="http://bit.ly/SDG-supporter-form"
             >
-              Support SDG
+              SUPPORT SDG
             </a>
           </p>
         </TabPanel>
