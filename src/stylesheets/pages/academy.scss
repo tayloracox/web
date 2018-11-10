@@ -216,5 +216,20 @@
         text-align: center;
       }
     }
+
+    .scholarship-logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .diversity,
+    .fullstack,
+    .hanekedesign {
+      background-color: transparentize(lighten($cream, 30%), 0.3);
+      padding: 1rem;
+      border-bottom: thick solid #5a9090;
+      margin: 1rem;
+    }
   }
 }
