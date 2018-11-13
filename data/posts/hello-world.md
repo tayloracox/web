@@ -17,7 +17,7 @@ It has been a year since The Iron Yard, the largest national coding school and b
 
 When the community asked our team to step up and keep the school’s momentum, we knew there would be challenges ahead. We also knew that this type of education is essential for our community and ecosystem, which is why we opened the [Academy at Suncoast Developers Guild](https://www.edsurge.com/news/2018-03-30-coding-bootcamps-cross-the-chasm) and are paving the way for a sustainable model to continue to deliver high quality education that provides people with the skills that make them valuable and competitive in the workforce. So what makes us different from what The Iron Yard was doing, and how can we ensure success at our code school? We presented at [1 Million Cups St Pete](https://www.1millioncups.com/stpete) recently and someone asked us the top differentiators from The Iron Yard:
 
-1. We are opening a not-for-profit model, focusing on people not profit
+1. We are opening a [not-for-profit](https://suncoast.io/blog/it-s-the-mission-not-the-money/) model, focusing on people not profit
 2. We are teaching a full-stack curriculum, rather than front-end or back-end programs
 3. We are focusing on educating Tampa Bay, not expanding nationally
 4. Our curriculum will be open source, which means it will be constantly refined and kept innovative by our [team](https://suncoast.io/team), [alumni](https://suncoast.io/academy/success) and [hiring network](https://suncoast.io/academy/success)
