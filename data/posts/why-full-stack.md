@@ -47,7 +47,7 @@ Suncoast Developers Guild has set out to [answer](https://suncoast.io/academy/fa
 
 ## What exactly does "full-stack" mean?
 
-A full-stack developer is a developer that can talk about, reason about, and programing in any part of the web stack. The full web stack developers has exposure and knowledge in the user experience, CSS, HTML, JavaScript, servers, some back-end language, how the data is stored and everything in between.
+A [full-stack developer](https://www.coredna.com/blogs/unicorns-aka-full-stack-developers) is a developer that can talk about, reason about, and programing in any part of the web stack. The full web stack developers has exposure and knowledge in the user experience, CSS, HTML, JavaScript, servers, some back-end language, how the data is stored and everything in between.
 
 <div class="callout">
 A full-stack developer can be at home at any part of the web stack. 
