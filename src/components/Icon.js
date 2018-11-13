@@ -70,7 +70,7 @@ const ICONS = {
   twitter: ['fab', 'twitter'],
   youtube: ['fab', 'youtube'],
   organizations: ['fas', 'users'],
-  sponsors: ['fas', 'handshake'],
+  supporters: ['fas', 'handshake'],
   jointTraining: ['fas', 'laptop'],
   hiring: ['fas', 'user-plus'],
   user: ['fas', 'user'],
