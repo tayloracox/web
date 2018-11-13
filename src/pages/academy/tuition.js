@@ -244,10 +244,13 @@ const AcademyTuitionPage = ({ data }) => (
               </h4>
             </div>
             <p>
-              Haneke Design wants to help you further your education with
-              Suncoast Developers Guild! We are offering a $1000 scholarship for
-              one lucky student. Women, U.S. military veterans, and populations
-              underrepresented in technology are eligible to apply.
+              Technology education is truly transformative, we’ve witnessed so
+              many lives changed for the better. The development world is a
+              welcoming place, where skills are valued over anything, but
+              underrepresentation is still a problem. Haneke Design believes in
+              the program at SDG and hope that we can help lower the barrier of
+              entry to a rewarding, lifelong career. We are offering a $1000
+              scholarship for one student.
             </p>
             <p className="action">
               <a
