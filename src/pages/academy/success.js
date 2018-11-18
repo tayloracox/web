@@ -31,6 +31,29 @@ const SuccessStoriesPage = props => (
     <div className="wrap">
       <PageHeading>Success Stories</PageHeading>
       <div className="bios">
+        <Card id="dat" name="Dat Tran" sizes={props.data.dat.sizes}>
+          After having worked in corporate America for a couple years as a
+          middle-manager, Dat went through a quarter life crisis. If this is how
+          he is to spend 8-12 hours of his day, he needed to see what else was
+          out there. After listening to the song Motto by Drake, he decided to
+          leave his job and enroll with SDG. After 3 fantastic months of
+          education, and 2 months of unemployment, he was hired at Operation PAR
+          as an application developer. After a successful year there, he
+          recently started working at Protect My Car as a Software Engineer II.
+        </Card>
+        <Card
+          id="brandyn"
+          name="Brandyn Sullins"
+          sizes={props.data.brandyn.sizes}
+        >
+          After college, Brandyn bounced between legal jobs while entertaining
+          the idea of law school. After a large amount of soul searching, he
+          decided a change needed to be made and performed a hard pivot; taking
+          a leap of faith to attend SDG. Brandyn is a conscientious developer
+          that cares about making programming enjoyable for everyone and solving
+          challenges in pragmatic ways. In his spare time, he's a swim
+          instructor and enjoys writing.
+        </Card>
         <Card
           id="julius"
           name="Julius Bzozowski"
@@ -223,6 +246,16 @@ export const pageQuery = graphql`
       }
     }
     taylor: imageSharp(id: { regex: "/people/taylor/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    brandyn: imageSharp(id: { regex: "/people/brandyn/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    dat: imageSharp(id: { regex: "/people/dat/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
