@@ -18,7 +18,7 @@ const IndexPage = () => (
           <h2>Academy</h2>
           <h3>Learn to code with us.</h3>
           <h3>
-            We are now enrolling for our and January 28
+            We are now enrolling for our January 28
             <sup>th</sup> cohort!
           </h3>
           <p>
