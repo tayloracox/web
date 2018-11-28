@@ -250,7 +250,7 @@ const AcademyTuitionPage = ({ data }) => (
               underrepresentation is still a problem. Haneke Design believes in
               the program at SDG and hope that we can help lower the barrier of
               entry to a rewarding, lifelong career. We are offering a $1000
-              scholarship for one student.
+              scholarship for one woman entering the program.
             </p>
             <p className="action">
               <a
