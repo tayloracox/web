@@ -1,12 +1,12 @@
 ---
 title: 'To Accredit or Not To Accredit, That is The Question'
 date: '2018-11-26T12:25:59-05:00'
-image: /media/41416064_1187377971409470_6719711544180998144_o.jpg
+image: /media/sdg-team.jpg
 description: >-
   As an educational institute, there are many issues we have had to take into
   consideration. One of the major concerns for the Academy at SDG focused on
-  whether to accredit or not. Denise Roane uncovers why SDG decided not to
-  pursue accreditation. 
+  whether to accredit or not. Denise Roane uncovers why SDG decided to stay
+  community focused and not pursue accreditation. 
 draft: true
 author: Denise Roane
 ---
