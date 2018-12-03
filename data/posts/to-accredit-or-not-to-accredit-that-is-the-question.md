@@ -1,13 +1,13 @@
 ---
 title: 'To Accredit or Not To Accredit, That is The Question'
 date: '2018-11-26T12:25:59-05:00'
-image: /media/sdg-team.jpg
+image: /media/screen-shot-2018-12-03-at-5.27.20-pm.png
 description: >-
   As an educational institute, there are many issues we have had to take into
   consideration. One of the major concerns for the Academy at SDG focused on
   whether to accredit or not. Denise Roane uncovers why SDG decided to stay
   community focused and not pursue accreditation. 
-draft: true
+draft: false
 author: Denise Roane
 ---
 As our Academy at Suncoast Developers Guild grows, there are many educational issues we have had to take into consideration as we continually move forward with our program. One of the biggest, and hardest, was the choice to not pursue accreditation. The reason for this decision was due to a combination of things, however the two largest two arguments against going this route was a simple matter of a few dollars and a whole lot of sense.   
