@@ -46,8 +46,8 @@ const AcademyPage = () => (
           <tr>
             <th>Background and Basics</th>
             <td>
-              Development environment, text editor, version control & Git, HTML
-              & CSS
+              Development environment, text editor, version control &amp; Git,
+              HTML &amp; CSS
             </td>
           </tr>
           <tr>
