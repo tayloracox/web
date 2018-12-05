@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Tab from '../../components/Tab'
 import PageHeading from '../../components/PageHeading'
 import AcademyNavigation from '../../components/AcademyNavigation'
+import Capture from '../../components/Capture'
 
 const AcademyAdmissionsPage = () => (
   <div className="AcademyPage Admissions">
@@ -92,6 +93,7 @@ const AcademyAdmissionsPage = () => (
         </p>
       </div>
     </div>
+    <Capture />
   </div>
 )
 

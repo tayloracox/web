@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Icon from '../components/Icon'
 import Engagement from '../components/Engagement'
+import Capture from '../components/Capture'
 import logoBanner from '../images/banner.svg'
 import swagIllustration from '../images/swag.svg'
 import logoJunior from '../images/junior.svg'
@@ -127,6 +128,9 @@ const IndexPage = () => (
           Join our next cohort of students and learn to be a web developer.
         </Engagement>
       </div>
+    </section>
+    <section>
+      <Capture />
     </section>
   </div>
 )

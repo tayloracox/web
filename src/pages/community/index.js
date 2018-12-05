@@ -4,6 +4,7 @@ import Meetup from '../../components/Meetup'
 import orgs from '../../orgs.json'
 import CommunityNavigation from '../../components/CommunityNavigation'
 import PageHeading from '../../components/PageHeading'
+import Capture from '../../components/Capture'
 
 const CommunityPage = ({ data }) => (
   <div className="CommunityPage">
@@ -24,6 +25,7 @@ const CommunityPage = ({ data }) => (
         </ul>
       </section>
     </div>
+    <Capture />
   </div>
 )
 

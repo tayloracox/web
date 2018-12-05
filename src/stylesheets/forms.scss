@@ -60,3 +60,7 @@ form {
     flex-direction: column;
   }
 }
+
+input[name='contactMeOnlyByCarrierPigeon'] {
+  display: none !important;
+}

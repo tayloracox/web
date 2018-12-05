@@ -2,6 +2,7 @@ import React from 'react'
 import Tab from '../../components/Tab'
 import AcademyNavigation from '../../components/AcademyNavigation'
 import PageHeading from '../../components/PageHeading'
+import Capture from '../../components/Capture'
 
 const AcademyPage = () => (
   <div className="AcademyPage">
@@ -122,6 +123,7 @@ const AcademyPage = () => (
         </tbody>
       </table>
     </div>
+    <Capture />
   </div>
 )
 
