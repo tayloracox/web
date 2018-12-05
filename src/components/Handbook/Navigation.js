@@ -22,10 +22,6 @@ class Navigation extends Component {
       {
         url: '/handbook/curriculum/back-end/',
         title: 'Back-end Frameworks'
-      },
-      {
-        url: '/handbook/curriculum/resources/',
-        title: 'Supplemental Resources'
       }
     ]
 
@@ -65,6 +61,11 @@ class Navigation extends Component {
           <li>
             <Link to="/handbook/skills/" activeClassName="active">
               Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="/handbook/resources/" activeClassName="active">
+              Resources
             </Link>
           </li>
           <li>
