@@ -10,7 +10,6 @@ description: >
 draft: false
 author: Mark Dewey
 ---
-
 <style>
 .callout{
     border-radius: 5px;
@@ -33,22 +32,22 @@ When bringing new developers into such a vast field, it can be a bit intimidatin
 
 This one questions splinters into many, equally as deep and important, questions
 
-- Should we start with a job oriented approach and learn whatever is hot and popular, but ignore important context?
-- Should the basics of computer science be explored with a more academic language, and trust that the students can fill in the gap to be job ready?
-- Should we throw them into the theoretical lake and let only the best sink or swim?
-- How can we prepare our young developers raise the bar for developers in Tampa Bay, not just today, but in the coming years?
+* Should we start with a job oriented approach and learn whatever is hot and popular, but ignore important context?
+* Should the basics of computer science be explored with a more academic language, and trust that the students can fill in the gap to be job ready?
+* Should we throw them into the theoretical lake and let only the best sink or swim?
+* How can we prepare our young developers raise the bar for developers in Tampa Bay, not just today, but in the coming years?
 
 <br/>
 
 # Narrowing the focus to web developers.
 
-Suncoast Developers Guild has set out to answer those questions and it looks like we may have some answers. At SDG, we are training folks to become junior developers in 12 weeks. That is no easy task. After several iterations, the experienced instructional staff, supported by the community, have determined that a "full-stack" developer curriculum produces pretty solid results.
+Suncoast Developers Guild has set out to [answer](https://suncoast.io/academy/faq) those questions and it looks like we may have some answers. At SDG, we are training folks to become junior developers in 12 weeks. That is no easy task. After several iterations, the experienced [instructional staff,](https://suncoast.io/team) supported by the community, have determined that a "full-stack" developer [curriculum](https://suncoast.io/academy) produces pretty solid results.
 
 <br/>
 
 ## What exactly does "full-stack" mean?
 
-A full-stack developer is a developer that can talk about, reason about, and programing in any part of the web stack. The full web stack developers has exposure and knowledge in the user experience, CSS, HTML, JavaScript, servers, some back-end language, how the data is stored and everything in between.
+A [full-stack developer](https://www.coredna.com/blogs/unicorns-aka-full-stack-developers) is a developer that can talk about, reason about, and programing in any part of the web stack. The full web stack developers has exposure and knowledge in the user experience, CSS, HTML, JavaScript, servers, some back-end language, how the data is stored and everything in between.
 
 <div class="callout">
 A full-stack developer can be at home at any part of the web stack. 

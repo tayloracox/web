@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Icon from '../components/Icon'
 import Engagement from '../components/Engagement'
+import Capture from '../components/Capture'
 import logoBanner from '../images/banner.svg'
 import swagIllustration from '../images/swag.svg'
 import logoJunior from '../images/junior.svg'
@@ -18,9 +19,8 @@ const IndexPage = () => (
           <h2>Academy</h2>
           <h3>Learn to code with us.</h3>
           <h3>
-            We are now enrolling for our December 3<sup>rd</sup>
-            and January 28
-            <sup>th</sup> cohorts!
+            We are now enrolling for our January 28
+            <sup>th</sup> cohort!
           </h3>
           <p>
             The <strong>Academy at Suncoast Developers Guild</strong> is a code
@@ -128,6 +128,9 @@ const IndexPage = () => (
           Join our next cohort of students and learn to be a web developer.
         </Engagement>
       </div>
+    </section>
+    <section>
+      <Capture />
     </section>
   </div>
 )

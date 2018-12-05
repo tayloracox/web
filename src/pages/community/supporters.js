@@ -7,7 +7,7 @@ const CommunityNetworkPage = props => (
   <div className="CommunityPage Network">
     <CommunityNavigation />
     <div className="wrap">
-      <PageHeading>Corporate Supporters</PageHeading>
+      <PageHeading>Supporters</PageHeading>
       <div className="blockquote">
         <blockquote className="quote">
           <span className="quotation-mark">&quot;</span>

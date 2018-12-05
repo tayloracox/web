@@ -23,19 +23,22 @@
   }
 }
 
-a.cta-button {
-  text-decoration: none;
-  background-color: $purple;
-  color: lighten($cream, 25%);
-  border: 0.2rem solid $purple;
-  padding: 0.3rem;
-  border-radius: 0.2rem;
-  transition: all 200ms ease;
-  text-transform: uppercase;
+a,
+button {
+  &.cta-button {
+    text-decoration: none;
+    background-color: $purple;
+    color: lighten($cream, 25%);
+    border: 0.2rem solid $purple;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    transition: all 200ms ease;
+    text-transform: uppercase;
 
-  &:hover {
-    background-color: darken($brightPurple, 5%);
-    color: $cream;
+    &:hover {
+      background-color: darken($brightPurple, 5%);
+      color: $cream;
+    }
   }
 }
 
