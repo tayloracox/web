@@ -11,6 +11,7 @@ const AcademyPage = () => (
       <PageHeading>Web Development Program</PageHeading>
       <ul className="tabs">
         <Tab to="/academy">Our Curriculum</Tab>
+        <Tab to="/academy/catalog">Program Catalog</Tab>
         <Tab to="/academy/schedule">Daily Schedule</Tab>
         <Tab to="/academy/career">Career Services</Tab>
       </ul>

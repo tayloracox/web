@@ -6,6 +6,7 @@ config.autoAddCss = false
 
 import {
   faBars,
+  faBook,
   faCalendar,
   faCode,
   faGraduationCap,
@@ -30,6 +31,7 @@ import {
 
 library.add(
   faBars,
+  faBook,
   faCalendar,
   faCode,
   faFacebook,
@@ -53,6 +55,7 @@ const ICONS = {
   apply: ['fas', 'laptop'],
   bars: ['fas', 'bars'],
   calendar: ['fas', 'calendar'],
+  catalog: ['fas', 'book'],
   facebook: ['fab', 'facebook'],
   faq: ['fas', 'puzzle-piece'],
   github: ['fab', 'github'],

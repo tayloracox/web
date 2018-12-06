@@ -5,7 +5,8 @@
   margin: auto;
   margin-top: 2rem;
 
-  h2 {
+  input[type='tel'] {
+    max-width: 12rem;
   }
 
   h2,

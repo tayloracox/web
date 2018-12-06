@@ -89,7 +89,7 @@ const AcademyAdmissionsPage = () => (
 
         <p>
           For more information about our program and the admissions process{' '}
-          <a href="/catalog.pdf">download our program catalog</a>.
+          <Link to="/academy/catalog">download our program catalog</Link>.
         </p>
       </div>
     </div>
