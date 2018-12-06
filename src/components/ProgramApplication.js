@@ -152,7 +152,12 @@ class ProgramApplication extends Component {
 
   componentDidMount() {
     const token = window.localStorage.getItem('application-token')
+    const responses = window.localStorage.getItem('application-responses')
     if (token && token.length > 0) {
+      if (responses && responses.length > 0) {
+        this.setState({ responses: JSON.parse(responses) })
+      }
+
       this.setState({ token, step: 1 })
     }
   }
@@ -187,9 +192,15 @@ class ProgramApplication extends Component {
         }
       ).then(response => response.json())
       window.localStorage.removeItem('application-token')
+      window.localStorage.removeItem('application-responses')
     }
 
     const step = this.state.token ? this.state.step + 1 : 0
+
+    window.localStorage.setItem(
+      'application-responses',
+      JSON.stringify(this.state.responses)
+    )
 
     this.setState({ step })
     this.scrollToTop()
