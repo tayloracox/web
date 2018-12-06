@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Tab from '../../../components/Tab'
 import PageHeading from '../../../components/PageHeading'
 import AcademyNavigation from '../../../components/AcademyNavigation'
@@ -55,22 +56,35 @@ const AcademyTuitionPage = ({ data }) => (
       </div>
       <div className="fullstack">
         <div className="scholarship-logo">
-          <h3> Full Stack Talent Scholarship</h3>
+          <h3>Full Stack Talent Scholarship</h3>
           <h4>
-            <Img
-              title="FullStack"
-              alt="FullStack Logo"
-              resolutions={data.fullStack.resolutions}
-            />
+            <OutboundLink
+              target="_blank"
+              rel="noopener"
+              href="https://www.fullstacktalent.com/"
+            >
+              <Img
+                title="FullStack"
+                alt="FullStack Logo"
+                resolutions={data.fullStack.resolutions}
+              />
+            </OutboundLink>
           </h4>
         </div>
         <p>
-          Full Stack Talent wants to help you further your education with
-          Suncoast Developers Guild! We are offering a $500 scholarship for one
-          lucky student. Being a technology staffing agency, we understand how
-          important technical talent is, and we want to support you while you
-          make such a large investment into your future, and become part of the
-          Tampa tech ecosystem.
+          <OutboundLink
+            target="_blank"
+            rel="noopener"
+            href="https://www.fullstacktalent.com/"
+          >
+            Full Stack Talent
+          </OutboundLink>{' '}
+          wants to help you further your education with Suncoast Developers
+          Guild! We are offering a $500 scholarship for one lucky student. Being
+          a technology staffing agency, we understand how important technical
+          talent is, and we want to support you while you make such a large
+          investment into your future, and become part of the Tampa tech
+          ecosystem.
         </p>
         <p className="action">
           <a
@@ -86,22 +100,35 @@ const AcademyTuitionPage = ({ data }) => (
         <div className="scholarship-logo">
           <h3>Haneke Design Scholarship</h3>
           <h4>
-            <Img
-              title="Haneke"
-              alt="Haneke Design Logo"
-              resolutions={data.hanekedesign.resolutions}
+            <OutboundLink
               target="_blank"
-            />
+              rel="noopener"
+              href="https://www.hanekedesign.com/"
+            >
+              <Img
+                title="Haneke"
+                alt="Haneke Design Logo"
+                resolutions={data.hanekedesign.resolutions}
+                target="_blank"
+              />
+            </OutboundLink>
           </h4>
         </div>
         <p>
           Technology education is truly transformative, we’ve witnessed so many
           lives changed for the better. The development world is a welcoming
           place, where skills are valued over anything, but underrepresentation
-          is still a problem. Haneke Design believes in the program at SDG and
-          hope that we can help lower the barrier of entry to a rewarding,
-          lifelong career. We are offering a $1000 scholarship for one woman
-          entering the program.
+          is still a problem.{' '}
+          <OutboundLink
+            target="_blank"
+            rel="noopener"
+            href="https://www.hanekedesign.com/"
+          >
+            Haneke Design
+          </OutboundLink>{' '}
+          believes in the program at SDG and hope that we can help lower the
+          barrier of entry to a rewarding, lifelong career. We are offering a
+          $1000 scholarship for one woman entering the program.
         </p>
         <p className="action">
           <a
