@@ -121,6 +121,11 @@ const QUESTIONS = [
       ],
     },
     {
+      type: 'medium-text',
+      question:
+        'Tell us more about how you heard about SDG. If it was a referral, let us know who to thank!',
+    },
+    {
       type: 'select',
       question: 'In which county are you located?',
       answers: [
@@ -451,12 +456,13 @@ const Question = ({
       {type === 'select' && (
         <div className="select">
           <select
+            value=""
             name={`q-${step}-${index}`}
             onChange={e => {
               update(question, e.target.value)
             }}
           >
-            <option selected disabled>
+            <option value="" disabled>
               Choose One
             </option>
             {answers.map((answer, i) => (
@@ -472,7 +478,19 @@ const Question = ({
           <textarea
             cols="30"
             rows="10"
-            list="opinion"
+            value={response}
+            onChange={e => {
+              update(question, e.target.value)
+            }}
+            data-gramm_editor="false"
+          />
+        </div>
+      )}
+      {type === 'medium-text' && (
+        <div className="medium-text">
+          <textarea
+            cols="30"
+            rows="3"
             value={response}
             onChange={e => {
               update(question, e.target.value)
