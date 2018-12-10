@@ -22,7 +22,7 @@ const AcademyNavigation = () => (
         </Link>
       </li>
       <li>
-        <Link to="/academy/tuition" activeClassName="active">
+        <Link exact to="/academy/tuition" activeClassName="active">
           <figure>
             <Icon name="tuition" />
           </figure>
@@ -30,11 +30,11 @@ const AcademyNavigation = () => (
         </Link>
       </li>
       <li>
-        <Link to="/academy/diversity" activeClassName="active">
+        <Link to="/academy/tuition/scholarships" activeClassName="active">
           <figure>
             <Icon name="diversity" />
           </figure>
-          Diversity
+          Scholarships &amp; Diversity
         </Link>
       </li>
       <li>
