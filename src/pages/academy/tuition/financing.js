@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Tab from '../../../components/Tab'
 import PageHeading from '../../../components/PageHeading'
 import AcademyNavigation from '../../../components/AcademyNavigation'
@@ -19,11 +20,13 @@ const AcademyTuitionPage = ({ data }) => (
 
       <div className="financeOption">
         <h4>
-          <Img
-            title="Climb Credit"
-            alt="Climb Logo"
-            resolutions={data.climb.resolutions}
-          />
+          <OutboundLink href="https://climbcredit.com/suncoast">
+            <Img
+              title="Climb Credit"
+              alt="Climb Logo"
+              resolutions={data.climb.resolutions}
+            />
+          </OutboundLink>
         </h4>
 
         <p>
@@ -62,18 +65,23 @@ const AcademyTuitionPage = ({ data }) => (
           </li>
         </ul>
         <p className="action">
-          <a className="cta-button" href="https://climbcredit.com/suncoast">
+          <OutboundLink
+            className="cta-button"
+            href="https://climbcredit.com/suncoast"
+          >
             Apply Now
-          </a>
+          </OutboundLink>
         </p>
       </div>
       <div className="financeOption">
         <h4>
-          <Img
-            title="Skills Fund"
-            alt="Skills Fund Logo"
-            resolutions={data.skillsFund.resolutions}
-          />
+          <OutboundLink href="https://suncoast.skills.fund/">
+            <Img
+              title="Skills Fund"
+              alt="Skills Fund Logo"
+              resolutions={data.skillsFund.resolutions}
+            />
+          </OutboundLink>
         </h4>
 
         <p>
@@ -100,41 +108,44 @@ const AcademyTuitionPage = ({ data }) => (
         </ul>
 
         <p className="action">
-          <a className="cta-button" href="https://suncoast.skills.fund/">
+          <OutboundLink
+            className="cta-button"
+            href="https://suncoast.skills.fund/"
+          >
             Learn More and Apply
-          </a>
+          </OutboundLink>
         </p>
       </div>
 
       <div className="financeOption">
         <h4>
-          <Img
-            title="Loanable"
-            alt="Loanable Logo"
-            resolutions={data.loanable.resolutions}
-          />
+          <OutboundLink href="https://loanwell.com/code-school/suncoast">
+            <Img
+              title="LoanWell"
+              alt="LoanWell Logo"
+              resolutions={data.loanwell.resolutions}
+            />
+          </OutboundLink>
         </h4>
 
         <p>
-          Loanable helps students get the financing they need for coding
-          bootcamps (tuition, equipment costs, and/or living expenses) through
-          low-interest friends and family loans. Students are also able to split
-          their total financing need into small chunks (think $500) allowing
-          several of their friends and family to contribute as a group. You can
-          also decide to get a friends and family loan for a specific expense
-          like a computer or the first month of living expenses. If the student
-          is not able to get all the funding they need from friends and family,
-          we have great lending partners that provide the additional capital
-          that they need.
+          We know from first hand experience that Code School is worth the
+          investment, so we built LoanWell to help you save thousands towards
+          your code school costs. It works like Kickstarter, but instead of
+          hoping your community can give you the money, you offer your
+          supporters (one or many) the opportunity to lend you the money and get
+          paid back. Whether it’s for a new computer or for your entire tuition,
+          LoanWell helps you get low or no-interest loans with the support of
+          your community.
         </p>
 
         <p className="action">
-          <a
+          <OutboundLink
             className="cta-button"
-            href="https://loanable.io/code-school/suncoast."
+            href="https://loanwell.com/code-school/suncoast"
           >
             Learn More
-          </a>
+          </OutboundLink>
         </p>
       </div>
     </div>
@@ -148,7 +159,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpResolutions
       }
     }
-    loanable: imageSharp(id: { regex: "/loanable/" }) {
+    loanwell: imageSharp(id: { regex: "/loanwell/" }) {
       resolutions(width: 260) {
         ...GatsbyImageSharpResolutions
       }
