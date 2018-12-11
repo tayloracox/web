@@ -177,7 +177,7 @@ class ProgramApplication extends Component {
           'Content-Type': 'application/json; charset=utf-8',
         },
         body: JSON.stringify({
-          program: 'web_development',
+          program: 'web-development',
           ...this.state.contact,
         }),
       }).then(response => response.json())

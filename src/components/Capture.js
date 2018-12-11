@@ -30,7 +30,7 @@ class Capture extends React.Component {
           'Content-Type': 'application/json; charset=utf-8',
         },
         body: JSON.stringify({
-          source: 'mailing_list',
+          source: 'mailing-list',
           ...this.state,
         }),
       }).then(() => {
