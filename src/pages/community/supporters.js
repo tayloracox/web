@@ -66,6 +66,32 @@ const CommunityNetworkPage = props => (
           </a>
         </li>
         <li>
+          <a href="https://www.walmart.com/" target="_blank">
+            <Img
+              title="Walmart"
+              alt="Walmart Logo"
+              sizes={props.data.walmart.sizes}
+            />
+          </a>
+          <hr />
+          <a href="https://www.walmart.com/" target="_blank">
+            <span className="supporter-tagline">Diversity Grant</span>
+          </a>
+        </li>
+        <li className="whentohelp">
+          <a href="https://www.whentohelp.com/" target="_blank">
+            <Img
+              title="When to Help"
+              alt="When to Help Logo"
+              sizes={props.data.whentohelp.sizes}
+            />
+          </a>
+          <hr />
+          <a href="https://www.whentohelp.com/" target="_blank">
+            <span className="supporter-tagline">Volunteer Application</span>
+          </a>
+        </li>
+        <li className="roane">
           <Img title="Roane" alt="Roane Logo" sizes={props.data.roane.sizes} />
           <hr />
           <span className="supporter-tagline">Signage</span>
@@ -98,7 +124,17 @@ export const pageQuery = graphql`
       }
     }
     embarc: imageSharp(id: { regex: "/network/embarc/" }) {
+      sizes(maxWidth: 100) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    walmart: imageSharp(id: { regex: "/network/walmart/" }) {
       sizes(maxWidth: 200) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    whentohelp: imageSharp(id: { regex: "/network/whentohelp/" }) {
+      sizes(maxWidth: 100, maxHeight: 100) {
         ...GatsbyImageSharpSizes
       }
     }
