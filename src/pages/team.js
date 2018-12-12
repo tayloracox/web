@@ -148,17 +148,17 @@ const TeamPage = props => (
             <Card
               id="katherine"
               name="Katherine Trammell"
-              title="Operations Unicorn"
+              title="Campus Director"
               imgData={props.data.katherine.sizes}
             >
               A Florida transplant that originated from Michigan, Katherine is
-              an alumnus from The Iron Yard. After joining the TIY team she soon
+              an alumn from The Iron Yard. After joining the TIY team, she soon
               found her love for supporting the local tech community, especially
               the Kids Academy classes. She uses her experiences as a developer
               and former student to help elevate the experience on the SDG
-              campus. As Operations Unicorn, Katherine assists with career
-              support and student success. Katherine is also a community liaison
-              for events on campus and our volunteer coordinator.
+              campus. As Campus Director, Katherine is our community liaison for
+              events on campus, our volunteer coordinator, and handles career
+              support and student success.
             </Card>
 
             <Card
@@ -200,6 +200,29 @@ const TeamPage = props => (
               grow for the better. She looks forward to finding new ways to get
               involved with its dynamic businesses, entrepreneurial individuals,
               and ever-growing community.
+            </Card>
+            <Card
+              id="kento"
+              name="Kento Kawakami"
+              title="Enrollment Specialist "
+              imgData={props.data.kento.sizes}
+            >
+              Born in a small city outside of Tokyo called Kawasaki (not the
+              motorcycle brand!) Kento has lived in Japan for 10 years until he
+              and his mother made their way to Florida in ’03. Kento’s life
+              passions include film photography, road trips, cooking, and
+              solving problems. Graduated with a photography studio art degree
+              at USF, he found the darkroom to be the place he loves to spend
+              the most time in. That being said, he is always enthusiastic about
+              being exposed to new things and stepping out of his comfort zone.
+              His life motto is simple and concise: leave the world a better
+              place for his children and generations to come. Enthralled to be a
+              part of the Suncoast Developers Guild team, you will find Kento to
+              be the person to talk to about getting your life started as a
+              developer and guide students on a career path with the skills you
+              will achieve with SDG. If he’s not on campus or anywhere else for
+              that matter, you will most likely find him in his apartment
+              bathroom in which he converted into a darkroom.
             </Card>
           </div>
         </TabPanel>
@@ -442,6 +465,11 @@ export const pageQuery = graphql`
       }
     }
     john: imageSharp(id: { regex: "/people/john-/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    kento: imageSharp(id: { regex: "/people/kento/" }) {
       sizes(maxWidth: 416) {
         ...GatsbyImageSharpSizes
       }
