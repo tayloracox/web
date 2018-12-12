@@ -201,6 +201,7 @@ const TeamPage = props => (
               involved with its dynamic businesses, entrepreneurial individuals,
               and ever-growing community.
             </Card>
+
             <Card
               id="kento"
               name="Kento Kawakami"
