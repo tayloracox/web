@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Tab from '../../../components/Tab'
 import PageHeading from '../../../components/PageHeading'
 import AcademyNavigation from '../../../components/AcademyNavigation'
@@ -17,24 +18,27 @@ const AcademyAdmissionsPage = () => (
         <h3>Hardware Requirements</h3>
 
         <p>
-          The suggested computer for students is an Apple MacBook Pro laptop
-          less than two years old. Minimum requirements:
+          A laptop computer is required for our program. Minimum requirements:
         </p>
 
         <ul>
           <li>8GB of RAM</li>
-          <li>500GB HDD</li>
+          <li>250GB HDD or SSD</li>
           <li>
-            macOS High Sierra (10.13) or Windows 10, subject to approval (see
-            below)
+            macOS Mojave (10.14) <em>or</em> Windows 10 64-bit (with WSL
+            <sup className="footnote">
+              <a href="#wsl">1</a>
+            </sup>
+            )
           </li>
         </ul>
 
         <p>
-          Why a Mac? All of our students being on the same platform enables us
-          to move at a much quicker pace. Processes like setting up new tools
-          experience reduced friction because the same workflows apply to
-          everyone.
+          The suggested computer for students is an Apple MacBook Pro laptop
+          less than two years old. Why do we prefer Macs? All of our students
+          being on the same platform enables us to move at a much quicker pace.
+          Processes like setting up new tools experience reduced friction
+          because the same workflows apply to everyone.
         </p>
 
         <p>
@@ -47,8 +51,15 @@ const AcademyAdmissionsPage = () => (
 
         <p>
           Students who choose to study .NET development with us may also find
-          substantial benefit from using macOS. A PC laptops can be approved for
+          substantial benefit from using macOS. PC laptops are approved for
           class use on a case by case basis during the interview process.
+        </p>
+
+        <p id="wsl" class="footnote">
+          <sup>1</sup>{' '}
+          <OutboundLink href="https://docs.microsoft.com/en-us/windows/wsl/about">
+            Windows Subsystem for Linux
+          </OutboundLink>
         </p>
 
         <h3>Software Requirements</h3>

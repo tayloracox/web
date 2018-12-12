@@ -56,3 +56,16 @@ p.note {
   display: block;
   color: $purple;
 }
+
+p,
+sup {
+  &.footnote a {
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+p.footnote {
+  font-size: 1rem;
+}
