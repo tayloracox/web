@@ -247,4 +247,34 @@
       margin: 2rem auto;
     }
   }
+
+  .ProgramSchedule {
+    a {
+      font-weight: inherit;
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    width: 100%;
+
+    th {
+      text-align: left;
+    }
+
+    td {
+      padding: 0 0.25rem;
+    }
+
+    .upcoming {
+      background-color: transparentize($brightBlue, 0.66);
+      font-weight: 700;
+    }
+
+    .future {
+      opacity: 0.75;
+    }
+    .distant.future {
+      opacity: 0.5;
+    }
+  }
 }
