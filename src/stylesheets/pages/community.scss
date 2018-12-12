@@ -119,6 +119,21 @@
         &.netsvs {
           max-width: 120px;
         }
+        //Adjusting logo sizes for formatting on supporters
+        &.whentohelp {
+          .gatsby-image-wrapper {
+            height: 100px;
+            width: 100px;
+            margin: auto;
+          }
+        }
+
+        &.roane {
+          .gatsby-image-wrapper {
+            width: 175px;
+            margin: auto;
+          }
+        }
       }
 
       @media (max-width: 48rem) {
