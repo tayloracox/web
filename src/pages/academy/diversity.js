@@ -34,7 +34,7 @@ class DiversityScholarship extends Component {
         'Content-Type': 'application/json; charset=utf-8',
       },
       body: JSON.stringify({
-        program: 'diversity_scholarship',
+        program: 'diversity-scholarship',
         full_name: this.state.name,
         email_address: this.state.email,
         phone_number: this.state.phone,
