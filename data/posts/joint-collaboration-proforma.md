@@ -1,5 +1,5 @@
 ---
-title: Partnering with Proforma
+title: 'The Power of Partnerships: Proforma'
 date: '2018-12-19T11:48:50-05:00'
 image: /media/cohort-proforma.jpg
 description: >-
