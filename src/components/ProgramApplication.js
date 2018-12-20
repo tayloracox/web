@@ -351,12 +351,9 @@ class ProgramApplication extends Component {
               </p>
               <p>
                 Your next step is an interview to get to learn more about the
-                program and answer any questions you may have. Please sign up
-                for a time to meet with someone from SDG at:
-                <br />
-                <a href="https://calendly.com/suncoastio/60int">
-                  https://calendly.com/suncoastio/60int
-                </a>
+                program and answer any questions you may have. Our enrollment
+                specialist will be reaching out to you soon to schedule your
+                interview.
               </p>
               <p>We'll be in touch&hellip;</p>
             </section>
