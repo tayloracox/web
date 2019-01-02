@@ -45,3 +45,10 @@
     justify-content: center;
   }
 }
+
+.footer {
+  .h-adr + .tel {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+}

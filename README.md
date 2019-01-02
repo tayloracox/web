@@ -14,7 +14,7 @@ The project is a [Gatsby](https://www.gatsbyjs.org/) based site. We also use [Co
 ```
 CONTENTFUL_SPACE_ID=
 CONTENTFUL_ACCESS_TOKEN=
-GATEWAY_API_URL=
+GATSBY_GATEWAY_API_URL=http://localhost:3000
 ```
 
 After cloning the project, run `yarn` to install dependencies, and `yarn start` to launch the development server on http://localhost:8000/.

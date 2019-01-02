@@ -68,6 +68,11 @@ const Footer = () => (
                 <span className="p-postal-code">33712</span>
               </OutboundLink>
             </p>
+            <p className="tel">
+              <OutboundLink href="tel:1-727-201-2012">
+                +1 (727) 201-201
+              </OutboundLink>
+            </p>
             <p className="menu-label">General</p>
             <ul className="menu-list">
               <li>
