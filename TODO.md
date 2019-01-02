@@ -51,7 +51,7 @@
 
 ### Deploy
 
-- [ ] update `siteUrl` in `gatsby-config.js`
+- [x] update `siteUrl` in `gatsby-config.js`
 - [x] update ENV in production
 - [x] squash changes into old repo
 - [ ] update renovate bot
