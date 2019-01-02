@@ -6,6 +6,8 @@ import cx from 'classnames'
 import Carousel from 're-carousel'
 // import temp from '../images/temp.svg'
 
+const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
+
 const INITIAL_STATE = {
   givenName: '',
   familyName: '',
@@ -35,7 +37,7 @@ class MailingListForm extends React.Component {
       familyName &&
       email
     ) {
-      fetch(`${process.env.GATEWAY_API_URL}/lead`, {
+      fetch(`${GATEWAY_API_URL}/lead`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=utf-8',

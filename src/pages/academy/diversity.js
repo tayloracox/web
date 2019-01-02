@@ -7,6 +7,8 @@ import PageTitle from '../../components/PageTitle'
 import Section from '../../components/Section'
 import AcademyNavigation from '../../components/academy/AcademyNavigation'
 
+const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
+
 class DiversityScholarship extends React.Component {
   state = {
     name: '',
@@ -27,7 +29,7 @@ class DiversityScholarship extends React.Component {
 
   _submit = event => {
     event.preventDefault()
-    fetch(`${process.env.GATEWAY_API_URL}/apply`, {
+    fetch(`${GATEWAY_API_URL}/apply`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',

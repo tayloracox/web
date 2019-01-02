@@ -8,7 +8,7 @@ import Question from './Question'
 
 const LAST_STEP = 3
 
-const GATEWAY_API_URL = process.env.GATEWAY_API_URL
+const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
 
 class ProgramApplication extends Component {
   constructor() {
