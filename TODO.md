@@ -47,7 +47,7 @@
 - [ ] Organize UI components from content components
 - [ ] Add publishDate to success stories & include in RSS feeds
 - [ ] Second SEO pass
-- [ ] Restore linting
+- [x] Restore linting
 
 ### Deploy
 
