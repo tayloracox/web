@@ -1,193 +1,27 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import Tab from '../../components/Tab'
-import AcademyNavigation from '../../components/AcademyNavigation'
-import PageHeading from '../../components/PageHeading'
-import Capture from '../../components/Capture'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import PageTitle from '../../components/PageTitle'
+import Section from '../../components/Section'
+import MailingListForm from '../../components/MailingListForm'
+import AcademyNavigation from '../../components/academy/AcademyNavigation'
+import ProgramNavigation from '../../components/academy/ProgramNavigation'
+import OurCurriculum from '../../components/academy/OurCurriculum'
+import ProgramSchedule from '../../components/academy/ProgramSchedule'
 
-const AcademyPage = () => (
-  <div className="AcademyPage">
+const AcademyIndex = () => (
+  <Layout>
     <AcademyNavigation />
-    <div className="wrap">
-      <PageHeading>Web Development Program</PageHeading>
-      <ul className="tabs">
-        <Tab to="/academy">Our Curriculum</Tab>
-        <Tab to="/academy/catalog">Program Catalog</Tab>
-        <Tab to="/academy/schedule">Daily Schedule</Tab>
-        <Tab to="/academy/career">Career Services</Tab>
-      </ul>
-
-      <h3>Program Schedule</h3>
-
-      <table className="ProgramSchedule">
-        <thead>
-          <tr>
-            <th>Cohort</th>
-            <th>Status</th>
-            <th>Classes Start</th>
-            <th>Graduation / Demo Day</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="current">
-            <td>Cohort XII</td>
-            <td>
-              <em>In Progress</em>
-            </td>
-            <td>
-              October 22
-              <sup>nd</sup>, 2018
-            </td>
-            <td>
-              January 25
-              <sup>th</sup>, 2018
-            </td>
-          </tr>
-          <tr className="upcoming">
-            <td>Cohort XIII</td>
-            <td>
-              <Link to="/academy/apply">Now Enrolling</Link>
-            </td>
-            <td>
-              January 28
-              <sup>th</sup>, 2019
-            </td>
-            <td>
-              April 19
-              <sup>th</sup>, 2019
-            </td>
-          </tr>
-          <tr className="future">
-            <td>Cohort XIV</td>
-            <td>
-              <Link to="/academy/apply">Accepting Applicants</Link>
-            </td>
-            <td>
-              April 28
-              <sup>th</sup>, 2019
-            </td>
-            <td>TBA</td>
-          </tr>
-          <tr className="distant future">
-            <td>Cohort XV</td>
-            <td>&quot;</td>
-            <td>Summer 2019</td>
-            <td>TBA</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Our Curriculum</h3>
-
-      <p>
-        Our three-month program runs four cohorts per year, starting roughly
-        every quarter. We prepare individuals for entry-level jobs as junior
-        front-end or back-end web developers. Graduates will be able find
-        employment with companies who build and maintain their own websites and
-        web applications (i.e. product work), or with agencies that produce
-        websites and web applications for other companies (i.e. client work).
-      </p>
-
-      <p>
-        Students will learn client-side (front-end) technology: HTML, CSS, and
-        JavaScript as well as server-side (back-end) technology such as .NET or
-        Ruby on Rails. At the end of the course, students will be able to create
-        beautiful, fully functional websites backed by databases and server-side
-        applications.
-      </p>
-
-      <h4>Fundamentals</h4>
-
-      <p>
-        The first unit of the program will cover fundamental skills for software
-        developers. Students will get to know their development environment and
-        tools while diving into the core web technologies: HTML, CSS, and
-        JavaScript.
-      </p>
-
-      <table className="curriculum-info">
-        <tbody>
-          <tr>
-            <th>Background and Basics</th>
-            <td>
-              Development environment, text editor, version control &amp; Git,
-              HTML &amp; CSS
-            </td>
-          </tr>
-          <tr>
-            <th>Programming Fundamentals</th>
-            <td>Syntax, Methods and functions, Control structures</td>
-          </tr>
-          <tr>
-            <th>Paradigms</th>
-            <td>
-              <ul>
-                <li>
-                  Objects, constructors, and object-oriented programming
-                  Anonymous functions
-                </li>
-                <li>Scope, closures, and `this`</li>
-                <li>Asynchronous programming; callbacks and promises</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4>Front-end Frameworks</h4>
-
-      <p>
-        Going into the second unit, students will get hands-on experience with
-        the latest best practices for modern JavaScript development. Students
-        will learn about building complex interactive applications with React, a
-        popular JavaScript library for building user interfaces.
-      </p>
-
-      <table className="curriculum-info">
-        <tbody>
-          <tr>
-            <th>Modern JavaScript tooling</th>
-            <td>webpack, ES2015+, transpiling, modules, Deploying</td>
-          </tr>
-          <tr>
-            <th>React</th>
-            <td>Component driven design, Routing, Managing complex state</td>
-          </tr>
-          <tr>
-            <th>Intermediate Web Concepts</th>
-            <td>Using data (via JSON), Intermediate CSS, APIs, AJAX, REST</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4>Back-end Frameworks</h4>
-
-      <p>
-        In the final unit, students will round out their full-stack toolkit with
-        a exploration of the server- side technologies that power applications
-        on the web and mobile devices. Students will be able to choose a focus,
-        such as: Ruby on Rails (and the Ruby programming language) or .NET (and
-        the C# programming language).
-      </p>
-
-      <table className="curriculum-info">
-        <tbody>
-          <tr>
-            <th>Working with servers </th>
-            <td>
-              Responding to requests, REST + APIs, Templating Engines,
-              Deploying, MVC
-            </td>
-          </tr>
-          <tr>
-            <th>Working with data</th>
-            <td>Database Basics, SQL, Migrations, Object Relational Mapping</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <Capture />
-  </div>
+    <Section>
+      <Container>
+        <PageTitle seo="Our Curriculum">Web Development Program</PageTitle>
+        <ProgramNavigation />
+        <OurCurriculum />
+        <ProgramSchedule />
+      </Container>
+    </Section>
+    <MailingListForm />
+  </Layout>
 )
 
-export default AcademyPage
+export default AcademyIndex

@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import config from '../../../gatsby-config'
-import banner from '../../images/banner.svg'
-import PageHeading from '../../components/PageHeading'
-import AcademyNavigation from '../../components/AcademyNavigation'
+import React from 'react'
+import { navigate } from 'gatsby'
+import Link from 'gatsby-link'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import PageTitle from '../../components/PageTitle'
+import Section from '../../components/Section'
+import AcademyNavigation from '../../components/academy/AcademyNavigation'
 
-const GATEWAY_API_URL = config.siteMetadata.apis.gateway
-
-class DiversityScholarship extends Component {
+class DiversityScholarship extends React.Component {
   state = {
     name: '',
     email: '',
     phone: '',
     applied: false,
     essay: '',
-    complete: false,
   }
 
   _update = event => {
@@ -28,7 +27,7 @@ class DiversityScholarship extends Component {
 
   _submit = event => {
     event.preventDefault()
-    fetch(GATEWAY_API_URL, {
+    fetch(`${process.env.GATEWAY_API_URL}/apply`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
@@ -45,30 +44,27 @@ class DiversityScholarship extends Component {
         },
       }),
     }).then(() => {
-      this.setState({ complete: true })
+      navigate('/thanks')
     })
   }
 
   render() {
-    if (this.state.complete) {
-      return <Redirect to="/thanks" />
-    }
     return (
-      <div className="AcademyPage DiversityScholarship">
+      <Layout>
         <AcademyNavigation />
-        <div className="wrap">
-          <PageHeading>Application for Diversity Scholarship</PageHeading>
-          <main className="app-main">
-            <div className="intro">
+        <Section>
+          <Container>
+            <PageTitle>Application for Diversity Scholarship</PageTitle>
+            <div className="content">
               <p>
-                Suncoast Developers Guild seeks to narrow the gaps in our
-                industry by introducing local companies to diverse talent. We
-                offer a scholarship of $1,900 to members of communities that are
-                underrepresented in technology.
+                <strong>Suncoast Developers Guild</strong> seeks to narrow the
+                gaps in our industry by introducing local companies to diverse
+                talent. We offer a scholarship of <strong>$1,900</strong> to
+                members of communities that are underrepresented in technology.
               </p>
               <ul>
                 <li>
-                  This opportunity is available, but not limited to:
+                  This opportunity is available, <em>but not limited to</em>:
                   self-identifying women, people of color, individuals with
                   disabilities, and the LGBTQ community. Members of all
                   underrepresented groups may apply for this scholarship.
@@ -79,39 +75,46 @@ class DiversityScholarship extends Component {
                 </li>
               </ul>
             </div>
-            <form className="form" onSubmit={this._submit}>
-              <fieldset className="primary-fields">
-                <p>
-                  <label>Full Name</label>
+            <form onSubmit={this._submit}>
+              <div className="field">
+                <label className="label">Full Name</label>
+                <div className="control">
                   <input
                     type="text"
                     name="name"
+                    className="input"
                     value={this.state.name}
                     onChange={this._update}
                   />
-                </p>
-                <p>
-                  <label>Email</label>
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Email</label>
+                <div className="control">
                   <input
                     type="email"
                     name="email"
+                    className="input"
                     value={this.state.email}
                     onChange={this._update}
                   />
-                </p>
-                <p>
-                  <label>Phone Number</label>
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Phone Number</label>
+                <div className="control">
                   <input
                     type="tel"
                     name="phone"
+                    className="input"
                     value={this.state.phone}
                     onChange={this._update}
                   />
-                </p>
-              </fieldset>
-              <fieldset className="secondary-fields">
-                <p className="confirm">
-                  <label>
+                </div>
+              </div>
+              <div className="field">
+                <div className="control">
+                  <label className="radio">
                     <input
                       type="checkbox"
                       name="applied"
@@ -123,31 +126,39 @@ class DiversityScholarship extends Component {
                       <strong>Academy at Suncoast Developers Guild</strong>.
                     </span>
                   </label>
-                </p>
-                <p className="essay">
-                  <label>
-                    Why is diversity in technology important to <em>you</em>?
-                  </label>
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">
+                  Why is diversity in technology important to <em>you</em>?
+                </label>
+                <div className="control">
                   <textarea
+                    className="textarea"
                     name="essay"
                     value={this.state.essay}
                     onChange={this._update}
                   />
+                </div>
+              </div>
+              <div className="field">
+                <p>
+                  <strong>Notice:</strong> By submitting this application, you
+                  are agreeing to our <Link to="/privacy">Privacy Policy</Link>{' '}
+                  and <Link to="/terms">Terms of Service</Link>.
                 </p>
-              </fieldset>
-              <p className="notice">
-                <strong>Notice:</strong> By submitting this application, you are
-                agreeing to our{' '}
-                <a href="https://suncoast.io/privacy">Privacy Policy</a> and{' '}
-                <a href="https://suncoast.io/terms">Terms of Service</a>.
-              </p>
-              <p className="actions">
-                <button type="submit">Submit</button>
-              </p>
+              </div>
+              <div className="field">
+                <div className="control">
+                  <button className="button is-primary" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </div>
             </form>
-          </main>
-        </div>
-      </div>
+          </Container>
+        </Section>
+      </Layout>
     )
   }
 }

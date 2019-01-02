@@ -1,144 +1,98 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import CommunityNavigation from '../../components/CommunityNavigation'
-import PageHeading from '../../components/PageHeading'
+import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
+import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import CommunityNavigation from '../../components/community/CommunityNavigation'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import PageTitle from '../../components/PageTitle'
+import Section from '../../components/Section'
 
-const CommunityNetworkPage = props => (
-  <div className="CommunityPage Network">
+const CommunitySupporters = ({ data }) => (
+  <Layout>
     <CommunityNavigation />
-    <div className="wrap">
-      <PageHeading>Supporters</PageHeading>
-      <div className="blockquote">
-        <blockquote className="quote">
-          <span className="quotation-mark">&quot;</span>
-          The Proforma / SDG collaboration selected passionate junior level
-          candidates and created an intensive training curriculum. This
-          customized curriculum would fine tune technology concepts and focus on
-          the skillsets necessary to be successful at Proforma.
-          <span className="quotation-mark">&quot;</span>
-          <p>
-            <a href="supporter-testimonial">Read More</a>
-          </p>
-        </blockquote>
-        <p className="author">- PROforma</p>
-      </div>
-
-      <ul className="companies">
-        <li className="tab">
-          <div className="logo">
-            <a href="http://www.proforma.com/" target="_blank">
-              <Img
-                title="PROforma"
-                alt="PROforma Logo"
-                sizes={props.data.proforma.sizes}
-              />
-            </a>
+    <Section>
+      <Container>
+        <PageTitle>Supporters</PageTitle>
+      </Container>
+    </Section>
+    <section className="hero is-primary">
+      <div className="hero-body">
+        <Container>
+          <div className="testimonial">
+            <blockquote>
+              The Proforma / SDG collaboration selected passionate junior level
+              candidates and created an intensive training curriculum. This
+              customized curriculum would fine tune technology concepts and
+              focus on the skillsets necessary to be successful at Proforma.
+            </blockquote>
+            <p className="has-text-weight-bold has-text-right">
+              &mdash; Proforma
+            </p>
+            <p className="has-text-centered">
+              <Link
+                className="button is-primary is-outlined is-inverted"
+                to="/community/supporter-testimonial"
+              >
+                Read More&hellip;
+              </Link>
+            </p>
           </div>
-          <hr />
-          <a href="http://www.proforma.com/" target="_blank">
-            <span className="supporter-tagline">Workforce Training</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.carltonfields.com/" target="_blank">
-            <Img
-              title="Carlton Fields"
-              alt="Carlton Fields Logo"
-              sizes={props.data.carltonFields.sizes}
-            />
-          </a>
-          <hr />
-          <a href="https://www.carltonfields.com/" target="_blank">
-            <span className="supporter-tagline">Legal</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.embarccollective.com/" target="_blank">
-            <Img
-              title="Embarc Collective"
-              alt="Embarc Collective Logo"
-              sizes={props.data.embarc.sizes}
-            />
-          </a>
-          <hr />
-          <a href="https://www.embarccollective.com/" target="_blank">
-            <span className="supporter-tagline">Collaborator</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.walmart.com/" target="_blank">
-            <Img
-              title="Walmart"
-              alt="Walmart Logo"
-              sizes={props.data.walmart.sizes}
-            />
-          </a>
-          <hr />
-          <a href="https://www.walmart.com/" target="_blank">
-            <span className="supporter-tagline">Diversity Grant</span>
-          </a>
-        </li>
-        <li className="whentohelp">
-          <a href="https://www.whentohelp.com/" target="_blank">
-            <Img
-              title="When to Help"
-              alt="When to Help Logo"
-              sizes={props.data.whentohelp.sizes}
-            />
-          </a>
-          <hr />
-          <a href="https://www.whentohelp.com/" target="_blank">
-            <span className="supporter-tagline">Volunteer Application</span>
-          </a>
-        </li>
-        <li className="roane">
-          <Img title="Roane" alt="Roane Logo" sizes={props.data.roane.sizes} />
-          <hr />
-          <span className="supporter-tagline">Signage</span>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </Container>
+      </div>
+    </section>
+    <Section>
+      <Container>
+        <div className="content">
+          <p>
+            Suncoast Developers Guild would like to thank these companies for
+            supporting our mission. They help make it possible for us to fulfill
+            our vision in Tampa Bay.
+          </p>
+        </div>
+        <div className="columns is-multiline">
+          {data.allContentfulSponsor.edges.map(({ node: sponsor }) => (
+            <div className="column is-one-third" key={sponsor.name}>
+              <div className="box has-text-centered">
+                <OutboundLink href={sponsor.url}>
+                  <Image
+                    Tag="figure"
+                    className="image"
+                    fluid={sponsor.logo.fluid}
+                    alt={sponsor.logo.description}
+                  />
+                </OutboundLink>
+                <hr />
+                <OutboundLink href={sponsor.url}>
+                  <h4 className="title is-4">{sponsor.benefit}</h4>
+                </OutboundLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  </Layout>
 )
 
+export default CommunitySupporters
+
 export const pageQuery = graphql`
-  query SponsorsPageQuery {
-    proforma: imageSharp(id: { regex: "/network/proforma/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    frontify: imageSharp(id: { regex: "/network/frontify/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    carltonFields: imageSharp(id: { regex: "/network/carlton-fields/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    roane: imageSharp(id: { regex: "/network/roane/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    embarc: imageSharp(id: { regex: "/network/embarc/" }) {
-      sizes(maxWidth: 100) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    walmart: imageSharp(id: { regex: "/network/walmart/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    whentohelp: imageSharp(id: { regex: "/network/whentohelp/" }) {
-      sizes(maxWidth: 100, maxHeight: 100) {
-        ...GatsbyImageSharpSizes
+  query {
+    allContentfulSponsor(sort: { fields: createdAt }) {
+      edges {
+        node {
+          name
+          benefit
+          url
+          logo {
+            fluid(maxWidth: 640, maxHeight: 200, resizingBehavior: PAD) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+        }
       }
     }
   }
 `
-
-export default CommunityNetworkPage
