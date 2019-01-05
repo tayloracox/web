@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import QUESTIONS from './questions'
 import Steps from './Steps'
 import Question from './Question'
+import Calendly from '../Calendly'
 
 const LAST_STEP = 3
 
@@ -193,19 +194,21 @@ class ProgramApplication extends Component {
             </>
           )}
           {step === 4 && (
-            <div className="content">
-              <h3>Hey, you're all done!</h3>
-              <p>
-                Thanks for completing this application; that was easy right?
-              </p>
-              <p>
-                Your next step is an interview to get to learn more about the
-                program and answer any questions you may have. Our enrollment
-                specialist will be reaching out to you soon to schedule your
-                interview.
-              </p>
-              <p>We'll be in touch&hellip;</p>
-            </div>
+            <>
+              <div className="content">
+                <h3>Hey, you're all done!</h3>
+                <p>
+                  Thanks for completing this application;{' '}
+                  <em>that was easy right?</em>
+                </p>
+                <p>
+                  Your <strong>next step is an interview</strong> to get to
+                  learn more about the program and answer any questions you may
+                  have. You can schedule it right now.
+                </p>
+              </div>
+              <Calendly />
+            </>
           )}
           <hr />
           <div className="field is-grouped">
