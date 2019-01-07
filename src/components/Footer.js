@@ -70,7 +70,7 @@ const Footer = () => (
             </p>
             <p className="tel">
               <OutboundLink href="tel:1-727-201-2012">
-                +1 (727) 201-201
+                +1 (727) 201-2012
               </OutboundLink>
             </p>
             <p className="menu-label">General</p>
