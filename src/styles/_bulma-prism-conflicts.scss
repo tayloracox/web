@@ -1,15 +1,14 @@
-// Unset any of the bulma .number styling if this is also a prism .token element
-.gatsby-highlight .token.number {
-  align-items: unset;
-  background-color: unset;
-  border-radius: unset;
-  display: unset;
-  font-size: unset;
-  height: unset;
-  justify-content: unset;
-  margin-right: unset;
-  min-width: unset;
-  padding: unset;
-  text-align: unset;
-  vertical-align: unset;
+// Unset any of the bulma .number or .tag styling
+.content .tag, .content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
 }
