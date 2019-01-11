@@ -163,19 +163,25 @@ class ProgramApplication extends Component {
                 <p>
                   Congratulations on making the first step to launch your career
                   in software development. Remember, there is no cost to apply
-                  or obligation to join the program.
+                  nor any obligation to join the program.
                 </p>
                 <p>
                   Filling out the application will get you fast-tracked to
                   meeting with someone on our team to see if the Web Development
-                  Program is a good fit for you. This application should take 15
-                  to 30 minutes. Please be honest with yourself and with us.
+                  Program is a good fit for you. This application should take
+                  15-30 minutes. Please be honest with yourself and with us.{' '}
+                  <strong>
+                    The next step will be an interview with our team.
+                  </strong>{' '}
+                  You'll have the opportunity to schedule it immediately at the
+                  end of this application.
                 </p>
                 <p>
                   <strong>Notice:</strong> By continuing with this application,
-                  you are agreeing to the terms of our{' '}
+                  you agree to the terms of our{' '}
                   <Link to="/privacy">Privacy Policy</Link> and{' '}
-                  <Link to="/terms">Terms of Service</Link>.
+                  <Link to="/terms">Terms of Service</Link>. We'll follow-up
+                  with you by email, phone, and SMS.
                 </p>
               </div>
             </>
