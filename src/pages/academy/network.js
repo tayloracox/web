@@ -50,7 +50,7 @@ export default AcademyNetwork
 
 export const pageQuery = graphql`
   query {
-    allContentfulHiringPartner {
+    allContentfulHiringPartner(sort: { fields: alumniHired, order: DESC }) {
       edges {
         node {
           id

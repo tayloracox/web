@@ -55,7 +55,7 @@ export default FinancingPage
 
 export const pageQuery = graphql`
   query {
-    allContentfulFinancingPartner {
+    allContentfulFinancingPartner(sort: { fields: position, order: ASC }) {
       edges {
         node {
           name
