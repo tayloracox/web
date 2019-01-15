@@ -105,6 +105,7 @@ export default [
         'LinkedIn',
         'Google',
         'Creative Loafing',
+        'Reddit',
         'Radio',
         'Referral',
         'Other',
