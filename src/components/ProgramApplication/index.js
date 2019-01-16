@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import update from 'immutability-helper'
+import queryString from 'query-string'
 import Link from 'gatsby-link'
 import QUESTIONS from './questions'
 import Steps from './Steps'
 import Question from './Question'
 import Calendly from '../Calendly'
+import Icon from '../Icon'
 
 const LAST_STEP = 3
 
@@ -17,6 +19,7 @@ class ProgramApplication extends Component {
     const questions = _.flatten(QUESTIONS).map(q => q.question)
     this.scrollRef = React.createRef()
     this.state = {
+      loading: false,
       token: null,
       contact: { full_name: '', email_address: '', phone_number: '' },
       step: 0,
@@ -25,21 +28,66 @@ class ProgramApplication extends Component {
   }
 
   componentDidMount() {
-    const token = window.localStorage.getItem('application-token')
-    const responses = window.localStorage.getItem('application-responses')
-    if (token && token.length > 0) {
-      if (responses && responses.length > 0) {
-        this.setState({ responses: JSON.parse(responses) })
-      }
+    const params = queryString.parse(location.search)
 
-      this.setState({ token, step: 1 })
+    if (params.continue) {
+      this.setState({ step: 1 })
+      fetch(`${GATEWAY_API_URL}/apply/${params.continue}`, {
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+      })
+        .then(r => r.json())
+        .then(applicationState => this.setState(applicationState))
+    } else {
+      const frozenState = window.localStorage.getItem('application-state')
+      if (frozenState && frozenState.length > 0) {
+        this.setState(JSON.parse(frozenState))
+      }
     }
+
+    this.updateApplicationInterval = setInterval(() => {
+      this.updateApplication()
+    }, 10000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.updateApplicationInterval)
   }
 
   continueApplication = async event => {
     event.preventDefault()
 
-    if (this.state.step === 0) {
+    if (this.state.token) {
+      if (this.state.step === LAST_STEP) {
+        await fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify({
+            question_responses: this.state.responses,
+            application_status: 'complete',
+          }),
+        })
+        window.localStorage.removeItem('application-state')
+      } else {
+        fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify({
+            ...this.state.contact,
+            question_responses: this.state.responses,
+          }),
+        })
+        window.localStorage.setItem(
+          'application-state',
+          JSON.stringify(this.state)
+        )
+      }
+    } else {
       const { id: token } = await fetch(`${GATEWAY_API_URL}/apply`, {
         method: 'POST',
         headers: {
@@ -50,31 +98,31 @@ class ProgramApplication extends Component {
           ...this.state.contact,
         }),
       }).then(response => response.json())
-      window.localStorage.setItem('application-token', token)
       await this.setState({ token })
     }
 
-    if (this.state.step === LAST_STEP) {
-      await fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
+    const step = this.state.token ? this.state.step + 1 : 0
+
+    this.setState({ step })
+    this.scrollToTop()
+  }
+
+  updateApplication() {
+    if (this.state.token) {
+      fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
         },
         body: JSON.stringify({ question_responses: this.state.responses }),
       })
-      window.localStorage.removeItem('application-token')
-      window.localStorage.removeItem('application-responses')
+      if (this.state.step !== LAST_STEP) {
+        window.localStorage.setItem(
+          'application-state',
+          JSON.stringify(this.state)
+        )
+      }
     }
-
-    const step = this.state.token ? this.state.step + 1 : 0
-
-    window.localStorage.setItem(
-      'application-responses',
-      JSON.stringify(this.state.responses)
-    )
-
-    this.setState({ step })
-    this.scrollToTop()
   }
 
   backtrackApplication = event => {
@@ -120,6 +168,22 @@ class ProgramApplication extends Component {
     return (
       <div className="ProgramApplication" ref={this.scrollRef}>
         {step > 0 && <Steps step={step} />}
+        {step > 0 && (
+          <nav className="level">
+            <div className="level-item">
+              <Icon i="fas fa-user fa-sm" />
+              <span>{this.state.contact.full_name}</span>
+            </div>
+            <div className="level-item">
+              <Icon i="fas fa-envelope fa-sm" />
+              <span>{this.state.contact.email_address}</span>
+            </div>
+            <div className="level-item">
+              <Icon i="fas fa-mobile fa-sm" />
+              <span>{this.state.contact.phone_number}</span>
+            </div>
+          </nav>
+        )}
         <form onSubmit={e => e.preventDefault()}>
           {step === 0 && (
             <>
@@ -230,7 +294,7 @@ class ProgramApplication extends Component {
                 </button>
               </p>
             )}
-            {step > 1 && step < LAST_STEP + 1 && (
+            {step > 0 && step < LAST_STEP + 1 && (
               <p className="control">
                 <button
                   className="button is-text"
