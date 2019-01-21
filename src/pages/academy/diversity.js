@@ -46,6 +46,13 @@ class DiversityScholarship extends React.Component {
         },
       }),
     }).then(() => {
+      if (window.ga) {
+        ga('send', 'event', {
+          eventCategory: 'Program Applications',
+          eventAction: 'Submit',
+          eventLabel: 'Diversity Scholarship',
+        })
+      }
       navigate('/thanks')
     })
   }

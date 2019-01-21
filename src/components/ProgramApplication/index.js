@@ -70,6 +70,13 @@ class ProgramApplication extends Component {
             application_status: 'complete',
           }),
         })
+        if (window.ga) {
+          ga('send', 'event', {
+            eventCategory: 'Program Applications',
+            eventAction: 'Submit',
+            eventLabel: 'Web Development',
+          })
+        }
         window.localStorage.removeItem('application-state')
       } else {
         fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
@@ -98,6 +105,13 @@ class ProgramApplication extends Component {
           ...this.state.contact,
         }),
       }).then(response => response.json())
+      if (window.ga) {
+        ga('send', 'event', {
+          eventCategory: 'Program Applications',
+          eventAction: 'Begin',
+          eventLabel: 'Web Development',
+        })
+      }
       await this.setState({ token })
     }
 
