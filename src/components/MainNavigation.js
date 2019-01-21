@@ -91,6 +91,9 @@ class MainNavigation extends Component {
                   <Link to="/academy/faq" className="navbar-item">
                     FAQ
                   </Link>
+                  <Link to="/demo-day" className="navbar-item">
+                    Graduates
+                  </Link>
                   <hr className="navbar-divider" />
                   <Link to="/academy/apply" className="navbar-item">
                     Apply Now

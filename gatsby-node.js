@@ -7,6 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
     const successStory = path.resolve('./src/templates/success-story.js')
+    const demoDayTemplate = path.resolve('./src/templates/demo-day.js')
     resolve(
       graphql(
         `
@@ -20,6 +21,14 @@ exports.createPages = ({ graphql, actions }) => {
             }
 
             allContentfulSuccessStory {
+              edges {
+                node {
+                  slug
+                }
+              }
+            }
+
+            allContentfulDemoDay {
               edges {
                 node {
                   slug
@@ -49,6 +58,17 @@ exports.createPages = ({ graphql, actions }) => {
             component: successStory,
             context: {
               slug: story.node.slug,
+            },
+          })
+        })
+
+        const demoDays = result.data.allContentfulDemoDay.edges
+        demoDays.forEach(({ node: demoDay }) => {
+          createPage({
+            path: `/demo-day/${demoDay.slug}/`,
+            component: demoDayTemplate,
+            context: {
+              slug: demoDay.slug,
             },
           })
         })

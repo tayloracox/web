@@ -24,7 +24,7 @@ const AcademyNavigation = () => (
             </NavItem>
             <NavItem
               to="/academy/admissions"
-              icon="fas fa-graduation-cap fa-lg"
+              icon="fas fa-clipboard-list-check fa-lg"
             >
               Admissions
             </NavItem>
@@ -49,6 +49,9 @@ const AcademyNavigation = () => (
             </NavItem>
             <NavItem to="/academy/faq" icon="fas fa-puzzle-piece fa-lg">
               FAQ
+            </NavItem>
+            <NavItem to="/demo-day" icon="fas fa-graduation-cap fa-lg">
+              Graduates
             </NavItem>
             <NavItem to="/academy/apply" icon="fas fa-laptop fa-lg">
               Apply Now
