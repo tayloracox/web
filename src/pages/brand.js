@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Link from 'gatsby-link'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { withPrefix } from 'gatsby'
 
@@ -370,6 +371,40 @@ const BrandPage = () => (
                 our corporate seal. It's primarily used a watermark to add
                 visual interest to a design, or on the back/bottom of a card or
                 letter.
+              </p>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-one-fifth">
+              <div className="logo card">
+                <div className="card-image">
+                  <figure className="image">
+                    <img
+                      src={withPrefix('/brand/junior.svg')}
+                      alt="SDG Jr Logo"
+                    />
+                  </figure>
+                </div>
+                <footer className="card-footer">
+                  <a
+                    href={withPrefix('/brand/junior.svg')}
+                    className="card-footer-item"
+                  >
+                    SVG
+                  </a>
+                  <a
+                    href={withPrefix('/brand/junior.png')}
+                    className="card-footer-item"
+                  >
+                    PNG
+                  </a>
+                </footer>
+              </div>
+            </div>
+            <div className="column content">
+              <p>
+                The <strong>Junior</strong> logo is used to promote{' '}
+                <Link to="/jr">SDG Jr.</Link>.
               </p>
             </div>
           </div>
