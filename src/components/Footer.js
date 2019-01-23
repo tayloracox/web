@@ -88,6 +88,9 @@ const Footer = () => (
                 <NavLink to="/blog">Blog</NavLink>
               </li>
               <li>
+                <NavLink to="/jr">SDG Jr.</NavLink>
+              </li>
+              <li>
                 <NavLink to="/contact">Contact</NavLink>
               </li>
             </ul>
