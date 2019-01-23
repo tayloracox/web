@@ -20,7 +20,14 @@ const PersonModal = ({ person, content, returnTo }) => (
         <div className="card-content">
           <h3 className="title is-3">{person.name}</h3>
           <h4 className="subtitle heading">
-            {person.title} @ {person.company}
+            {person.title} @{' '}
+            {person.companyUrl ? (
+              <OutboundLink href={person.companyUrl}>
+                {person.company}
+              </OutboundLink>
+            ) : (
+              person.company
+            )}
           </h4>
           <div
             className="content"

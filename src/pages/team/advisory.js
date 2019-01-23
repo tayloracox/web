@@ -68,6 +68,7 @@ export const pageQuery = graphql`
             name
             title
             company
+            companyUrl
             biography {
               childMarkdownRemark {
                 html
