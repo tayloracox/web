@@ -45,7 +45,7 @@ const ProgramSchedule = () => (
               <Link to="/academy/apply">Accepting Applicants</Link>
             </td>
             <td>
-              April 28<sup>th</sup>, 2019
+              April 29<sup>th</sup>, 2019
             </td>
             <td>TBA</td>
           </tr>

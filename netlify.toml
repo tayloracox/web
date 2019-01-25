@@ -1,3 +1,11 @@
 [build]
   publish = "public"
   command = "yarn build"
+
+[[redirects]]
+  from = "http://demoday.suncoast.io/*"
+  to = "https://suncoast.io/demp-day"
+
+[[redirects]]
+  from = "https://demoday.suncoast.io/*"
+  to = "https://suncoast.io/demp-day"

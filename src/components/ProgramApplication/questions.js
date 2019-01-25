@@ -6,7 +6,7 @@ export default [
       question: 'When are you hoping to start the program?',
       answers: [
         'January 28th, 2019 (Cohort XIII)',
-        'April 28th, 2019 (Cohort XIV)',
+        'April 29th, 2019 (Cohort XIV)',
         'Summer 2019',
         'Later in the future',
       ],

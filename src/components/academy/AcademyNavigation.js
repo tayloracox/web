@@ -64,7 +64,7 @@ const AcademyNavigation = () => (
       <Link to="/academy/apply">
         <img
           src={announcement}
-          alt="Now enrolling for our January 28th cohort!"
+          alt="Now enrolling for our April 29th cohort!"
         />
       </Link>
     </figure>

@@ -8,6 +8,7 @@ import Container from '../../components/Container'
 import Section from '../../components/Section'
 import PageTitle from '../../components/PageTitle'
 import Icon from '../../components/Icon'
+import MailingListForm from '../MailingListForm'
 
 const Cohort = ({
   title,
@@ -62,8 +63,8 @@ const Cohort = ({
 
             <h3>Interested in taking classes or learning more?</h3>
             <p>
-              We are still accepting applications for our next cohort begining
-              January 28th. <Link to="/academy">Find out more.</Link>
+              We are now accepting applications for our next cohort begining
+              April 29th. <Link to="/academy">Find out more.</Link>
             </p>
           </div>
 
@@ -180,21 +181,26 @@ const Cohort = ({
                 <hr />
               </>
             )}
-            <div
-              className="content"
-              dangerouslySetInnerHTML={{
-                __html: sponsorText.childMarkdownRemark.html,
-              }}
-            />
-            <Image
-              Tag="figure"
-              className="image"
-              fluid={sponsorLogo.fluid}
-              alt={sponsorLogo.description}
-            />
+            {sponsorText && (
+              <>
+                <div
+                  className="content"
+                  dangerouslySetInnerHTML={{
+                    __html: sponsorText.childMarkdownRemark.html,
+                  }}
+                />
+                <Image
+                  Tag="figure"
+                  className="image"
+                  fluid={sponsorLogo.fluid}
+                  alt={sponsorLogo.description}
+                />
+              </>
+            )}
           </div>
         </div>
       </section>
+      <MailingListForm />
     </>
   )
 }
