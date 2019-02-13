@@ -121,7 +121,7 @@ const Footer = () => (
       </div>
       <div className="content has-text-centered">
         <p className="is-uppercase has-text-weight-bold">
-          &copy; 2018 Suncoast Developers Guild, Inc.
+          &copy; 2019 Suncoast Developers Guild, Inc.
         </p>
         <p>
           Made with
