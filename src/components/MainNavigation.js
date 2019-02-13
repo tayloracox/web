@@ -11,31 +11,26 @@ class MainNavigation extends Component {
     this.unlisten = history.listen(() => {
       this.setState({ active: false })
     })
-    window.addEventListener('scroll', this._visibilty)
   }
 
   componentWillUnmount() {
     this.unlisten()
-    window.removeEventListener('scroll', this._visibilty)
   }
 
   _toggle = () => {
     this.setState({ active: !this.state.active })
   }
 
-  _visibilty = () => {
-    // Don't hide while menu is visible.
-    if (!this.state.active) {
-      const visible = window.scrollY > 42
-      this.setState({ visible })
-    }
-  }
-
   render() {
-    const { active, visible } = this.state
+    const { active } = this.state
     return (
       <nav
-        className={cx('main-navigation', 'navbar', 'is-fixed-top', { visible })}
+        className={cx(
+          'main-navigation',
+          'navbar',
+          'is-fixed-top',
+          'has-shadow'
+        )}
         role="navigation"
         aria-label="main navigation"
       >

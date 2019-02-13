@@ -11,9 +11,6 @@ import swag from '../images/swag.svg'
 
 const IndexPage = () => (
   <Layout>
-    <Helmet>
-      <html className="landing" />
-    </Helmet>
     <SplashHero />
     <AcademyCommunityDuo />
     <MissionStatement />
