@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "0.17.0",
-    "@mdx-js/tag": "0.16.6",
+    "@mdx-js/tag": "0.17.0",
     "@sentry/browser": "4.5.2",
     "bulma": "0.7.2",
     "classnames": "2.2.6",
