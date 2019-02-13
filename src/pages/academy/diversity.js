@@ -39,6 +39,7 @@ class DiversityScholarship extends React.Component {
         full_name: this.state.name,
         email_address: this.state.email,
         phone_number: this.state.phone,
+        application_status: 'complete',
         question_responses: {
           'I have applied for a program at the Academy at Suncoast Developers Guild.': this
             .state.applied,
