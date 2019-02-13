@@ -7,7 +7,11 @@ const UniversalLink = ({ to, href, ...rest }) => {
   if (/^(http)?s?:\/\//.test(url)) {
     return <OutboundLink href={url} {...rest} />
   } else {
-    return <Link to={url} {...rest} />
+    if (/\.[0-9a-z]+$/i.test(url)) {
+      return <a href={url} {...rest} />
+    } else {
+      return <Link to={url} {...rest} />
+    }
   }
 }
 
