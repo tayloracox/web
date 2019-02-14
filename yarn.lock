@@ -858,56 +858,56 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@sentry/browser@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.5.2.tgz#d13a96a0638d16af47edef25b613d96ba3f9dc21"
-  integrity sha512-Gi0wKzKokn9ZYI7MCTe3ev36npI12127QgyZNwyyG9vcR9J62cH6cltQ3BTefghJaSjgwDAfy5F/+htUzE5eCQ==
+"@sentry/browser@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.6.0.tgz#1233a408732f9b82d0c37c18c1d629af09b5e46a"
+  integrity sha512-d8Ptf+X9TJLAaqieJ/RuJcDlr6i5ZpGS1RmlyiHBO0DnOgveDb8JWfEU0Zx5EigfJkQZNRL/5GRxzX+HMiGfPA==
   dependencies:
-    "@sentry/core" "4.5.2"
-    "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.2"
+    "@sentry/core" "4.6.0"
+    "@sentry/types" "4.5.3"
+    "@sentry/utils" "4.5.4"
     tslib "^1.9.3"
 
-"@sentry/core@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.5.2.tgz#b103b659857e0fabf7219e9f34c4070bcb2af0c2"
-  integrity sha512-TRUQWQugcn2ut7eII6WxU3wlUs4CSYTUqjUDne8vCMjI4oZhmGEcRUEo03OcetieH8e+oB/a1LbLMg+JI6Nsxg==
+"@sentry/core@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.6.0.tgz#9543dc7a26a84ac288124c7481a63f11ec8b53ac"
+  integrity sha512-fed1P8TnuO99utd7rRMA46/OlL+sbRckPka2B0HZZWlKL8VGNjXt0oUbmgrTocF4UhLit9Q1rXX6bxubQ2y43Q==
   dependencies:
-    "@sentry/hub" "4.5.2"
-    "@sentry/minimal" "4.5.2"
-    "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.2"
+    "@sentry/hub" "4.6.0"
+    "@sentry/minimal" "4.6.0"
+    "@sentry/types" "4.5.3"
+    "@sentry/utils" "4.5.4"
     tslib "^1.9.3"
 
-"@sentry/hub@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.5.2.tgz#b1df97dccc8644f6ef9b36e8747fe04342cb92ef"
-  integrity sha512-17mVTzYCPVdVSBOYrpr53tDTfFcSBNb92dIIEvSybZe4IWDuMRe4hhUAy+A35HesEZS68uTQq49Ntspms5B8ow==
+"@sentry/hub@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.6.0.tgz#53e61ceb54159e46fcbf3bb4187f73dfd59bf594"
+  integrity sha512-L+YmVOo7gFAQrDuaaA/wYI2JkLNJFjjDrqGrUp3XEgIKvUsINE4S84ZPFC1HXUpWLeq05xrUDZovt0XYxD/5IQ==
   dependencies:
-    "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.2"
+    "@sentry/types" "4.5.3"
+    "@sentry/utils" "4.5.4"
     tslib "^1.9.3"
 
-"@sentry/minimal@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.5.2.tgz#c090427f6ac276b4dc449e8be460ca5b35ce4fb3"
-  integrity sha512-HhOw055ZhjUJkJIq3/tBBE3H8tC5J64UKggrzJ1i7GinCecHBbH/RZ55zMqb3ckHPa6aFshq0hJ1+lHxeYz1Rg==
+"@sentry/minimal@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.6.0.tgz#464a818901c681fce1e87f714e458a90d12211d4"
+  integrity sha512-6P5r8oXHrCvEynip4svfgptnvt7EzM6uKriqGSgOTLsb1kcO/0yb4fFqC/51OO0cGJ0OEWSxsdGptg+p2Eowyg==
   dependencies:
-    "@sentry/hub" "4.5.2"
-    "@sentry/types" "4.5.0"
+    "@sentry/hub" "4.6.0"
+    "@sentry/types" "4.5.3"
     tslib "^1.9.3"
 
-"@sentry/types@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.5.0.tgz#59e2a27d48b01b44e8959aa5c8a30514fe1086a9"
-  integrity sha512-IstPjFoebQGrQWdM732D/+S0BTovmDgezyplk4kLEb87+/B+YK0hlhziUa7B2byTFJGgQQKXy7h2sKZBrA3GUA==
+"@sentry/types@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.5.3.tgz#3350dce2b7f9b936a8c327891c12e3aef7bd8852"
+  integrity sha512-7ll1PAFNjrBNX9rzy3P2qAQrpQwHaDO3uKj735qsnGw34OtAS8Xr8WYrjI14f9fMPa/XIeWvMPb4GMic28V/ag==
 
-"@sentry/utils@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.5.2.tgz#0de5bef1c71e0dd800d378c010e5bfad91add91a"
-  integrity sha512-ED4CkT/zmc7LZLW5OuWRkgqcSqwZELh2S0ALJTv/4MhFZYuPWrs4DF/jcJcRkwivSoCUsiWDiESlU0JzYflbcg==
+"@sentry/utils@4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.5.4.tgz#fc074b0c16850f39685a6c17f96407f56ed36b03"
+  integrity sha512-LhWnCuTEzmbQKyc0qyahs5PYPpj9qkY3BpMOyEIoYz79RU5lMD1iPR62wG8cqO09JmrCHuqfWeQIQIwUFQTaBQ==
   dependencies:
-    "@sentry/types" "4.5.0"
+    "@sentry/types" "4.5.3"
     tslib "^1.9.3"
 
 "@sindresorhus/is@^0.7.0":
@@ -10719,15 +10719,15 @@ react-dev-utils@^4.2.1:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@16.8.1:
-  version "16.8.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.1.tgz#ec860f98853d09d39bafd3a6f1e12389d283dbb4"
-  integrity sha512-N74IZUrPt6UiDjXaO7UbDDFXeUXnVhZzeRLy/6iqqN1ipfjrhR60Bp5NuBK+rv3GMdqdIuwIl22u1SYwf330bg==
+react-dom@16.7.0:
+  version "16.7.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
+  integrity sha512-D0Ufv1ExCAmF38P2Uh1lwpminZFRXEINJe53zRAbm4KPwSyd6DY/uDoS0Blj9jvPpn1+wivKpZYc8aAAN/nAkg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.1"
+    scheduler "^0.12.0"
 
 react-dom@~15.4.1:
   version "15.4.2"
@@ -10786,15 +10786,15 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react@16.8.1:
-  version "16.8.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.1.tgz#ae11831f6cb2a05d58603a976afc8a558e852c4a"
-  integrity sha512-wLw5CFGPdo7p/AgteFz7GblI2JPOos0+biSoxf1FPsGxWQZdN/pj6oToJs1crn61DL3Ln7mN86uZ4j74p31ELQ==
+react@16.7.0:
+  version "16.7.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
+  integrity sha512-StCz3QY8lxTb5cl2HJxjwLFOXPIFQp+p+hxQfc8WE0QiLfCtIlKj8/+5tjjKm8uSTlAW+fCPaavGFS06V9Ar3A==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.1"
+    scheduler "^0.12.0"
 
 react@~15.4.1:
   version "15.4.2"
@@ -11486,10 +11486,10 @@ sax@>=0.6.0, sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scheduler@^0.13.1:
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.1.tgz#1a217df1bfaabaf4f1b92a9127d5d732d85a9591"
-  integrity sha512-VJKOkiKIN2/6NOoexuypwSrybx13MY7NSy9RNt8wPvZDMRT1CW6qlpF5jXRToXNHz3uWzbm2elNpZfXfGPqP9A==
+scheduler@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
+  integrity sha512-t7MBR28Akcp4Jm+QoR63XgAi9YgCUmgvDHqf5otgAj4QvdoBE4ImCX0ffehefePPG+aitiYHp0g/mW6s4Tp+dw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
