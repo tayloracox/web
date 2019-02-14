@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Image from 'gatsby-image'
+
 import Layout from '../../../components/Layout'
 import Container from '../../../components/Container'
 import Section from '../../../components/Section'
 import PageTitle from '../../../components/PageTitle'
 import AcademyNavigation from '../../../components/academy/AcademyNavigation'
 
-const TestDriveCourse = () => (
+const TestDriveCourse = ({ data }) => (
   <Layout>
     <AcademyNavigation />
     <Section>
@@ -51,6 +53,9 @@ const TestDriveCourse = () => (
               </p>
             </div>
           </div>
+          <div className="level-item has-text-centered">
+            <button className="button is-primary">Register</button>
+          </div>
         </nav>
 
         <h4 className="title is-4">Course Description</h4>
@@ -80,6 +85,30 @@ const TestDriveCourse = () => (
           </p>
         </div>
 
+        <h4 className="title is-4">
+          About the Instructor: {data.contentfulPerson.name}
+        </h4>
+
+        <div className="columns">
+          <div className="column is-narrow">
+            <Image
+              Tag="figure"
+              className="image"
+              fixed={data.contentfulPerson.image.fixed}
+              alt={data.contentfulPerson.image.description}
+            />
+          </div>
+          <div className="column">
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.contentfulPerson.biography.childMarkdownRemark.html,
+              }}
+            />
+          </div>
+        </div>
+        <hr />
         <div className="columns">
           <div className="column is-three-fifths">
             <h4 className="title is-4">Course Outline</h4>
@@ -208,9 +237,33 @@ const TestDriveCourse = () => (
             </div>
           </div>
         </div>
+        <div className="has-text-centered">
+          <button className="button is-primary">
+            Register for this Course
+          </button>
+        </div>
       </Container>
     </Section>
   </Layout>
 )
 
 export default TestDriveCourse
+
+export const pageQuery = graphql`
+  query {
+    contentfulPerson(name: { eq: "Liz Tiller" }) {
+      name
+      biography {
+        childMarkdownRemark {
+          html
+        }
+      }
+      image {
+        fixed(width: 128, height: 128, resizingBehavior: FILL) {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        description
+      }
+    }
+  }
+`
