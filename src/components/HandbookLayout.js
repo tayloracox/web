@@ -1,9 +1,11 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/tag'
+import { preToCodeBlock } from 'mdx-utils'
 import Layout from './Layout'
 import Container from './Container'
 import Section from './Section'
 import PageTitle from './PageTitle'
+import Code from './Code'
 import Link from './UniversalLink'
 
 const HandbookLayout = ({ children }) => (
@@ -34,6 +36,14 @@ const HandbookLayout = ({ children }) => (
                 {children}
               </h6>
             ),
+            pre: props => {
+              const preProps = preToCodeBlock(props)
+              if (preProps) {
+                return <Code {...preProps} />
+              } else {
+                return <pre {...props} />
+              }
+            },
           }}
         >
           <div className="columns">
