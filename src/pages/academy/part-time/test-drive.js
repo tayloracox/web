@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Image from 'gatsby-image'
-
+import { graphql } from 'gatsby'
 import Layout from '../../../components/Layout'
 import Container from '../../../components/Container'
 import Section from '../../../components/Section'
