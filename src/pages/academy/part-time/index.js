@@ -1,10 +1,96 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../../../components/Layout'
 import Container from '../../../components/Container'
 import Section from '../../../components/Section'
 import PageTitle from '../../../components/PageTitle'
 import AcademyNavigation from '../../../components/academy/AcademyNavigation'
+import wdtd from '../../../images/part-time/wdtd.svg'
+import rbiw from '../../../images/part-time/rbiw.svg'
+import uxnd from '../../../images/part-time/uxnd.svg'
+import dmds from '../../../images/part-time/dmds.svg'
+
+const CourseListing = ({
+  title,
+  path,
+  registration,
+  image,
+  children,
+  tags,
+  day,
+  month,
+  days,
+  time,
+}) => (
+  <article className="columns">
+    <div className="column">
+      <div className="media">
+        <div className="media-left is-hidden-mobile">
+          <figure className="image is-128x128">
+            <Link to={path}>
+              <img src={image} alt="Course Image" width="128" height="128" />
+            </Link>
+          </figure>
+        </div>
+        <div className="media-content">
+          <h3 className="title is-3">
+            <Link to={path}>{title}</Link>
+          </h3>
+          <div className="subtitle tags">
+            {tags.map(tag => (
+              <span className="tag" key={tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="level is-block-mobile is-hidden-tablet">
+            <div className="level-item">
+              <figure className="image is-128x128">
+                <Link to={path}>
+                  <img
+                    src={image}
+                    alt="Course Image"
+                    width="128"
+                    height="128"
+                  />
+                </Link>
+              </figure>
+            </div>
+          </div>
+          <div className="content">{children}</div>
+        </div>
+      </div>
+    </div>
+    <div className="column is-narrow">
+      <nav className="level">
+        <div className="level-item">
+          <div className="has-text-centered">
+            <div className="calendar-date">
+              <span className="month">{month}</span>
+              <span className="day">{day}</span>
+            </div>
+            <div>
+              {days.map(day => (
+                <>
+                  <span className="tag" key={day}>
+                    {day}
+                  </span>{' '}
+                </>
+              ))}
+            </div>
+            <div className="time is-size-7 content">
+              <p>{time}</p>
+            </div>
+            <OutboundLink href={registration} className="button is-primary">
+              Register
+            </OutboundLink>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </article>
+)
 
 const PartTimeCourses = () => (
   <Layout>
@@ -25,103 +111,91 @@ const PartTimeCourses = () => (
             specific areas, one of our part-time courses might be right for you.
           </p>
         </div>
+        <hr />
         <div>
-          <article className="columns">
-            <div className="column">
-              <div className="media">
-                <div className="media-left is-hidden-mobile">
-                  <figure className="image is-128x128">
-                    <Link to="/academy/part-time/test-drive">
-                      <img src="https://via.placeholder.com/128" alt="" />
-                    </Link>
-                  </figure>
-                </div>
-                <div className="media-content">
-                  <h3 className="title is-3">
-                    <Link to="/academy/part-time/test-drive">
-                      Web Development Test Drive
-                    </Link>
-                  </h3>
-                  <div className="subtitle tags">
-                    <span className="tag">6 WEEKS</span>
-                    <span className="tag">BEGINNER</span>
-                  </div>
-                  <div className="level is-block-mobile is-hidden-tablet">
-                    <div className="level-item">
-                      <figure className="image is-128x128">
-                        <Link to="/academy/part-time/test-drive">
-                          <img src="https://via.placeholder.com/128" alt="" />
-                        </Link>
-                      </figure>
-                    </div>
-                  </div>
-                  <div className="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Iure facere perspiciatis aliquam ea, non vitae autem
-                      inventore repellendus saepe dolor iste. Modi architecto
-                      excepturi dolorum rerum hic illum maiores dolor!{' '}
-                      <Link to="/academy/part-time/test-drive">Learn More</Link>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="column is-narrow">
-              <nav className="level">
-                <div className="level-item">
-                  <div className="has-text-centered">
-                    <div className="calendar-date">
-                      <span className="month">Mar</span>
-                      <span className="day">11</span>
-                    </div>
-                    <div>
-                      <span className="tag">Mon</span>{' '}
-                      <span className="tag">Wed</span>
-                    </div>
-                    <div className="time is-size-7 content">
-                      <p>6:30 - 8:30 PM</p>
-                    </div>
-                    <button className="button is-primary">Register</button>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </article>
+          <CourseListing
+            title="Web Development Test Drive"
+            image={wdtd}
+            path="/academy/part-time/test-drive"
+            month="March"
+            day={11}
+            days={['Mon', 'Wed']}
+            tags={['6-WEEKS', 'BEGINNER']}
+            time="6:30 - 8:30 p.m."
+            registration="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+          >
+            <p>
+              In this six-week course, students learn the basics of front-end
+              web development. Students will learn the basic practices,
+              fundamentals, and ideas behind creating dynamic websites with
+              HTML, CSS, and JavaScript.{' '}
+              <Link to="/academy/part-time/test-drive">Learn more</Link>.
+            </p>
+          </CourseListing>
           <hr />
-          <article className="media">
-            <div className="media-left">
-              <figure className="image is-100by100">
-                <img src="https://via.placeholder.com/100" alt="" />
-              </figure>
-            </div>
-            <div className="media-content">
-              <h3 className="title is-3">
-                React I: Building Interactive Websites
-              </h3>
-              <div className="subtitle tags">
-                <span className="tag">6 WEEKS</span>
-                <span className="tag">INTERMEDIATE</span>
-              </div>
-              <div className="content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  facere perspiciatis aliquam ea, non vitae autem inventore
-                  repellendus saepe dolor iste. Modi architecto excepturi
-                  dolorum rerum hic illum maiores dolor!{' '}
-                  <Link to="...">Learn More</Link>
-                </p>
-              </div>
-            </div>
-            <div className="media-right">
-              <div>Mar 11</div>
-              <div>
-                <span className="tag">Saturday</span>
-              </div>
-              <div>6:30 PM</div>
-              <button className="button is-primary">Register</button>
-            </div>
-          </article>
+          <CourseListing
+            title="User Experience (UX) for Non-Designers"
+            image={uxnd}
+            path="/academy/part-time/user-experience"
+            month="March"
+            day={16}
+            days={['Saturday']}
+            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+            time="10:00 a.m. - 3:00 p.m."
+            registration="https://squareup.com/store/suncoast-developers-guild/item/user-experience-ux-for-non-designers"
+          >
+            <p>
+              Over the course of six weeks, students learn the theory and
+              practice behind User Experience (UX) design through a series of
+              lectures, sharing of professional examples, interactive team
+              activities, and individual assignments. With a focus on solving
+              problems creatively and systematically by putting your users and
+              their needs first, students will utilize User Experience (UX) and
+              User-Interface (UI) techniques and methodologies to develop a
+              product or service of their choosing.{' '}
+              <Link to="/academy/part-time/user-experience">Learn more</Link>.
+            </p>
+          </CourseListing>
+          <hr />
+          <CourseListing
+            title="Digital Marketing"
+            image={dmds}
+            path="/academy/part-time/digital-marketing"
+            month="March"
+            day={16}
+            days={['Saturday']}
+            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+            time="10:00 a.m. - 3:00 p.m."
+            registration="https://squareup.com/store/suncoast-developers-guild/item/digital-marketing"
+          >
+            <p>
+              Become Savvy at Digital Strategy in this 6-week Digital Marketing
+              Course. From content strategy and social media to paid campaigns
+              and analytics, learn digital-marketing tactics to increase
+              engagement, drive growth, and acquire users.{' '}
+              <Link to="/academy/part-time/digital-marketing">Learn more</Link>.
+            </p>
+          </CourseListing>
+          <hr />
+          <CourseListing
+            title="React I: Building Interactive Websites"
+            image={rbiw}
+            path="/academy/part-time/react-i"
+            month="March"
+            day={12}
+            days={['Tues', 'Thur']}
+            tags={['6-WEEKS', 'INTERMEDIATE']}
+            time="6:30 - 8:30 p.m."
+            registration="https://squareup.com/store/suncoast-developers-guild/item/react-i-building-interactive-websites"
+          >
+            <p>
+              Get up and running with React, one of the most popular JavaScript
+              libraries for building powerful interactive web applications.
+              Students should have prior experience with HTML, CSS, and
+              JavaScript.{' '}
+              <Link to="/academy/part-time/react-i">Learn more</Link>.
+            </p>
+          </CourseListing>
         </div>
         <hr />
         <article className="message is-primary is-small">

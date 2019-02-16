@@ -7,24 +7,22 @@ import Container from '../../../components/Container'
 import Section from '../../../components/Section'
 import PageTitle from '../../../components/PageTitle'
 import AcademyNavigation from '../../../components/academy/AcademyNavigation'
-import image from '../../../images/part-time/wdtd.svg'
+import image from '../../../images/part-time/dmds.svg'
 
 const TestDriveCourse = ({ data }) => (
   <Layout>
     <AcademyNavigation />
     <Section>
       <Container>
-        <PageTitle>Web Development Test Drive</PageTitle>
-        <h4 className="subtitle is-4">
-          An Introduction to Programing and the Web
-        </h4>
+        <PageTitle>Digital Marketing</PageTitle>
+        <h4 className="subtitle is-4">Become Savvy at Digital Strategy</h4>
 
         <nav className="level">
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Start Date</p>
               <p className="title is-5">
-                March 11<sup>th</sup>, 2019
+                March 16<sup>th</sup>, 2019
               </p>
             </div>
           </div>
@@ -32,20 +30,20 @@ const TestDriveCourse = ({ data }) => (
             <div>
               <p className="heading">End Date</p>
               <p className="title is-5">
-                April 17<sup>th</sup>, 2019
+                April 22<sup>nd</sup>, 2019
               </p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Days</p>
-              <p className="title is-5">Mon &amp; Wed</p>
+              <p className="title is-5">Saturday</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Time</p>
-              <p className="title is-5">6:30 &ndash; 8:30 p.m.</p>
+              <p className="title is-5">10 a.m. &ndash; 3 p.m.</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
@@ -58,7 +56,7 @@ const TestDriveCourse = ({ data }) => (
           </div>
           <div className="level-item has-text-centered">
             <OutboundLink
-              href="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+              href="https://squareup.com/store/suncoast-developers-guild/item/digital-marketing"
               className="button is-primary"
             >
               Register
@@ -72,33 +70,37 @@ const TestDriveCourse = ({ data }) => (
           <div className="column">
             <div className="content">
               <p>
-                Throughout this six-week course, students learn the basics of
-                front-end web development. Students will learn the basic
-                practices, fundamentals, and ideas behind creating dynamic
-                websites with HTML, CSS, and JavaScript. With a focus on applied
-                knowledge, students will get hands-on training using HTML to
-                create semantic pages structures, CSS to implement modern
-                designs, and JavaScript to make the pages dynamic and
-                interactive.
+                From content strategy and social media to paid campaigns and
+                analytics, learn digital-marketing tactics to increase
+                engagement, drive growth, and acquire users.{' '}
               </p>
 
               <p>
-                This course can also be utilized as a preview to the immersive
-                12-week program, giving students new to development exposure to
-                what the full-time course would feel like and a great
-                introduction to being a developer.{' '}
-                <em>
-                  The fee for this introductory course can be applied directly
-                  to the tuition of our immersive Web Development Program.
-                </em>
+                This is a Saturday class with optional lab time from 3 - 5 p.m.
+                Instructor hours will be available during the week at designated
+                times.
               </p>
 
-              <p>
-                Classes are for two hours every Monday and Wednesday at 6:30
-                p.m. Optional lab time begins at 5:30 p.m. The course is taught{' '}
-                <strong>in-person</strong>, on our campus at 2220 Central Ave,
-                St. Petersburg, Florida.
-              </p>
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <th>10 a.m. - 12 p.m.</th>
+                    <td>Instruction</td>
+                  </tr>
+                  <tr>
+                    <th>12 p.m. - 1 p.m.</th>
+                    <td>Lunch Break</td>
+                  </tr>
+                  <tr>
+                    <th>1 p.m. - 3 p.m.</th>
+                    <td>Instruction</td>
+                  </tr>
+                  <tr>
+                    <th>3 p.m. - 5 p.m.</th>
+                    <td>Lab Time</td>
+                  </tr>
+                </tbody>
+              </table>
 
               <p>
                 <sup>*</sup>Group rates are available,{' '}
@@ -146,94 +148,89 @@ const TestDriveCourse = ({ data }) => (
                 <tr>
                   <th>
                     <h5 className="title is-5">Week One</h5>
-                    <h6 className="subtitle is-6">HTML and CSS Foundations</h6>
+                    <h6 className="subtitle is-6">
+                      Digital Marketing Frameworks and Creating Funnels
+                    </h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>
-                        Using a developer environment (Git, IDE, terminal)
-                      </li>
-                      <li>Deploy a web page</li>
-                      <li>Basics of HTML and HTML5</li>
-                      <li>Using semantic HTML</li>
-                      <li>Using CSS to style a page</li>
-                      <li>Using CSS to layout a page</li>
-                      <li>
-                        How to breakdown and implement a basic webpage design
-                      </li>
-                    </ul>
+                    <p>
+                      Learn how to set objectives and plan a digital marketing
+                      campaign. Understand how the concept of a funnel and how
+                      to drive acquisition through marketing.
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Two</h5>
-                    <h6 className="subtitle is-6">HTML and CSS Mastery</h6>
+                    <h6 className="subtitle is-6">
+                      Digital Strategy: SEO + Customer Acquisition + Conversion
+                      Marketing
+                    </h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>Creating Responsive webpages</li>
-                      <li>Advanced CSS tricks</li>
-                      <li>Using CDNs</li>
-                    </ul>
+                    <p>
+                      Learn how to use various channels (paid, search, content,
+                      social and more) to acquire customers.
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Three</h5>
                     <h6 className="subtitle is-6">
-                      Using JavaScript on the Web
+                      Content Marketing and Social Media
                     </h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>What is the DOM?</li>
-                      <li>Using JavaScript on a webpage</li>
-                      <li>Control Flow (if, loops, functions)</li>
-                      <li>Basic algorithmic thinking</li>
-                    </ul>
+                    <p>
+                      Learn the role of content marketing through web,
+                      multimedia, and social media platforms. Discover how paid
+                      campaigns play into converting content into customers or
+                      users.
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Four</h5>
                     <h6 className="subtitle is-6">
-                      Data Structures and Algorithms
+                      Marketing Acquisition and Conversion Rate Optimization
                     </h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>Arrays</li>
-                      <li>Objects</li>
-                      <li>Map, filter, reduce</li>
-                      <li>Applications of Algorithms</li>
-                    </ul>
+                    <p>
+                      Learn how to generate leads, optimize landing pages and
+                      run email campaigns to convert and retain your customers.
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Five</h5>
-                    <h6 className="subtitle is-6">
-                      Problem Solving with JavaScript
-                    </h6>
+                    <h6 className="subtitle is-6">Measurement and Metrics</h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>Practical application of PEDAC and JavaScript</li>
-                    </ul>
+                    <p>
+                      Learn how setting KPIs, tracking metrics and analyzing
+                      data can help you understand and improve your campaigns.
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Six</h5>
                     <h6 className="subtitle is-6">
-                      APIs and Bringing it all Together
+                      Storytelling and Marketing Budgets
                     </h6>
                   </th>
                   <td>
-                    <ul>
-                      <li>Using an API to get data</li>
-                      <li>Building a full website, using APIs</li>
-                    </ul>
+                    <p>
+                      Discover how storytelling can turn potential customers and
+                      users into loyal fans. Drive sales and acquisition through
+                      persuasive marketing and learn to craft budgets that
+                      reflect the specialized interests of your audience.{' '}
+                    </p>
                   </td>
                 </tr>
               </tbody>
@@ -246,28 +243,31 @@ const TestDriveCourse = ({ data }) => (
               <p>By the end of the course, students should be able to:</p>
 
               <ul>
-                <li>Explain the basic developer workflow</li>
                 <li>
-                  Implement semnatic HTML to structure a webpage's content
+                  <strong>Acquire:</strong> Learn how paid, organic,
+                  search-engine, and content marketing helps you reach a target
+                  audience.
                 </li>
                 <li>
-                  Implement CSS to style and layout a webpage's presentation
+                  <strong>Convert:</strong> Discover the art of using landing
+                  pages to transform interested prospects into customers.
                 </li>
                 <li>
-                  Implement JavaScript to manipulate and HTML webpage's behavior
+                  <strong>Retain:</strong> Apply email-marketing and social
+                  media techniques to engage users and get repeated interaction.{' '}
                 </li>
-                <li>Solve simple problems with JavaScript</li>
                 <li>
-                  Utilize, using JavaScript, APIs to build data driven websites
+                  <strong>Measure:</strong> Optimize campaign performance with
+                  analytics and KPIs, and learn to utilize metrics to draft
+                  budgets and drive improvements to your marketing.
                 </li>
-                <li>Create a website and deploy it to the internet</li>
               </ul>
             </div>
           </div>
         </div>
         <div className="has-text-centered">
           <OutboundLink
-            href="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+            href="https://squareup.com/store/suncoast-developers-guild/item/digital-marketing"
             className="button is-primary"
           >
             Register for this Course
@@ -282,7 +282,7 @@ export default TestDriveCourse
 
 export const pageQuery = graphql`
   query {
-    contentfulPerson(name: { eq: "Liz Tiller" }) {
+    contentfulPerson(name: { eq: "Kiki Roeder" }) {
       name
       biography {
         childMarkdownRemark {

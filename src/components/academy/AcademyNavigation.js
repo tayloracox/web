@@ -23,17 +23,19 @@ const AcademyNavigation = () => (
               Web Development
             </NavItem>
             <NavItem
-              to="/academy/admissions"
-              icon="fas fa-clipboard-list-check fa-lg"
-            >
-              Admissions
-            </NavItem>
-            <NavItem
               to="/academy/tuition"
-              icon="fas fa-money-check fa-lg"
-              paths={['/academy/tuition', '/academy/tuition/financing']}
+              icon="fas fa-clipboard-list-check fa-lg"
+              paths={[
+                '/academy/tuition',
+                '/academy/tuition/financing',
+                '/academy/admissions',
+                '/academy/admissions/requirements',
+              ]}
             >
-              Tuition
+              Tuition &amp; Admissions
+            </NavItem>
+            <NavItem to="/academy/part-time" icon="fas fa-sun-haze fa-lg">
+              Part-Time
             </NavItem>
             <NavItem
               to="/academy/tuition/scholarships"

@@ -8,7 +8,6 @@ exports.onClientEntry = () => {
       environment: process.env.NODE_ENV,
       enabled: () => process.env.NODE_ENV === 'production',
     })
-    console.log(process.env.NODE_ENV, process.env.GATSBY_SENTRY_DSN_URL)
     window.Sentry = Sentry
   })
 }
