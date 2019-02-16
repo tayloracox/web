@@ -78,7 +78,7 @@ const TestDriveCourse = ({ data }) => (
                 practices, fundamentals, and ideas behind creating dynamic
                 websites with HTML, CSS, and JavaScript. With a focus on applied
                 knowledge, students will get hands-on training using HTML to
-                create semantic pages structures, CSS to implement modern
+                create semantic page structures, CSS to implement modern
                 designs, and JavaScript to make the pages dynamic and
                 interactive.
               </p>
@@ -249,7 +249,7 @@ const TestDriveCourse = ({ data }) => (
               <ul>
                 <li>Explain the basic developer workflow</li>
                 <li>
-                  Implement semnatic HTML to structure a webpage's content
+                  Implement semantic HTML to structure a webpage's content
                 </li>
                 <li>
                   Implement CSS to style and layout a webpage's presentation
