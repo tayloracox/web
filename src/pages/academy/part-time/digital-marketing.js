@@ -31,7 +31,7 @@ const TestDriveCourse = ({ data }) => (
             <div>
               <p className="heading">End Date</p>
               <p className="title is-5">
-                April 22<sup>nd</sup>, 2019
+                April 20<sup>th</sup>, 2019
               </p>
             </div>
           </div>

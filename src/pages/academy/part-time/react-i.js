@@ -121,7 +121,7 @@ const TestDriveCourse = ({ data }) => (
           </div>
         </div>
         <hr />
-        {/* <div className="columns">
+        <div className="columns">
           <div className="column is-three-fifths">
             <h4 className="title is-4">Course Outline</h4>
 
@@ -130,66 +130,63 @@ const TestDriveCourse = ({ data }) => (
                 <tr>
                   <th>
                     <h5 className="title is-5">Week One</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>React Components</li>
+                      <li>State</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Two</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>Life Cycle Events</li>
+                      <li>Complex State</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Three</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>React and APIs</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Four</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>Component Best Practices</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Five</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>SPAs (Single Page Applications)</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Six</h5>
-                    <h6 className="subtitle is-6">...</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>...</li>
+                      <li>Practice</li>
+                      <li>Research Projects</li>
                     </ul>
                   </td>
                 </tr>
@@ -203,11 +200,20 @@ const TestDriveCourse = ({ data }) => (
               <p>By the end of the course, students should be able to:</p>
 
               <ul>
-                <li>...</li>
+                <li>Implement a simple React App</li>
+                <li>Explain how to use state and props</li>
+                <li>Implement a SPA using react</li>
+                <li>
+                  Utilize, using React, APIs to build data driven websites
+                </li>
+                <li>
+                  Create a React SPA website and deploy it to the internet
+                </li>
+                <li>Utilize React to manipulate HTML and CSS</li>
               </ul>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="has-text-centered">
           <OutboundLink
             href="https://squareup.com/store/suncoast-developers-guild/item/react-i-building-interactive-websites"
