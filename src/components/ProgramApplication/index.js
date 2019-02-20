@@ -46,6 +46,10 @@ class ProgramApplication extends Component {
       }
     }
 
+    if (window.rdt) {
+      rdt('track', 'ViewContent')
+    }
+
     this.updateApplicationInterval = setInterval(() => {
       this.updateApplication()
     }, 10000)
@@ -76,6 +80,9 @@ class ProgramApplication extends Component {
             eventAction: 'Submit',
             eventLabel: 'Web Development',
           })
+        }
+        if (window.rdt) {
+          rdt('track', 'Lead')
         }
         window.localStorage.removeItem('application-state')
       } else {
@@ -111,6 +118,9 @@ class ProgramApplication extends Component {
           eventAction: 'Begin',
           eventLabel: 'Web Development',
         })
+      }
+      if (window.rdt) {
+        rdt('track', 'AddToCart')
       }
       await this.setState({ token })
     }
