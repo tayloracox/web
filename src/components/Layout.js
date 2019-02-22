@@ -13,6 +13,7 @@ import '../styles/screen.scss'
 const Layout = ({ children }) => {
   useEffect(() => {
     if (window.rdt) {
+      console.log('rpv')
       rdt('track', 'PageVisit')
     }
   })
