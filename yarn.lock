@@ -817,10 +817,10 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@mdx-js/mdx@0.17.4":
-  version "0.17.4"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.17.4.tgz#119aae0dd1e4bdf5b3a0c8fb9106e332ac151974"
-  integrity sha512-sBrdWWxq72bjR6sGTOCLLg9OQUjam1pT+uRQBzhgqatlkVAzCjSj9vhaeuS40dm3zIqHom98uzkSSmkT71Veyg==
+"@mdx-js/mdx@0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.18.0.tgz#d80cdde7355680856cd112086d71a9c93ab87c4c"
+  integrity sha512-JAxgdnZhZqw4HMNVcRCH9Pbp/W3oBwENt9hoiyk1NVBy5MHszNRYqCJMcgTjGFHXVIlLxmiokFe0r6ZXZOjV2Q==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
     "@babel/plugin-syntax-jsx" "^7.2.0"
