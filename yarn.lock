@@ -5277,7 +5277,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@^0.2.3:
+gatsby-background-image@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.2.3.tgz#2f064938f8e845da792aae62e250aa5479452a16"
   integrity sha512-/9Lr6QeRXrLFz5haXGNTqdwmBHc5emzs7qCnumWViYGkCTUMmQuE/1oORotIeoRZxrO4U0NOvbXTlV8lKL9VJw==
@@ -10426,7 +10426,7 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-stripe-elements@^2.0.3:
+react-stripe-elements@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/react-stripe-elements/-/react-stripe-elements-2.0.3.tgz#cfd0f68d00ce52a07aab1cb2b59b29dc12309486"
   integrity sha512-aKLiWyfP0n3Gq42BKykULgoruNVRXEaeYh8NSokdgH3ubGU3nsHFZJg3LgbT/XOquttDGHE7kLhleaX+UnN81A==
