@@ -728,6 +728,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.3.4":
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
+  integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@^7.1.0", "@babel/template@^7.1.2", "@babel/template@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.2.2.tgz#005b3fdf0ed96e88041330379e0da9a708eb2907"
@@ -5277,13 +5284,13 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.2.3.tgz#2f064938f8e845da792aae62e250aa5479452a16"
-  integrity sha512-/9Lr6QeRXrLFz5haXGNTqdwmBHc5emzs7qCnumWViYGkCTUMmQuE/1oORotIeoRZxrO4U0NOvbXTlV8lKL9VJw==
+gatsby-background-image@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.2.4.tgz#0c183b43e578f651409ce0ecf2e4d9e0258a446f"
+  integrity sha512-d2N5dywcvkcVs7Suf48BvliKo2PDoFP6UGcelca8ED1zdvI+23E3xLD9EGudqgfHlRgM+6ANkCzdzhOKJzYf3w==
   dependencies:
-    "@babel/runtime" "^7.3.1"
-    prop-types "^15.6.2"
+    "@babel/runtime" "^7.3.4"
+    prop-types "^15.7.2"
 
 gatsby-cli@^2.4.10:
   version "2.4.10"
@@ -10112,7 +10119,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10:
+prop-types@^15.5.10, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
