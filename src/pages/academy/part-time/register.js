@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
 import Link from 'gatsby-link'
+import { globalHistory } from '@reach/router'
 import queryString from 'query-string'
 import moment from 'moment'
 import Layout from '../../../components/Layout'
@@ -50,7 +51,7 @@ const COURSES = {
 const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
 
 const PartTimeRegistration = () => {
-  const params = queryString.parse(location.search)
+  const params = queryString.parse(globalHistory.location.search)
 
   const [values, setValues] = useState({
     course: params.course || Object.keys(COURSES)[0],
@@ -60,8 +61,6 @@ const PartTimeRegistration = () => {
     code: '',
     acceptPolicy: false,
   })
-
-  const [isComplete, setIsComplete] = useState(false)
 
   const onChange = event => {
     const target = event.target
