@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -11,13 +11,6 @@ import MainNavigation from './MainNavigation'
 import '../styles/screen.scss'
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    if (window.rdt) {
-      console.log('rpv')
-      rdt('track', 'PageVisit')
-    }
-  })
-
   return (
     <StaticQuery
       query={graphql`

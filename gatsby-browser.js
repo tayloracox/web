@@ -11,3 +11,19 @@ exports.onClientEntry = () => {
     window.Sentry = Sentry
   })
 }
+
+exports.onRouteUpdate = ({ location, prevLocation }) => {
+  const sendPageView = () => {
+    if (typeof rdt === 'function') {
+      rdt('track', 'PageVisit')
+    }
+  }
+
+  if (`requestAnimationFrame` in window) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(sendPageView)
+    })
+  } else {
+    setTimeout(sendPageView, 32)
+  }
+}

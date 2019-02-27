@@ -72,19 +72,17 @@ const CourseListing = ({
             </div>
             <div>
               {days.map(day => (
-                <>
-                  <span className="tag" key={day}>
-                    {day}
-                  </span>{' '}
-                </>
+                <React.Fragment key={day}>
+                  <span className="tag">{day}</span>{' '}
+                </React.Fragment>
               ))}
             </div>
             <div className="time is-size-7 content">
               <p>{time}</p>
             </div>
-            <OutboundLink href={registration} className="button is-primary">
+            <Link to={registration} className="button is-primary">
               Register
-            </OutboundLink>
+            </Link>
           </div>
         </div>
       </nav>
@@ -122,7 +120,7 @@ const PartTimeCourses = () => (
             days={['Mon', 'Wed']}
             tags={['6-WEEKS', 'BEGINNER']}
             time="6:30 - 8:30 p.m."
-            registration="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+            registration="/academy/part-time/register?course=wdtd"
           >
             <p>
               In this six-week course, students learn the basics of front-end
@@ -142,7 +140,7 @@ const PartTimeCourses = () => (
             days={['Saturday']}
             tags={['6-WEEKS', 'ALL SKILL LEVELS']}
             time="10:00 a.m. - 3:00 p.m."
-            registration="https://squareup.com/store/suncoast-developers-guild/item/user-experience-ux-for-non-designers"
+            registration="/academy/part-time/register?course=uxnd"
           >
             <p>
               Over the course of six weeks, students learn the theory and
@@ -166,7 +164,7 @@ const PartTimeCourses = () => (
             days={['Saturday']}
             tags={['6-WEEKS', 'ALL SKILL LEVELS']}
             time="10:00 a.m. - 3:00 p.m."
-            registration="https://squareup.com/store/suncoast-developers-guild/item/digital-marketing"
+            registration="/academy/part-time/register?course=dmds"
           >
             <p>
               Become Savvy at Digital Strategy in this 6-week Digital Marketing
@@ -186,7 +184,7 @@ const PartTimeCourses = () => (
             days={['Tues', 'Thur']}
             tags={['6-WEEKS', 'INTERMEDIATE']}
             time="6:30 - 8:30 p.m."
-            registration="https://squareup.com/store/suncoast-developers-guild/item/react-i-building-interactive-websites"
+            registration="/academy/part-time/register?course=rbiw"
           >
             <p>
               Get up and running with React, one of the most popular JavaScript

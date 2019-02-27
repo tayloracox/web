@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Image from 'gatsby-image'
 import Layout from '../../../components/Layout'
 import Container from '../../../components/Container'
@@ -58,12 +57,12 @@ const TestDriveCourse = ({ data }) => (
             </div>
           </div>
           <div className="level-item has-text-centered">
-            <OutboundLink
-              href="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+            <Link
+              to="/academy/part-time/register?course=wdtd"
               className="button is-primary"
             >
               Register
-            </OutboundLink>
+            </Link>
           </div>
         </nav>
 
@@ -267,12 +266,12 @@ const TestDriveCourse = ({ data }) => (
           </div>
         </div>
         <div className="has-text-centered">
-          <OutboundLink
-            href="https://squareup.com/store/suncoast-developers-guild/item/web-development-test-drive"
+          <Link
+            to="/academy/part-time/register?course=wdtd"
             className="button is-primary"
           >
             Register for this Course
-          </OutboundLink>
+          </Link>
         </div>
       </Container>
     </Section>
