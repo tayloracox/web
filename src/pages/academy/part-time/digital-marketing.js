@@ -15,7 +15,9 @@ const TestDriveCourse = ({ data }) => (
     <Section>
       <Container>
         <PageTitle>Digital Marketing</PageTitle>
-        <h4 className="subtitle is-4">Become Savvy at Digital Strategy</h4>
+        <h4 className="subtitle is-4">
+          Elevate your Business with Digital Strategy
+        </h4>
 
         <nav className="level">
           <div className="level-item has-text-centered">
