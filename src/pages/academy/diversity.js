@@ -168,6 +168,29 @@ class DiversityScholarship extends React.Component {
             </form>
           </Container>
         </Section>
+        <section className="hero is-info is-bold">
+          <div className="hero-body">
+            <Container>
+              <div className="testimonial">
+                <blockquote>
+                  It honestly made me feel valued and wanted. Knowing that there
+                  was an extra effort to include women and other minorities
+                  within the field made me want to be involved even more. Also,
+                  it was kind of surprising to me to be included within
+                  diversity. So often, women aren’t included or considered to be
+                  a part of making something diverse. People tend to think more
+                  about race in that case. Knowing that it was being recognized
+                  that women don’t have the same advantages within tech and that
+                  an organization was focused on improving that issue meant a
+                  lot to me.
+                </blockquote>
+                <p className="has-text-weight-bold has-text-right">
+                  &mdash; Taylor Cox
+                </p>
+              </div>
+            </Container>
+          </div>
+        </section>
       </Layout>
     )
   }

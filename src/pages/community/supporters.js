@@ -22,21 +22,18 @@ const CommunitySupporters = ({ data }) => (
         <Container>
           <div className="testimonial">
             <blockquote>
-              The Proforma / SDG collaboration selected passionate junior level
-              candidates and created an intensive training curriculum. This
-              customized curriculum would fine tune technology concepts and
-              focus on the skillsets necessary to be successful at Proforma.
+              It honestly made me feel valued and wanted. Knowing that there was
+              an extra effort to include women and other minorities within the
+              field made me want to be involved even more. Also, it was kind of
+              surprising to me to be included within diversity. So often, women
+              aren’t included or considered to be a part of making something
+              diverse. People tend to think more about race in that case.
+              Knowing that it was being recognized that women don’t have the
+              same advantages within tech and that an organization was focused
+              on improving that issue meant a lot to me.
             </blockquote>
             <p className="has-text-weight-bold has-text-right">
-              &mdash; Proforma
-            </p>
-            <p className="has-text-centered">
-              <Link
-                className="button is-primary is-outlined is-inverted"
-                to="/community/supporter-testimonial"
-              >
-                Read More&hellip;
-              </Link>
+              &mdash; Taylor Cox
             </p>
           </div>
         </Container>

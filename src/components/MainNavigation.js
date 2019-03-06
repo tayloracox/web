@@ -106,6 +106,9 @@ class MainNavigation extends Component {
                   <Link to="/community" className="navbar-item">
                     Member Organizations
                   </Link>
+                  <Link to="/community/joint-training" className="navbar-item">
+                    Corporate Training
+                  </Link>
                   <Link to="/community/supporters" className="navbar-item">
                     Supporters
                   </Link>

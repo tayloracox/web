@@ -14,6 +14,9 @@ const CommunityNavigation = () => (
           >
             Member Organizations
           </NavItem>
+          <NavItem to="/community/joint-training" icon="fas fa-laptop fa-lg">
+            Corporate Training
+          </NavItem>
           <NavItem to="/community/supporters" icon="fas fa-handshake fa-lg">
             Supporters
           </NavItem>
