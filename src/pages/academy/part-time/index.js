@@ -116,7 +116,7 @@ const PartTimeCourses = () => (
             image={wdtd}
             path="/academy/part-time/test-drive"
             month="March"
-            day={11}
+            day={25}
             days={['Mon', 'Wed']}
             tags={['6-WEEKS', 'BEGINNER']}
             time="6:30 - 8:30 p.m."
@@ -136,7 +136,7 @@ const PartTimeCourses = () => (
             image={uxnd}
             path="/academy/part-time/user-experience"
             month="March"
-            day={16}
+            day={30}
             days={['Saturday']}
             tags={['6-WEEKS', 'ALL SKILL LEVELS']}
             time="10:00 a.m. - 3:00 p.m."
@@ -159,8 +159,8 @@ const PartTimeCourses = () => (
             title="Digital Marketing"
             image={dmds}
             path="/academy/part-time/digital-marketing"
-            month="March"
-            day={16}
+            month="April"
+            day={13}
             days={['Saturday']}
             tags={['6-WEEKS', 'ALL SKILL LEVELS']}
             time="10:00 a.m. - 3:00 p.m."

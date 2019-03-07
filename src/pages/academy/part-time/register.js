@@ -19,7 +19,7 @@ const COURSES = {
     name: 'Web Development Test Drive',
     days: 'Mondays and Wednesdays',
     time: '6:30 - 8:30 p.m.',
-    start: '2019-03-11',
+    start: '2019-03-25',
     end: '2019-04-17',
   },
   rbiw: {
@@ -35,7 +35,7 @@ const COURSES = {
     name: 'User Experience (UX) for Non-Designers',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2019-03-16',
+    start: '2019-03-30',
     end: '2019-04-20',
   },
   dmds: {
@@ -43,7 +43,7 @@ const COURSES = {
     name: 'Digital Marketing',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2019-03-16',
+    start: '2019-04-13',
     end: '2019-04-20',
   },
 }
