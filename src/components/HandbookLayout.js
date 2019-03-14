@@ -47,7 +47,7 @@ const HandbookLayout = ({ children }) => (
           }}
         >
           <div className="columns">
-            <div className="column is-narrow">
+            <div className="column is-one-fifth">
               <aside className="menu">
                 <p className="menu-label">Handbook</p>
                 <ul className="menu-list">
@@ -118,7 +118,7 @@ const HandbookLayout = ({ children }) => (
                 </ul>
               </aside>
             </div>
-            <div className="column">
+            <div className="column is-four-fifths">
               <article className="message is-primary">
                 <div className="message-body">
                   <strong>Note</strong>: This document is a{' '}
