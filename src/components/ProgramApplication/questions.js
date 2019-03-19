@@ -6,20 +6,21 @@ export default [
       question: 'When are you hoping to start the program?',
       answers: [
         'April 29th, 2019 (Cohort XIV)',
-        'Summer 2019',
+        'July 29th, 2019 (Cohort XV)',
+        'Fall 2019',
         'Later in the future',
       ],
-    },
-    {
-      type: 'text',
-      question:
-        'What are you currently doing for hobbies and/or work that fills your day?',
-      answers: '',
     },
     {
       type: 'radio',
       question:
         'Are you aware of the full-time commitment and are able to attend on campus everyday?',
+      answers: ['Yes', 'No', 'Maybe, tell me more please'],
+    },
+    {
+      type: 'radio',
+      question:
+        'Are you aware of the program is taught in-person in St. Petersburg, FL?',
       answers: ['Yes', 'No', 'Maybe, tell me more please'],
     },
     {
@@ -43,12 +44,19 @@ export default [
       question: 'What experience do you have with programming, if any?',
     },
     {
-      type: 'radio',
-      question: 'What experience do you have with a Mac laptop?',
+      type: 'text',
+      question:
+        'What are you currently doing for hobbies and/or work that fills your day?',
+      answers: '',
+    },
+    {
+      type: 'check',
+      question: 'Which computer operating systems are you comfortable with?',
       answers: [
-        'I feel very comfortable with Mac products',
-        'I’ve dabbled with Macs',
-        'PC for life!',
+        'Apple macOS',
+        'Linux/Unix',
+        'Microsoft Windows',
+        'None of the above',
       ],
     },
     {
@@ -104,8 +112,10 @@ export default [
         'LinkedIn',
         'Google',
         'Creative Loafing',
+        'Postcard Mailer',
+        'Radio Ad',
         'Reddit',
-        'Radio',
+        'Flyer',
         'Referral',
         'Other',
       ],

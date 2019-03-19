@@ -67,7 +67,7 @@ const Question = ({
         {type === 'select' && (
           <div className="select">
             <select
-              value=""
+              value={response}
               name={`q-${step}-${index}`}
               onChange={e => {
                 update(question, e.target.value)

@@ -183,7 +183,9 @@ class ProgramApplication extends Component {
           phone_number.length > 0
         )
       default:
-        return true
+        return QUESTIONS[this.state.step]
+          .map(q => this.state.responses[q.question])
+          .every(answer => answer && answer.length > 0)
     }
   }
 
