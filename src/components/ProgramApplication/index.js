@@ -273,6 +273,15 @@ class ProgramApplication extends Component {
                   <Link to="/terms">Terms of Service</Link>. We'll follow-up
                   with you by email, phone, and SMS.
                 </p>
+                <div className="message is-primary">
+                  <p className="message-body">
+                    This is an application for our{' '}
+                    <strong>full-time immersive</strong> web development program
+                    . If you're interested in after hours learning, you can
+                    register for our{' '}
+                    <Link to="/academy/part-time">part-time courses</Link>.
+                  </p>
+                </div>
               </div>
             </>
           )}
