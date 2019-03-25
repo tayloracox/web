@@ -20,7 +20,7 @@ export default [
     {
       type: 'radio',
       question:
-        'Are you aware of the program is taught in-person in St. Petersburg, FL?',
+        'Are you aware the program is taught in-person in St. Petersburg, FL?',
       answers: ['Yes', 'No', 'Maybe, tell me more please'],
     },
     {
