@@ -69,9 +69,7 @@ const CourseListing = ({
           <div className="has-text-centered">
             {tbd ? (
               <>
-                <div className="calendar-date">
-                  <span className="month">TBD</span>
-                </div>
+                <span className="tag">TBD</span>
               </>
             ) : (
               <>
@@ -163,31 +161,6 @@ const PartTimeCourses = () => (
           </CourseListing>
           <hr />
           <CourseListing
-            title="User Experience (UX) for Non-Designers"
-            image={uxnd}
-            path="/academy/part-time/user-experience"
-            tbd={true}
-            // month="March"
-            // day={30}
-            // days={['Saturday']}
-            // time="10:00 a.m. - 3:00 p.m."
-            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
-            registration="/academy/part-time/register?course=uxnd"
-          >
-            <p>
-              Over the course of six weeks, students learn the theory and
-              practice behind User Experience (UX) design through a series of
-              lectures, sharing of professional examples, interactive team
-              activities, and individual assignments. With a focus on solving
-              problems creatively and systematically by putting your users and
-              their needs first, students will utilize User Experience (UX) and
-              User-Interface (UI) techniques and methodologies to develop a
-              product or service of their choosing.{' '}
-              <Link to="/academy/part-time/user-experience">Learn more</Link>.
-            </p>
-          </CourseListing>
-          <hr />
-          <CourseListing
             title="React I: Building Interactive Websites"
             image={rbiw}
             path="/academy/part-time/react-i"
@@ -207,6 +180,31 @@ const PartTimeCourses = () => (
             </p>
           </CourseListing>
         </div>
+        <hr />
+        <CourseListing
+          title="User Experience (UX) for Non-Designers"
+          image={uxnd}
+          path="/academy/part-time/user-experience"
+          tbd={true}
+          // month="March"
+          // day={30}
+          // days={['Saturday']}
+          // time="10:00 a.m. - 3:00 p.m."
+          tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+          registration="/academy/part-time/register?course=uxnd"
+        >
+          <p>
+            Over the course of six weeks, students learn the theory and practice
+            behind User Experience (UX) design through a series of lectures,
+            sharing of professional examples, interactive team activities, and
+            individual assignments. With a focus on solving problems creatively
+            and systematically by putting your users and their needs first,
+            students will utilize User Experience (UX) and User-Interface (UI)
+            techniques and methodologies to develop a product or service of
+            their choosing.{' '}
+            <Link to="/academy/part-time/user-experience">Learn more</Link>.
+          </p>
+        </CourseListing>
         <hr />
         <article className="message is-primary is-small">
           <div className="message-body content">
