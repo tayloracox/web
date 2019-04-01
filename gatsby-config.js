@@ -108,5 +108,6 @@ module.exports = {
 
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-remove-serviceworker',
   ],
 }
