@@ -14,37 +14,29 @@ import { hashCode } from '../../../util'
 const CODE_HASH = -523902460
 
 const COURSES = {
-  wdtd: {
-    session: 'Spring Session I',
-    name: 'Web Development Test Drive',
-    days: 'Mondays and Wednesdays',
-    time: '6:30 - 8:30 p.m.',
-    start: '2019-03-25',
-    end: '2019-04-17',
-  },
-  rbiw: {
-    session: 'Spring Session I',
-    name: 'React I: Building Interactive Websites',
-    days: 'Tuesdays and Thursdays',
-    time: '6:30 - 8:30 p.m.',
-    start: '2019-03-12',
-    end: '2019-04-18',
-  },
-  uxnd: {
-    session: 'Spring Session I',
-    name: 'User Experience (UX) for Non-Designers',
-    days: 'Saturdays',
-    time: '10:00 a.m. - 3:00 p.m.',
-    start: '2019-03-30',
-    end: '2019-04-20',
-  },
   dmds: {
-    session: 'Spring Session I',
+    session: 'Spring Session',
     name: 'Digital Marketing',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
     start: '2019-04-13',
     end: '2019-04-20',
+  },
+  wdtd: {
+    session: 'Summer Session',
+    name: 'Web Development Test Drive',
+    days: 'Tuesdays and Thursdays',
+    time: '6:30 - 8:30 p.m.',
+    start: '2019-06-18',
+    end: '2019-07-25',
+  },
+  rbiw: {
+    session: 'Summer Session',
+    name: 'React I: Building Interactive Websites',
+    days: 'Tuesdays and Thursdays',
+    time: '6:30 - 8:30 p.m.',
+    start: '2019-07-30',
+    end: '2019-09-05',
   },
 }
 

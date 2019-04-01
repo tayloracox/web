@@ -22,6 +22,7 @@ const CourseListing = ({
   month,
   days,
   time,
+  tbd,
 }) => (
   <article className="columns">
     <div className="column">
@@ -66,23 +67,33 @@ const CourseListing = ({
       <nav className="level">
         <div className="level-item">
           <div className="has-text-centered">
-            <div className="calendar-date">
-              <span className="month">{month}</span>
-              <span className="day">{day}</span>
-            </div>
-            <div>
-              {days.map(day => (
-                <React.Fragment key={day}>
-                  <span className="tag">{day}</span>{' '}
-                </React.Fragment>
-              ))}
-            </div>
-            <div className="time is-size-7 content">
-              <p>{time}</p>
-            </div>
-            <Link to={registration} className="button is-primary">
-              Register
-            </Link>
+            {tbd ? (
+              <>
+                <div className="calendar-date">
+                  <span className="month">TBD</span>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="calendar-date">
+                  <span className="month">{month}</span>
+                  <span className="day">{day}</span>
+                </div>
+                <div>
+                  {days.map(day => (
+                    <React.Fragment key={day}>
+                      <span className="tag">{day}</span>{' '}
+                    </React.Fragment>
+                  ))}
+                </div>
+                <div className="time is-size-7 content">
+                  <p>{time}</p>
+                </div>
+                <Link to={registration} className="button is-primary">
+                  Register
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </nav>
@@ -112,50 +123,6 @@ const PartTimeCourses = () => (
         <hr />
         <div>
           <CourseListing
-            title="Web Development Test Drive"
-            image={wdtd}
-            path="/academy/part-time/test-drive"
-            month="March"
-            day={25}
-            days={['Mon', 'Wed']}
-            tags={['6-WEEKS', 'BEGINNER']}
-            time="6:30 - 8:30 p.m."
-            registration="/academy/part-time/register?course=wdtd"
-          >
-            <p>
-              In this six-week course, students learn the basics of front-end
-              web development. Students will learn the basic practices,
-              fundamentals, and ideas behind creating dynamic websites with
-              HTML, CSS, and JavaScript.{' '}
-              <Link to="/academy/part-time/test-drive">Learn more</Link>.
-            </p>
-          </CourseListing>
-          <hr />
-          <CourseListing
-            title="User Experience (UX) for Non-Designers"
-            image={uxnd}
-            path="/academy/part-time/user-experience"
-            month="March"
-            day={30}
-            days={['Saturday']}
-            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
-            time="10:00 a.m. - 3:00 p.m."
-            registration="/academy/part-time/register?course=uxnd"
-          >
-            <p>
-              Over the course of six weeks, students learn the theory and
-              practice behind User Experience (UX) design through a series of
-              lectures, sharing of professional examples, interactive team
-              activities, and individual assignments. With a focus on solving
-              problems creatively and systematically by putting your users and
-              their needs first, students will utilize User Experience (UX) and
-              User-Interface (UI) techniques and methodologies to develop a
-              product or service of their choosing.{' '}
-              <Link to="/academy/part-time/user-experience">Learn more</Link>.
-            </p>
-          </CourseListing>
-          <hr />
-          <CourseListing
             title="Digital Marketing"
             image={dmds}
             path="/academy/part-time/digital-marketing"
@@ -176,11 +143,56 @@ const PartTimeCourses = () => (
           </CourseListing>
           <hr />
           <CourseListing
+            title="Web Development Test Drive"
+            image={wdtd}
+            path="/academy/part-time/test-drive"
+            month="June"
+            day={18}
+            days={['Tues', 'Thurs']}
+            tags={['6-WEEKS', 'BEGINNER']}
+            time="6:30 - 8:30 p.m."
+            registration="/academy/part-time/register?course=wdtd"
+          >
+            <p>
+              In this six-week course, students learn the basics of front-end
+              web development. Students will learn the basic practices,
+              fundamentals, and ideas behind creating dynamic websites with
+              HTML, CSS, and JavaScript.{' '}
+              <Link to="/academy/part-time/test-drive">Learn more</Link>.
+            </p>
+          </CourseListing>
+          <hr />
+          <CourseListing
+            title="User Experience (UX) for Non-Designers"
+            image={uxnd}
+            path="/academy/part-time/user-experience"
+            tbd={true}
+            // month="March"
+            // day={30}
+            // days={['Saturday']}
+            // time="10:00 a.m. - 3:00 p.m."
+            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+            registration="/academy/part-time/register?course=uxnd"
+          >
+            <p>
+              Over the course of six weeks, students learn the theory and
+              practice behind User Experience (UX) design through a series of
+              lectures, sharing of professional examples, interactive team
+              activities, and individual assignments. With a focus on solving
+              problems creatively and systematically by putting your users and
+              their needs first, students will utilize User Experience (UX) and
+              User-Interface (UI) techniques and methodologies to develop a
+              product or service of their choosing.{' '}
+              <Link to="/academy/part-time/user-experience">Learn more</Link>.
+            </p>
+          </CourseListing>
+          <hr />
+          <CourseListing
             title="React I: Building Interactive Websites"
             image={rbiw}
             path="/academy/part-time/react-i"
-            month="March"
-            day={12}
+            month="July"
+            day={30}
             days={['Tues', 'Thur']}
             tags={['6-WEEKS', 'INTERMEDIATE']}
             time="6:30 - 8:30 p.m."
