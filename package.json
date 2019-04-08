@@ -8,8 +8,8 @@
     "format": "prettier --write \"src/**/*.js\""
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.0-alpha.17",
-    "@mdx-js/react": "^1.0.0-alpha.17",
+    "@mdx-js/mdx": "1.0.0-rc.0",
+    "@mdx-js/react": "1.0.0-rc.0",
     "@sentry/browser": "5.0.6",
     "bulma": "0.7.4",
     "classnames": "2.2.6",
