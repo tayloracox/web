@@ -27,10 +27,10 @@ const DemoDayPage = ({ data }) => {
             <h3>Interested in hiring a graduate?</h3>
             <p>
               All of our graduates are ready for their first jobs as junior
-              developers. If you meet someone today who would be a great fit for
-              your team, please feel free to reach out to them directly. If you
-              want more information about how our career support program works
-              or direct recommendations for your needs, please contact us at
+              developers. If you think someone would be a great fit for your
+              team, please feel free to reach out to them directly. If you want
+              more information about how our career support program works or
+              direct recommendations for your needs, please contact us at
               hello@suncoast.io.
             </p>
           </div>
