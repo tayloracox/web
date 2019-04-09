@@ -2,13 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 import Image from 'gatsby-image'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import moment from 'moment'
 import Container from '../../components/Container'
 import Section from '../../components/Section'
 import PageTitle from '../../components/PageTitle'
-import Icon from '../../components/Icon'
 import MailingListForm from '../MailingListForm'
+import Graduate from './Graduate'
 
 const Cohort = ({
   title,
@@ -20,6 +19,9 @@ const Cohort = ({
   thankYou,
   thankYouImage,
 }) => {
+  const graduates = demo_day_graduate
+    .slice()
+    .sort((a, b) => (a.hireable ? -1 : 1))
   return (
     <>
       <Section>
@@ -63,97 +65,9 @@ const Cohort = ({
 
           <h3 className="title is-3">Our Graduates</h3>
 
-          {demo_day_graduate.map(
-            ({ student, description, tagLine, hireable }) => (
-              <React.Fragment key={student.name}>
-                <div className="columns demo-day-graduate">
-                  <div className="column is-narrow has-text-centered">
-                    <Image
-                      className="image"
-                      Tag="p"
-                      fixed={student.image.fixed}
-                      alt={student.image.description}
-                    />
-                  </div>
-                  <div class="column">
-                    <h4 className="title is-4">{student.name}</h4>
-                    <h5
-                      className="subtitle is-5"
-                      dangerouslySetInnerHTML={{
-                        __html: tagLine,
-                      }}
-                    />
-                    <div
-                      class="content"
-                      dangerouslySetInnerHTML={{
-                        __html: description.childMarkdownRemark.html,
-                      }}
-                    />
-                    <nav class="level">
-                      <div className="level-left">
-                        {hireable && (
-                          <p className="level-item">
-                            <span className="tag is-primary">
-                              Availble for Hire
-                            </span>
-                          </p>
-                        )}
-                      </div>
-                      <div class="level-right">
-                        <div className="level-item social-links">
-                          {student.github && (
-                            <OutboundLink
-                              href={`https://github.com/${student.github}`}
-                            >
-                              <Icon i="fab fa-github fa-lg" />
-                            </OutboundLink>
-                          )}
-                          {student.portfolioUrl && (
-                            <OutboundLink href={student.portfolioUrl}>
-                              <Icon i="fas fa-suitcase fa-lg" />
-                            </OutboundLink>
-                          )}
-                          {student.email && (
-                            <OutboundLink href={`mailto:${student.email}`}>
-                              <Icon i="fas fa-envelope fa-lg" />
-                            </OutboundLink>
-                          )}
-                          {student.linkedIn && (
-                            <OutboundLink
-                              href={`https://www.linkedin.com/in/${
-                                student.linkedIn
-                              }/`}
-                            >
-                              <Icon i="fab fa-linkedin fa-lg" />
-                            </OutboundLink>
-                          )}
-                          {student.twitter && (
-                            <OutboundLink
-                              href={`https://twitter.com/${student.twitter}`}
-                            >
-                              <Icon i="fab fa-twitter fa-lg" />
-                            </OutboundLink>
-                          )}
-                          {student.blogUrl && (
-                            <OutboundLink href={student.blogUrl}>
-                              <Icon
-                                i={
-                                  student.blogUrl.includes('medium.com')
-                                    ? 'fab fa-medium fa-lg'
-                                    : 'fas fa-blog fa-lg'
-                                }
-                              />
-                            </OutboundLink>
-                          )}
-                        </div>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-                <hr />
-              </React.Fragment>
-            )
-          )}
+          {graduates.map(grad => (
+            <Graduate {...grad} key={grad.student.name} />
+          ))}
         </Container>
       </Section>
       <section className="hero demo-day-sponsor">
