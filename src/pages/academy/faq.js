@@ -1,79 +1,79 @@
 import React from 'react'
-import AcademyNavigation from '../../components/AcademyNavigation'
-import PageHeading from '../../components/PageHeading'
+import { graphql } from 'gatsby'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import PageTitle from '../../components/PageTitle'
+import Section from '../../components/Section'
+import AcademyNavigation from '../../components/academy/AcademyNavigation'
 
-const sluggify = text =>
-  text
-    .toString()
-    .toLowerCase()
-    .replace(/[^a-z0-9_\-]+/g, '-')
-    .replace(/\-\-+/g, '-')
-    .replace(/\-$/, '')
-    .split('-')
-    .slice(0, 6)
-    .join('-')
-
-const FAQListItem = ({ question }) => (
-  <li>
-    <a href={`#${sluggify(question)}`}>{question}</a>
-  </li>
-)
-
-const FAQItem = ({ answer, question }) => (
-  <div className="faq">
-    <hr />
-    <h3 id={sluggify(question)}>
-      <a href={`#${sluggify(question)}`}>{question}</a>
-    </h3>
-    <div dangerouslySetInnerHTML={{ __html: answer }} />
-  </div>
-)
-
-const AcademyFAQPage = ({ data }) => (
-  <div className="AcademyPage FAQ">
+const AcademyCatalog = ({ data }) => (
+  <Layout>
     <AcademyNavigation />
-    <div className="wrap">
-      <PageHeading>Frequently Asked Questions</PageHeading>
-
-      <ul className="faqs-list">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <FAQListItem
-            key={node.frontmatter.position}
-            question={node.frontmatter.title}
-          />
+    <Section>
+      <Container>
+        {/* eslint-disable-next-line */}
+        <a name="top" />
+        <PageTitle>Frequently Asked Questions</PageTitle>
+        <div className="content">
+          <p>
+            These are some of the questions we receive most often from potential
+            students.
+          </p>
+        </div>
+        {data.allContentfulFaq.edges.map(({ node: faq }) => (
+          <h4 key={faq.slug}>
+            <a href={`#${faq.slug}`}>{faq.question}</a>
+          </h4>
         ))}
-      </ul>
-
-      <div className="faqs">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <FAQItem
-            key={node.frontmatter.position}
-            question={node.frontmatter.title}
-            answer={node.html}
-          />
+        {data.allContentfulFaq.edges.map(({ node: faq }) => (
+          <React.Fragment key={faq.slug}>
+            <hr />
+            {/* eslint-disable-next-line */}
+            <a
+              name={faq.slug}
+              style={{ position: 'absolute', marginTop: '-68px' }}
+            />
+            <nav className="columns is-mobile">
+              <div className="column">
+                <h4 className="title is-4 is-marginless">{faq.question}</h4>
+              </div>
+              <div className="column is-narrow">
+                <a href="#top">
+                  <span className="icon">
+                    <i className="fas fa-angle-up" />
+                  </span>
+                </a>
+              </div>
+            </nav>
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{
+                __html: faq.answer.childMarkdownRemark.html,
+              }}
+            />
+          </React.Fragment>
         ))}
-      </div>
-    </div>
-  </div>
+      </Container>
+    </Section>
+  </Layout>
 )
+
+export default AcademyCatalog
 
 export const pageQuery = graphql`
-  query FAQPageQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/data/faqs/" } }
-      sort: { fields: [frontmatter___position], order: ASC }
-    ) {
+  query {
+    allContentfulFaq(sort: { fields: position }) {
       edges {
         node {
-          frontmatter {
-            title
-            position
+          question
+          answer {
+            childMarkdownRemark {
+              html
+            }
           }
-          html
+          slug
         }
       }
     }
   }
 `
-
-export default AcademyFAQPage

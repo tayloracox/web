@@ -1,212 +1,102 @@
 const path = require('path')
-const fs = require('fs')
-const Feed = require('feed')
-const config = require('./gatsby-config')
-const { createFilePath } = require('gatsby-source-filesystem')
+const createFeeds = require('./src/config/createFeeds')
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-  if (node.internal.type === 'MarkdownRemark') {
-    const fileNode = getNode(node.parent)
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-    // Blog posts
-    if (/data\/posts/.test(node.id)) {
-      const slug = createFilePath({ node, getNode, basePath: 'posts' })
-      createNodeField({ node, name: 'slug', value: slug })
-    }
-
-    // Handbook, NOTE: Trailing slashes here are significant.
-    if (/data\/handbook/.test(node.id)) {
-      const parsedFilePath = path.parse(fileNode.relativePath)
-      if (parsedFilePath.name !== 'README' && parsedFilePath.dir !== '') {
-        slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
-      } else if (parsedFilePath.dir === '') {
-        slug = `/${parsedFilePath.name}/`
-      } else {
-        slug = `/${parsedFilePath.dir}/`
-      }
-      createNodeField({ node, name: 'slug', value: slug })
-    }
-
-    // TODO: Generalize this for more fields, not just 'image'
-    const { frontmatter } = node
-    if (frontmatter) {
-      const { image } = frontmatter
-      if (image) {
-        if (image.indexOf('/media') === 0) {
-          const relativePath = path.relative(
-            path.dirname(node.fileAbsolutePath),
-            path.join(__dirname, '/static/', image)
-          )
-          createNodeField({ node, name: 'image', value: relativePath })
-        }
-      }
-    }
-  }
-}
-
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
-    if (
-      page.path.match(/^\/(academy\/refer|volunteer)/) ||
-      page.path.match(/^\/(community\/joint-training)/)
-    ) {
-      page.layout = 'formEmbed'
-      createPage(page)
-    }
-
-    resolve()
-  })
-}
-
-exports.onPostBuild = ({ graphql }) => {
-  return new Promise((resolve, reject) => {
+    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const successStory = path.resolve('./src/templates/success-story.js')
+    const demoDayTemplate = path.resolve('./src/templates/demo-day.js')
     resolve(
-      graphql(`
-        {
-          allMarkdownRemark(
-            filter: {
-              fileAbsolutePath: { regex: "/data/posts/" }
-              frontmatter: { draft: { ne: true } }
-            }
-            sort: { order: DESC, fields: [frontmatter___date] }
-          ) {
-            edges {
-              node {
-                html
-                frontmatter {
-                  title
-                  date
-                  description
-                  author
-                }
-                fields {
+      graphql(
+        `
+          {
+            allContentfulBlogPost {
+              edges {
+                node {
                   slug
-                  image {
-                    childImageSharp {
-                      feature: sizes(maxWidth: 640, maxHeight: 480) {
-                        src
-                      }
-                    }
-                  }
+                }
+              }
+            }
+
+            allContentfulSuccessStory {
+              edges {
+                node {
+                  slug
+                }
+              }
+            }
+
+            allContentfulDemoDay {
+              edges {
+                node {
+                  slug
                 }
               }
             }
           }
-        }
-      `).then(result => {
+        `
+      ).then(result => {
         if (result.errors) reject(result.errors)
-        let feed = new Feed({
-          title: config.siteMetadata.title,
-          description: config.siteMetadata.description,
-          favicon: `${config.siteMetadata.siteUrl}/favicon.ico`,
-          link: config.siteMetadata.siteUrl,
-          id: config.siteMetadata.siteUrl,
-          copyright:
-            'All rights reserved 2018, SUNCOAST DEVELOPERS GUILD, INC.',
-          // updated: new Date(2013, 06, 14), // TODO: latest post date
-          feedLinks: {
-            atom: `${config.siteMetadata.siteUrl}/atom.xml`,
-            json: `${config.siteMetadata.siteUrl}/feed.json`,
-          },
-          author: {
-            name: 'Suncoast Developers Guild',
-            email: 'hello@suncoast.io',
-          },
-        })
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          feed.addItem({
-            id: node.fields.slug,
-            link: `${config.siteMetadata.siteUrl}/blog${node.fields.slug}`,
-            title: node.frontmatter.title,
-            description: node.frontmatter.description,
-            date: new Date(node.frontmatter.date),
-            image:
-              config.siteMetadata.siteUrl +
-              node.fields.image.childImageSharp.feature.src,
-            content: node.html,
-            author: {
-              name: node.frontmatter.author,
+
+        const posts = result.data.allContentfulBlogPost.edges
+        posts.forEach(post => {
+          createPage({
+            path: `/blog/${post.node.slug}/`,
+            component: blogPost,
+            context: {
+              slug: post.node.slug,
             },
           })
         })
-        fs.writeFileSync('./public/atom.xml', feed.atom1())
-        fs.writeFileSync('./public/rss.xml', feed.rss2())
-        fs.writeFileSync('./public/feed.json', feed.json1())
+
+        const stories = result.data.allContentfulSuccessStory.edges
+        stories.forEach(story => {
+          createPage({
+            path: `/academy/success/${story.node.slug}/`,
+            component: successStory,
+            context: {
+              slug: story.node.slug,
+            },
+          })
+        })
+
+        const demoDays = result.data.allContentfulDemoDay.edges
+        demoDays.forEach(({ node: demoDay }) => {
+          createPage({
+            path: `/demo-day/${demoDay.slug}/`,
+            component: demoDayTemplate,
+            context: {
+              slug: demoDay.slug,
+            },
+          })
+        })
       })
     )
   })
 }
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+// TODO: Move these to static pages, like success stories above.
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions
 
-  return Promise.all([
-    new Promise((resolve, reject) => {
-      resolve(
-        graphql(
-          `
-            {
-              allMarkdownRemark(
-                filter: {
-                  fileAbsolutePath: { regex: "/data/handbook/(?!meta)/" }
-                }
-              ) {
-                edges {
-                  node {
-                    id
-                    fields {
-                      slug
-                    }
-                  }
-                }
-              }
-            }
-          `
-        ).then(result => {
-          if (result.errors) reject(result.errors)
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-              path: node.fields.slug,
-              component: path.resolve('src/components/Handbook/Content.js'),
-              context: { ...node.fields },
-              layout: `handbook`,
-            })
-          })
-        })
-      )
-    }),
-    new Promise((resolve, reject) => {
-      resolve(
-        graphql(
-          `
-            {
-              allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/data/posts/" } }
-              ) {
-                edges {
-                  node {
-                    id
-                    fields {
-                      slug
-                    }
-                  }
-                }
-              }
-            }
-          `
-        ).then(result => {
-          if (result.errors) reject(result.errors)
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-              path: '/blog' + node.fields.slug,
-              component: path.resolve('src/components/Post.js'),
-              context: { ...node.fields },
-            })
-          })
-        })
-      )
-    }),
-  ])
+  switch (page.path) {
+    case `/team/volunteers/`:
+      page.matchPath = `/team/volunteers/*`
+      createPage(page)
+      break
+    case `/team/advisory/`:
+      page.matchPath = `/team/advisory/*`
+      createPage(page)
+      break
+    case `/team/`:
+      page.matchPath = `/team/*`
+      createPage(page)
+      break
+  }
+}
+
+exports.onPostBuild = ({ graphql }) => {
+  return Promise.all([createFeeds(graphql)])
 }
