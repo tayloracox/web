@@ -19,9 +19,6 @@ const Cohort = ({
   thankYou,
   thankYouImage,
 }) => {
-  const graduates = demo_day_graduate
-    .slice()
-    .sort((a, b) => (a.hireable ? -1 : 1))
   return (
     <>
       <Section>
@@ -65,7 +62,7 @@ const Cohort = ({
 
           <h3 className="title is-3">Our Graduates</h3>
 
-          {graduates.map(grad => (
+          {demo_day_graduate.map(grad => (
             <Graduate {...grad} key={grad.student.name} />
           ))}
         </Container>
