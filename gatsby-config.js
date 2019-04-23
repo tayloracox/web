@@ -36,6 +36,18 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@handbook': require('path').resolve(
+            __dirname,
+            'src/pages/handbook/components'
+          ),
+        },
+        extensions: [],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
