@@ -25,6 +25,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `setTimeout(() => {window.__CPEmbed('.codepen-later')}, 1000)`,
+          }}
+        />
       </body>
     </html>
   )
