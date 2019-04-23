@@ -42,7 +42,7 @@ module.exports = {
         alias: {
           '@handbook': require('path').resolve(
             __dirname,
-            'src/pages/handbook/components'
+            'src/pages/handbook/.components'
           ),
         },
         extensions: [],
