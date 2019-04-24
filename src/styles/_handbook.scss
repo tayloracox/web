@@ -1,6 +1,6 @@
 .handbook {
   .cp_embed_wrapper {
-    width: 50%;
+    min-width: 50%;
   }
 
   iframe {
@@ -27,5 +27,10 @@
 
   .handbook-nav-links a {
     padding: 0.4rem;
+  }
+
+  .handbook-nav-links i {
+    min-width: 16px;
+    text-align: center;
   }
 }
