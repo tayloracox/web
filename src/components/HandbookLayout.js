@@ -8,6 +8,42 @@ import PageTitle from './PageTitle'
 import Code from './Code'
 import Link from './UniversalLink'
 
+const Units = [
+  {
+    name: 'Pre-work',
+    link: 'prework',
+    lessons: [],
+  },
+  {
+    name: 'Fundamentals',
+    link: 'curriculum/fundamentals',
+    lessons: [
+      {
+        name: 'Intro To HTML',
+        link: 'intro-to-html',
+      },
+      {
+        name: 'Intro To CSS',
+        link: 'intro-to-css',
+      },
+      {
+        name: 'CSS Layout',
+        link: 'css-layout',
+      },
+    ],
+  },
+  {
+    name: 'Front-end',
+    link: 'curriculum/front-end',
+    lessons: [],
+  },
+  {
+    name: 'Full-stack',
+    link: 'curriculum/back-end',
+    lessons: [],
+  },
+]
+
 const HandbookLayout = ({ children }) => (
   <div className="handbook">
     <Layout>
@@ -60,38 +96,31 @@ const HandbookLayout = ({ children }) => (
                         Curriculum
                       </Link>
                       <ul>
-                        <li>
-                          <Link
-                            to="/handbook/prework"
-                            activeClassName="is-active"
-                          >
-                            Pre-work
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/handbook/curriculum/fundamentals"
-                            activeClassName="is-active"
-                          >
-                            Fundamentals
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/handbook/curriculum/front-end"
-                            activeClassName="is-active"
-                          >
-                            Front-end
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="/handbook/curriculum/back-end"
-                            activeClassName="is-active"
-                          >
-                            Full-stack
-                          </Link>
-                        </li>
+                        {Units.map(unit => (
+                          <li key={unit.link}>
+                            <Link
+                              to={`/handbook/${unit.link}`}
+                              activeClassName="is-active"
+                            >
+                              {unit.name}
+                            </Link>
+                            <ul>
+                              {unit.lessons.map(lesson => (
+                                <li key={lesson.link}>
+                                  <Link
+                                    partiallyActive
+                                    to={`/handbook/${unit.link}/lessons/${
+                                      lesson.link
+                                    }`}
+                                    activeClassName="is-active"
+                                  >
+                                    {lesson.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </li>
+                        ))}
                       </ul>
                     </li>
                     <li>
