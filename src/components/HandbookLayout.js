@@ -30,6 +30,10 @@ const Units = [
         name: 'CSS Layout',
         link: 'css-layout',
       },
+      {
+        name: 'Intro to Responsive Web',
+        link: 'intro-to-responsive',
+      },
     ],
   },
   {
