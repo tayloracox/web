@@ -50,12 +50,21 @@ const Layout = ({ children }) => {
         >
           <Helmet>
             <html lang="en" className="has-navbar-fixed-top" />
-            <link
-              rel="stylesheet"
-              href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css"
-              integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt"
-              crossorigin="anonymous"
-            />
+            {process.env.BRANCH === 'master' ? (
+              <link
+                rel="stylesheet"
+                href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css"
+                integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt"
+                crossorigin="anonymous"
+              />
+            ) : (
+              <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+                integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+                crossorigin="anonymous"
+              />
+            )}
           </Helmet>
           <Head />
           <MainNavigation />
