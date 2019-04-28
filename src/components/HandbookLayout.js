@@ -12,39 +12,53 @@ const Units = [
   {
     name: 'Pre-work',
     link: 'prework',
-    lessons: [],
+    modules: [],
   },
   {
     name: 'Fundamentals',
     link: 'curriculum/fundamentals',
-    lessons: [
+    modules: [
       {
-        name: 'Intro To HTML',
-        link: 'intro-to-html',
+        name: 'HTML and CSS',
+        lessons: [
+          {
+            name: 'Intro To HTML',
+            link: 'modules/html-css/lessons/intro-to-html/',
+          },
+          {
+            name: 'Intro To CSS',
+            link: 'modules/html-css/lessons/intro-to-css',
+          },
+          {
+            name: 'CSS Layout',
+            link: 'modules/html-css/lessons/css-layout',
+          },
+          {
+            name: 'Intro to Responsive Web',
+            link: 'modules/html-css/lessons/intro-to-responsive',
+          },
+        ],
       },
       {
-        name: 'Intro To CSS',
-        link: 'intro-to-css',
-      },
-      {
-        name: 'CSS Layout',
-        link: 'css-layout',
-      },
-      {
-        name: 'Intro to Responsive Web',
-        link: 'intro-to-responsive',
+        name: 'JavaScript',
+        lessons: [
+          {
+            name: 'Introduction to JavaScript',
+            link: 'modules/javascript/lessons/intro',
+          },
+        ],
       },
     ],
   },
   {
     name: 'Front-end',
     link: 'curriculum/front-end',
-    lessons: [],
+    modules: [],
   },
   {
     name: 'Full-stack',
     link: 'curriculum/back-end',
-    lessons: [],
+    modules: [],
   },
 ]
 
@@ -109,17 +123,24 @@ const HandbookLayout = ({ children }) => (
                               {unit.name}
                             </Link>
                             <ul>
-                              {unit.lessons.map(lesson => (
-                                <li key={lesson.link}>
-                                  <Link
-                                    partiallyActive
-                                    to={`/handbook/${unit.link}/lessons/${
-                                      lesson.link
-                                    }`}
-                                    activeClassName="is-active"
-                                  >
-                                    {lesson.name}
-                                  </Link>
+                              {unit.modules.map(module => (
+                                <li key={module.link}>
+                                  {module.name}
+                                  <ul>
+                                    {module.lessons.map(lesson => (
+                                      <li key={lesson.link}>
+                                        <Link
+                                          partiallyActive
+                                          to={`/handbook/${unit.link}/${
+                                            lesson.link
+                                          }`}
+                                          activeClassName="is-active"
+                                        >
+                                          {lesson.name}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
                                 </li>
                               ))}
                             </ul>
