@@ -7,12 +7,14 @@ const Graduate = ({ student, description, tagLine, hireable }) => (
   <React.Fragment>
     <div className="columns demo-day-graduate">
       <div className="column is-narrow has-text-centered">
-        <Image
-          className="image"
-          Tag="p"
-          fixed={student.image.fixed}
-          alt={student.image.description}
-        />
+        {student.image && (
+          <Image
+            className="image"
+            Tag="p"
+            fixed={student.image.fixed}
+            alt={student.image.description}
+          />
+        )}
       </div>
       <div className="column">
         <h4 className="title is-4">{student.name}</h4>
@@ -25,7 +27,7 @@ const Graduate = ({ student, description, tagLine, hireable }) => (
         <div
           className="content"
           dangerouslySetInnerHTML={{
-            __html: description.childMarkdownRemark.html,
+            __html: description ? description.childMarkdownRemark.html : '',
           }}
         />
         <nav className="level">
