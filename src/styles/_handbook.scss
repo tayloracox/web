@@ -1,3 +1,10 @@
+// Overriding a style from bulma
+.content {
+  li + li {
+    margin-top: 0;
+  }
+}
+
 .handbook {
   .cp_embed_wrapper {
     min-width: 50%;
@@ -23,6 +30,9 @@
 
   ul.handbook-nav-links {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: $sand;
   }
 
   .handbook-nav-links a {
