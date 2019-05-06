@@ -43,8 +43,12 @@ const Units = [
         name: 'JavaScript',
         lessons: [
           {
-            name: 'Introduction to JavaScript',
-            link: 'modules/javascript/lessons/intro',
+            name: 'Welcome To Javascript',
+            link: 'modules/javascript/lessons/welcome-to-javascript',
+          },
+          {
+            name: 'JavaScript Basics',
+            link: 'modules/javascript/lessons/javascript-basics',
           },
         ],
       },
