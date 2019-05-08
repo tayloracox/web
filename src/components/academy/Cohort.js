@@ -38,9 +38,9 @@ const Cohort = ({
               After their 12-week journey to becoming Full-Stack Developers, our
               students have grown their technical skills. These students have
               gone from little to no experience to learning HTML/CSS,
-              JavaScript, React and then diving into .NET or Ruby on Rails to
-              round out their full-stack understanding. We are proud to present
-              to you our graduating students from {title}.
+              JavaScript, React and then diving into a back-end technology stack
+              to round out their full-stack understanding. We are proud to
+              present to you our graduating students from {title}.
             </p>
 
             <h3>Interested in hiring a graduate?</h3>

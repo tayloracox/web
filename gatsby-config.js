@@ -36,6 +36,18 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@handbook': require('path').resolve(
+            __dirname,
+            'src/pages/handbook/.components'
+          ),
+        },
+        extensions: [],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -96,6 +108,7 @@ module.exports = {
       options: {
         name: 'handbook',
         path: `${__dirname}/src/pages/handbook`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {
