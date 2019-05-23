@@ -90,10 +90,10 @@ const TestDriveCourse = ({ data }) => (
               </p>
 
               <p>
-                Classes are for two hours every Monday and Wednesday at 6:30
-                p.m. Optional lab time begins at 5:30 p.m. The course is taught{' '}
-                <strong>in-person</strong>, on our campus at 2220 Central Ave,
-                St. Petersburg, Florida.
+                Classes are for two hours, twice a week (as scheduled) at 6:30
+                p.m. Optional lab time generally begins at 5:30 p.m. The course
+                is taught <strong>in-person</strong>, on our campus at 2220
+                Central Ave, St. Petersburg, Florida.
               </p>
 
               <p>
