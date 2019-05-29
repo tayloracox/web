@@ -47,7 +47,7 @@ const IndexPage = () => (
               your company.
             </p>
             <p className=" has-text-centered">
-              <Link to="/" className="button is-info">
+              <Link to="/demo-day" className="button is-info">
                 Meet Alumni
               </Link>
             </p>
@@ -56,7 +56,7 @@ const IndexPage = () => (
             <h4 className="title is-4 has-text-centered">Donate</h4>
             <p>Every dollar helps us fulfill our mission.</p>
             <p className=" has-text-centered">
-              <Link to="/" className="button is-info">
+              <Link to="http://store.suncoast.io" className="button is-info">
                 Give Today
               </Link>
             </p>
@@ -67,7 +67,7 @@ const IndexPage = () => (
               Join our next cohort of students and learn to be a web developer.
             </p>
             <p className=" has-text-centered">
-              <Link to="/" className="button is-info">
+              <Link to="/academy" className="button is-info">
                 Apply Now
               </Link>
             </p>
