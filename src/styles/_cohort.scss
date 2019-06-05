@@ -1,0 +1,28 @@
+.cohort-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  img {
+    width: 128px;
+  }
+}
+
+.demo-day-sponsor {
+  text-align: center;
+
+  figure.image {
+    margin: 0 auto;
+    max-width: 256px;
+  }
+}
+
+.demo-day-graduate {
+  .social-links {
+    a {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+  }
+}

@@ -1,10 +1,4 @@
-# Project dependencies
-.cache
 node_modules
-yarn-error.log
-
-# Editor artifacts
-/.idea
-
-# Build directory
+.cache
 /public
+.env.*

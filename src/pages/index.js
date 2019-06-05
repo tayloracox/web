@@ -1,130 +1,129 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Icon from '../components/Icon'
-import Engagement from '../components/Engagement'
-import logoBanner from '../images/banner.svg'
-import swagIllustration from '../images/swag.svg'
-import logoJunior from '../images/junior.svg'
+import Helmet from 'react-helmet'
+import Layout from '../components/Layout'
+import SplashHero from '../components/SplashHero'
+import Link from '../components/UniversalLink'
+import AcademyCommunityDuo from '../components/AcademyCommunityDuo'
+import MissionStatement from '../components/MissionStatement'
+import MailingListForm from '../components/MailingListForm'
+import junior from '../images/junior.svg'
+import swag from '../images/swag.svg'
 
 const IndexPage = () => (
-  <div className="IndexPage">
-    <div className="Splash">
-      <img src={logoBanner} alt="Suncoast Developers Guild" height="280" />
-    </div>
-    <div className="Duo">
-      <div className="Community">
-        <aside>
-          <h2>Community</h2>
-          <h3>
-            We are a collective of software engineers, programmers, and
-            designers in Tampa Bay.
-          </h3>
-          <p>
-            With thousands of members across dozens of local groups, our members
-            touch all aspects of technology development across Tampa Bay.
-          </p>
-          <p className="cta">
-            <Link to="/community">Explore our community</Link>
-            <OutboundLink href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtMzE1NzYyNjM3NzE1LTUwYmJiZmQwNzMwOTJlMTczMzQ4ODdiYmE5NDJiMDgwOGY2ODRmNDIxNTIzMGQ1ZmI3OTEwYmVjZmU3YzYzZjY">
-              Join us on Slack <Icon name="slack" />
-            </OutboundLink>
-          </p>
-        </aside>
-      </div>
-      <div className="Academy">
-        <aside>
-          <h2>Academy</h2>
-          <h3>Learn to code with us.</h3>
-          <p>
-            The <strong>Academy at Suncoast Developers Guild</strong> is a code
-            school that serves <em>people</em>, not profit. We are changing
-            lives and teaching people to be the best software developers they
-            can be.
-          </p>
-          <p className="cta">
-            <Link to="/academy">Find out more</Link>
-            <Link to="/academy/apply">Apply now</Link>
-          </p>
-        </aside>
-      </div>
-    </div>
-    <div className="Organization">
-      <aside>
-        <h2>Our Organization</h2>
-        <p>
-          Our mission is to provide those seeking an education in software
-          development with the technical and soft skills they need to pursue
-          rewarding careers as programmers. We also seek to promote a sense of
-          community among local technology organizations, supporting members in
-          a way that strengthens our community and promotes the common good.
-        </p>
-        {/* <nav>
-          <span className="active">Mission</span>
-          <span>Vision</span>
-          <span>Values</span>
-        </nav> */}
-      </aside>
-    </div>
-
-    <section className="Yolo">
-      <div className="Junior">
-        <img src={logoJunior} alt="SDG Jr Logo" width="120" />
-        <aside>
-          <p>Do you want to know about our free kids classes?</p>
-          <p className="cta">
-            <Link to="/jr">Yes, I do!</Link>
-          </p>
-        </aside>
-      </div>
-      <div className="Swag">
-        <img
-          src={swagIllustration}
-          alt="An illustration of a t-shirt and some stickers"
-          width="170"
-        />
-        <aside>
-          <p>Get shirts, stickers and other stunning swag from our store.</p>
-          <p className="cta">
-            <OutboundLink href="http://store.suncoast.io/">
-              Shop now
-            </OutboundLink>
-          </p>
-        </aside>
+  <Layout>
+    <SplashHero />
+    <AcademyCommunityDuo />
+    <MissionStatement />
+    <section className="section getting-involved">
+      <div className="container">
+        <div className="columns">
+          <div className="column content engage">
+            <h5 className="title is-4 has-text-centered">Engage</h5>
+            <p>Checkout an event, or chat with us on our public Slack.</p>
+            <p className=" has-text-centered">
+              <Link to="/community" className="button is-info">
+                Join Us
+              </Link>
+            </p>
+          </div>
+          <div className="column content volunteer">
+            <h4 className="title is-4 has-text-centered">Volunteer</h4>
+            <p>
+              Help us by mentoring the next generation of software engineers.
+            </p>
+            <p className="has-text-centered">
+              <Link
+                to="https://docs.google.com/forms/d/e/1FAIpQLSd842YjtBlChtuKo1Kp032ZshQxL368jZxJIxJ6Ireqo2bu_A/viewform"
+                className="button is-info"
+              >
+                Sign Up
+              </Link>
+            </p>
+          </div>
+          <div className="column content hire">
+            <h4 className="title is-4 has-text-centered">Hire</h4>
+            <p>
+              See which of our highly sought-after graduates might be a fit for
+              your company.
+            </p>
+            <p className=" has-text-centered">
+              <Link to="/demo-day" className="button is-info">
+                Meet Alumni
+              </Link>
+            </p>
+          </div>
+          <div className="column content donate">
+            <h4 className="title is-4 has-text-centered">Donate</h4>
+            <p>Every dollar helps us fulfill our mission.</p>
+            <p className=" has-text-centered">
+              <Link to="http://store.suncoast.io" className="button is-info">
+                Give Today
+              </Link>
+            </p>
+          </div>
+          <div className="column content learn">
+            <h4 className="title is-4 has-text-centered">Learn</h4>
+            <p>
+              Join our next cohort of students and learn to be a web developer.
+            </p>
+            <p className=" has-text-centered">
+              <Link to="/academy" className="button is-info">
+                Apply Now
+              </Link>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-
-    <section className="Engage">
-      <h2 id="getting-involved">Getting Involved</h2>
-
-      <div className="ways">
-        <Engagement title="Engage" link="/community" label="Join Us">
-          Checkout an event, or chat with us on our public Slack.
-        </Engagement>
-
-        <Engagement title="Volunteer" link="/volunteer" label="Sign Up">
-          Help us by mentoring the next generation of software engineers.
-        </Engagement>
-
-        <Engagement title="Hire" link="/academy/success" label="Meet Alumni">
-          See which of our highly sought-after graduates might be a fit for your
-          company.
-        </Engagement>
-
-        <Engagement
-          title="Donate"
-          link="http://store.suncoast.io/"
-          label="Give Today"
-        >
-          Every dollar helps us fulfill our mission.
-        </Engagement>
-
-        <Engagement title="Learn" link="/academy/apply" label="Apply Now">
-          Join our next cohort of students and learn to be a web developer.
-        </Engagement>
+    <section className="section kids-swag">
+      <div className="container">
+        <hr />
+        <div className="columns">
+          <div className="column">
+            <div className="columns is-vcentered is-mobile">
+              <div className="column is-narrow">
+                <figure className="image is-96x96">
+                  <img src={junior} alt="SDG Jr." />
+                </figure>
+              </div>
+              <div className="column content">
+                <p>Do you want to know about our free kids classes?</p>
+                <p>
+                  <Link to="/jr" className="button is-primary">
+                    Yes, I do!
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column">
+            <div className="columns is-vcentered is-mobile">
+              <div className="column is-narrow">
+                <figure className="image is-128x128">
+                  <img src={swag} alt="Sweet Swag" />
+                </figure>
+              </div>
+              <div className="column content">
+                <p>
+                  Get shirts, stickers and other stunning swag from our store.
+                </p>
+                <p>
+                  <Link
+                    href="http://store.suncoast.io/"
+                    className="button is-primary"
+                  >
+                    Shop Now
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
       </div>
     </section>
-  </div>
+    <MailingListForm />
+  </Layout>
 )
 
 export default IndexPage

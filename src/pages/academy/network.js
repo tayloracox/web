@@ -1,173 +1,69 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import AcademyNavigation from '../../components/AcademyNavigation'
+import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import PageTitle from '../../components/PageTitle'
+import Section from '../../components/Section'
+import AcademyNavigation from '../../components/academy/AcademyNavigation'
 
-const AcademyNetworkPage = props => (
-  <div className="AcademyPage Network">
+const AcademyNetwork = ({ data }) => (
+  <Layout>
     <AcademyNavigation />
-    <div className="wrap">
-      <h2>Hiring Network</h2>
-
-      <h3>Some of the great companies where our alumni work:</h3>
-
-      <ul className="companies">
-        <li>
-          <Img
-            title="Spatial Networks"
-            alt="Spatial Networks Logo"
-            sizes={props.data.spatialNetworks.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="PROforma"
-            alt="PROforma Logo"
-            sizes={props.data.proforma.sizes}
-          />
-        </li>
-        <li>
-          <Img title="Gooee" alt="Gooee Logo" sizes={props.data.gooee.sizes} />
-        </li>
-        <li>
-          <Img
-            title="Haneke"
-            alt="Haneke Design Logo"
-            sizes={props.data.haneke.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Malware Bytes"
-            alt="Malware Bytes Logo"
-            sizes={props.data.malwarebytes.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Raymond James"
-            alt="Raymond James Logo"
-            sizes={props.data.raymondJames.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Clarity Services"
-            alt="Clarity Services Logo"
-            sizes={props.data.clarity.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Gitlab"
-            alt="Gitlab Logo"
-            sizes={props.data.gitlab.sizes}
-          />
-        </li>
-        <li>
-          <Img
-            title="Presence"
-            alt="Presence Logo"
-            sizes={props.data.presence.sizes}
-          />
-        </li>
-        <li className="padWhite">
-          <Img
-            title="Bank of the Ozarks"
-            alt="Bank of the Ozarks Logo"
-            sizes={props.data.ozarks.sizes}
-          />
-        </li>
-        <li className="padWhite netsvs">
-          <Img
-            title="NetSynergy Virtual Solutions"
-            alt="NetSynergy Virtual Solutions Logo"
-            sizes={props.data.netsvs.sizes}
-          />
-        </li>
-        <li>
-          <Img title="Bisk" alt="Bisk Logo" sizes={props.data.bisk.sizes} />
-        </li>
-      </ul>
-
-      <h3>Why become part of our Hiring Network?</h3>
-
-      <ul className="why">
-        <li>
-          Speak to students during the cohort, host field trips and lighting
-          talks at your offices!
-        </li>
-        <li>
-          Meet our upcoming graduates <em>before</em> Demo Day.
-        </li>
-        <li>Access to our reverse job board.</li>
-      </ul>
-    </div>
-  </div>
+    <Section>
+      <Container>
+        <PageTitle>Hiring Network</PageTitle>
+        <h3 className="subtitle">
+          Some of the great companies where our alumni work:
+        </h3>
+        <div className="columns is-multiline is-variable is-6">
+          {data.allContentfulHiringPartner.edges.map(({ node: partner }) => (
+            <div className="column is-one-quarter" key={partner.id}>
+              <OutboundLink href={partner.url}>
+                <Image
+                  className="image"
+                  fluid={partner.logo.fluid}
+                  alt={partner.logo.description}
+                />
+              </OutboundLink>
+            </div>
+          ))}
+        </div>
+        <div className="content">
+          <p>Why become part of our Hiring Network?</p>
+          <ul>
+            <li>
+              Speak to students during the cohort, host field trips and lighting
+              talks at your offices!
+            </li>
+            <li>Meet our upcoming graduates before Demo Day.</li>
+            <li>Access our reverse job board.</li>
+          </ul>
+        </div>
+      </Container>
+    </Section>
+  </Layout>
 )
 
+export default AcademyNetwork
+
 export const pageQuery = graphql`
-  query NetworkPageQuery {
-    bisk: imageSharp(id: { regex: "/network/bisk/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    clarity: imageSharp(id: { regex: "/network/clarity/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    gitlab: imageSharp(id: { regex: "/network/gitlab/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    gooee: imageSharp(id: { regex: "/network/gooee/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    haneke: imageSharp(id: { regex: "/network/haneke/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    malwarebytes: imageSharp(id: { regex: "/network/malwarebytes/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    netsvs: imageSharp(id: { regex: "/network/netsvs/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    ozarks: imageSharp(id: { regex: "/network/ozarks/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    presence: imageSharp(id: { regex: "/network/presence/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    proforma: imageSharp(id: { regex: "/network/proforma/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    raymondJames: imageSharp(id: { regex: "/network/raymond-james/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    spatialNetworks: imageSharp(id: { regex: "/network/spatial-networks/" }) {
-      sizes(maxWidth: 200) {
-        ...GatsbyImageSharpSizes
+  query {
+    allContentfulHiringPartner(sort: { fields: alumniHired, order: DESC }) {
+      edges {
+        node {
+          id
+          name
+          url
+          logo {
+            fluid(maxWidth: 480, maxHeight: 320, resizingBehavior: PAD) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            description
+          }
+        }
       }
     }
   }
 `
-
-export default AcademyNetworkPage

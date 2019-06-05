@@ -1,0 +1,12 @@
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 640px;
+
+  @media screen and (max-width: 1280px) {
+    height: 890px;
+  }
+
+  iframe {
+    height: inherit;
+  }
+}
